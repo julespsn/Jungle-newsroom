@@ -13,3 +13,4 @@ A shared crew scouts, tags momentum and fact-checks once each morning; each desk
 
 - `docs/agent-newsroom-principles.md`: the founding principles the newsroom is built on.
 - `prototype/floor.html`: a clickable 3D mockup of the newsroom floor (crew characters, the morning run, seasonal themes). Example content only.
+- `prototype/logos/`: client and Jungle logos used on the desks and in the crew cards (Disney and DFS from Wikimedia, Mutti and Jungle from their own sites).
