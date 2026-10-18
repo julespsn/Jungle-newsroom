@@ -320,7 +320,7 @@ controls.enableDamping = true;
 controls.dampingFactor = 0.08;
 controls.enablePan = false;
 controls.minDistance = 8;
-controls.maxDistance = 110;
+controls.maxDistance = 140;
 controls.minPolarAngle = 0.55;
 controls.maxPolarAngle = 1.28;
 controls.minAzimuthAngle = 0.0;
@@ -334,7 +334,7 @@ const sun = new THREE.DirectionalLight(0xffffff, 1);
 sun.position.set(12, 20, 10);
 sun.castShadow = true;
 sun.shadow.mapSize.set(3072, 3072);
-Object.assign(sun.shadow.camera, {left:-22, right:22, top:22, bottom:-22, near:1, far:60});
+Object.assign(sun.shadow.camera, {left:-21, right:21, top:21, bottom:-21, near:1, far:70});
 sun.shadow.bias = -0.0008;
 sun.shadow.camera.updateProjectionMatrix();
 scene.add(sun);
@@ -477,15 +477,16 @@ const FOLIAGE_A = [], FOLIAGE_B = [];
 const PROPS = {halloween:[], fireworks:[], festive:[], sills:[], summer:[]};
 function prop(key, obj){ PROPS[key].push(obj); obj.visible = false; return obj; }
 
-// One open-plan floor. Outer walls run along the back (z = Z0) and left (x = X0);
-// the front and right stay open so it reads like a cutaway.
-// Back strip: the Newsdesk (shared crew). Front left: the Jungle Newsroom. Front right: the Client Newsroom.
-const X0 = -8, X1 = 8, Z0 = -6, Z1 = 6;
-// The whole floor plan is laid out on this grid and then stretched by SPREAD in x and z,
-// while every object keeps its own size. Bigger SPREAD = more room between the crew.
-const SPREAD = 1.55;
-const space = o => { o.userData.space = true; return o; };
+// Islands in a jungle lagoon. The review desk sits on a raised dais at the very centre,
+// the Jungle team works on the ring around it, and boardwalks branch out to one island per client.
+const FX_SCALE = 1.6;                  // how far weather, bats and fireworks spread
+const CORE_R = 2.7, RING_R = 6.6, CLIENT_R = 12.5, ISLE_R = 2.6;
+const TOP_RING = 0.35, TOP_CORE = 0.62, TOP_ISLE = 0.35;
+const CLIENT_ANGLE = {disney:Math.PI / 4, family:Math.PI * 3 / 4, muti:-Math.PI * 3 / 4, dfs:-Math.PI / 4};
+const CREW_ANGLE = {chief:0, scout:Math.PI / 2, trend:Math.PI, facts:-Math.PI / 2};
+const polar = (r, a) => [Math.cos(a) * r, Math.sin(a) * r];
 const JUNGLE_LOGO = 'logos/jungle.png';
+let pulseOn = false;
 
 // images (logos) load once and repaint any texture that uses them
 const IMG = {};
@@ -499,72 +500,143 @@ function withImage(url, cb){
   IMG[url].ready ? cb(IMG[url].im) : IMG[url].cbs.push(cb);
 }
 
-// island
-const grassMat = toon('#86913d');
-const base = space(mk(box(20.4, 1.4, 16.4), toon('#6e4a2c'), -0.6, -0.78, -0.6, world)); base.castShadow = false; ink(base, 0.04);
-const grass = space(mk(box(20.6, 0.24, 16.6), grassMat, -0.6, -0.12, -0.6, world));
-ink(grass, 0.03);
-
-// floor planks
-const floorTex = canvasTex(512, 512, (x, w, h) => {
-  const cols = ['#c49460', '#b8864f', '#cc9d68', '#bb8a55'];
-  const rows = 8, rh = h / rows;
-  for (let r = 0; r < rows; r++) {
-    let off = (r % 2) * 90, xx = -off;
-    while (xx < w) {
-      const len = 160 + ((r * 37 + xx) % 90);
-      x.fillStyle = cols[(r + Math.floor(xx / 70)) & 3];
-      x.fillRect(xx, r * rh, len, rh);
-      x.strokeStyle = 'rgba(60,35,15,.35)'; x.lineWidth = 2;
-      x.strokeRect(xx, r * rh, len, rh);
-      xx += len;
-    }
-  }
-});
-floorTex.wrapS = floorTex.wrapT = THREE.RepeatWrapping;
-floorTex.repeat.set(4 * SPREAD, 3 * SPREAD);
-const floor = space(mk(box(16, 0.16, 12), toon('#ffffff', {map:floorTex}), 0, 0.07, 0, world));
-floor.castShadow = false;
-ink(floor, 0.025);
-
-// zone rugs mark the three areas without walls
-function zoneRug(x0, z0, x1, z1, fill, edge){
-  const W = x1 - x0, D = z1 - z0, px = 64;
-  const tex = canvasTex(Math.round(W * px), Math.round(D * px), (x, w, h) => {
-    const r = 40;
-    x.fillStyle = edge; x.beginPath(); x.roundRect(4, 4, w - 8, h - 8, r); x.fill();
-    x.fillStyle = fill; x.beginPath(); x.roundRect(22, 22, w - 44, h - 44, r - 14); x.fill();
-    x.strokeStyle = edge; x.lineWidth = 3; x.setLineDash([14, 10]);
-    x.beginPath(); x.roundRect(36, 36, w - 72, h - 72, r - 20); x.stroke();
-  });
-  const m = mk(new THREE.PlaneGeometry(W, D), toon('#ffffff', {map:tex, transparent:true}), (x0 + x1) / 2, 0.156, (z0 + z1) / 2, world, {noShadow:true});
-  m.rotation.x = -Math.PI / 2;
-  return space(m);
-}
-zoneRug(-7.7, -5.7, 7.7, -2.7, '#e9cf8f', '#c53a2b');
-zoneRug(-7.7, -1.9, -0.6, 5.7, '#a9c48a', '#3f6b2e');
-zoneRug(0.6, -1.9, 7.7, 5.7, '#ead9bd', '#7a5230');
-
-// outer walls
-const paperTex = () => canvasTex(256, 256, (x, w, h) => {
-  x.fillStyle = '#ead6aa'; x.fillRect(0, 0, w, h);
-  x.fillStyle = 'rgba(80,110,50,.14)';
-  for (let i = 0; i < 6; i++) {
-    const px = (i % 3) * 86 + (i > 2 ? 43 : 0) + 20, py = i > 2 ? 170 : 50;
-    x.save(); x.translate(px, py); x.rotate(i * 0.9);
-    x.beginPath(); x.ellipse(0, 0, 26, 12, 0, 0, 7); x.fill();
-    x.restore();
-  }
-});
-const bwTex = paperTex(); bwTex.wrapS = bwTex.wrapT = THREE.RepeatWrapping; bwTex.repeat.set(8 * SPREAD, 1.6);
-const lwTex = paperTex(); lwTex.wrapS = lwTex.wrapT = THREE.RepeatWrapping; lwTex.repeat.set(6 * SPREAD, 1.6);
-space(ink(mk(box(16.2, 3.3, 0.2), toon('#ffffff', {map:bwTex}), 0, 1.65, Z0 - 0.1, world), 0.03));
-space(ink(mk(box(0.2, 3.3, 12.2), toon('#ffffff', {map:lwTex}), X0 - 0.1, 1.65, 0, world), 0.03));
 const woodDark = toon('#7a5230'), woodMid = toon('#94653a'), wood = toon('#a87443');
-space(ink(mk(box(15.9, 0.9, 0.05), woodDark, 0.05, 0.6, Z0 + 0.03, world), 0.015));
-space(ink(mk(box(0.05, 0.9, 11.9), woodDark, X0 + 0.03, 0.6, 0.05, world), 0.015));
-space(ink(mk(box(16.3, 0.12, 0.3), woodMid, 0, 3.32, Z0 - 0.1, world), 0.015));
-space(ink(mk(box(0.3, 0.12, 12.3), woodMid, X0 - 0.1, 3.32, 0, world), 0.015));
+const frameM = toon('#3b2a1e');
+
+// lagoon: earth bank, water, grass rim
+const grassMat = toon('#86913d');
+const bank = mk(cyl(19.6, 19.0, 1.4, 64), toon('#6e4a2c'), 0, -0.75, 0, world); bank.castShadow = false; ink(bank, 0.05);
+const rim = mk(new THREE.RingGeometry(16.8, 19.6, 72), grassMat, 0, 0.03, 0, world, {noShadow:true}); rim.rotation.x = -Math.PI / 2;
+const water = mk(new THREE.CircleGeometry(16.9, 72), toon('#5aa3a6'), 0, 0.0, 0, world, {noShadow:true}); water.rotation.x = -Math.PI / 2;
+const padM = toon('#5f9a3a');
+[[9, 4.5], [-6.5, 9.5], [10.5, -8], [-11, -3.5], [4.5, 10.5], [-3.5, -12], [14.5, 2], [-14, 6]].forEach((p, i) => {
+  const pad = mk(new THREE.CircleGeometry(0.35 + (i % 3) * 0.12, 18, 0.3, Math.PI * 1.85), padM, p[0], 0.015, p[1], world, {noShadow:true});
+  pad.rotation.x = -Math.PI / 2; pad.rotation.z = i;
+});
+
+// platform tops use the plank texture
+function plankTex(rep){
+  const t = canvasTex(512, 512, (x, w, h) => {
+    const cols = ['#c49460', '#b8864f', '#cc9d68', '#bb8a55'];
+    const rows = 8, rh = h / rows;
+    for (let r = 0; r < rows; r++) {
+      let xx = -(r % 2) * 90;
+      while (xx < w) {
+        const len = 160 + ((r * 37 + xx) % 90);
+        x.fillStyle = cols[(r + Math.floor(xx / 70)) & 3];
+        x.fillRect(xx, r * rh, len, rh);
+        x.strokeStyle = 'rgba(60,35,15,.35)'; x.lineWidth = 2;
+        x.strokeRect(xx, r * rh, len, rh);
+        xx += len;
+      }
+    }
+  });
+  t.wrapS = t.wrapT = THREE.RepeatWrapping; t.repeat.set(rep, rep);
+  return t;
+}
+function platform(x, z, r, top, rep){
+  const h = top + 0.4;
+  const m = mk(cyl(r, r, h, 64), [woodDark, toon('#ffffff', {map:plankTex(rep)}), woodDark], x, top - h / 2, z, world);
+  m.castShadow = false; ink(m, 0.03);
+  return m;
+}
+function disc(x, y, z, r0, r1, col){
+  const g = r0 > 0 ? new THREE.RingGeometry(r0, r1, 64) : new THREE.CircleGeometry(r1, 64);
+  const m = mk(g, toon(col), x, y, z, world, {noShadow:true}); m.rotation.x = -Math.PI / 2;
+  return m;
+}
+// the ring: Jungle team
+platform(0, 0, RING_R, TOP_RING, 4);
+disc(0, TOP_RING + 0.005, 0, CORE_R + 0.25, RING_R - 0.3, '#a9c48a');
+disc(0, TOP_RING + 0.008, 0, RING_R - 0.48, RING_R - 0.36, '#3f6b2e');
+// the core: review desk
+platform(0, 0, CORE_R, TOP_CORE, 2);
+const rugTex = canvasTex(256, 256, (x, w) => {
+  const rings = ['#c53a2b', '#e2a634', '#f1e2c0', '#c53a2b', '#f1e2c0', '#e2a634'];
+  rings.forEach((c, i) => { x.fillStyle = c; x.beginPath(); x.arc(w/2, w/2, w/2 - i * 20, 0, 7); x.fill(); });
+  x.strokeStyle = '#1f1610'; x.lineWidth = 4; x.beginPath(); x.arc(w/2, w/2, w/2 - 3, 0, 7); x.stroke();
+});
+const coreRug = mk(new THREE.CircleGeometry(CORE_R - 0.25, 64), toon('#ffffff', {map:rugTex}), 0, TOP_CORE + 0.005, 0, world, {noShadow:true});
+coreRug.rotation.x = -Math.PI / 2;
+// client islands
+const ISLES = {};
+Object.keys(CLIENT_ANGLE).forEach(id => {
+  const [x, z] = polar(CLIENT_R, CLIENT_ANGLE[id]);
+  const c = byId[id];
+  platform(x, z, ISLE_R, TOP_ISLE, 1.6);
+  disc(x, TOP_ISLE + 0.005, z, 0, ISLE_R - 0.3, '#' + new THREE.Color(c.color).lerp(new THREE.Color('#f1e2c0'), 0.7).getHexString());
+  disc(x, TOP_ISLE + 0.008, z, ISLE_R - 0.48, ISLE_R - 0.32, c.color);
+  ISLES[id] = [x, z];
+});
+
+// boardwalks from the ring to each client island, with vine rails
+const VINE_CURVES = [];
+const PULSES = [];
+const pulseM = basic('#ffe08a');
+function boardwalk(a){
+  const r0 = RING_R - 0.15, r1 = CLIENT_R - ISLE_R + 0.15, len = r1 - r0, y = 0.3;
+  const [mx, mz] = polar((r0 + r1) / 2, a);
+  const g = new THREE.Group(); g.position.set(mx, 0, mz); g.rotation.y = Math.PI / 2 - a; world.add(g);
+  const n = Math.round(len / 0.3);
+  for (let i = 0; i < n; i++) ink(mk(box(1.3, 0.06, 0.24), i % 2 ? wood : woodMid, 0, y, -len / 2 + (i + 0.5) * len / n, g), 0.01);
+  [-1, 1].forEach(s => {
+    mk(box(0.08, 0.12, len), woodDark, s * 0.62, y - 0.08, 0, g);
+    [-len / 2 + 0.1, 0, len / 2 - 0.1].forEach(pz => ink(mk(cyl(0.04, 0.05, 0.75, 8), woodDark, s * 0.66, y + 0.37, pz, g), 0.008));
+    // rail as a sagging vine, in world space
+    const dir = new THREE.Vector3(Math.cos(a), 0, Math.sin(a)), perp = new THREE.Vector3(-Math.sin(a), 0, Math.cos(a));
+    const pts = [];
+    for (let k = 0; k <= 8; k++) {
+      const t = k / 8, r = r0 + 0.1 + t * (len - 0.2);
+      pts.push(dir.clone().multiplyScalar(r).add(perp.clone().multiplyScalar(s * 0.66)).setY(y + 0.72 - Math.sin(t * Math.PI * 2) ** 2 * 0.16));
+    }
+    VINE_CURVES.push(new THREE.CatmullRomCurve3(pts));
+  });
+  for (let i = 0; i < 3; i++) {
+    const p = mk(sph(0.09, 10, 8), pulseM, 0, 0, 0, world, {noShadow:true}); p.visible = false;
+    PULSES.push({mesh:p, a, r0, r1, ph:i / 3});
+  }
+}
+Object.values(CLIENT_ANGLE).forEach(boardwalk);
+
+// lamp posts at each bridge head, with vines strung between them (front quadrant left open)
+const POSTS = [];
+const lampM = basic('#ffd98a');
+Object.values(CLIENT_ANGLE).forEach(a => [-0.2, 0.2].forEach(d => {
+  const [x, z] = polar(RING_R - 0.25, a + d);
+  ink(mk(cyl(0.06, 0.08, 2.1, 10), frameM, x, TOP_RING + 1.05, z, world), 0.01);
+  ink(mk(sph(0.14, 12, 10), lampM, x, TOP_RING + 2.18, z, world, {noShadow:true}), 0.012);
+  POSTS.push({x, z, a:a + d});
+}));
+[[Math.PI * 3 / 4 + 0.2, Math.PI * 5 / 4 - 0.2], [Math.PI * 5 / 4 + 0.2, Math.PI * 7 / 4 - 0.2]].forEach(([a0, a1]) => {
+  const pts = [];
+  for (let k = 0; k <= 10; k++) {
+    const t = k / 10, a = a0 + (a1 - a0) * t;
+    const [x, z] = polar(RING_R - 0.25, a);
+    pts.push(new THREE.Vector3(x, TOP_RING + 2.0 - Math.sin(t * Math.PI) * 0.55, z));
+  }
+  VINE_CURVES.push(new THREE.CatmullRomCurve3(pts));
+});
+const vineMat = toon('#4d7a2f');
+const leafGeo = sph(0.075, 8, 6);
+const vineLeaves = new THREE.InstancedMesh(leafGeo, toon('#5f9a3a'), 900);
+FOLIAGE_B.push(vineLeaves.material);
+let leafN = 0;
+const dummy = new THREE.Object3D();
+VINE_CURVES.forEach((c, ci) => {
+  ink(mk(new THREE.TubeGeometry(c, 48, 0.026, 6, false), vineMat, 0, 0, 0, world), 0.01);
+  const L = c.getLength(), n = Math.floor(L / 0.2);
+  for (let i = 0; i <= n && leafN < 900; i++) {
+    const p = c.getPointAt(i / n);
+    dummy.position.set(p.x + Math.sin(i * 2.1 + ci) * 0.05, p.y - 0.03, p.z + Math.cos(i * 1.7) * 0.05);
+    dummy.rotation.set(i * 0.7, i * 1.3 + ci, i * 0.5);
+    dummy.scale.set(1.2, 0.45, 0.8);
+    dummy.updateMatrix();
+    vineLeaves.setMatrixAt(leafN++, dummy.matrix);
+  }
+});
+vineLeaves.count = leafN;
+vineLeaves.castShadow = true;
+world.add(vineLeaves);
 
 // signs: cream panel with a logo (or a painted wordmark) and a coloured strap line
 function signTex(title, sub, bg, logoUrl){
@@ -593,9 +665,8 @@ function signTex(title, sub, bg, logoUrl){
   withImage(logoUrl, draw);
   return t;
 }
-const frameM = toon('#3b2a1e');
-function standSign(x, z, rotY, title, sub, bg, logo, scale){
-  const g = new THREE.Group(); g.position.set(x, 0.15, z); g.rotation.y = rotY; g.scale.setScalar(scale || 1); world.add(g);
+function standSign(x, y, z, rotY, title, sub, bg, logo, scale){
+  const g = new THREE.Group(); g.position.set(x, y, z); g.rotation.y = rotY; g.scale.setScalar(scale || 1); world.add(g);
   ink(mk(cyl(0.32, 0.36, 0.08, 20), frameM, 0, 0.04, 0, g), 0.01);
   ink(mk(box(0.07, 1.5, 0.07), frameM, 0, 0.8, 0, g), 0.008);
   const side = toon('#1f1610');
@@ -603,76 +674,33 @@ function standSign(x, z, rotY, title, sub, bg, logo, scale){
   panel.position.set(0, 1.85, 0); panel.castShadow = true; g.add(panel); ink(panel, 0.014);
   return g;
 }
-// zone headers, one for each half of the room
-standSign(-6.7, -0.9, 0.7, 'THE JUNGLE NEWSROOM', 'Strategy · Data & Insight', '#3f6b2e', null, 1.45);
-standSign(1.6, -0.9, 0.7, 'THE CLIENT NEWSROOM', 'Social & creative · UK first', '#7a5230', null, 1.45);
-
-// windows share one outside view
-const outsideCanvas = document.createElement('canvas'); outsideCanvas.width = 256; outsideCanvas.height = 256;
-const outsideTex = new THREE.CanvasTexture(outsideCanvas);
-function drawOutside(th){
-  const x = outsideCanvas.getContext('2d'), w = 256, h = 256;
-  const g = x.createLinearGradient(0, 0, 0, h); g.addColorStop(0, th.sky[0]); g.addColorStop(1, th.sky[1]);
-  x.fillStyle = g; x.fillRect(0, 0, w, h);
-  x.fillStyle = th.orb === 'moon' ? '#f4ecd0' : '#ffe08a';
-  x.beginPath(); x.arc(185, 70, 30, 0, 7); x.fill();
-  if (th.orb === 'moon') { x.fillStyle = th.sky[0]; x.beginPath(); x.arc(200, 60, 26, 0, 7); x.fill(); }
-  x.fillStyle = th.leaf[0];
-  for (let i = 0; i < 9; i++) { x.beginPath(); x.ellipse(i * 34, 230 - (i % 3) * 22, 40, 34, 0, 0, 7); x.fill(); }
-  x.fillStyle = 'rgba(0,0,0,.18)';
-  for (let i = 0; i < 9; i++) { x.beginPath(); x.ellipse(i * 34 + 14, 250, 40, 24, 0, 0, 7); x.fill(); }
-  outsideTex.needsUpdate = true;
-}
-function makeWindow(w, h){
-  const g = new THREE.Group();
-  const view = mk(new THREE.PlaneGeometry(w, h), basic('#ffffff', {map:outsideTex}), 0, 0, 0.015, g, {noShadow:true});
-  view.receiveShadow = false;
-  const f = toon('#6b4426'), t = 0.1;
-  [[0, h/2, w + t, t], [0, -h/2, w + t, t]].forEach(a => ink(mk(box(a[2], a[3], 0.08), f, a[0], a[1], 0.05, g), 0.012));
-  [[-w/2, 0], [w/2, 0]].forEach(a => ink(mk(box(t, h, 0.08), f, a[0], a[1], 0.05, g), 0.012));
-  mk(box(0.05, h, 0.04), f, 0, 0, 0.05, g); mk(box(w, 0.05, 0.04), f, 0, 0, 0.05, g);
-  ink(mk(box(w + 0.3, 0.07, 0.2), toon('#7a5230'), 0, -h/2 - 0.07, 0.11, g), 0.012);
-  const snow = mk(box(w + 0.26, 0.07, 0.17), toon('#f6f8fb'), 0, -h/2 - 0.0, 0.12, g);
-  prop('sills', snow);
-  return g;
-}
-[[-6.4, Z0, 0], [3.8, Z0, 0], [X0, -4.1, Math.PI / 2], [X0, 3.9, Math.PI / 2]].forEach(p => {
-  const wnd = makeWindow(1.6, 1.3); wnd.position.set(p[0], 1.95, p[1]); wnd.rotation.y = p[2]; world.add(wnd);
+const FACE = Math.PI / 4;   // faces the default camera
+standSign(-1.75, TOP_CORE, -1.75, FACE, 'THE REVIEW DESK', 'Approve · change · drop', '#c53a2b', null, 1.05);
+standSign(...(() => { const [x, z] = polar(5.7, Math.PI * 1.25); return [x, TOP_RING, z]; })(), FACE, 'THE JUNGLE TEAM', 'Strategy · Data & Insight', '#3f6b2e', JUNGLE_LOGO, 1.1);
+Object.keys(ISLES).forEach(id => {
+  const [x, z] = ISLES[id], c = byId[id];
+  standSign(x - 1.3, TOP_ISLE, z + 1.3, FACE, c.client.toUpperCase(), c.client, c.color, c.logo, 1.2);
 });
 
-// poster
-const posterTex = canvasTex(256, 360, (x, w, h) => {
-  x.fillStyle = '#efd9a8'; x.fillRect(0, 0, w, h);
-  x.fillStyle = '#c53a2b'; x.fillRect(14, 14, w - 28, 92);
-  x.fillStyle = '#f1e2c0'; x.textAlign = 'center'; x.textBaseline = 'middle';
-  fitFont(x, 'EXTRA!', 210, 64, 20); x.fillText('EXTRA!', w/2, 62);
-  x.fillStyle = '#1f1610';
-  fitFont(x, 'HOT OFF', 210, 40, 16); x.fillText('HOT OFF', w/2, 150);
-  fitFont(x, 'THE VINE', 210, 40, 16); x.fillText('THE VINE', w/2, 196);
-  x.font = '22px "Special Elite", monospace'; x.fillText('Daily from 06:00', w/2, 262);
-  x.fillText('Est. 2026', w/2, 296);
-  x.strokeStyle = '#1f1610'; x.lineWidth = 6; x.strokeRect(5, 5, w - 10, h - 10);
+// the review table, with a seat kept for the human editor
+const table = new THREE.Group(); table.position.set(0.55, TOP_CORE, 0.55); world.add(table);
+ink(mk(cyl(0.8, 0.8, 0.07, 32), wood, 0, 0.74, 0, table), 0.015);
+ink(mk(cyl(0.08, 0.12, 0.72, 10), woodDark, 0, 0.36, 0, table), 0.01);
+[['#7bbf5a', -0.35], ['#e2a634', 0], ['#c53a2b', 0.35]].forEach(([col, dx], i) => {
+  const card = mk(box(0.26, 0.015, 0.34), toon(col), dx, 0.79, 0.15 - Math.abs(dx) * 0.4, table); card.rotation.y = dx * 0.6; ink(card, 0.006);
 });
-mk(new THREE.PlaneGeometry(0.9, 1.26), toon('#ffffff', {map:posterTex}), 0.0, 1.95, Z0 + 0.015, world, {noShadow:true});
+mk(box(0.4, 0.03, 0.3), toon('#fbf6ea'), -0.15, 0.79, -0.35, table).rotation.y = 0.3;
+const stamp = new THREE.Group(); stamp.position.set(0.35, 0.78, -0.3); table.add(stamp);
+ink(mk(cyl(0.09, 0.09, 0.05, 14), toon('#c53a2b'), 0, 0.03, 0, stamp), 0.006);
+ink(mk(cyl(0.025, 0.025, 0.14, 8), woodDark, 0, 0.12, 0, stamp), 0.006);
+ink(mk(sph(0.055, 10, 8), woodDark, 0, 0.21, 0, stamp), 0.006);
+const seat = new THREE.Group(); seat.position.set(1.55, TOP_CORE, -0.45); seat.rotation.y = -2.0; world.add(seat);
+ink(mk(box(0.6, 0.1, 0.55), toon('#2f6b55'), 0, 0.48, 0, seat), 0.012);
+ink(mk(box(0.6, 0.6, 0.1), toon('#2f6b55'), 0, 0.82, -0.25, seat), 0.012);
+[[-1, -1], [1, -1], [-1, 1], [1, 1]].forEach(s => mk(box(0.05, 0.45, 0.05), woodDark, s[0] * 0.25, 0.22, s[1] * 0.22, seat));
+const yours = plate('YOUR SEAT', 0.7, 0.18, '#f1e2c0', '#1f1610', '#1f1610'); yours.position.set(0, 0.86, -0.19); seat.add(yours);
 
-// newsdesk sign over the shared crew
-const nd = plate('THE NEWSDESK · SHARED CREW', 3.2, 0.36, '#c53a2b', '#f1e2c0', '#1f1610');
-nd.position.set(-2.1, 2.92, Z0 + 0.05); world.add(nd);
-
-// whiteboard in the Jungle Newsroom
-const ideasTex = canvasTex(384, 256, (x, w, h) => {
-  x.fillStyle = '#fbfaf5'; x.fillRect(0, 0, w, h);
-  x.fillStyle = '#1f1610'; x.textAlign = 'left';
-  fitFont(x, 'BIG IDEAS', 300, 38, 18); x.fillText('BIG IDEAS', 22, 52);
-  x.strokeStyle = '#2f6b9c'; x.lineWidth = 4;
-  [96, 140, 184].forEach((y, i) => { x.beginPath(); x.moveTo(30, y); x.lineTo(30 + [250, 200, 280][i], y + (i - 1) * 3); x.stroke(); });
-  x.strokeStyle = '#c53a2b'; x.lineWidth = 5; x.beginPath(); x.arc(300, 150, 34, 0, 7); x.stroke();
-  x.strokeStyle = '#7a5230'; x.lineWidth = 12; x.strokeRect(6, 6, w - 12, h - 12);
-});
-const ideas = mk(new THREE.PlaneGeometry(1.6, 1.07), toon('#ffffff', {map:ideasTex}), X0 + 0.015, 1.85, 0.6, world, {noShadow:true});
-ideas.rotation.y = Math.PI / 2;
-
-// clock
+// clock on a post behind the Jungle team
 const clockTex = canvasTex(256, 256, (x, w) => {
   x.fillStyle = '#f6ead0'; x.beginPath(); x.arc(w/2, w/2, 124, 0, 7); x.fill();
   x.strokeStyle = '#1f1610'; x.lineWidth = 10; x.stroke();
@@ -682,75 +710,24 @@ const clockTex = canvasTex(256, 256, (x, w) => {
     x.beginPath(); x.moveTo(w/2 + Math.sin(a) * 96, w/2 - Math.cos(a) * 96); x.lineTo(w/2 + Math.sin(a) * 112, w/2 - Math.cos(a) * 112); x.stroke();
   }
 });
-const clock = new THREE.Group(); clock.position.set(6.6, 2.4, Z0 + 0.04); world.add(clock);
-const clockFace = mk(cyl(0.34, 0.34, 0.06, 32), [toon('#7a5230'), toon('#ffffff', {map:clockTex}), toon('#7a5230')], 0, 0, 0.03, clock);
+const clockPost = polar(5.9, Math.PI * 1.12);
+ink(mk(cyl(0.06, 0.08, 2.4, 10), frameM, clockPost[0], TOP_RING + 1.2, clockPost[1], world), 0.01);
+const clock = new THREE.Group(); clock.position.set(clockPost[0], TOP_RING + 2.55, clockPost[1]); clock.rotation.y = FACE; world.add(clock);
+const clockFace = mk(cyl(0.34, 0.34, 0.06, 32), [toon('#7a5230'), toon('#ffffff', {map:clockTex}), toon('#7a5230')], 0, 0, 0, clock);
 clockFace.rotation.x = Math.PI / 2;
 ink(clockFace, 0.015);
 function hand(len, wid){
-  const p = new THREE.Group(); p.position.z = 0.075; clock.add(p);
+  const p = new THREE.Group(); p.position.z = 0.045; clock.add(p);
   mk(box(wid, len, 0.015), basic('#1f1610'), 0, len / 2 - 0.03, 0, p, {noShadow:true});
   return p;
 }
 const hourHand = hand(0.19, 0.035), minHand = hand(0.27, 0.025);
 
-// a sofa and a coffee table for the Jungle Newsroom
-function sofa(x, z, rot, col){
-  const g = new THREE.Group(); g.position.set(x, 0.15, z); g.rotation.y = rot; world.add(g);
-  const m = toon(col);
-  ink(mk(box(1.6, 0.36, 0.75), m, 0, 0.26, 0, g), 0.015);
-  ink(mk(box(1.6, 0.5, 0.2), m, 0, 0.55, -0.3, g), 0.015);
-  [-1, 1].forEach(s => ink(mk(box(0.18, 0.5, 0.75), m, s * 0.8, 0.35, 0, g), 0.015));
-  [-1, 1].forEach(s => ink(mk(box(0.66, 0.1, 0.5), toon('#f1e2c0'), s * 0.36, 0.48, 0.08, g), 0.01));
-}
-sofa(-7.2, 3.4, Math.PI / 2, '#c53a2b');
-ink(mk(cyl(0.38, 0.38, 0.06, 24), wood, -6.1, 0.55, 3.4, world), 0.012);
-mk(cyl(0.05, 0.05, 0.4, 8), woodDark, -6.1, 0.35, 3.4, world);
+// outside view used by the season themes (kept for the sky colours)
+const outsideCanvas = document.createElement('canvas'); outsideCanvas.width = 4; outsideCanvas.height = 4;
+function drawOutside(){}
 
-// vines along the tops of the outer walls
-const vineMat = toon('#4d7a2f');
-const VINE_CURVES = [];
-function swag(a, b, sag){
-  const mid = a.clone().add(b).multiplyScalar(0.5); mid.y -= sag * 2;
-  return new THREE.QuadraticBezierCurve3(a, mid, b);
-}
-for (let i = 0; i < 5; i++) {
-  const x0 = X0 + i * 3.2, x1 = x0 + 3.2;
-  VINE_CURVES.push(swag(new THREE.Vector3(x0, 3.22, Z0 + 0.1), new THREE.Vector3(x1, 3.22, Z0 + 0.1), 0.3 + (i % 2) * 0.12));
-}
-for (let i = 0; i < 3; i++) {
-  const z0 = Z0 + i * 4, z1 = z0 + 4;
-  VINE_CURVES.push(swag(new THREE.Vector3(X0 + 0.1, 3.22, z0), new THREE.Vector3(X0 + 0.1, 3.22, z1), 0.3 + (i % 2) * 0.14));
-}
-const DROPS = [[-4.3, 'b', 1.0], [1.9, 'b', 0.8], [5.4, 'b', 1.1], [-1.6, 'l', 1.2], [5.0, 'l', 0.9]];
-DROPS.forEach(d => {
-  const back = d[1] === 'b';
-  const p = (x, y, z) => back ? new THREE.Vector3(d[0] + x, y, Z0 + 0.1 + z) : new THREE.Vector3(X0 + 0.1 + z, y, d[0] + x);
-  VINE_CURVES.push(new THREE.CatmullRomCurve3([p(0, 3.25, 0), p(0.08, 3.25 - d[2] * 0.4, 0.05), p(-0.06, 3.25 - d[2] * 0.8, 0.08), p(0.04, 3.25 - d[2], 0.1)]));
-});
-const leafGeo = sph(0.075, 8, 6);
-const vineLeaves = new THREE.InstancedMesh(leafGeo, toon('#5f9a3a'), 700);
-FOLIAGE_B.push(vineLeaves.material);
-let leafN = 0;
-const dummy = new THREE.Object3D();
-VINE_CURVES.forEach((c, ci) => {
-  const tube = space(mk(new THREE.TubeGeometry(c, 40, 0.026, 6, false), vineMat, 0, 0, 0, world));
-  ink(tube, 0.01);
-  const L = c.getLength(), n = Math.floor(L / 0.17);
-  for (let i = 0; i <= n && leafN < 700; i++) {
-    const p = c.getPointAt(i / n);
-    dummy.position.set(p.x + Math.sin(i * 2.1 + ci) * 0.05, p.y - 0.03, p.z + Math.cos(i * 1.7) * 0.05);
-    dummy.rotation.set(i * 0.7, i * 1.3 + ci, i * 0.5);
-    dummy.scale.set(1.2, 0.45, 0.8);
-    dummy.updateMatrix();
-    vineLeaves.setMatrixAt(leafN++, dummy.matrix);
-  }
-});
-vineLeaves.count = leafN;
-vineLeaves.castShadow = true;
-space(vineLeaves);
-world.add(vineLeaves);
-
-// plants (monstera in pots) and a few indoor trees
+// plants and trees
 const leafShape = (() => {
   const s = new THREE.Shape();
   s.moveTo(0, 0);
@@ -762,8 +739,8 @@ const leafShape = (() => {
   return s;
 })();
 const monsteraGeo = new THREE.ShapeGeometry(leafShape, 10);
-function plant(x, z, s){
-  const g = new THREE.Group(); g.position.set(x, 0.15, z); g.scale.setScalar(s || 1); world.add(g);
+function plant(x, y, z, s){
+  const g = new THREE.Group(); g.position.set(x, y, z); g.scale.setScalar(s || 1); world.add(g);
   ink(mk(cyl(0.26, 0.2, 0.44, 16), toon('#c2683a'), 0, 0.22, 0, g), 0.018);
   mk(cyl(0.24, 0.24, 0.04, 16), toon('#4a3020'), 0, 0.43, 0, g);
   const lm = toon('#4f8a35', {side:THREE.DoubleSide}); FOLIAGE_A.push(lm);
@@ -774,18 +751,16 @@ function plant(x, z, s){
   }
   return g;
 }
-function indoorTree(x, z, s){
-  const g = new THREE.Group(); g.position.set(x, 0.15, z); g.scale.setScalar(s || 1); world.add(g);
+function indoorTree(x, y, z, s){
+  const g = new THREE.Group(); g.position.set(x, y, z); g.scale.setScalar(s || 1); world.add(g);
   ink(mk(cyl(0.34, 0.28, 0.5, 18), toon('#f1e2c0'), 0, 0.25, 0, g), 0.018);
   ink(mk(cyl(0.06, 0.09, 1.5, 8), toon('#7a5230'), 0, 1.15, 0, g), 0.012);
   const m1 = toon('#4f8a35'), m2 = toon('#6aa043'); FOLIAGE_A.push(m1); FOLIAGE_B.push(m2);
   [[0, 2.05, 0, 0.6, m1], [0.32, 1.8, 0.1, 0.42, m2], [-0.3, 1.85, -0.08, 0.4, m2], [0.05, 2.45, -0.05, 0.38, m2]].forEach(c => ink(mk(sph(c[3], 14, 10), c[4], c[0], c[1], c[2], g), 0.022));
   return g;
 }
-indoorTree(-7.3, -5.3, 1); indoorTree(7.3, -5.3, 0.95); indoorTree(0, 5.3, 0.9);
-plant(0, -1.0, 0.85); plant(0, 2.1, 0.85); plant(-7.3, -1.4, 0.8); plant(7.4, 5.4, 0.75);
-
-// outside trees
+[[Math.PI * 0.62, 5.5], [Math.PI * 1.38, 5.5], [-Math.PI * 0.14, 5.6]].forEach(([a, r]) => { const [x, z] = polar(r, a); indoorTree(x, TOP_RING, z, 0.85); });
+Object.keys(ISLES).forEach(id => { const [x, z] = ISLES[id]; plant(x + 0.6, TOP_ISLE, z - 1.6, 0.8); });
 function tree(x, z, h, kind, s){
   const g = new THREE.Group(); g.position.set(x, 0, z); g.scale.setScalar(s || 1); world.add(g);
   ink(mk(cyl(0.16, 0.26, h, 10), toon('#7a5230'), 0, h / 2, 0, g), 0.02);
@@ -804,15 +779,20 @@ function tree(x, z, h, kind, s){
     });
   }
 }
-[[-9.8, -7.8, 4.2, 'round', 1.1], [-6.4, -8.0, 3.6, 'palm', 1], [-3.0, -7.7, 4.6, 'round', 1.05], [0.6, -8.0, 3.9, 'palm', 1.1], [3.8, -7.7, 4.4, 'round', 1], [7.4, -7.9, 3.5, 'palm', 1],
- [-9.8, -3.8, 3.8, 'palm', 1], [-9.7, 0.6, 4.4, 'round', 1], [-9.8, 4.8, 3.6, 'palm', 1.05]].forEach(t => tree(t[0], t[1], t[2], t[3], t[4]));
+// trees fill the far side of the rim; the side facing the camera only gets low bushes
+for (let i = 0; i < 13; i++) {
+  const a = Math.PI * 0.62 + i * (Math.PI * 1.25 / 12);
+  const [x, z] = polar(18.2 + (i % 2) * 0.6, a);
+  tree(x, z, 3.8 + (i % 3) * 0.5, i % 2 ? 'palm' : 'round', 1.15);
+}
 const bushM = toon('#4f8a35'); FOLIAGE_A.push(bushM);
-[[-9.4, 6.9], [-4.6, 7.1], [0.4, 7.0], [5.0, 7.1], [9.0, 6.6], [9.2, 2.4], [9.1, -2.0], [9.3, -6.4]].forEach((b, i) => {
-  ink(mk(sph(0.45 + (i % 2) * 0.12, 14, 10), bushM, b[0], 0.18, b[1], world), 0.025).scale.set(1.2, 0.7, 1);
-});
+for (let i = 0; i < 8; i++) {
+  const [x, z] = polar(18.0, -Math.PI * 0.12 + i * (Math.PI * 0.74 / 7));
+  ink(mk(sph(0.55 + (i % 2) * 0.15, 14, 10), bushM, x, 0.1, z, world), 0.025).scale.set(1.2, 0.7, 1);
+}
 
 // sky orb
-const orb = mk(new THREE.CircleGeometry(1.8, 40), basic('#f4ecd0'), -16, 12, -22, scene, {noShadow:true});
+const orb = mk(new THREE.CircleGeometry(2.4, 40), basic('#f4ecd0'), -24, 16, -30, scene, {noShadow:true});
 
 /* ----------------------------------------------------------- characters */
 
@@ -978,22 +958,16 @@ function screenTex(accent){
   });
 }
 
-const STATIONS = {
-  scout:  {pos:[-5.4, 0, -4.4], rot:0.6},
-  trend:  {pos:[-2.1, 0, -4.55], rot:0.35},
-  facts:  {pos:[1.9, 0, -4.4], rot:0.45},
-  critic: {pos:[5.4, 0, -4.0], rot:0.6},
-  chief:  {pos:[-4.4, 0, 0.9], rot:0.45, scale:1.28},
-  disney: {pos:[2.6, 0, 0.3], rot:0.45},
-  family: {pos:[6.0, 0, 0.3], rot:0.45},
-  muti:   {pos:[2.6, 0, 3.4], rot:0.45},
-  dfs:    {pos:[6.0, 0, 3.4], rot:0.45}
-};
+const STATIONS = {};
+Object.keys(CREW_ANGLE).forEach(id => { const [x, z] = polar(4.7, CREW_ANGLE[id]); STATIONS[id] = {pos:[x, 0, z], y:TOP_RING, rot:FACE}; });
+STATIONS.chief.scale = 1.28;
+STATIONS.critic = {pos:[-0.55, 0, -0.55], y:TOP_CORE, rot:FACE};
+Object.keys(CLIENT_ANGLE).forEach(id => { const [x, z] = polar(CLIENT_R, CLIENT_ANGLE[id]); STATIONS[id] = {pos:[x + 0.35, 0, z - 0.35], y:TOP_ISLE, rot:FACE}; });
 
 function build(){
   for (const c of CREW) {
     const st = STATIONS[c.id];
-    const g = new THREE.Group(); g.position.set(st.pos[0], 0.15, st.pos[2]); g.rotation.y = st.rot; world.add(g);
+    const g = new THREE.Group(); g.position.set(st.pos[0], st.y, st.pos[2]); g.rotation.y = st.rot; world.add(g);
     const a = makeCharacter(c);
     a.root.scale.setScalar(st.scale || 1);
     let lift = 0;
@@ -1027,9 +1001,11 @@ function build(){
           x.fillStyle = '#1f1610'; x.font = '22px "Special Elite", monospace'; x.fillText(cc[0], cx, 250);
         });
       });
-      const board = mk(new THREE.PlaneGeometry(2.2, 1.3), toon('#ffffff', {map:boardTex}), 0, 0, 0, world, {noShadow:true});
-      board.position.set(-2.1, 1.85, Z0 + 0.045);
-      ink(mk(box(2.32, 1.42, 0.05), woodDark, -2.1, 1.85, Z0 + 0.01, world), 0.012);
+      // freestanding board behind Cam
+      const bg = new THREE.Group(); bg.position.set(0, 0, -0.95); g.add(bg);
+      ink(mk(box(1.9, 1.15, 0.05), woodDark, 0, 1.55, 0, bg), 0.012);
+      mk(new THREE.PlaneGeometry(1.8, 1.06), toon('#ffffff', {map:boardTex}), 0, 1.55, 0.03, bg, {noShadow:true});
+      [-0.8, 0.8].forEach(px => ink(mk(box(0.06, 1.0, 0.06), woodDark, px, 0.5, 0, bg), 0.008));
     } else if (c.id === 'critic') {
       const stool = new THREE.Group(); g.add(stool);
       ink(mk(cyl(0.36, 0.36, 0.08, 20), toon('#c53a2b'), 0, 0.92, 0, stool), 0.015);
@@ -1053,6 +1029,19 @@ function build(){
         });
       }
       if (c.id === 'chief') {
+        const ideasTex = canvasTex(384, 256, (x, w, h) => {
+          x.fillStyle = '#fbfaf5'; x.fillRect(0, 0, w, h);
+          x.fillStyle = '#1f1610'; x.textAlign = 'left';
+          fitFont(x, 'BIG IDEAS', 300, 38, 18); x.fillText('BIG IDEAS', 22, 52);
+          x.strokeStyle = '#2f6b9c'; x.lineWidth = 4;
+          [96, 140, 184].forEach((y, i) => { x.beginPath(); x.moveTo(30, y); x.lineTo(30 + [250, 200, 280][i], y + (i - 1) * 3); x.stroke(); });
+          x.strokeStyle = '#c53a2b'; x.lineWidth = 5; x.beginPath(); x.arc(300, 150, 34, 0, 7); x.stroke();
+          x.strokeStyle = '#7a5230'; x.lineWidth = 12; x.strokeRect(6, 6, w - 12, h - 12);
+        });
+        const wb = new THREE.Group(); wb.position.set(-1.35, 0, -0.5); wb.rotation.y = 0.35; g.add(wb);
+        mk(new THREE.PlaneGeometry(1.2, 0.8), toon('#ffffff', {map:ideasTex}), 0, 1.45, 0.03, wb, {noShadow:true});
+        ink(mk(box(1.26, 0.86, 0.04), woodDark, 0, 1.45, 0, wb), 0.01);
+        [-0.55, 0.55].forEach(px => ink(mk(box(0.05, 1.05, 0.05), woodDark, px, 0.52, 0, wb), 0.008));
         const pk = new THREE.Group(); pk.position.set(0.75, 0.8, 0.05); pk.scale.setScalar(0.75); d.add(pk); prop('halloween', pk);
         pumpkin(pk);
       }
@@ -1081,10 +1070,10 @@ function pumpkin(parent){
 }
 function buildSeasonal(){
   // Halloween: pumpkins, cobwebs, bats, a warm glow
-  [[-1.4, -1.6, 1], [7.3, 1.9, 1.1], [3.6, -2.3, 0.8]].forEach(p => {
-    const g = new THREE.Group(); g.position.set(p[0], 0.15, p[1]); g.scale.setScalar(p[2]); g.rotation.y = 0.6; world.add(g); prop('halloween', g); pumpkin(g);
+  [[1.9, TOP_CORE, -1.0, 0.9], [ISLES.family[0] + 1.3, TOP_ISLE, ISLES.family[1] + 0.9, 1.1], [ISLES.dfs[0] + 1.4, TOP_ISLE, ISLES.dfs[1] + 0.6, 0.9]].forEach(p => {
+    const g = new THREE.Group(); g.position.set(p[0], p[1], p[2]); g.scale.setScalar(p[3]); g.rotation.y = 0.6; world.add(g); prop('halloween', g); pumpkin(g);
   });
-  const glow = new THREE.PointLight(0xff9a3c, 0.9, 4.5, 2); glow.position.set(7.3, 0.6, 1.9); world.add(glow); prop('halloween', glow);
+  const glow = new THREE.PointLight(0xff9a3c, 0.9, 4.5, 2); glow.position.set(ISLES.family[0] + 1.3, 0.9, ISLES.family[1] + 0.9); world.add(glow); prop('halloween', glow);
   function web(){
     const pts = [], n = 6, R = 0.85;
     for (let i = 0; i < n; i++) { const a = -Math.PI / 2 + i / (n - 1) * Math.PI / 2; pts.push(0, 0, 0, Math.cos(a) * R, Math.sin(a) * R, 0); }
@@ -1099,8 +1088,8 @@ function buildSeasonal(){
     const geo = new THREE.BufferGeometry(); geo.setAttribute('position', new THREE.Float32BufferAttribute(pts, 3));
     return new THREE.LineSegments(geo, new THREE.LineBasicMaterial({color:0xf3ece0, transparent:true, opacity:0.85}));
   }
-  const w1 = web(); w1.position.set(X0 + 0.02, 3.26, Z0 + 0.02); world.add(w1); prop('halloween', w1);
-  const w2 = web(); w2.position.set(X0 + 0.02, 3.26, Z1 + 0.08); w2.rotation.y = Math.PI / 2; w2.scale.x = -1; world.add(w2); prop('halloween', w2);
+  const w1 = web(); w1.position.set(POSTS[5].x, TOP_RING + 2.1, POSTS[5].z); w1.rotation.y = FACE; world.add(w1); prop('halloween', w1);
+  const w2 = web(); w2.position.set(POSTS[2].x, TOP_RING + 2.1, POSTS[2].z); w2.rotation.y = FACE; w2.scale.x = -1; world.add(w2); prop('halloween', w2);
   const wingShape = new THREE.Shape();
   wingShape.moveTo(0, 0); wingShape.lineTo(0.32, 0.12); wingShape.quadraticCurveTo(0.28, 0.0, 0.33, -0.07); wingShape.quadraticCurveTo(0.22, -0.02, 0.2, -0.1); wingShape.quadraticCurveTo(0.12, -0.03, 0.05, -0.08); wingShape.closePath();
   const wingGeo = new THREE.ShapeGeometry(wingShape);
@@ -1112,7 +1101,7 @@ function buildSeasonal(){
     const L = new THREE.Group(), R = new THREE.Group(); g.add(L, R);
     mk(wingGeo, batM, 0, 0, 0, R, {noShadow:true});
     const lw = mk(wingGeo, batM, 0, 0, 0, L, {noShadow:true}); lw.scale.x = -1;
-    BATS.push({g, L, R, ph:i * 1.6, r:(3 + i * 0.7) * SPREAD, cy:4.8 + (i % 2) * 1.2, cx:(-1.5 + i) * SPREAD, cz:-8.6 * SPREAD});
+    BATS.push({g, L, R, ph:i * 1.6, r:(3 + i * 0.7) * FX_SCALE, cy:4.8 + (i % 2) * 1.2, cx:(-1.5 + i) * FX_SCALE, cz:-8.6 * FX_SCALE});
   }
 
   // Fireworks
@@ -1138,13 +1127,13 @@ function buildSeasonal(){
 
   // Festive: fairy lights along the vines, a decorated palm
   const bulbs = [];
-  VINE_CURVES.slice(0, 8).forEach(c => { const n = Math.floor(c.getLength() / 0.3); for (let i = 0; i <= n; i++) bulbs.push(c.getPointAt(i / n)); });
+  VINE_CURVES.forEach(c => { const n = Math.floor(c.getLength() / 0.3); for (let i = 0; i <= n; i++) bulbs.push(c.getPointAt(i / n)); });
   const lightsM = new THREE.InstancedMesh(sph(0.05, 8, 6), new THREE.MeshBasicMaterial(), bulbs.length);
   const lcols = ['#ffcf5a', '#ff6b5a', '#7fd0ff', '#9cff8a', '#ff9ad5'].map(c => new THREE.Color(c));
   bulbs.forEach((p, i) => { dummy.position.set(p.x, p.y - 0.05, p.z + 0.02); dummy.rotation.set(0, 0, 0); dummy.scale.setScalar(1); dummy.updateMatrix(); lightsM.setMatrixAt(i, dummy.matrix); lightsM.setColorAt(i, lcols[i % 5]); });
-  world.add(lightsM); prop('festive', lightsM); space(lightsM);
+  world.add(lightsM); prop('festive', lightsM);
   LIGHTS.mesh = lightsM; LIGHTS.base = bulbs.map((_, i) => lcols[i % 5]);
-  const palm = new THREE.Group(); palm.position.set(-1.6, 0.15, 4.6); world.add(palm); prop('festive', palm);
+  const palm = new THREE.Group(); { const [px, pz] = polar(5.5, Math.PI * 0.38); palm.position.set(px, TOP_RING, pz); }; world.add(palm); prop('festive', palm);
   ink(mk(cyl(0.3, 0.24, 0.32, 14), toon('#c53a2b'), 0, 0.16, 0, palm), 0.015);
   for (let i = 0; i < 5; i++) ink(mk(cyl(0.09, 0.11, 0.3, 10), toon(i % 2 ? '#8a5f34' : '#7a5230'), Math.sin(i) * 0.02, 0.42 + i * 0.27, 0, palm), 0.01);
   const pf = toon('#3f7a3a');
@@ -1158,7 +1147,7 @@ function buildSeasonal(){
   const st = mk(new THREE.ExtrudeGeometry(star, {depth:0.04, bevelEnabled:false}), toon('#ffd35a'), 0, 2.0, 0, palm); st.rotation.y = 0.7; ink(st, 0.01);
 
   // Summer: a beach ball
-  const ball = new THREE.Group(); ball.position.set(-1.4, 0.38, -1.7); world.add(ball); prop('summer', ball);
+  const ball = new THREE.Group(); { const [bx, bz] = polar(3.4, Math.PI * 1.75); ball.position.set(bx, TOP_RING + 0.23, bz); }; world.add(ball); prop('summer', ball);
   ['#c53a2b', '#f1e2c0', '#2f7a9c', '#f1e2c0', '#e2a634', '#f1e2c0'].forEach((c, i) => {
     mk(new THREE.SphereGeometry(0.23, 12, 12, i / 6 * Math.PI * 2, Math.PI / 3), toon(c), 0, 0, 0, ball);
   });
@@ -1183,7 +1172,7 @@ function setFaller(kind){
   const mesh = new THREE.InstancedMesh(f.geo(), new THREE.MeshBasicMaterial({side:THREE.DoubleSide}), f.n);
   const parts = [];
   for (let i = 0; i < f.n; i++) {
-    parts.push({x:(-10.5 + Math.random() * 20) * SPREAD, y:Math.random() * 10, z:(-8.8 + Math.random() * 16) * SPREAD, s:0.7 + Math.random() * 0.6, ph:Math.random() * 6, r:Math.random() * 6});
+    parts.push({x:(-10.5 + Math.random() * 20) * FX_SCALE, y:Math.random() * 10, z:(-8.8 + Math.random() * 16) * FX_SCALE, s:0.7 + Math.random() * 0.6, ph:Math.random() * 6, r:Math.random() * 6});
     mesh.setColorAt(i, new THREE.Color(f.cols[i % f.cols.length]));
   }
   mesh.frustumCulled = false;
@@ -1263,14 +1252,16 @@ function rowHtml(c){
     '<span class="chip ' + s + '">' + STATUS_TXT[s] + '</span></button></li>';
 }
 function renderList(){
-  const shared = CREW.filter(c => c.group === 'shared'), desks = CREW.filter(c => c.group === 'desk');
+  const core = CREW.filter(c => c.id === 'critic'), team = CREW.filter(c => c.group === 'shared' && c.id !== 'critic'), desks = CREW.filter(c => c.group === 'desk');
   panelBody.innerHTML =
-    '<p class="eyebrow">On the floor</p>' +
-    '<h2>Shared crew</h2><p class="hint">Runs once each morning. Every desk builds on its work.</p>' +
-    '<ul class="roster">' + shared.map(rowHtml).join('') + '</ul>' +
-    '<h2>Client desks</h2><p class="hint">One light step per client, guided by that client’s brief pack.</p>' +
+    '<p class="eyebrow">From the centre out</p>' +
+    '<h2>The review desk</h2><p class="hint">At the core. Every piece is challenged here last, then waits at your seat for approve, change or drop.</p>' +
+    '<ul class="roster">' + core.map(rowHtml).join('') + '</ul>' +
+    '<h2>The Jungle team</h2><p class="hint">The ring around the core. Runs once each morning and feeds every desk.</p>' +
+    '<ul class="roster">' + team.map(rowHtml).join('') + '</ul>' +
+    '<h2>Client islands</h2><p class="hint">Branch out from the Jungle team. One light step per client, guided by its brief pack.</p>' +
     '<ul class="roster">' + desks.map(rowHtml).join('') + '</ul>' +
-    '<p class="hint" style="margin-top:12px">A new client adds one desk monkey, not a new crew.</p>';
+    '<p class="hint" style="margin-top:12px">A new client adds one island, not a new crew.</p>';
   panelBody.querySelectorAll('.row').forEach(b => b.addEventListener('click', () => select(b.dataset.id)));
 }
 function tagHtml(t){ return '<span class="' + t[1] + '">' + t[0] + '</span>'; }
@@ -1278,7 +1269,7 @@ function renderDetail(id){
   const c = byId[id], s = ACTORS[id].state;
   let h = '<button class="back" type="button" id="backBtn">← All crew</button>' +
     (c.group === 'desk' ? '<div class="clientbadge" style="--c:' + c.color + '">' + (c.logo ? '<img src="' + c.logo + '" alt="' + c.client + '">' : c.client) + '</div>' : '') +
-    '<p class="eyebrow" style="margin-top:8px">' + (c.group === 'desk' ? 'Client desk' : 'Shared crew') + '</p>' +
+    '<p class="eyebrow" style="margin-top:8px">' + (c.group === 'desk' ? 'Client island' : (c.id === 'critic' ? 'Review desk' : 'Jungle team')) + '</p>' +
     '<h2 class="name">' + c.name + '</h2>' +
     '<p class="role">' + c.role + ' <span class="chip ' + s + '">' + STATUS_TXT[s] + '</span></p>' +
     '<p class="job">' + c.job + '</p>' +
@@ -1345,10 +1336,12 @@ async function runMorning(){
       if (c.blocked) { setState(id, 'blocked'); say(id, 'No brief pack yet'); }
       else { setState(id, 'working'); say(id, c.step); }
     });
-    ticker.textContent = byId[step.ids[0]].name + ': ' + byId[step.ids[0]].step;
+    pulseOn = step.ids.includes('disney');
+    ticker.textContent = pulseOn ? 'The Jungle team hands the checked shortlist out to every client desk' : byId[step.ids[0]].name + ': ' + byId[step.ids[0]].step;
     refreshTags(); renderPanel();
     await wait(step.t);
     step.ids.forEach(id => { if (!byId[id].blocked) { setState(id, 'done'); say(id, byId[id].doneTxt + ' ✓'); } });
+    pulseOn = false;
     refreshTags(); renderPanel();
     await wait(500);
   }
@@ -1398,7 +1391,7 @@ function resize(){
   // keep the floor centred in the space left of the crew card on wide screens
   if (w > 760) camera.setViewOffset(w, h, 180, 0, w, h); else camera.clearViewOffset();
   camera.updateProjectionMatrix();
-  homeDist = camera.aspect < 0.8 ? 86 : (camera.aspect < 1.2 ? 68 : 52);
+  homeDist = camera.aspect < 0.8 ? 128 : (camera.aspect < 1.2 ? 76 : 54);
   if (!selected) wantDist = homeDist;
 }
 window.addEventListener('resize', resize);
@@ -1448,11 +1441,19 @@ function tick(){
 
   orb.lookAt(camera.position);
 
+  // glowing dots run out along the boardwalks while the client desks work
+  PULSES.forEach(p => {
+    p.mesh.visible = pulseOn;
+    if (!pulseOn) return;
+    const k = (t * 0.45 + p.ph) % 1, r = p.r0 + (p.r1 - p.r0) * k;
+    p.mesh.position.set(Math.cos(p.a) * r, 0.62 + Math.sin(k * Math.PI) * 0.15, Math.sin(p.a) * r);
+  });
+
   if (faller) {
     const {mesh, parts, f} = faller;
     parts.forEach((p, i) => {
       p.y -= f.speed * p.s * dt;
-      if (p.y < 0.1) { p.y = 9 + Math.random(); p.x = (-10.5 + Math.random() * 20) * SPREAD; p.z = (-8.8 + Math.random() * 16) * SPREAD; }
+      if (p.y < 0.1) { p.y = 9 + Math.random(); p.x = (-10.5 + Math.random() * 20) * FX_SCALE; p.z = (-8.8 + Math.random() * 16) * FX_SCALE; }
       dummy.position.set(p.x + Math.sin(t * 0.9 + p.ph) * 0.35, p.y, p.z + Math.cos(t * 0.7 + p.ph) * 0.2);
       if (f.spin) dummy.rotation.set(t * 1.3 + p.r, t * 0.9 + p.ph, p.r); else dummy.rotation.set(0, 0, 0);
       dummy.scale.setScalar(p.s);
@@ -1478,7 +1479,7 @@ function tick(){
       b.t += dt;
       if (b.t > 2.4) {
         b.t = 0;
-        b.c.set((-6 + Math.random() * 11) * SPREAD, 6.5 + Math.random() * 2.5, (-9 + Math.random() * 3) * SPREAD);
+        b.c.set((-6 + Math.random() * 11) * FX_SCALE, 6.5 + Math.random() * 2.5, (-9 + Math.random() * 3) * FX_SCALE);
         b.color = FW.palette[Math.floor(Math.random() * FW.palette.length)];
       }
       const life = b.t < 0 ? 0 : Math.max(0, 1 - b.t / 2.4);
@@ -1521,9 +1522,6 @@ function tick(){
 function start(){
   build();
   buildSeasonal();
-  // stretch the floor plan, then shrink each object back to its own size
-  world.scale.set(SPREAD, 1, SPREAD);
-  world.children.forEach(o => { if (!o.userData.space) o.scale.set(o.scale.x / SPREAD, o.scale.y, o.scale.z / SPREAD); });
   buildReel();
   buildTags();
   applyTheme(TODAY_THEME);
@@ -1531,7 +1529,7 @@ function start(){
   ticker.textContent = RESTING_TICKER;
   if (matchMedia('(max-width:760px)').matches) $('#panel').classList.add('collapsed');
   resize();
-  camera.position.copy(HOME_TARGET).add(new THREE.Vector3(1, 0.82, 1).setLength(homeDist));
+  camera.position.copy(HOME_TARGET).add(new THREE.Vector3(1, 1.3, 1).setLength(homeDist));
   tick();
 }
 const fontsReady = document.fonts && document.fonts.load ? Promise.all([document.fonts.load('40px Ultra'), document.fonts.load('20px "Special Elite"')]) : Promise.resolve();
