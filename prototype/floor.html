@@ -320,7 +320,7 @@ controls.enableDamping = true;
 controls.dampingFactor = 0.08;
 controls.enablePan = false;
 controls.minDistance = 8;
-controls.maxDistance = 72;
+controls.maxDistance = 110;
 controls.minPolarAngle = 0.55;
 controls.maxPolarAngle = 1.28;
 controls.minAzimuthAngle = 0.0;
@@ -331,10 +331,10 @@ controls.target.copy(HOME_TARGET);
 const hemi = new THREE.HemisphereLight(0xffffff, 0x444444, 0.8);
 scene.add(hemi);
 const sun = new THREE.DirectionalLight(0xffffff, 1);
-sun.position.set(8, 14, 7);
+sun.position.set(12, 20, 10);
 sun.castShadow = true;
-sun.shadow.mapSize.set(2048, 2048);
-Object.assign(sun.shadow.camera, {left:-15, right:15, top:15, bottom:-15, near:1, far:46});
+sun.shadow.mapSize.set(3072, 3072);
+Object.assign(sun.shadow.camera, {left:-22, right:22, top:22, bottom:-22, near:1, far:60});
 sun.shadow.bias = -0.0008;
 sun.shadow.camera.updateProjectionMatrix();
 scene.add(sun);
@@ -481,6 +481,10 @@ function prop(key, obj){ PROPS[key].push(obj); obj.visible = false; return obj; 
 // the front and right stay open so it reads like a cutaway.
 // Back strip: the Newsdesk (shared crew). Front left: the Jungle Newsroom. Front right: the Client Newsroom.
 const X0 = -8, X1 = 8, Z0 = -6, Z1 = 6;
+// The whole floor plan is laid out on this grid and then stretched by SPREAD in x and z,
+// while every object keeps its own size. Bigger SPREAD = more room between the crew.
+const SPREAD = 1.55;
+const space = o => { o.userData.space = true; return o; };
 const JUNGLE_LOGO = 'logos/jungle.png';
 
 // images (logos) load once and repaint any texture that uses them
@@ -497,8 +501,8 @@ function withImage(url, cb){
 
 // island
 const grassMat = toon('#86913d');
-const base = mk(box(20.4, 1.4, 16.4), toon('#6e4a2c'), -0.6, -0.78, -0.6, world); base.castShadow = false; ink(base, 0.04);
-const grass = mk(box(20.6, 0.24, 16.6), grassMat, -0.6, -0.12, -0.6, world);
+const base = space(mk(box(20.4, 1.4, 16.4), toon('#6e4a2c'), -0.6, -0.78, -0.6, world)); base.castShadow = false; ink(base, 0.04);
+const grass = space(mk(box(20.6, 0.24, 16.6), grassMat, -0.6, -0.12, -0.6, world));
 ink(grass, 0.03);
 
 // floor planks
@@ -518,8 +522,8 @@ const floorTex = canvasTex(512, 512, (x, w, h) => {
   }
 });
 floorTex.wrapS = floorTex.wrapT = THREE.RepeatWrapping;
-floorTex.repeat.set(4, 3);
-const floor = mk(box(16, 0.16, 12), toon('#ffffff', {map:floorTex}), 0, 0.07, 0, world);
+floorTex.repeat.set(4 * SPREAD, 3 * SPREAD);
+const floor = space(mk(box(16, 0.16, 12), toon('#ffffff', {map:floorTex}), 0, 0.07, 0, world));
 floor.castShadow = false;
 ink(floor, 0.025);
 
@@ -535,7 +539,7 @@ function zoneRug(x0, z0, x1, z1, fill, edge){
   });
   const m = mk(new THREE.PlaneGeometry(W, D), toon('#ffffff', {map:tex, transparent:true}), (x0 + x1) / 2, 0.156, (z0 + z1) / 2, world, {noShadow:true});
   m.rotation.x = -Math.PI / 2;
-  return m;
+  return space(m);
 }
 zoneRug(-7.7, -5.7, 7.7, -2.7, '#e9cf8f', '#c53a2b');
 zoneRug(-7.7, -1.9, -0.6, 5.7, '#a9c48a', '#3f6b2e');
@@ -552,15 +556,15 @@ const paperTex = () => canvasTex(256, 256, (x, w, h) => {
     x.restore();
   }
 });
-const bwTex = paperTex(); bwTex.wrapS = bwTex.wrapT = THREE.RepeatWrapping; bwTex.repeat.set(8, 1.6);
-const lwTex = paperTex(); lwTex.wrapS = lwTex.wrapT = THREE.RepeatWrapping; lwTex.repeat.set(6, 1.6);
-ink(mk(box(16.2, 3.3, 0.2), toon('#ffffff', {map:bwTex}), 0, 1.65, Z0 - 0.1, world), 0.03);
-ink(mk(box(0.2, 3.3, 12.2), toon('#ffffff', {map:lwTex}), X0 - 0.1, 1.65, 0, world), 0.03);
+const bwTex = paperTex(); bwTex.wrapS = bwTex.wrapT = THREE.RepeatWrapping; bwTex.repeat.set(8 * SPREAD, 1.6);
+const lwTex = paperTex(); lwTex.wrapS = lwTex.wrapT = THREE.RepeatWrapping; lwTex.repeat.set(6 * SPREAD, 1.6);
+space(ink(mk(box(16.2, 3.3, 0.2), toon('#ffffff', {map:bwTex}), 0, 1.65, Z0 - 0.1, world), 0.03));
+space(ink(mk(box(0.2, 3.3, 12.2), toon('#ffffff', {map:lwTex}), X0 - 0.1, 1.65, 0, world), 0.03));
 const woodDark = toon('#7a5230'), woodMid = toon('#94653a'), wood = toon('#a87443');
-ink(mk(box(15.9, 0.9, 0.05), woodDark, 0.05, 0.6, Z0 + 0.03, world), 0.015);
-ink(mk(box(0.05, 0.9, 11.9), woodDark, X0 + 0.03, 0.6, 0.05, world), 0.015);
-ink(mk(box(16.3, 0.12, 0.3), woodMid, 0, 3.32, Z0 - 0.1, world), 0.015);
-ink(mk(box(0.3, 0.12, 12.3), woodMid, X0 - 0.1, 3.32, 0, world), 0.015);
+space(ink(mk(box(15.9, 0.9, 0.05), woodDark, 0.05, 0.6, Z0 + 0.03, world), 0.015));
+space(ink(mk(box(0.05, 0.9, 11.9), woodDark, X0 + 0.03, 0.6, 0.05, world), 0.015));
+space(ink(mk(box(16.3, 0.12, 0.3), woodMid, 0, 3.32, Z0 - 0.1, world), 0.015));
+space(ink(mk(box(0.3, 0.12, 12.3), woodMid, X0 - 0.1, 3.32, 0, world), 0.015));
 
 // signs: cream panel with a logo (or a painted wordmark) and a coloured strap line
 function signTex(title, sub, bg, logoUrl){
@@ -600,8 +604,8 @@ function standSign(x, z, rotY, title, sub, bg, logo, scale){
   return g;
 }
 // zone headers, one for each half of the room
-standSign(-4.0, -1.5, 0.7, 'THE JUNGLE NEWSROOM', 'Strategy · Data & Insight', '#3f6b2e', null, 1.45);
-standSign(4.3, -1.5, 0.7, 'THE CLIENT NEWSROOM', 'Social & creative · UK first', '#7a5230', null, 1.45);
+standSign(-6.7, -0.9, 0.7, 'THE JUNGLE NEWSROOM', 'Strategy · Data & Insight', '#3f6b2e', null, 1.45);
+standSign(1.6, -0.9, 0.7, 'THE CLIENT NEWSROOM', 'Social & creative · UK first', '#7a5230', null, 1.45);
 
 // windows share one outside view
 const outsideCanvas = document.createElement('canvas'); outsideCanvas.width = 256; outsideCanvas.height = 256;
@@ -729,7 +733,7 @@ FOLIAGE_B.push(vineLeaves.material);
 let leafN = 0;
 const dummy = new THREE.Object3D();
 VINE_CURVES.forEach((c, ci) => {
-  const tube = mk(new THREE.TubeGeometry(c, 40, 0.026, 6, false), vineMat, 0, 0, 0, world);
+  const tube = space(mk(new THREE.TubeGeometry(c, 40, 0.026, 6, false), vineMat, 0, 0, 0, world));
   ink(tube, 0.01);
   const L = c.getLength(), n = Math.floor(L / 0.17);
   for (let i = 0; i <= n && leafN < 700; i++) {
@@ -743,6 +747,7 @@ VINE_CURVES.forEach((c, ci) => {
 });
 vineLeaves.count = leafN;
 vineLeaves.castShadow = true;
+space(vineLeaves);
 world.add(vineLeaves);
 
 // plants (monstera in pots) and a few indoor trees
@@ -1107,11 +1112,11 @@ function buildSeasonal(){
     const L = new THREE.Group(), R = new THREE.Group(); g.add(L, R);
     mk(wingGeo, batM, 0, 0, 0, R, {noShadow:true});
     const lw = mk(wingGeo, batM, 0, 0, 0, L, {noShadow:true}); lw.scale.x = -1;
-    BATS.push({g, L, R, ph:i * 1.6, r:3 + i * 0.7, cy:4.8 + (i % 2) * 1.2, cx:-1.5 + i, cz:-8.6});
+    BATS.push({g, L, R, ph:i * 1.6, r:(3 + i * 0.7) * SPREAD, cy:4.8 + (i % 2) * 1.2, cx:(-1.5 + i) * SPREAD, cz:-8.6 * SPREAD});
   }
 
   // Fireworks
-  const FW_N = 3, FW_P = 80;
+  const FW_N = 4, FW_P = 80;
   const pos = new Float32Array(FW_N * FW_P * 3), col = new Float32Array(FW_N * FW_P * 3);
   const fgeo = new THREE.BufferGeometry();
   fgeo.setAttribute('position', new THREE.BufferAttribute(pos, 3));
@@ -1137,7 +1142,7 @@ function buildSeasonal(){
   const lightsM = new THREE.InstancedMesh(sph(0.05, 8, 6), new THREE.MeshBasicMaterial(), bulbs.length);
   const lcols = ['#ffcf5a', '#ff6b5a', '#7fd0ff', '#9cff8a', '#ff9ad5'].map(c => new THREE.Color(c));
   bulbs.forEach((p, i) => { dummy.position.set(p.x, p.y - 0.05, p.z + 0.02); dummy.rotation.set(0, 0, 0); dummy.scale.setScalar(1); dummy.updateMatrix(); lightsM.setMatrixAt(i, dummy.matrix); lightsM.setColorAt(i, lcols[i % 5]); });
-  world.add(lightsM); prop('festive', lightsM);
+  world.add(lightsM); prop('festive', lightsM); space(lightsM);
   LIGHTS.mesh = lightsM; LIGHTS.base = bulbs.map((_, i) => lcols[i % 5]);
   const palm = new THREE.Group(); palm.position.set(-1.6, 0.15, 4.6); world.add(palm); prop('festive', palm);
   ink(mk(cyl(0.3, 0.24, 0.32, 14), toon('#c53a2b'), 0, 0.16, 0, palm), 0.015);
@@ -1178,7 +1183,7 @@ function setFaller(kind){
   const mesh = new THREE.InstancedMesh(f.geo(), new THREE.MeshBasicMaterial({side:THREE.DoubleSide}), f.n);
   const parts = [];
   for (let i = 0; i < f.n; i++) {
-    parts.push({x:-10.5 + Math.random() * 20, y:Math.random() * 10, z:-8.8 + Math.random() * 16, s:0.7 + Math.random() * 0.6, ph:Math.random() * 6, r:Math.random() * 6});
+    parts.push({x:(-10.5 + Math.random() * 20) * SPREAD, y:Math.random() * 10, z:(-8.8 + Math.random() * 16) * SPREAD, s:0.7 + Math.random() * 0.6, ph:Math.random() * 6, r:Math.random() * 6});
     mesh.setColorAt(i, new THREE.Color(f.cols[i % f.cols.length]));
   }
   mesh.frustumCulled = false;
@@ -1308,7 +1313,7 @@ function select(id){
   if (id) {
     const p = new THREE.Vector3(); ACTORS[id].root.getWorldPosition(p);
     wantTarget.copy(p).add(new THREE.Vector3(0, 0.7, 0));
-    wantDist = 13;
+    wantDist = 16;
   } else {
     wantTarget.copy(HOME_TARGET); wantDist = homeDist;
   }
@@ -1393,7 +1398,7 @@ function resize(){
   // keep the floor centred in the space left of the crew card on wide screens
   if (w > 760) camera.setViewOffset(w, h, 180, 0, w, h); else camera.clearViewOffset();
   camera.updateProjectionMatrix();
-  homeDist = camera.aspect < 0.8 ? 60 : (camera.aspect < 1.2 ? 48 : 38);
+  homeDist = camera.aspect < 0.8 ? 86 : (camera.aspect < 1.2 ? 68 : 52);
   if (!selected) wantDist = homeDist;
 }
 window.addEventListener('resize', resize);
@@ -1447,7 +1452,7 @@ function tick(){
     const {mesh, parts, f} = faller;
     parts.forEach((p, i) => {
       p.y -= f.speed * p.s * dt;
-      if (p.y < 0.1) { p.y = 9 + Math.random(); p.x = -10.5 + Math.random() * 20; p.z = -8.8 + Math.random() * 16; }
+      if (p.y < 0.1) { p.y = 9 + Math.random(); p.x = (-10.5 + Math.random() * 20) * SPREAD; p.z = (-8.8 + Math.random() * 16) * SPREAD; }
       dummy.position.set(p.x + Math.sin(t * 0.9 + p.ph) * 0.35, p.y, p.z + Math.cos(t * 0.7 + p.ph) * 0.2);
       if (f.spin) dummy.rotation.set(t * 1.3 + p.r, t * 0.9 + p.ph, p.r); else dummy.rotation.set(0, 0, 0);
       dummy.scale.setScalar(p.s);
@@ -1473,7 +1478,7 @@ function tick(){
       b.t += dt;
       if (b.t > 2.4) {
         b.t = 0;
-        b.c.set(-6 + Math.random() * 11, 6.5 + Math.random() * 2.5, -9 + Math.random() * 3);
+        b.c.set((-6 + Math.random() * 11) * SPREAD, 6.5 + Math.random() * 2.5, (-9 + Math.random() * 3) * SPREAD);
         b.color = FW.palette[Math.floor(Math.random() * FW.palette.length)];
       }
       const life = b.t < 0 ? 0 : Math.max(0, 1 - b.t / 2.4);
@@ -1516,6 +1521,9 @@ function tick(){
 function start(){
   build();
   buildSeasonal();
+  // stretch the floor plan, then shrink each object back to its own size
+  world.scale.set(SPREAD, 1, SPREAD);
+  world.children.forEach(o => { if (!o.userData.space) o.scale.set(o.scale.x / SPREAD, o.scale.y, o.scale.z / SPREAD); });
   buildReel();
   buildTags();
   applyTheme(TODAY_THEME);
