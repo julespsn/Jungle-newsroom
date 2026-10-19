@@ -14,7 +14,15 @@ Each step runs on the cheapest model that holds quality for it. Run the Scout, T
 | Pick and write | Sterling | Claude Opus 5.5 | medium | Story choice and writing quality |
 | Review | Ozzie | Claude Opus 5.5 | high | Final quality gate |
 
-Prices per million input / output tokens: Opus 5.5 $4 / $20, Sonnet 5.5 $2 / $10, Haiku 5.5 $0.10 / $0.50. Log any step-up with a one-line reason in the edition folder (`models.log`).
+Prices per million input / output tokens: Opus 5.5 $4 / $20, Sonnet 5.5 $2 / $10, Haiku 5.5 $0.10 / $0.50.
+
+### Switching models when quality slips
+Every step starts on its base model above and can step up when its work isn't good enough:
+- **Trigger:** Ozzie sends a step's work back twice in the same run (Scout misses obvious moments, a desk's ideas are generic, a fact-check leaves gaps), or Jules flags the same weakness in feedback.
+- **Ladder:** Haiku 5.5 → Sonnet 5.5 → Opus 5.5. Re-run only the failing step, one rung up. Steps already on Opus go up in effort instead (medium → high → xhigh).
+- **Ozzie's own review:** if Jules says the review let weak work through, run Ozzie at xhigh effort for the next editions.
+- **Stepping down:** each run starts from the base plan again. If the same step needed a step-up on three runs in a row, raise its base model in this table (and say so to Jules) instead of escalating every day. If a step has run cleanly on its base for a week, try one rung down on the next edition and keep it if Ozzie passes it.
+- **Log every switch** in the edition folder (`models.log`): step, from, to, one-line reason. The cost difference shows up there.
 
 ## The week's rhythm
 Each weekday edition has its own job:
