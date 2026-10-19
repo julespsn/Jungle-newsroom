@@ -88,6 +88,7 @@ dl.facts dt{font-family:var(--type);font-weight:500;font-size:12px;color:var(--m
 dl.facts dd{margin:0}
 dl.facts .why{font-size:13px;color:var(--muted);line-height:1.35}
 dl.facts .price{font-size:12px;color:var(--muted)}
+dl.facts .up{display:inline-block;margin-top:5px;font-size:12.5px;line-height:1.35;border-left:3px solid var(--mustard);padding-left:7px}
 .pack{list-style:none;margin:0;padding:0;display:flex;flex-wrap:wrap;gap:6px}
 .pack li{font-size:12.5px;border:1.5px dashed var(--ink);border-radius:8px;padding:2px 8px;background:rgba(255,255,255,.3)}
 .stamp{display:inline-block;font-family:var(--display);font-size:11px;letter-spacing:.06em;color:var(--red);border:2px solid var(--red);border-radius:6px;padding:1px 6px;transform:rotate(-3deg);margin-left:6px;vertical-align:middle;font-weight:800}
@@ -276,12 +277,12 @@ const MODELS = {
   haiku: {name:'Claude Haiku 5.5',  price:'$0.10 / $0.50'}
 };
 const MODEL_PLAN = {
-  scout: {m:'sonnet', effort:'medium', why:'Searches and reads dozens of sources each morning. Needs judgement to spot a real moment, and has the web tools.'},
-  trend: {m:'haiku',  effort:'low',    why:'Tags each item rising, peaking or fading. A simple, high-volume call.'},
-  facts: {m:'sonnet', effort:'high',   why:'Opens every source and checks every claim. Accuracy matters more than speed.'},
-  chief: {m:'opus',   effort:'medium', why:'Picks the stories and writes the Jungle angles. Judgement and writing quality matter most here.'},
-  critic:{m:'opus',   effort:'high',   why:'The last quality gate before you. The strongest model, checking everything once.'},
-  desk:  {m:'haiku',  effort:'medium', why:'Filters a checked shortlist for one brand and writes 1-2 ideas. Steps up to Sonnet 5.5 if the critic sends work back twice.'}
+  scout: {m:'sonnet', effort:'medium', why:'Searches and reads dozens of sources each morning. Needs judgement to spot a real moment, and has the web tools.', up:'Opus 5.5'},
+  trend: {m:'haiku',  effort:'low',    why:'Tags each item rising, peaking or fading. A simple, high-volume call.', up:'Sonnet 5.5, then Opus 5.5'},
+  facts: {m:'sonnet', effort:'high',   why:'Opens every source and checks every claim. Accuracy matters more than speed.', up:'Opus 5.5'},
+  chief: {m:'opus',   effort:'medium', why:'Picks the stories and writes the Jungle angles. Judgement and writing quality matter most here.', up:'high, then xhigh effort'},
+  critic:{m:'opus',   effort:'high',   why:'The last quality gate before you. The strongest model, checking everything once.', up:'xhigh effort'},
+  desk:  {m:'haiku',  effort:'medium', why:'Filters a checked shortlist for one brand and writes 1-2 ideas.', up:'Sonnet 5.5, then Opus 5.5'}
 };
 for (const c of CREW) { const p = MODEL_PLAN[c.id] || MODEL_PLAN.desk; c.model = Object.assign({}, MODELS[p.m], p); }
 const byId = Object.fromEntries(CREW.map(c => [c.id, c]));
@@ -1347,7 +1348,8 @@ function renderDetail(id){
     '<p class="job">' + c.job + '</p>' +
     '<dl class="facts"><dt>Hands over</dt><dd>' + c.out + '</dd>' +
     (c.reads ? '<dt>Read by</dt><dd>' + c.reads + '</dd>' : '') +
-    '<dt>Model</dt><dd><b>' + c.model.name + '</b> \u00b7 ' + c.model.effort + ' effort<br><span class="why">' + c.model.why + '</span><br><span class="price">' + c.model.price + ' per million tokens in / out</span></dd>' +
+    '<dt>Model</dt><dd><b>' + c.model.name + '</b> \u00b7 ' + c.model.effort + ' effort<br><span class="why">' + c.model.why + '</span><br><span class="price">' + c.model.price + ' per million tokens in / out</span>' +
+      '<br><span class="up">' + (c.id === 'critic' ? 'Steps up to xhigh effort if you flag weak work getting through.' : 'Steps up to ' + c.model.up + ' if Ozzie sends the work back twice, then back to base next run.') + '</span></dd>' +
     '<dt>Runs</dt><dd>' + (c.group === 'desk' ? 'Daily, after the shared crew' : 'Daily, once for every desk') + '</dd></dl>';
   if (c.group === 'desk' || c.id === 'chief') {
     h += '<h2>Brief pack</h2><ul class="pack"><li>Brand book</li><li>Point of view</li><li>Audience</li><li>Sources</li><li>Risk list</li></ul>' +
