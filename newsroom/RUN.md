@@ -41,7 +41,7 @@ Test every story and idea against the five gates: forward, business, accessible,
 2. `node newsroom/render.js newsroom/editions/YYYY-MM-DD` renders `carousel.html`, `slides/*.png` and `carousel.pdf`.
 3. Commit and push the edition folder.
 4. Publish `carousel.html` as an artifact (with the `logos/` files).
-5. Deliver: Slack is not connected yet, so create a Gmail draft to Jules with the headlines, the artifact link and the PDF link.
+5. Deliver to Jules on Slack as a message to self (user `U0B6CN0B6NS`): the edition name, the headlines, the carousel link and the PDF attached (find the self-DM `D…` channel ID with the user's IM channels before uploading). If Slack is unavailable, fall back to a Gmail draft to Jules with the same content.
 
 ## Style
 UK English. Plain words, short sentences, no hype. Every story names its source and date.
