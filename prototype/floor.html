@@ -1422,8 +1422,17 @@ stage.addEventListener('wheel', e => {
   const dist = camera.position.distanceTo(controls.target);
   let f = Math.exp(Math.max(-1, Math.min(1, e.deltaY * (e.deltaMode === 1 ? 0.05 : 0.0015))));
   f = Math.max(controls.minDistance / dist, Math.min(controls.maxDistance / dist, f));
-  camera.position.sub(anchor).multiplyScalar(f).add(anchor);
-  controls.target.sub(anchor).multiplyScalar(f).add(anchor);
+  if (f < 1) {
+    // zooming in: head towards the point under the pointer
+    camera.position.sub(anchor).multiplyScalar(f).add(anchor);
+    controls.target.sub(anchor).multiplyScalar(f).add(anchor);
+  } else {
+    // zooming out: drift back to the centre of the floor, fully centred by the home distance
+    const nd = dist * f, k = dist >= homeDist ? 1 : Math.min(1, (nd - dist) / (homeDist - dist));
+    const dir = camera.position.clone().sub(controls.target).normalize();
+    controls.target.lerp(HOME_TARGET, k);
+    camera.position.copy(controls.target).addScaledVector(dir, nd);
+  }
   wantTarget.copy(controls.target); wantDist = null;
 }, {capture:true, passive:false});
 let downAt = null, hovered = null;
@@ -1466,6 +1475,7 @@ function resize(){
   camera.aspect = w / h;
   applyViewOffset();
   homeDist = camera.aspect < 0.8 ? 150 : (camera.aspect < 1.2 ? 90 : 64);
+  controls.maxDistance = homeDist * 1.35;   // never zoom out far past the full floor
   if (!selected) wantDist = homeDist;
 }
 window.addEventListener('resize', resize);
