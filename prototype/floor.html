@@ -53,7 +53,14 @@ button:focus-visible{outline:3px solid var(--mustard);outline-offset:2px}
 .card{background:var(--paper);background-image:radial-gradient(circle at 20% 10%,rgba(255,255,255,.35),transparent 50%),radial-gradient(circle at 90% 90%,rgba(160,110,50,.12),transparent 55%);
   border:3px solid var(--ink);border-radius:16px;box-shadow:6px 6px 0 var(--ink)}
 #panelBody{overflow-y:auto;padding:16px 18px 18px;min-height:0;flex:1}
-.sheet-handle{display:none}
+.sheet-handle{display:flex;justify-content:space-between;align-items:center;gap:12px;width:100%;font:inherit;font-family:var(--display);font-size:14px;background:none;border:none;border-bottom:2px solid var(--ink);padding:10px 16px;cursor:pointer;color:var(--ink);text-align:left}
+.sheet-handle .act{font-family:var(--type);font-size:12px;color:var(--muted)}
+.sheet-handle .act::after{content:"Hide \25B8"}
+#panel.collapsed .sheet-handle .act::after{content:"Show \25C2"}
+.sheet-handle:hover .act{color:var(--ink)}
+#panel.collapsed{bottom:auto;width:230px}
+#panel.collapsed #panelBody{display:none}
+#panel.collapsed .sheet-handle{border-bottom:none}
 .eyebrow{font-family:var(--type);font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);margin:0 0 4px}
 #panel h2{font-family:var(--display);font-weight:400;font-size:17px;margin:14px 0 2px;letter-spacing:.01em;text-wrap:balance}
 #panel h2:first-of-type{margin-top:4px}
@@ -108,6 +115,12 @@ dl.facts dd{margin:0}
 
 /* floating name tags */
 #labels{position:absolute;inset:0;pointer-events:none}
+/* hover card: who this is and what they do, pinned above the character */
+#hoverCard{position:absolute;left:0;top:0;z-index:3;pointer-events:none;width:250px;background:var(--paper);border:3px solid var(--ink);border-radius:14px;box-shadow:4px 4px 0 var(--ink);padding:10px 13px 11px;line-height:1.35}
+#hoverCard b{display:block;font-family:var(--display);font-weight:400;font-size:17px}
+#hoverCard .r{display:block;font-weight:700;font-size:13px;color:var(--red);margin:1px 0 5px}
+#hoverCard p{margin:0;font-size:13.5px;color:var(--ink)}
+#hoverCard::after{content:"";position:absolute;left:50%;bottom:-9px;width:12px;height:12px;background:var(--paper);border-right:3px solid var(--ink);border-bottom:3px solid var(--ink);transform:translateX(-50%) rotate(45deg)}
 .tag{position:absolute;left:0;top:0;transform:translate(-50%,-100%);display:flex;flex-direction:column;align-items:center;gap:4px;pointer-events:none;will-change:transform}
 .tag .nm{pointer-events:auto;cursor:pointer;background:var(--paper);border:2px solid var(--ink);border-radius:12px;padding:3px 10px 3px 7px;
   white-space:nowrap;box-shadow:2px 2px 0 var(--ink);display:flex;align-items:center;gap:7px}
@@ -150,10 +163,7 @@ dl.facts dd{margin:0}
 
 @media (max-width:760px){
   #panel{left:max(12px,env(safe-area-inset-left,0px));right:max(12px,env(safe-area-inset-right,0px));top:auto;bottom:calc(72px + env(safe-area-inset-bottom,0px));width:auto;max-height:38%}
-  #panel.collapsed{max-height:none}
-  #panel.collapsed #panelBody{display:none}
-  .sheet-handle{display:block;font:inherit;font-family:var(--display);font-size:13px;background:none;border:none;border-bottom:2px solid var(--ink);padding:8px 14px;text-align:left;cursor:pointer;color:var(--ink)}
-  #panel.collapsed .sheet-handle{border-bottom:none}
+  #panel.collapsed{max-height:none;width:auto;bottom:calc(72px + env(safe-area-inset-bottom,0px))}
   .dateline{font-size:11.5px}
   #runBtn{font-size:11.5px;padding:.5em .7em}
   #ticker{bottom:auto;top:calc(104px + env(safe-area-inset-top,0px));max-width:calc(100% - 32px);font-size:12.5px}
@@ -166,6 +176,7 @@ dl.facts dd{margin:0}
 <div id="app">
   <div id="stage"></div>
   <div id="labels" aria-hidden="true"></div>
+  <div id="hoverCard" hidden></div>
   <div class="vignette"></div>
   <div class="grain"></div>
   <div class="flicker"></div>
@@ -179,7 +190,7 @@ dl.facts dd{margin:0}
   </header>
 
   <aside id="panel" class="card" aria-label="Crew">
-    <button class="sheet-handle" id="sheetHandle" type="button">Crew &amp; desks</button>
+    <button class="sheet-handle" id="sheetHandle" type="button" aria-expanded="true" aria-controls="panelBody"><span>Crew &amp; desks</span><span class="act"></span></button>
     <div id="panelBody"></div>
   </aside>
 
@@ -1324,7 +1335,12 @@ function renderList(){
     '<h2>Client islands</h2><p class="hint">Branch out from the Jungle team. One light step per client, guided by its brief pack.</p>' +
     '<ul class="roster">' + desks.map(rowHtml).join('') + '</ul>' +
     '<p class="hint" style="margin-top:12px">A new client adds one island, not a new crew.</p>';
-  panelBody.querySelectorAll('.row').forEach(b => b.addEventListener('click', () => select(b.dataset.id)));
+  panelBody.querySelectorAll('.row').forEach(b => {
+    b.addEventListener('click', () => select(b.dataset.id));
+    // hovering a name lights up that character on the floor
+    b.addEventListener('pointerenter', () => { hovered = b.dataset.id; });
+    b.addEventListener('pointerleave', () => { if (hovered === b.dataset.id) hovered = null; });
+  });
 }
 function tagHtml(t){ return '<span class="' + t[1] + '">' + t[0] + '</span>'; }
 function renderDetail(id){
@@ -1361,7 +1377,7 @@ const wantTarget = HOME_TARGET.clone();
 let wantDist = null, homeDist = 30;
 function select(id){
   selected = id;
-  $('#panel').classList.remove('collapsed');
+  if ($('#panel').classList.contains('collapsed')) setPanel(true);
   renderPanel(); refreshTags();
   if (id) {
     const p = new THREE.Vector3(); ACTORS[id].root.getWorldPosition(p);
@@ -1456,20 +1472,29 @@ renderer.domElement.addEventListener('pointermove', e => {
   renderer.domElement.style.cursor = hovered ? 'pointer' : '';
 });
 $('#runBtn').addEventListener('click', runMorning);
-$('#sheetHandle').addEventListener('click', () => $('#panel').classList.toggle('collapsed'));
+function setPanel(open){
+  $('#panel').classList.toggle('collapsed', !open);
+  $('#sheetHandle').setAttribute('aria-expanded', String(open));
+  applyViewOffset();
+}
+$('#sheetHandle').addEventListener('click', () => setPanel($('#panel').classList.contains('collapsed')));
 $('#enterBtn').addEventListener('click', () => {
   $('#titlecard').classList.add('out');
   setTimeout(() => { $('#titlecard').hidden = true; }, 550);
   runMorning();
 });
 
+// keep the floor centred in the space left of the crew card on wide screens (not when the card is hidden)
+function applyViewOffset(){
+  const w = stage.clientWidth, h = stage.clientHeight;
+  if (w > 760 && !$('#panel').classList.contains('collapsed')) camera.setViewOffset(w, h, 180, 0, w, h); else camera.clearViewOffset();
+  camera.updateProjectionMatrix();
+}
 function resize(){
   const w = stage.clientWidth, h = stage.clientHeight;
   renderer.setSize(w, h, false);
   camera.aspect = w / h;
-  // keep the floor centred in the space left of the crew card on wide screens
-  if (w > 760) camera.setViewOffset(w, h, 180, 0, w, h); else camera.clearViewOffset();
-  camera.updateProjectionMatrix();
+  applyViewOffset();
   homeDist = camera.aspect < 0.8 ? 150 : (camera.aspect < 1.2 ? 90 : 64);
   if (!selected) wantDist = homeDist;
 }
@@ -1480,6 +1505,8 @@ window.addEventListener('resize', resize);
 const clockT = new THREE.Clock();
 const tmpV = new THREE.Vector3(), tmpW = new THREE.Vector3();
 const FULL_TAG_DIST = 26;
+const hoverCard = $('#hoverCard');
+let cardFor = null;
 const chamA = new THREE.Color('#6fae4a'), chamB = new THREE.Color('#d9a33a'), chamC = new THREE.Color('#4a8fc9');
 function tick(){
   const dt = Math.min(clockT.getDelta(), 0.05), t = clockT.elapsedTime;
@@ -1584,6 +1611,7 @@ function tick(){
 
   // name tags follow their crew member
   const r = renderer.domElement.getBoundingClientRect();
+  let hx = 0, hy = 0;
   for (const id in ACTORS) {
     const a = ACTORS[id];
     a.root.getWorldPosition(tmpV);
@@ -1594,7 +1622,18 @@ function tick(){
     // full name card only up close, on hover or when selected; otherwise a small status pin
     const full = hovered === id || selected === id || camera.position.distanceTo(a.root.getWorldPosition(tmpW)) < FULL_TAG_DIST;
     if (TAGS[id].full !== full) { TAGS[id].full = full; TAGS[id].el.classList.toggle('full', full); }
+    if (id === hovered) { hx = x; hy = y; }
   }
+  // hover card above whoever is hovered, on the floor or in the crew list
+  if (hovered !== cardFor) {
+    cardFor = hovered;
+    if (hovered && byId[hovered]) {
+      const c = byId[hovered];
+      hoverCard.innerHTML = '<b>' + c.name + '</b><span class="r">' + c.role + '</span><p>' + c.job.split('. ')[0].replace(/\.$/, '') + '.</p>';
+    }
+    hoverCard.hidden = !cardFor;
+  }
+  if (cardFor) hoverCard.style.transform = 'translate(' + hx.toFixed(1) + 'px,' + (hy - 58).toFixed(1) + 'px) translate(-50%,-100%)';
 
   BADGES.forEach(b => { b.sp.position.y = b.y + (REDUCE ? 0 : Math.sin(t * 1.1 + b.ph) * 0.12); });
 
@@ -1612,7 +1651,7 @@ function start(){
   applyTheme(TODAY_THEME);
   renderPanel();
   ticker.textContent = RESTING_TICKER;
-  if (matchMedia('(max-width:760px)').matches) $('#panel').classList.add('collapsed');
+  if (matchMedia('(max-width:760px)').matches) { $('#panel').classList.add('collapsed'); $('#sheetHandle').setAttribute('aria-expanded', 'false'); }
   resize();
   camera.position.copy(HOME_TARGET).add(new THREE.Vector3(1, 1.3, 1).setLength(homeDist));
   tick();
