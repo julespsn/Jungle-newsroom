@@ -1,0 +1,107 @@
+{
+    "dateLabel": "Monday 19 October",
+    "season": "Halloween edition",
+    "floorUrl": "https://claude.ai/artifact/QByUaU2dzAX6fAwH2X3jVb",
+    "stories": [
+        {
+            "short": "Sample story one about a rising format",
+            "headline": "Sample: a format *everyone is copying* this week",
+            "what": "Layout test only. This paragraph explains what is happening in two or three plain sentences, with the key figure if there is one.",
+            "why": "One or two sentences on why a strategist or a creative should care today.",
+            "momentum": "Rising",
+            "region": "UK",
+            "platform": "TikTok",
+            "source": "Example Source, 18 Oct",
+            "desks": [
+                "chief",
+                "disney",
+                "dfs"
+            ]
+        },
+        {
+            "short": "Sample story two, peaking globally",
+            "headline": "Sample: a platform update worth knowing",
+            "what": "Layout test only.",
+            "why": "Layout test only.",
+            "momentum": "Peaking",
+            "region": "Global",
+            "platform": "Instagram",
+            "source": "Example Source, 18 Oct",
+            "desks": [
+                "family"
+            ]
+        }
+    ],
+    "desks": [
+        {
+            "id": "chief",
+            "name": "the Jungle team",
+            "short": "Jungle",
+            "title": "For *Strategy* & Insight",
+            "byline": "Sterling \u00b7 Editor-in-chief",
+            "color": "#3f6b2e",
+            "logo": "logos/jungle.png",
+            "ideas": [
+                {
+                    "from": "From story 1",
+                    "idea": "Sample thought leadership prompt.",
+                    "note": "Angle note."
+                }
+            ]
+        },
+        {
+            "id": "disney",
+            "name": "Disney UK",
+            "short": "Disney UK",
+            "byline": "Pip \u00b7 Disney UK desk",
+            "color": "#4a74c9",
+            "logo": "logos/disney.png",
+            "ideas": [
+                {
+                    "from": "From story 1",
+                    "idea": "Sample idea for the team."
+                }
+            ]
+        },
+        {
+            "id": "family",
+            "name": "Disney Family UK",
+            "short": "Disney Family",
+            "byline": "Bo",
+            "color": "#a983cf",
+            "logo": "logos/disney.png",
+            "ideas": [
+                {
+                    "from": "From story 2",
+                    "idea": "Sample idea."
+                }
+            ]
+        },
+        {
+            "id": "muti",
+            "name": "Mutti UK",
+            "short": "Mutti",
+            "byline": "Kiki",
+            "color": "#d8302b",
+            "logo": "logos/mutti.png",
+            "ideas": []
+        },
+        {
+            "id": "dfs",
+            "name": "DFS",
+            "short": "DFS",
+            "byline": "Dot",
+            "color": "#2f9c8f",
+            "logo": "logos/dfs.png",
+            "ideas": [
+                {
+                    "from": "From story 1",
+                    "idea": "Sample idea."
+                }
+            ]
+        }
+    ],
+    "edition": "Weekend wrap-up",
+    "coverTitle": "Weekend wrap-up",
+    "coverSub": "what you *missed* on social"
+}

@@ -37,11 +37,13 @@ Brief packs are not written yet, so desks work from what is public about each br
 Test every story and idea against the five gates: forward, business, accessible, stopping power, brand. Cut what fails. Correct but dull fails.
 
 ## 6. Ship
-1. Write `newsroom/editions/YYYY-MM-DD/edition.json` (shape: see the first edition).
+1. Write `newsroom/editions/YYYY-MM-DD/edition.json`, following `newsroom/editions/_example/edition.json` (layout test content only, never ship it). Set `edition`, `coverTitle` and `coverSub`; wrap the key words of a headline or title in `*asterisks*` to set them in Jungle green. Keep headlines under about 12 words and `what` under about 45 words so they fit the slide.
 2. `node newsroom/render.js newsroom/editions/YYYY-MM-DD` renders `carousel.html`, `slides/*.png` and `carousel.pdf`.
 3. Commit and push the edition folder.
 4. Publish `carousel.html` as an artifact (with the `logos/` files).
 5. Deliver to Jules on Slack as a message to self (user `U0B6CN0B6NS`): the edition name, the headlines, the carousel link and the PDF attached (find the self-DM `D…` channel ID with the user's IM channels before uploading). If Slack is unavailable, fall back to a Gmail draft to Jules with the same content.
 
 ## Style
+The carousel follows Jungle's own Instagram carousels (reference: instagram.com/p/DeeohthDBuS): dark concrete texture, hairline top bar, big bold sans, green for the key words, lowercase jungle wordmark.
+
 UK English. Plain words, short sentences, no hype. Every story names its source and date.
