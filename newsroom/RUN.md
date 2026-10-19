@@ -2,6 +2,20 @@
 
 How one edition of the Jungle Newsroom is made. Follows `docs/agent-newsroom-principles.md`: every claim sourced, no invented figures, nothing posts without a human.
 
+## Models (cost vs quality)
+Each step runs on the cheapest model that holds quality for it. Run the Scout, Trend, Fact-check and desk steps as sub-agents on their model; Sterling's edit and Ozzie's review stay in the main session (Opus).
+
+| Step | Who | Model | Effort | Why |
+|---|---|---|---|---|
+| Scout | Mira | Claude Sonnet 5.5 | medium | Heavy web search and reading; needs judgement to spot real moments |
+| Momentum tags | Cam | Claude Haiku 5.5 | low | Simple, high-volume tagging |
+| Fact-check | Tilly | Claude Sonnet 5.5 | high | Accuracy over speed; opens every source |
+| Desk ideas | Desk monkeys | Claude Haiku 5.5 | medium | Filter a checked shortlist for one brand; step up to Sonnet 5.5 if Ozzie sends work back twice |
+| Pick and write | Sterling | Claude Opus 5.5 | medium | Story choice and writing quality |
+| Review | Ozzie | Claude Opus 5.5 | high | Final quality gate |
+
+Prices per million input / output tokens: Opus 5.5 $4 / $20, Sonnet 5.5 $2 / $10, Haiku 5.5 $0.10 / $0.50. Log any step-up with a one-line reason in the edition folder (`models.log`).
+
 ## The week's rhythm
 Each weekday edition has its own job:
 

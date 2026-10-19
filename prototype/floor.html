@@ -86,6 +86,8 @@ button:focus-visible{outline:3px solid var(--mustard);outline-offset:2px}
 dl.facts{display:grid;grid-template-columns:auto 1fr;gap:4px 12px;margin:0 0 6px;font-size:14px}
 dl.facts dt{font-family:var(--type);font-weight:500;font-size:12px;color:var(--muted);padding-top:2px}
 dl.facts dd{margin:0}
+dl.facts .why{font-size:13px;color:var(--muted);line-height:1.35}
+dl.facts .price{font-size:12px;color:var(--muted)}
 .pack{list-style:none;margin:0;padding:0;display:flex;flex-wrap:wrap;gap:6px}
 .pack li{font-size:12.5px;border:1.5px dashed var(--ink);border-radius:8px;padding:2px 8px;background:rgba(255,255,255,.3)}
 .stamp{display:inline-block;font-family:var(--display);font-size:11px;letter-spacing:.06em;color:var(--red);border:2px solid var(--red);border-radius:6px;padding:1px 6px;transform:rotate(-3deg);margin-left:6px;vertical-align:middle;font-weight:800}
@@ -121,6 +123,7 @@ dl.facts dd{margin:0}
 #hoverCard b{display:block;font-family:var(--display);font-weight:800;font-size:17px}
 #hoverCard .r{display:block;font-weight:700;font-size:13px;color:var(--red);margin:1px 0 5px}
 #hoverCard p{margin:0;font-size:13.5px;color:var(--ink)}
+#hoverCard .mdl{display:inline-block;margin-top:7px;font-size:11.5px;font-weight:600;background:var(--ink);color:var(--paper);border-radius:999px;padding:2px 9px}
 #hoverCard::after{content:"";position:absolute;left:50%;bottom:-9px;width:12px;height:12px;background:var(--paper);border-right:3px solid var(--ink);border-bottom:3px solid var(--ink);transform:translateX(-50%) rotate(45deg)}
 .tag{position:absolute;left:0;top:0;transform:translate(-50%,-100%);display:flex;flex-direction:column;align-items:center;gap:4px;pointer-events:none;will-change:transform}
 .tag .nm{pointer-events:auto;cursor:pointer;background:var(--paper);border:2px solid var(--ink);border-radius:12px;padding:3px 10px 3px 7px;
@@ -265,6 +268,22 @@ for (const c of CREW) if (c.group === 'desk') {
   c.step = 'Filtering for ' + c.role.replace(' desk','') + '…';
   c.doneTxt = 'Update ready';
 }
+// Which Claude model each crew member runs on: the cheapest one that holds quality for that job.
+// Prices are per million input / output tokens.
+const MODELS = {
+  opus:  {name:'Claude Opus 5.5',   price:'$4 / $20'},
+  sonnet:{name:'Claude Sonnet 5.5', price:'$2 / $10'},
+  haiku: {name:'Claude Haiku 5.5',  price:'$0.10 / $0.50'}
+};
+const MODEL_PLAN = {
+  scout: {m:'sonnet', effort:'medium', why:'Searches and reads dozens of sources each morning. Needs judgement to spot a real moment, and has the web tools.'},
+  trend: {m:'haiku',  effort:'low',    why:'Tags each item rising, peaking or fading. A simple, high-volume call.'},
+  facts: {m:'sonnet', effort:'high',   why:'Opens every source and checks every claim. Accuracy matters more than speed.'},
+  chief: {m:'opus',   effort:'medium', why:'Picks the stories and writes the Jungle angles. Judgement and writing quality matter most here.'},
+  critic:{m:'opus',   effort:'high',   why:'The last quality gate before you. The strongest model, checking everything once.'},
+  desk:  {m:'haiku',  effort:'medium', why:'Filters a checked shortlist for one brand and writes 1-2 ideas. Steps up to Sonnet 5.5 if the critic sends work back twice.'}
+};
+for (const c of CREW) { const p = MODEL_PLAN[c.id] || MODEL_PLAN.desk; c.model = Object.assign({}, MODELS[p.m], p); }
 const byId = Object.fromEntries(CREW.map(c => [c.id, c]));
 
 const THEMES = {
@@ -1328,7 +1347,7 @@ function renderDetail(id){
     '<p class="job">' + c.job + '</p>' +
     '<dl class="facts"><dt>Hands over</dt><dd>' + c.out + '</dd>' +
     (c.reads ? '<dt>Read by</dt><dd>' + c.reads + '</dd>' : '') +
-    '<dt>Model</dt><dd>' + c.tier + '</dd>' +
+    '<dt>Model</dt><dd><b>' + c.model.name + '</b> \u00b7 ' + c.model.effort + ' effort<br><span class="why">' + c.model.why + '</span><br><span class="price">' + c.model.price + ' per million tokens in / out</span></dd>' +
     '<dt>Runs</dt><dd>' + (c.group === 'desk' ? 'Daily, after the shared crew' : 'Daily, once for every desk') + '</dd></dl>';
   if (c.group === 'desk' || c.id === 'chief') {
     h += '<h2>Brief pack</h2><ul class="pack"><li>Brand book</li><li>Point of view</li><li>Audience</li><li>Sources</li><li>Risk list</li></ul>' +
@@ -1609,7 +1628,7 @@ function tick(){
     cardFor = hovered;
     if (hovered && byId[hovered]) {
       const c = byId[hovered];
-      hoverCard.innerHTML = '<b>' + c.name + '</b><span class="r">' + c.role + '</span><p>' + c.job.split('. ')[0].replace(/\.$/, '') + '.</p>';
+      hoverCard.innerHTML = '<b>' + c.name + '</b><span class="r">' + c.role + '</span><p>' + c.job.split('. ')[0].replace(/\.$/, '') + '.</p><span class="mdl">' + c.model.name + ' \u00b7 ' + c.model.effort + ' effort</span>';
     }
     hoverCard.hidden = !cardFor;
   }
