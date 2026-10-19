@@ -38,7 +38,8 @@ Set `edition` in `edition.json` to the edition name, so the cover shows it. On F
 ## 1. Scout (Mira)
 Search the window for today's edition, UK first, global when a trend crosses borders. Read the original source, not a rewrite.
 - Platforms: TikTok Newsroom, Instagram (@creators, Meta newsroom), YouTube blog, Snapchat, X, Threads, Pinterest.
-- Trade press: Social Media Today, The Drum, Campaign, Marketing Week, Marketing Beat, Press Gazette.
+- Trade press: Social Media Today, The Drum, Campaign, Adweek, Marketing Week, Marketing Beat, Press Gazette. Campaign and Adweek's work and campaign coverage often shows what is about to drive content.
+- Other agencies, for leads only: OKAY COOL's channels and its founders' LinkedIn posts. Use them to spot moments and updates, then trace each one to the original post, brand or platform and cite that. Never quote, credit or name OKAY COOL or any other agency in an edition, least of all next to Jungle: it's about the content and the updates, not who spotted them.
 - Culture: Google Trends UK, Know Your Meme, BBC Culture/Entertainment, TikTok Creative Center.
 - Client categories: Disney UK news and releases; family and half-term culture; Disney Store UK products and retail moments; food and grocery (The Grocer) for Mutti; home and retail (Retail Gazette) for DFS; gym, fitness and sports nutrition culture for Optimum Nutrition UK.
 Shortlist 10 to 12 items, each with its source link and date.
@@ -73,6 +74,8 @@ Test every story and idea against the five gates: forward, business, accessible,
 5. Deliver to Jules on Slack as a message to self (user `U0B6CN0B6NS`): the edition name, the headlines, the carousel link and the PDF attached (find the self-DM `D…` channel ID with the user's IM channels before uploading). If Slack is unavailable, fall back to a Gmail draft to Jules with the same content.
 
 ## Style
+Reference edition: `editions/2026-10-19/` (the second version Jules approved) sets the bar for structure, tone, images and links.
+
 The carousel follows Jungle's own Instagram carousels (reference: instagram.com/p/DeeohthDBuS): dark concrete texture, hairline top bar, big bold sans, green for the key words, lowercase jungle wordmark.
 
 UK English. Plain words, short sentences, no hype. Every story names its source and date.
