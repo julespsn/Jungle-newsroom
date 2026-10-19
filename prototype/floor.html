@@ -124,6 +124,15 @@ dl.facts .up{display:inline-block;margin-top:5px;font-size:12.5px;line-height:1.
 /* hover card: who this is and what they do, pinned above the character */
 #hoverCard{position:absolute;left:0;top:0;z-index:3;pointer-events:none;width:250px;background:var(--paper);border:3px solid var(--ink);border-radius:14px;box-shadow:4px 4px 0 var(--ink);padding:10px 13px 11px;line-height:1.35}
 #hoverCard b{display:block;font-family:var(--display);font-weight:800;font-size:17px}
+#hoverCard .hc-top{display:flex;justify-content:space-between;align-items:center;gap:10px}
+#hoverCard .st{display:inline-flex;align-items:center;gap:6px;font-size:11.5px;font-weight:600;color:var(--muted);white-space:nowrap}
+#hoverCard .st em{font-style:normal}
+#hoverCard .st i{width:11px;height:11px;border-radius:50%;border:2px solid var(--ink);background:#c9bda5}
+#hoverCard[data-s="working"] .st i{background:var(--mustard)}
+#hoverCard[data-s="done"] .st i{background:#7bbf5a}
+#hoverCard[data-s="blocked"] .st i{background:var(--warn)}
+.tag.hovered .nm{display:none!important}
+.tag.hovered .pin{opacity:0}  /* stays hoverable so the card does not flicker */
 #hoverCard .r{display:block;font-weight:700;font-size:13px;color:var(--red);margin:1px 0 5px}
 #hoverCard p{margin:0;font-size:13.5px;color:var(--ink)}
 #hoverCard .mdl{display:inline-block;margin-top:7px;font-size:11.5px;font-weight:600;background:var(--ink);color:var(--paper);border-radius:999px;padding:2px 9px}
@@ -1625,6 +1634,7 @@ function tick(){
     // full name card only up close, on hover or when selected; otherwise a small status pin
     const full = hovered === id || selected === id || camera.position.distanceTo(a.root.getWorldPosition(tmpW)) < FULL_TAG_DIST;
     if (TAGS[id].full !== full) { TAGS[id].full = full; TAGS[id].el.classList.toggle('full', full); }
+    TAGS[id].el.classList.toggle('hovered', id === hovered);
     if (id === hovered) { hx = x; hy = y; }
   }
   // hover card above whoever is hovered, on the floor or in the crew list
@@ -1632,11 +1642,16 @@ function tick(){
     cardFor = hovered;
     if (hovered && byId[hovered]) {
       const c = byId[hovered];
-      hoverCard.innerHTML = '<b>' + c.name + '</b><span class="r">' + c.role + '</span><p>' + c.job.split('. ')[0].replace(/\.$/, '') + '.</p><span class="mdl">' + c.model.name + ' \u00b7 ' + c.model.effort + ' effort</span>';
+      hoverCard.innerHTML = '<div class="hc-top"><b>' + c.name + '</b><span class="st"><i></i><em></em></span></div><span class="r">' + c.role + '</span><p>' + c.job.split('. ')[0].replace(/\.$/, '') + '.</p><span class="mdl">' + c.model.name + ' \u00b7 ' + c.model.effort + ' effort</span>';
     }
+    hoverCard.dataset.s = '';
     hoverCard.hidden = !cardFor;
   }
-  if (cardFor) hoverCard.style.transform = 'translate(' + hx.toFixed(1) + 'px,' + (hy - 58).toFixed(1) + 'px) translate(-50%,-100%)';
+  if (cardFor) {
+    hoverCard.style.transform = 'translate(' + hx.toFixed(1) + 'px,' + (hy - 6).toFixed(1) + 'px) translate(-50%,-100%)';
+    const st = ACTORS[cardFor].state;
+    if (hoverCard.dataset.s !== st) { hoverCard.dataset.s = st; hoverCard.querySelector('.st em').textContent = STATUS_TXT[st]; }
+  }
 
   BADGES.forEach(b => { b.sp.position.y = b.y + (REDUCE ? 0 : Math.sin(t * 1.1 + b.ph) * 0.12); });
 
