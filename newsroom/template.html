@@ -36,6 +36,7 @@ body{background:#2a1d14;color:var(--ink);font-family:var(--body)}
 .cover .plaque{background:var(--paper);border:7px solid var(--ink);border-radius:44px;box-shadow:14px 14px 0 var(--ink);padding:56px 60px 50px;width:100%;box-sizing:border-box}
 .cover .pre{font-family:var(--type);font-size:30px;letter-spacing:.14em;text-transform:uppercase;margin:0}
 .cover h1{font-family:var(--display);font-weight:400;font-size:112px;line-height:.92;margin:18px 0 10px;color:var(--red);text-shadow:6px 6px 0 var(--ink)}
+.cover .edition{display:inline-block;font-family:var(--display);font-size:34px;color:var(--paper);background:var(--leaf);border:5px solid var(--ink);border-radius:999px;padding:8px 30px;margin:4px 0 8px}
 .cover .date{font-family:var(--display);font-size:46px;margin:6px 0 26px}
 .cover ol{list-style:none;margin:0;padding:0;text-align:left;display:grid;gap:14px;counter-reset:s}
 .cover li{counter-increment:s;display:grid;grid-template-columns:62px 1fr;gap:16px;align-items:center;font-size:33px;line-height:1.18;font-weight:700}
@@ -112,6 +113,7 @@ const top = (n) => '<div class="top"><b>THE JUNGLE NEWSROOM</b><span>' + esc(E.d
 slides.push('<section class="slide cover"><div class="rays"></div>' +
   (E.season ? '<div class="season">' + esc(E.season) + '</div>' : '') +
   '<div class="plaque"><p class="pre">Jungle Creations presents</p><h1>The Jungle Newsroom</h1>' +
+  (E.edition ? '<p class="edition">' + esc(E.edition) + '</p>' : '') +
   '<p class="date">' + esc(E.dateLabel) + '</p><ol>' + (E.stories || []).map(s => '<li>' + esc(s.short || s.headline) + '</li>').join('') + '</ol></div></section>');
 
 (E.stories || []).forEach((s, i) => {

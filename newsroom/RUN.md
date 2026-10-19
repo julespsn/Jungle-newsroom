@@ -2,8 +2,19 @@
 
 How one edition of the Jungle Newsroom is made. Follows `docs/agent-newsroom-principles.md`: every claim sourced, no invented figures, nothing posts without a human.
 
+## The week's rhythm
+Each weekday edition has its own job:
+
+| Day | Edition | Window |
+|---|---|---|
+| Monday | **Weekend wrap-up**: what we might have missed on social over the weekend | Friday evening to Sunday night |
+| Tuesday to Thursday | **The daily**: what's moving now | Last 24 to 72 hours; up to a week for a topic still building |
+| Friday | **Best of the week**: the strongest stories of the week, plus anything new worth knowing | Monday to Friday, starting from this week's editions |
+
+Set `edition` in `edition.json` to the edition name, so the cover shows it. On Friday, read this week's earlier `edition.json` files first and say which stories carried on growing.
+
 ## 1. Scout (Mira)
-Search the last 72 hours, UK first, global when a trend crosses borders. Read the original source, not a rewrite.
+Search the window for today's edition, UK first, global when a trend crosses borders. Read the original source, not a rewrite.
 - Platforms: TikTok Newsroom, Instagram (@creators, Meta newsroom), YouTube blog, Snapchat, X, Threads, Pinterest.
 - Trade press: Social Media Today, The Drum, Campaign, Marketing Week, Marketing Beat, Press Gazette.
 - Culture: Google Trends UK, Know Your Meme, BBC Culture/Entertainment, TikTok Creative Center.
