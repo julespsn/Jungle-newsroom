@@ -3,110 +3,135 @@
   "coverTitle": "Weekend wrap-up",
   "coverSub": "what you *missed* on social",
   "dateLabel": "Monday 19 October",
-  "season": "Halloween edition",
   "floorUrl": "https://claude.ai/artifact/QByUaU2dzAX6fAwH2X3jVb",
-  "stories": [
-    {
-      "short": "Strictly fans call out a couple for not saying thank you",
-      "headline": "Strictly fans call out a couple for *not saying thank you*",
-      "what": "On Sunday's results show, viewers on social media called Cach Mercer and Maddie Ingoldsby “rude” for not thanking voters after being kept in. Cach later posted an Instagram video thanking his supporters.",
-      "why": "Audiences now judge the moments between the performance. A thank-you, a reply or a tone of voice is part of the content.",
-      "momentum": "Rising", "region": "UK", "platform": "X & Instagram",
-      "source": "Brit Brief, 18 Oct",
-      "desks": ["chief"]
-    },
-    {
-      "short": "The UK's Halloween costume of the year is Nikki from Obsession",
-      "headline": "The UK's costume of the year: *Nikki from Obsession*",
-      "what": "A BBC round-up on Saturday found fancy dress shops, influencers and make-up artists naming Nikki as the most copied look. One Bournemouth shop says Scream masks make up 20% of its sales, and KPop Demon Hunters leads for kids.",
-      "why": "Costume season is peaking now, and the Ramalama (Bang Bang) strut is back as the go-to reveal format.",
-      "momentum": "Peaking", "region": "UK", "platform": "TikTok",
-      "source": "BBC via AOL UK, 17 Oct; New Engen, 14 Oct",
-      "desks": ["chief", "disney", "family", "muti"]
-    },
-    {
-      "short": "TikTok banned a documentary's ads, then called it an error",
-      "headline": "TikTok banned a documentary's ads, then *called it an error*",
-      "what": "TikTok gave the ad account for the film Musk a “permanent suspension” over political content, then restored it, saying it was “restored after an error”. Meta and YouTube had also rejected its ads before reversing.",
-      "why": "Ad approval for provocative titles is unpredictable. Entertainment launches need a back-up plan for paid.",
-      "momentum": "Fading", "region": "Global", "platform": "TikTok",
-      "source": "TechCrunch, 17–18 Oct (first reported by The Hollywood Reporter)",
-      "desks": ["chief", "disney"]
-    },
-    {
-      "short": "LinkedIn brings back the business card",
-      "headline": "LinkedIn brings back the *business card*",
-      "what": "LinkedIn is rolling out a digital business card you can design, with your headshot, job title and a QR code, and keep in your phone's wallet. It goes global over the coming months.",
-      "why": "Events are where B2B relationships start. This makes LinkedIn the default handshake again.",
-      "momentum": "Rising", "region": "Global", "platform": "LinkedIn",
-      "source": "Social Media Today, 18 Oct; LinkedIn",
-      "desks": ["chief"]
-    },
-    {
-      "short": "Instagram makes response Reels easier with “Use as reference”",
-      "headline": "Instagram's *“Use as reference”* makes response Reels easier",
-      "what": "Creators can now overlay another Reel (under 90 seconds) in the camera to match a response clip. It's iOS only for now. Instagram is also removing Reels series links on 28 Oct.",
-      "why": "Side-by-side recreations are about to get easier on Instagram, so expect more of them in feeds.",
-      "momentum": "Rising", "region": "Global", "platform": "Instagram",
-      "source": "Social Media Today, 15 Oct",
-      "desks": ["disney", "dfs"]
-    },
-    {
-      "short": "TikTok Shop UK sellers can now post shoppable photo carousels",
-      "headline": "TikTok Shop UK adds *shoppable photo carousels*",
-      "what": "UK sellers can turn two or more product images into a swipeable post that links to products, with no video needed. Live shopping also gets group deals and price cuts once a sales target is hit.",
-      "why": "Brands without video can now sell straight from feed with product photos they already have.",
-      "momentum": "Rising", "region": "UK", "platform": "TikTok Shop",
-      "source": "TikTok Shop UK via Social Media Today, 14 Oct",
-      "desks": ["muti", "dfs"]
-    }
+  "sections": {
+    "saw": [
+      {
+        "short": "Tesla's flying Roadster becomes an AI meme machine",
+        "headline": "Tesla's flying Roadster becomes an *AI meme machine*",
+        "what": "Tesla unveiled its new Roadster on 15 Oct, shown flipping and flying on cold-gas thrusters. Within a day X filled with AI-made “what if” clips: stuck in traffic, leaping broken bridges, escaping the police, a Back to the Future riff.",
+        "why": "AI video tools now turn a launch into a meme format in hours, and creators name the tool they used in the post.",
+        "momentum": "Rising", "region": "Global", "platform": "X",
+        "source": "GIGAZINE, 18 Oct", "credit": "GIGAZINE / posts on X",
+        "url": "https://gigazine.net/gsc_news/en/20261018-tesla-roadster-ai-meme/",
+        "image": "images/roadster.jpg"
+      },
+      {
+        "short": "Hundreds turn out for Lime bike jousting in Hackney",
+        "headline": "Hundreds turn out for *Lime bike jousting* in Hackney",
+        "what": "On Saturday two men dressed as knights tried to knock each other off Lime e-bikes in London Fields. It began as a joke post by artist Jack Carden and “Camtholomew the First”. Police let it go ahead, and a sequel is promised.",
+        "why": "A local in-joke became a real crowd and then went back online as content. Lime got the spotlight without lifting a finger.",
+        "momentum": "Rising", "region": "UK", "platform": "Instagram",
+        "source": "LBC, 18 Oct", "credit": "LBC",
+        "url": "https://www.lbc.co.uk/article/lime-bike-joust-london-5Hjdk5M_2/",
+        "image": "images/joust.jpg"
+      },
+      {
+        "short": "Strictly fans call out a couple for not saying thank you",
+        "headline": "Strictly fans call out a couple for *not saying thank you*",
+        "what": "On Sunday's results show, viewers on social media called Cach Mercer and Maddie Ingoldsby “rude” for not thanking voters after being kept in. Cach later posted an Instagram video thanking his supporters.",
+        "why": "Audiences now judge the moments between the performance. A thank-you or a tone of voice is part of the content.",
+        "momentum": "Rising", "region": "UK", "platform": "X & Instagram",
+        "source": "Brit Brief, 18 Oct", "credit": "Brit Brief / BBC",
+        "url": "https://britbrief.co.uk/entertainment/television/strictly-fans-slam-cach-mercer-and-maddie-as-rude.html",
+        "image": "images/strictly.jpg"
+      },
+      {
+        "short": "The UK's Halloween costume of the year: Nikki from Obsession",
+        "headline": "The UK's costume of the year: *Nikki from Obsession*",
+        "what": "A BBC round-up on Saturday found fancy dress shops, influencers and make-up artists naming Nikki as the most copied look. One Bournemouth shop says Scream masks make up 20% of its sales; KPop Demon Hunters leads for kids.",
+        "why": "Costume season is peaking, and the Ramalama (Bang Bang) strut is back as the go-to reveal format.",
+        "momentum": "Peaking", "region": "UK", "platform": "TikTok",
+        "source": "BBC via AOL UK, 17 Oct", "credit": "BBC / AOL",
+        "url": "https://www.aol.co.uk/articles/not-sure-wear-halloween-outfits-232708000.html",
+        "image": "images/costume.jpg"
+      },
+      {
+        "short": "The “Boo” prank is TikTok's trend of the month",
+        "headline": "The *“Boo” prank* is TikTok's trend of the month",
+        "what": "People pull a cross-eyed face and say “boo” to camera, often tricking a partner or sibling into joining in. The first known clip (20 Sept) passed 8.4M views; one posted on 12 Oct hit 1.3M in about a day.",
+        "why": "Low effort, made for a reaction shot and easy to join: a ready-made format for talent if it fits the brand.",
+        "momentum": "Rising", "region": "Global", "platform": "TikTok",
+        "source": "Know Your Meme, 14 Oct (view counts as reported)", "credit": "Know Your Meme / TikTok",
+        "url": "https://trending.knowyourmeme.com/editorials/guides/what-is-the-boo-trend-on-tiktok-the-origin-of-the-viral-trend-and-prank-explained",
+        "image": "images/boo.jpg"
+      }
+    ],
+    "platform": [
+      {
+        "short": "Instagram's “Use as reference” makes response Reels easier",
+        "headline": "Instagram's *“Use as reference”* makes response Reels easier",
+        "what": "Creators can overlay another Reel (under 90 seconds) in the camera to match a response clip. It's iOS only for now. Instagram is also removing Reels series links on 28 Oct, and Edits adds tappable audio links.",
+        "why": "Side-by-side recreations are about to get easier on Instagram, so expect more of them in feeds.",
+        "momentum": "Rising", "region": "Global", "platform": "Instagram",
+        "source": "Social Media Today, 15 Oct", "credit": "Instagram via Social Media Today",
+        "url": "https://www.socialmediatoday.com/news/meta-adds-audio-links-and-reference-reels-to-edits/833192/",
+        "image": "images/reels.jpg"
+      },
+      {
+        "short": "TikTok Shop UK adds shoppable photo carousels",
+        "headline": "TikTok Shop UK adds *shoppable photo carousels*",
+        "what": "UK sellers can turn two or more product images into a swipeable post that links to products, with no video needed. Live shopping also gets group deals and price cuts once a sales target is hit.",
+        "why": "Brands without video can now sell straight from the feed with product photos they already have.",
+        "momentum": "Rising", "region": "UK", "platform": "TikTok Shop",
+        "source": "TikTok Shop UK via Social Media Today, 14 Oct", "credit": "TikTok Shop",
+        "url": "https://www.socialmediatoday.com/news/tiktok-shop-offers-uk-merchants-more-engagement-tools/833064/",
+        "image": "images/tiktokshop.jpg"
+      },
+      {
+        "short": "LinkedIn brings back the business card",
+        "headline": "LinkedIn brings back the *business card*",
+        "what": "LinkedIn is rolling out a digital business card you can design, with your headshot, job title and a QR code, and keep in your phone's wallet. It goes global over the coming months.",
+        "why": "Events are where B2B relationships start. This makes LinkedIn the default handshake again.",
+        "momentum": "Rising", "region": "Global", "platform": "LinkedIn",
+        "source": "Social Media Today, 18 Oct; LinkedIn", "credit": "LinkedIn via Social Media Today",
+        "url": "https://www.socialmediatoday.com/news/linkedin-adds-digital-business-cards/833306/",
+        "image": "images/linkedin.jpg"
+      }
+    ]
+  },
+  "watch": [
+    {"when": "Now", "title": "Brands copying the Roadster “what if” format", "note": "AI “what if” clips are the format of the week. Expect brand versions, and some backlash to them."},
+    {"when": "All week", "title": "Halloween build-up to Saturday 31 Oct", "note": "Costume reveals, the Ramalama strut and the Boo prank will crowd feeds from Thursday."},
+    {"when": "TBC", "title": "Lime Bike Jousting II", "note": "The organisers have promised a sequel. Watch for a date and whether Lime joins in."},
+    {"when": "Wed 28 Oct", "title": "Instagram drops Reels series links", "note": "Any Reels linked in a series lose that link. Check client series before then."}
   ],
   "desks": [
     {
-      "id": "chief", "name": "the Jungle team", "short": "Jungle",
-      "title": "For *Strategy* & Insight",
-      "byline": "Sterling · Editor-in-chief",
-      "color": "#3f6b2e", "logo": "logos/jungle.png",
-      "ideas": [
-        {"from": "Story 1 · Thought leadership", "idea": "The thank-you is the new performance.", "note": "Audiences now rate what happens between the big moments. A piece on etiquette, replies and tone as content."},
-        {"from": "Story 3 · Thought leadership", "idea": "Who decides what's political in paid social?", "note": "Three platforms rejected the same film's ads, then reversed. What should entertainment launches plan for?"},
-        {"from": "Story 2 · Reactive", "idea": "A Ramalama strut reveal of the Jungle team in costume.", "note": "Low-angle feet first, full reveal on the drop. Post in Halloween week."}
-      ]
-    },
-    {
       "id": "disney", "name": "Disney UK", "short": "Disney UK",
-      "byline": "Pip · Disney UK desk",
-      "color": "#4a74c9", "logo": "logos/disney.png",
+      "byline": "Pip · Disney UK desk", "color": "#4a74c9", "logo": "logos/disney.png",
       "ideas": [
-        {"from": "Story 2", "idea": "A Ramalama-style witch reveal for Hexed.", "note": "Strut reveal ending on the Hexed poster. In cinemas 27 November."},
-        {"from": "Story 5", "idea": "Fans recreate a classic Disney scene side by side.", "note": "Use “Use as reference” to invite recreations of one iconic moment."}
-      ]
+        {"from": "Costume of the year", "idea": "A Ramalama-style witch reveal for Hexed.", "note": "Strut reveal ending on the Hexed poster. In cinemas 27 November."},
+        {"from": "Use as reference", "idea": "Fans recreate a classic Disney scene side by side.", "note": "Invite recreations of one iconic moment with the new reference tool."}
+      ],
+      "watch": "Unofficial AI “what if” clips of famous characters are the format of the week. Agree now how to respond if Disney ones spread."
     },
     {
       "id": "family", "name": "Disney Family UK", "short": "Disney Family",
-      "byline": "Bo · Disney Family UK desk",
-      "color": "#a983cf", "logo": "logos/disney.png",
+      "byline": "Bo · Disney Family UK desk", "color": "#a983cf", "logo": "logos/disney.png",
       "ideas": [
-        {"from": "Story 2", "idea": "Parent and child matching costume reveals.", "note": "A family strut reveal in Disney costumes, timed for half-term."}
-      ]
+        {"from": "Costume of the year", "idea": "Parent and child matching costume reveals.", "note": "A family strut reveal in Disney costumes for Halloween week."},
+        {"from": "The Boo prank", "idea": "The Boo prank, family edition.", "note": "A parent tries the boo on their kids. Reaction shot does the work."}
+      ],
+      "watch": "This year's top adult costumes are horror looks (Nikki, Scream). Keep family content clear of that imagery."
     },
     {
       "id": "muti", "name": "Mutti UK", "short": "Mutti",
-      "byline": "Kiki · Mutti UK desk",
-      "color": "#d8302b", "logo": "logos/mutti.png",
+      "byline": "Kiki · Mutti UK desk", "color": "#d8302b", "logo": "logos/mutti.png",
       "ideas": [
-        {"from": "Story 6", "idea": "A five-image passata recipe carousel.", "note": "One photo per step. If Mutti sells on TikTok Shop UK, link the product (check first)."},
-        {"from": "Story 2", "idea": "A blood-red Halloween pasta for party night.", "note": "A spooky-styled passata dish as a quick recipe Reel."}
-      ]
+        {"from": "TikTok Shop carousels", "idea": "A five-image passata recipe carousel.", "note": "One photo per step. If Mutti sells on TikTok Shop UK, link the product (check first)."},
+        {"from": "Halloween", "idea": "A blood-red Halloween pasta for party night.", "note": "A spooky-styled passata dish as a quick recipe Reel."}
+      ],
+      "watch": "Halloween is Saturday 31 Oct. Spooky recipes need to be live by Thursday 29th to catch people planning."
     },
     {
       "id": "dfs", "name": "DFS", "short": "DFS",
-      "byline": "Dot · DFS desk",
-      "color": "#2f9c8f", "logo": "logos/dfs.png",
+      "byline": "Dot · DFS desk", "color": "#2f9c8f", "logo": "logos/dfs.png",
       "ideas": [
-        {"from": "Story 6", "idea": "One sofa, styled for day and for night.", "note": "A shoppable carousel borrowing the “day vs night” decor format."},
-        {"from": "Story 5", "idea": "Recreate a viral room makeover with a DFS sofa.", "note": "A side-by-side Reel made with “Use as reference”."}
-      ]
+        {"from": "TikTok Shop carousels", "idea": "One sofa, styled for day and for night.", "note": "A shoppable carousel borrowing the “day vs night” decor format."},
+        {"from": "Use as reference", "idea": "Recreate a viral room makeover with a DFS sofa.", "note": "A side-by-side Reel made with the new reference tool."}
+      ],
+      "watch": "Shoppable photo carousels are new for UK sellers. Test them now, before Black Friday (27 Nov) gets crowded."
     }
   ]
 }
