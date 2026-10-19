@@ -4,7 +4,7 @@
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Ultra&family=Alegreya+Sans:wght@400;500;700;800&family=Special+Elite&display=swap">
 <style>
 /* Layout: full-screen 3D jungle-office diorama; a 1930s rubber-hose cartoon HUD floats on top
-   (title ribbon, crew card, theme reel), with film grain and vignette over everything. */
+   (title ribbon, crew card, edit-theme button), with film grain and vignette over everything. */
 :root{
   --paper:#f1e2c0; --paper-deep:#e3c994; --ink:#1f1610; --red:#c53a2b; --mustard:#e2a634;
   --leaf:#3e6a2c; --muted:#6a5842; --ok:#3f7d3a; --warn:#b5402f;
@@ -90,16 +90,16 @@ dl.facts dd{margin:0}
 .clientbadge img{max-height:44px;max-width:100%;background:#fbf6ea;border-radius:6px;padding:4px 8px}
 .empty{border:2px dashed var(--ink);border-radius:12px;padding:10px;font-size:14px;line-height:1.4;background:rgba(255,255,255,.3)}
 
-/* theme reel */
-.reel{position:absolute;left:0;right:0;bottom:calc(14px + env(safe-area-inset-bottom,0px));display:flex;justify-content:center;
-  padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px));pointer-events:none}
-.reel-inner{pointer-events:auto;display:flex;align-items:center;gap:6px;max-width:100%;overflow-x:auto;background:var(--paper);border:3px solid var(--ink);border-radius:999px;padding:6px 8px;box-shadow:4px 4px 0 var(--ink);scrollbar-width:none}
-.reel-inner::-webkit-scrollbar{display:none}
-.reel-label{font-family:var(--type);font-size:12px;color:var(--muted);padding:0 6px 0 8px;white-space:nowrap}
-.tchip{font:inherit;font-size:13px;font-weight:700;white-space:nowrap;background:transparent;border:2px solid transparent;border-radius:999px;padding:4px 11px;cursor:pointer;color:var(--ink)}
-.tchip:hover{border-color:var(--ink)}
-.tchip[aria-pressed="true"]{background:var(--red);color:var(--paper);border-color:var(--ink)}
-.tchip .today{font-family:var(--type);font-weight:400;font-size:10px;margin-left:4px;opacity:.85}
+/* theme: follows the calendar automatically; "Edit theme" overrides it for this viewer */
+.theme{position:absolute;left:max(16px,env(safe-area-inset-left,0px));bottom:calc(14px + env(safe-area-inset-bottom,0px));display:flex;flex-direction:column;align-items:flex-start;gap:8px}
+.theme-btn{font:inherit;font-family:var(--display);font-size:13px;letter-spacing:.03em;color:var(--ink);background:var(--paper);border:3px solid var(--ink);border-radius:999px;padding:.5em 1em;box-shadow:3px 3px 0 var(--ink);cursor:pointer}
+.theme-btn:hover{background:#fff6dd}
+.theme-menu{order:-1;background:var(--paper);border:3px solid var(--ink);border-radius:14px;box-shadow:5px 5px 0 var(--ink);padding:6px;min-width:230px}
+.theme-menu button{display:flex;justify-content:space-between;gap:16px;width:100%;font:inherit;font-size:14px;font-weight:700;text-align:left;background:none;border:none;border-radius:9px;padding:7px 10px;cursor:pointer;color:var(--ink)}
+.theme-menu button:hover{background:#fff6dd}
+.theme-menu button[aria-checked="true"]{background:var(--red);color:var(--paper)}
+.theme-menu small{font-family:var(--type);font-weight:400;font-size:11px;opacity:.8;white-space:nowrap}
+.theme-menu hr{border:none;border-top:2px dashed rgba(31,22,16,.35);margin:4px 6px}
 
 /* ticker */
 #ticker{position:absolute;left:max(16px,env(safe-area-inset-left,0px));bottom:calc(76px + env(safe-area-inset-bottom,0px));max-width:min(520px,calc(100% - 400px));
@@ -156,7 +156,6 @@ dl.facts dd{margin:0}
   .dateline{font-size:11.5px}
   #runBtn{font-size:11.5px;padding:.5em .7em}
   #ticker{bottom:auto;top:calc(104px + env(safe-area-inset-top,0px));max-width:calc(100% - 32px);font-size:12.5px}
-  .reel-label{display:none}
 }
 @media (prefers-reduced-motion: reduce){
   .grain,.flicker,.rays,.plaque h1,.pin{animation:none!important}
@@ -185,9 +184,10 @@ dl.facts dd{margin:0}
 
   <div id="ticker" role="status"></div>
 
-  <nav class="reel" aria-label="Theme preview">
-    <div class="reel-inner" id="reel"><span class="reel-label">Theme preview</span></div>
-  </nav>
+  <div class="theme">
+    <button class="theme-btn" id="themeBtn" type="button" aria-haspopup="true" aria-expanded="false" aria-controls="themeMenu">Edit theme</button>
+    <div class="theme-menu" id="themeMenu" role="menu" hidden></div>
+  </div>
 
   <div id="titlecard">
     <div class="rays"></div>
@@ -1234,7 +1234,8 @@ function setFaller(kind){
 /* --------------------------------------------------------------- themes */
 
 let currentTheme = null;
-function applyTheme(key){
+let themeAuto = true;
+function applyTheme(key, auto){
   const th = THEMES[key]; currentTheme = key;
   scene.background = new THREE.Color(th.bg);
   sun.color.set(th.sun); sun.intensity = th.sunI;
@@ -1249,19 +1250,24 @@ function applyTheme(key){
   Object.keys(PROPS).forEach(k => PROPS[k].forEach(o => { o.visible = th.props.includes(k); }));
   setFaller(th.fall);
   $('#themeTxt').textContent = th.label + (key === TODAY_THEME ? '' : ' preview');
-  document.querySelectorAll('.tchip').forEach(b => b.setAttribute('aria-pressed', b.dataset.k === key ? 'true' : 'false'));
+  themeAuto = auto !== false && key === TODAY_THEME;
+  document.querySelectorAll('#themeMenu button').forEach(b => b.setAttribute('aria-checked', String(b.dataset.k === (themeAuto ? 'auto' : key))));
 }
 
-function buildReel(){
-  const reel = $('#reel');
-  THEME_ORDER.forEach(k => {
-    const b = document.createElement('button');
-    b.type = 'button'; b.className = 'tchip'; b.dataset.k = k;
-    b.title = THEMES[k].when;
-    b.innerHTML = THEMES[k].label + (k === TODAY_THEME ? '<span class="today">today</span>' : '');
-    b.addEventListener('click', () => applyTheme(k));
-    reel.appendChild(b);
+function buildThemeMenu(){
+  const menu = $('#themeMenu'), btn = $('#themeBtn');
+  const item = (k, label, note) => '<button type="button" role="menuitemradio" data-k="' + k + '"><span>' + label + '</span><small>' + note + '</small></button>';
+  menu.innerHTML = item('auto', 'Automatic', 'today: ' + THEMES[TODAY_THEME].label) + '<hr>' +
+    THEME_ORDER.map(k => item(k, THEMES[k].label, THEMES[k].when)).join('');
+  const close = () => { menu.hidden = true; btn.setAttribute('aria-expanded', 'false'); };
+  btn.addEventListener('click', e => { e.stopPropagation(); menu.hidden = !menu.hidden; btn.setAttribute('aria-expanded', String(!menu.hidden)); });
+  menu.addEventListener('click', e => {
+    const b = e.target.closest('button'); if (!b) return;
+    b.dataset.k === 'auto' ? applyTheme(TODAY_THEME, true) : applyTheme(b.dataset.k, false);
+    close();
   });
+  document.addEventListener('click', e => { if (!menu.hidden && !menu.contains(e.target)) close(); });
+  document.addEventListener('keydown', e => { if (e.key === 'Escape') close(); });
 }
 
 /* ------------------------------------------------------------ labels/UI */
@@ -1583,7 +1589,7 @@ function tick(){
 function start(){
   build();
   buildSeasonal();
-  buildReel();
+  buildThemeMenu();
   buildTags();
   applyTheme(TODAY_THEME);
   renderPanel();
