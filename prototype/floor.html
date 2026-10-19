@@ -146,19 +146,6 @@ dl.facts dd{margin:0}
 .bubble[hidden]{display:none}
 
 /* title card */
-#titlecard{position:absolute;inset:0;display:grid;place-items:center;z-index:5;background:#e8cf9c;overflow:hidden;transition:opacity .5s, transform .5s}
-#titlecard.out{opacity:0;transform:scale(1.04);pointer-events:none}
-.rays{position:absolute;left:50%;top:50%;width:260vmax;height:260vmax;margin:-130vmax 0 0 -130vmax;
-  background:repeating-conic-gradient(from 0deg,#efd8a6 0deg 7.5deg,#dcb97a 7.5deg 15deg);animation:spin 60s linear infinite}
-@keyframes spin{to{transform:rotate(360deg)}}
-.plaque{position:relative;text-align:center;padding:28px 34px 26px;max-width:min(560px,calc(100% - 32px));background:var(--paper);border:4px solid var(--ink);border-radius:22px;box-shadow:8px 8px 0 var(--ink)}
-.plaque .pre{font-family:var(--type);font-size:14px;letter-spacing:.12em;text-transform:uppercase;margin:0}
-.plaque h1{font-family:var(--display);font-weight:400;font-size:clamp(34px,7vw,64px);line-height:.95;margin:10px 0 6px;color:var(--red);text-shadow:3px 3px 0 var(--ink);text-wrap:balance;animation:boil .45s steps(1) infinite}
-@keyframes boil{0%{transform:rotate(-.4deg)}33%{transform:rotate(.3deg) translateY(1px)}66%{transform:rotate(0) translateX(1px)}}
-.plaque .in{font-family:var(--display);font-size:14px;margin:6px 0}
-.plaque .episode{font-family:var(--display);font-size:clamp(18px,3.2vw,26px);margin:0 0 6px;text-wrap:balance}
-.plaque .when{font-family:var(--type);margin:0 0 18px;color:var(--muted)}
-.plaque .btn{font-size:16px;background:var(--red)}
 #fail{position:absolute;inset:0;display:grid;place-items:center;padding:24px;text-align:center;color:var(--paper);font-family:var(--type)}
 
 @media (max-width:760px){
@@ -169,7 +156,7 @@ dl.facts dd{margin:0}
   #ticker{bottom:auto;top:calc(104px + env(safe-area-inset-top,0px));max-width:calc(100% - 32px);font-size:12.5px}
 }
 @media (prefers-reduced-motion: reduce){
-  .grain,.flicker,.rays,.plaque h1,.pin{animation:none!important}
+  .grain,.flicker,.pin{animation:none!important}
 }
 </style>
 
@@ -201,17 +188,6 @@ dl.facts dd{margin:0}
     <div class="theme-menu" id="themeMenu" role="menu" hidden></div>
   </div>
 
-  <div id="titlecard">
-    <div class="rays"></div>
-    <div class="plaque">
-      <p class="pre">Jungle Creations presents</p>
-      <h1>The Jungle Newsroom</h1>
-      <p class="in">in</p>
-      <p class="episode" id="episode"></p>
-      <p class="when" id="when"></p>
-      <button class="btn" id="enterBtn" type="button">Enter the floor</button>
-    </div>
-  </div>
 </div>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
@@ -324,8 +300,6 @@ const DATE_TXT = TODAY.toLocaleDateString('en-GB', {weekday:'long', day:'numeric
 
 /* ------------------------------------------------------------ title card */
 
-$('#episode').textContent = THEMES[TODAY_THEME].episode;
-$('#when').textContent = DATE_TXT;
 $('#dateTxt').textContent = DATE_TXT;
 
 if (!window.THREE || !THREE.OrbitControls) {
@@ -1398,7 +1372,7 @@ const RUN = [
   {ids:['critic'], t:2300}
 ];
 const ticker = $('#ticker');
-const RESTING_TICKER = 'Example run · the real one lands at 06:00 each weekday';
+const RESTING_TICKER = 'This morning\u2019s run is done \u00b7 replay it any time';
 let running = false;
 function setState(id, s){ ACTORS[id].state = s; }
 async function runMorning(){
@@ -1478,11 +1452,6 @@ function setPanel(open){
   applyViewOffset();
 }
 $('#sheetHandle').addEventListener('click', () => setPanel($('#panel').classList.contains('collapsed')));
-$('#enterBtn').addEventListener('click', () => {
-  $('#titlecard').classList.add('out');
-  setTimeout(() => { $('#titlecard').hidden = true; }, 550);
-  runMorning();
-});
 
 // keep the floor centred in the space left of the crew card on wide screens (not when the card is hidden)
 function applyViewOffset(){
