@@ -18,7 +18,7 @@ Search the window for today's edition, UK first, global when a trend crosses bor
 - Platforms: TikTok Newsroom, Instagram (@creators, Meta newsroom), YouTube blog, Snapchat, X, Threads, Pinterest.
 - Trade press: Social Media Today, The Drum, Campaign, Marketing Week, Marketing Beat, Press Gazette.
 - Culture: Google Trends UK, Know Your Meme, BBC Culture/Entertainment, TikTok Creative Center.
-- Client categories: Disney UK news and releases; family and half-term culture; food and grocery (The Grocer) for Mutti; home and retail (Retail Gazette) for DFS.
+- Client categories: Disney UK news and releases; family and half-term culture; Disney Store UK products and retail moments; food and grocery (The Grocer) for Mutti; home and retail (Retail Gazette) for DFS; gym, fitness and sports nutrition culture for Optimum Nutrition UK.
 Shortlist 10 to 12 items, each with its source link and date.
 
 ## 2. Trend Analyst (Cam)
@@ -37,7 +37,7 @@ Every story has a link to the post or article and an image taken from it (saved 
 ## 4. Desks
 Pick the 5 or 6 strongest stories. Then:
 - Jungle (Sterling): two thought leadership prompts for Strategy and Data & Insight, one quick reactive idea for Jungle's own social.
-- Each client desk: one or two ideas tied to a named story. A desk may have nothing today; that is fine.
+- Each client desk: one or two ideas tied to a named story, plus one watch-out. Desks: Disney UK, Disney Family UK, Disney Store UK, Mutti UK, Optimum Nutrition UK, DFS. A desk may have nothing today; that is fine.
 Brief packs are not written yet, so desks work from what is public about each brand.
 
 ## 5. Review (Ozzie)

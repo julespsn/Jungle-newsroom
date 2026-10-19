@@ -243,6 +243,11 @@ const CREW = [
      {tags:[['Rising','up'],['UK',''],['Instagram','']], t:'Half-term “what we did today” family reels.', idea:'Family movie-night setups for half-term week.'},
      {tags:[['Fading','down'],['UK',''],['TikTok','']], t:'Costume-reveal transitions.', idea:'Already past its peak. Skip.'}
    ]},
+  {id:'store', name:'Lulu', species:'Monkey', role:'Disney Store UK desk', group:'desk', color:'#d4567f', tier:'Fast model', reads:'Social & creative team', plate:'DISNEY STORE',
+   items:[
+     {tags:[['Peaking','peak'],['UK',''],['TikTok','']], t:'Costume reveals ahead of Halloween.', idea:'A dress-up strut reveal built around the Disney Store costume range.'},
+     {tags:[['Rising','up'],['UK',''],['TikTok Shop','']], t:'Shoppable photo carousels for UK sellers.', idea:'A swipeable Halloween dress-up carousel (check if Disney Store sells on TikTok Shop UK).'}
+   ]},
   {id:'muti', name:'Kiki', species:'Monkey', role:'Mutti UK desk', group:'desk', color:'#d8302b', tier:'Fast model', reads:'Social & creative team', plate:'MUTTI UK',
    items:[
      {tags:[['Rising','up'],['UK',''],['TikTok','']], t:'Three-ingredient \u201cstore-cupboard\u201d pasta videos.', idea:'A passata weeknight pasta for when the clocks go back.'},
@@ -252,10 +257,15 @@ const CREW = [
    items:[
      {tags:[['Rising','up'],['UK',''],['TikTok','']], t:'“Sofa-to-screen” night-in setups as the evenings draw in.', idea:'The cosiest corner for the clocks going back.'},
      {tags:[['Rising','up'],['Global',''],['Pinterest','']], t:'Warm autumn colour palettes in living rooms.', idea:'A swatch-led carousel built from the autumn range.'}
+   ]},
+  {id:'on', name:'Rex', species:'Monkey', role:'Optimum Nutrition UK desk', group:'desk', color:'#c9962c', tier:'Fast model', reads:'Social & creative team', plate:'OPTIMUM NUTRITION',
+   items:[
+     {tags:[['Rising','up'],['UK',''],['TikTok','']], t:'Gym-floor versions of the \u201cBoo\u201d prank.', idea:'A spotter tries the boo mid-set. The reaction shot does the work.'},
+     {tags:[['Peaking','peak'],['UK',''],['Instagram','']], t:'Protein bakes for Halloween.', idea:'A spooky protein pancake stack as a quick recipe Reel.'}
    ]}
 ];
 // Client logos live in prototype/logos/. A desk without one shows a painted wordmark in its colour.
-const LOGOS = {disney:'logos/disney.png', family:'logos/disney.png', muti:'logos/mutti.png', dfs:'logos/dfs.png'};
+const LOGOS = {disney:'logos/disney.png', family:'logos/disney.png', store:'logos/disney-store.png', muti:'logos/mutti.png', dfs:'logos/dfs.png', on:'logos/on.png'};
 const SHORT = {scout:'Scout', trend:'Trend analyst', facts:'Fact-checker', chief:'Editor-in-chief', critic:'Strategist'};
 for (const c of CREW) c.short = SHORT[c.id] || c.role;
 for (const c of CREW) if (c.group === 'desk') {
@@ -327,12 +337,12 @@ controls.enableDamping = true;
 controls.dampingFactor = 0.08;
 controls.enablePan = false;
 controls.minDistance = 8;
-controls.maxDistance = 140;
+controls.maxDistance = 165;
 controls.minPolarAngle = 0.55;
 controls.maxPolarAngle = 1.28;
 controls.minAzimuthAngle = 0.0;
 controls.maxAzimuthAngle = 1.57;
-const HOME_TARGET = new THREE.Vector3(0, 0.6, 0);
+const HOME_TARGET = new THREE.Vector3(1.6, 0.6, 1.6);   // nudged towards the Disney island so it clears the theme bar
 controls.target.copy(HOME_TARGET);
 
 const hemi = new THREE.HemisphereLight(0xffffff, 0x444444, 0.8);
@@ -341,7 +351,7 @@ const sun = new THREE.DirectionalLight(0xffffff, 1);
 sun.position.set(12, 20, 10);
 sun.castShadow = true;
 sun.shadow.mapSize.set(3072, 3072);
-Object.assign(sun.shadow.camera, {left:-21, right:21, top:21, bottom:-21, near:1, far:70});
+Object.assign(sun.shadow.camera, {left:-25, right:25, top:25, bottom:-25, near:1, far:80});
 sun.shadow.bias = -0.0008;
 sun.shadow.camera.updateProjectionMatrix();
 scene.add(sun);
@@ -487,10 +497,17 @@ function prop(key, obj){ PROPS[key].push(obj); obj.visible = false; return obj; 
 // Islands in a jungle lagoon. The review desk sits on a raised dais at the very centre,
 // the Jungle team works on the ring around it, and boardwalks branch out to one island per client.
 const FX_SCALE = 1.6;                  // how far weather, bats and fireworks spread
-const CORE_R = 2.7, RING_R = 6.6, CLIENT_R = 12.5, ISLE_R = 2.6;
+const CORE_R = 2.7, RING_R = 6.6;
 const TOP_RING = 0.35, TOP_CORE = 0.62, TOP_ISLE = 0.35;
-const CLIENT_ANGLE = {disney:Math.PI / 4, family:Math.PI * 3 / 4, muti:-Math.PI * 3 / 4, dfs:-Math.PI / 4};
-const CREW_ANGLE = {chief:0, scout:Math.PI / 2, trend:Math.PI, facts:-Math.PI / 2};
+// Client islands. The Disney island faces the camera and is larger: it holds all three Disney desks.
+const DEG = Math.PI / 180;
+const ISLANDS = {
+  disney:{a:45 * DEG, R:14.6, r:4.5, color:'#4a74c9', logo:'logos/disney.png', label:'DISNEY', desks:['disney', 'family', 'store']},
+  muti:{a:135 * DEG, R:12.5, r:2.6, desks:['muti']},
+  on:{a:225 * DEG, R:12.5, r:2.6, desks:['on']},
+  dfs:{a:315 * DEG, R:12.5, r:2.6, desks:['dfs']}
+};
+const CREW_ANGLE = {chief:0, scout:90 * DEG, trend:180 * DEG, facts:270 * DEG};
 const polar = (r, a) => [Math.cos(a) * r, Math.sin(a) * r];
 const JUNGLE_LOGO = 'logos/jungle.png';
 let pulseOn = false;
@@ -512,9 +529,9 @@ const frameM = toon('#3b2a1e');
 
 // lagoon: earth bank, water, grass rim
 const grassMat = toon('#86913d');
-const bank = mk(cyl(19.6, 19.0, 1.4, 64), toon('#6e4a2c'), 0, -0.75, 0, world); bank.castShadow = false; ink(bank, 0.05);
-const rim = mk(new THREE.RingGeometry(16.8, 19.6, 72), grassMat, 0, 0.03, 0, world, {noShadow:true}); rim.rotation.x = -Math.PI / 2;
-const water = mk(new THREE.CircleGeometry(16.9, 72), toon('#5aa3a6'), 0, 0.0, 0, world, {noShadow:true}); water.rotation.x = -Math.PI / 2;
+const bank = mk(cyl(23.4, 22.8, 1.4, 72), toon('#6e4a2c'), 0, -0.75, 0, world); bank.castShadow = false; ink(bank, 0.05);
+const rim = mk(new THREE.RingGeometry(20.4, 23.4, 80), grassMat, 0, 0.03, 0, world, {noShadow:true}); rim.rotation.x = -Math.PI / 2;
+const water = mk(new THREE.CircleGeometry(20.5, 80), toon('#5aa3a6'), 0, 0.0, 0, world, {noShadow:true}); water.rotation.x = -Math.PI / 2;
 const padM = toon('#5f9a3a');
 [[9, 4.5], [-6.5, 9.5], [10.5, -8], [-11, -3.5], [4.5, 10.5], [-3.5, -12], [14.5, 2], [-14, 6]].forEach((p, i) => {
   const pad = mk(new THREE.CircleGeometry(0.35 + (i % 3) * 0.12, 18, 0.3, Math.PI * 1.85), padM, p[0], 0.015, p[1], world, {noShadow:true});
@@ -567,12 +584,13 @@ const coreRug = mk(new THREE.CircleGeometry(CORE_R - 0.25, 64), toon('#ffffff', 
 coreRug.rotation.x = -Math.PI / 2;
 // client islands
 const ISLES = {};
-Object.keys(CLIENT_ANGLE).forEach(id => {
-  const [x, z] = polar(CLIENT_R, CLIENT_ANGLE[id]);
-  const c = byId[id];
-  platform(x, z, ISLE_R, TOP_ISLE, 1.6);
-  disc(x, TOP_ISLE + 0.005, z, 0, ISLE_R - 0.3, '#' + new THREE.Color(c.color).lerp(new THREE.Color('#f1e2c0'), 0.7).getHexString());
-  disc(x, TOP_ISLE + 0.008, z, ISLE_R - 0.48, ISLE_R - 0.32, c.color);
+Object.keys(ISLANDS).forEach(id => {
+  const isl = ISLANDS[id], c = byId[isl.desks[0]];
+  isl.color = isl.color || c.color; isl.logo = isl.logo || c.logo; isl.label = isl.label || c.client.toUpperCase();
+  const [x, z] = polar(isl.R, isl.a);
+  platform(x, z, isl.r, TOP_ISLE, isl.r * 0.62);
+  disc(x, TOP_ISLE + 0.005, z, 0, isl.r - 0.3, '#' + new THREE.Color(isl.color).lerp(new THREE.Color('#f1e2c0'), 0.7).getHexString());
+  disc(x, TOP_ISLE + 0.008, z, isl.r - 0.48, isl.r - 0.32, isl.color);
   ISLES[id] = [x, z];
 });
 
@@ -580,8 +598,8 @@ Object.keys(CLIENT_ANGLE).forEach(id => {
 const VINE_CURVES = [];
 const PULSES = [];
 const pulseM = basic('#ffe08a');
-function boardwalk(a){
-  const r0 = RING_R - 0.15, r1 = CLIENT_R - ISLE_R + 0.15, len = r1 - r0, y = 0.3;
+function boardwalk(isl){
+  const a = isl.a, r0 = RING_R - 0.15, r1 = isl.R - isl.r + 0.15, len = r1 - r0, y = 0.3;
   const [mx, mz] = polar((r0 + r1) / 2, a);
   const g = new THREE.Group(); g.position.set(mx, 0, mz); g.rotation.y = Math.PI / 2 - a; world.add(g);
   const n = Math.round(len / 0.3);
@@ -603,18 +621,18 @@ function boardwalk(a){
     PULSES.push({mesh:p, a, r0, r1, ph:i / 3});
   }
 }
-Object.values(CLIENT_ANGLE).forEach(boardwalk);
+Object.values(ISLANDS).forEach(boardwalk);
 
 // lamp posts at each bridge head, with vines strung between them (front quadrant left open)
 const POSTS = [];
 const lampM = basic('#ffd98a');
-Object.values(CLIENT_ANGLE).forEach(a => [-0.2, 0.2].forEach(d => {
+Object.values(ISLANDS).forEach(({a}) => [-0.2, 0.2].forEach(d => {
   const [x, z] = polar(RING_R - 0.25, a + d);
   ink(mk(cyl(0.06, 0.08, 2.1, 10), frameM, x, TOP_RING + 1.05, z, world), 0.01);
   ink(mk(sph(0.14, 12, 10), lampM, x, TOP_RING + 2.18, z, world, {noShadow:true}), 0.012);
   POSTS.push({x, z, a:a + d});
 }));
-[[Math.PI * 3 / 4 + 0.2, Math.PI * 5 / 4 - 0.2], [Math.PI * 5 / 4 + 0.2, Math.PI * 7 / 4 - 0.2]].forEach(([a0, a1]) => {
+[[135 * DEG + 0.2, 225 * DEG - 0.2], [225 * DEG + 0.2, 315 * DEG - 0.2]].forEach(([a0, a1]) => {
   const pts = [];
   for (let k = 0; k <= 10; k++) {
     const t = k / 10, a = a0 + (a1 - a0) * t;
@@ -686,7 +704,7 @@ function badge(x, y, z, logo, ring, label, size){
     g.fillStyle = ring; g.beginPath(); g.arc(128, 126, 118, 0, 7); g.fill();
     g.fillStyle = '#fbf6ea'; g.beginPath(); g.arc(128, 126, 100, 0, 7); g.fill();
     if (img) {
-      const s = Math.min(150 / img.width, 104 / img.height);
+      const s = Math.min(172 / img.width, 104 / img.height);
       g.drawImage(img, 128 - img.width * s / 2, 126 - img.height * s / 2, img.width * s, img.height * s);
     } else {
       g.fillStyle = ring; g.textAlign = 'center'; g.textBaseline = 'middle';
@@ -701,10 +719,10 @@ function badge(x, y, z, logo, ring, label, size){
   BADGES.push({sp, y, ph:BADGES.length * 1.3});
   return sp;
 }
-badge(...(() => { const [x, z] = polar(6.4, Math.PI * 1.02); return [x, 3.7, z]; })(), JUNGLE_LOGO, '#3f6b2e', 'JUNGLE', 3.0);
+badge(...(() => { const [x, z] = polar(4.6, 157 * DEG); return [x, 4.2, z]; })(), JUNGLE_LOGO, '#3f6b2e', 'JUNGLE', 3.0);
 Object.keys(ISLES).forEach(id => {
-  const [x, z] = ISLES[id], c = byId[id];
-  badge(x, 4.0, z, c.logo, c.color, c.client.toUpperCase(), 2.7);
+  const [x, z] = ISLES[id], isl = ISLANDS[id], big = isl.desks.length > 1;
+  badge(x, big ? 4.8 : 4.0, z, isl.logo, isl.color, isl.label, big ? 3.3 : 2.7);
 });
 
 // the review table, with a seat kept for the human editor
@@ -735,7 +753,7 @@ const clockTex = canvasTex(256, 256, (x, w) => {
     x.beginPath(); x.moveTo(w/2 + Math.sin(a) * 96, w/2 - Math.cos(a) * 96); x.lineTo(w/2 + Math.sin(a) * 112, w/2 - Math.cos(a) * 112); x.stroke();
   }
 });
-const clockPost = polar(5.9, Math.PI * 1.12);
+const clockPost = polar(5.9, 247 * DEG);
 ink(mk(cyl(0.06, 0.08, 2.4, 10), frameM, clockPost[0], TOP_RING + 1.2, clockPost[1], world), 0.01);
 const clock = new THREE.Group(); clock.position.set(clockPost[0], TOP_RING + 2.55, clockPost[1]); clock.rotation.y = FACE; world.add(clock);
 const clockFace = mk(cyl(0.34, 0.34, 0.06, 32), [toon('#7a5230'), toon('#ffffff', {map:clockTex}), toon('#7a5230')], 0, 0, 0, clock);
@@ -784,8 +802,9 @@ function indoorTree(x, y, z, s){
   [[0, 2.05, 0, 0.6, m1], [0.32, 1.8, 0.1, 0.42, m2], [-0.3, 1.85, -0.08, 0.4, m2], [0.05, 2.45, -0.05, 0.38, m2]].forEach(c => ink(mk(sph(c[3], 14, 10), c[4], c[0], c[1], c[2], g), 0.022));
   return g;
 }
-[[Math.PI * 0.62, 5.5], [Math.PI * 1.38, 5.5], [-Math.PI * 0.14, 5.6]].forEach(([a, r]) => { const [x, z] = polar(r, a); indoorTree(x, TOP_RING, z, 0.85); });
-Object.keys(ISLES).forEach(id => { const [x, z] = ISLES[id]; plant(x + 0.6, TOP_ISLE, z - 1.6, 0.8); });
+[[108 * DEG, 5.6], [293 * DEG, 5.6]].forEach(([a, r]) => { const [x, z] = polar(r, a); indoorTree(x, TOP_RING, z, 0.85); });
+// a plant at the back edge of each island
+Object.keys(ISLES).forEach(id => { const [x, z] = ISLES[id], d = (ISLANDS[id].r - 0.75) * Math.SQRT1_2; plant(x - d, TOP_ISLE, z - d, 0.8); });
 function tree(x, z, h, kind, s){
   const g = new THREE.Group(); g.position.set(x, 0, z); g.scale.setScalar(s || 1); world.add(g);
   ink(mk(cyl(0.16, 0.26, h, 10), toon('#7a5230'), 0, h / 2, 0, g), 0.02);
@@ -807,12 +826,12 @@ function tree(x, z, h, kind, s){
 // trees fill the far side of the rim; the side facing the camera only gets low bushes
 for (let i = 0; i < 13; i++) {
   const a = Math.PI * 0.62 + i * (Math.PI * 1.25 / 12);
-  const [x, z] = polar(18.2 + (i % 2) * 0.6, a);
+  const [x, z] = polar(21.9 + (i % 2) * 0.6, a);
   tree(x, z, 3.8 + (i % 3) * 0.5, i % 2 ? 'palm' : 'round', 1.15);
 }
 const bushM = toon('#4f8a35'); FOLIAGE_A.push(bushM);
 for (let i = 0; i < 8; i++) {
-  const [x, z] = polar(18.0, -Math.PI * 0.12 + i * (Math.PI * 0.74 / 7));
+  const [x, z] = polar(21.7, -Math.PI * 0.12 + i * (Math.PI * 0.74 / 7));
   ink(mk(sph(0.55 + (i % 2) * 0.15, 14, 10), bushM, x, 0.1, z, world), 0.025).scale.set(1.2, 0.7, 1);
 }
 
@@ -987,7 +1006,14 @@ const STATIONS = {};
 Object.keys(CREW_ANGLE).forEach(id => { const [x, z] = polar(4.7, CREW_ANGLE[id]); STATIONS[id] = {pos:[x, 0, z], y:TOP_RING, rot:FACE}; });
 STATIONS.chief.scale = 1.28;
 STATIONS.critic = {pos:[-0.55, 0, -0.55], y:TOP_CORE, rot:FACE};
-Object.keys(CLIENT_ANGLE).forEach(id => { const [x, z] = polar(CLIENT_R, CLIENT_ANGLE[id]); STATIONS[id] = {pos:[x + 0.35, 0, z - 0.35], y:TOP_ISLE, rot:FACE}; });
+// desks sit side by side across the screen; a lone desk sits just right of centre
+Object.keys(ISLANDS).forEach(k => {
+  const [x, z] = ISLES[k], ds = ISLANDS[k].desks;
+  ds.forEach((id, i) => {
+    const off = ds.length > 1 ? (i - (ds.length - 1) / 2) * 2.4 : 0.5, back = ds.length > 1 ? -0.7 : 0;
+    STATIONS[id] = {pos:[x + (off + back) * Math.SQRT1_2, 0, z + (-off + back) * Math.SQRT1_2], y:TOP_ISLE, rot:FACE};
+  });
+});
 
 function build(){
   for (const c of CREW) {
@@ -1095,10 +1121,10 @@ function pumpkin(parent){
 }
 function buildSeasonal(){
   // Halloween: pumpkins, cobwebs, bats, a warm glow
-  [[1.9, TOP_CORE, -1.0, 0.9], [ISLES.family[0] + 1.3, TOP_ISLE, ISLES.family[1] + 0.9, 1.1], [ISLES.dfs[0] + 1.4, TOP_ISLE, ISLES.dfs[1] + 0.6, 0.9]].forEach(p => {
+  [[1.9, TOP_CORE, -1.0, 0.9], [ISLES.disney[0] + 2.4, TOP_ISLE, ISLES.disney[1] + 2.4, 1.1], [ISLES.dfs[0] + 1.4, TOP_ISLE, ISLES.dfs[1] + 0.6, 0.9]].forEach(p => {
     const g = new THREE.Group(); g.position.set(p[0], p[1], p[2]); g.scale.setScalar(p[3]); g.rotation.y = 0.6; world.add(g); prop('halloween', g); pumpkin(g);
   });
-  const glow = new THREE.PointLight(0xff9a3c, 0.9, 4.5, 2); glow.position.set(ISLES.family[0] + 1.3, 0.9, ISLES.family[1] + 0.9); world.add(glow); prop('halloween', glow);
+  const glow = new THREE.PointLight(0xff9a3c, 0.9, 4.5, 2); glow.position.set(ISLES.disney[0] + 2.4, 0.9, ISLES.disney[1] + 2.4); world.add(glow); prop('halloween', glow);
   function web(){
     const pts = [], n = 6, R = 0.85;
     for (let i = 0; i < n; i++) { const a = -Math.PI / 2 + i / (n - 1) * Math.PI / 2; pts.push(0, 0, 0, Math.cos(a) * R, Math.sin(a) * R, 0); }
@@ -1345,7 +1371,7 @@ const RUN = [
   {ids:['scout'], t:2300},
   {ids:['trend'], t:2100},
   {ids:['facts'], t:2100},
-  {ids:['chief', 'disney', 'family', 'muti', 'dfs'], t:2700},
+  {ids:['chief', 'disney', 'family', 'store', 'muti', 'on', 'dfs'], t:2700},
   {ids:['critic'], t:2300}
 ];
 const ticker = $('#ticker');
@@ -1374,7 +1400,7 @@ async function runMorning(){
     refreshTags(); renderPanel();
     await wait(500);
   }
-  ticker.textContent = 'Morning run finished · five desk updates ready';
+  ticker.textContent = 'Morning run finished · seven desk updates ready';
   await wait(2600);
   CREW.forEach(c => say(c.id, null));
   ticker.textContent = RESTING_TICKER;
@@ -1420,7 +1446,7 @@ function resize(){
   // keep the floor centred in the space left of the crew card on wide screens
   if (w > 760) camera.setViewOffset(w, h, 180, 0, w, h); else camera.clearViewOffset();
   camera.updateProjectionMatrix();
-  homeDist = camera.aspect < 0.8 ? 128 : (camera.aspect < 1.2 ? 76 : 54);
+  homeDist = camera.aspect < 0.8 ? 150 : (camera.aspect < 1.2 ? 90 : 64);
   if (!selected) wantDist = homeDist;
 }
 window.addEventListener('resize', resize);
