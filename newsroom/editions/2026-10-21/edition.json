@@ -1,0 +1,259 @@
+{
+ "edition": "The daily",
+ "coverTitle": "The daily",
+ "coverSub": "what's *moving* on social",
+ "dateLabel": "Wednesday 21 October",
+ "floorUrl": "https://claude.ai/artifact/QByUaU2dzAX6fAwH2X3jVb",
+ "sections": {
+  "saw": [
+   {
+    "short": "A creator calls a Suffolk pumpkin patch the UK's “most depressing”",
+    "headline": "A creator calls a Suffolk pumpkin patch the *UK's “most depressing”*",
+    "what": "Instagram creator @alexdodman posted “a real review” of Suffolk's Pumpkin Patch in Barton Mills, with “Glasgow Willy Wonka vibes”. He said it cost £19.52 for a family of five. The family-run organisers, in their first year, replied: “At the end of the day we are only humans.”",
+    "why": "Half-term days out are under the microscope. Honest reviews of family attractions travel fast in Halloween week.",
+    "momentum": "Rising",
+    "region": "UK",
+    "platform": "Instagram",
+    "source": "LADbible, 20 Oct",
+    "credit": "@alexdodman via LADbible",
+    "url": "https://www.ladbible.com/news/uk-news/pumpkin-patch-halloween-compared-to-willy-wonka-experience-260881-20261020",
+    "image": "images/pumpkin.jpg"
+   },
+   {
+    "short": "Dune: Part Three IMAX 70mm tickets spark huge UK online queues",
+    "headline": "Dune: Part Three tickets spark *huge online queues*",
+    "what": "IMAX 70mm tickets went on sale on Tuesday morning at only three UK cinemas: BFI IMAX, the Science Museum and Vue Manchester Printworks. One X user claimed “at least 65,000 people” were in the BFI queue in the first minute. The film opens on 18 Dec.",
+    "why": "Queue screenshots are content in their own right. Fans turn a ticket sale into a shared event.",
+    "momentum": "Rising",
+    "region": "UK",
+    "platform": "X",
+    "source": "LADbible, 20 Oct",
+    "credit": "LADbible",
+    "url": "https://www.ladbible.com/entertainment/film/dune-part-3-cinema-tickets-imax-discounts-333702-20261020",
+    "image": "images/dune.jpg"
+   },
+   {
+    "short": "SNL UK calls out Shane Gillis, and UK viewers feel “patriotic”",
+    "headline": "SNL UK calls out Shane Gillis, and viewers feel *“patriotic”*",
+    "what": "Cast member Ania Magliano used a mock news segment to answer Shane Gillis's controversial monologue on the US show, with a photo of him on screen and some strong language. Viewers replied “suddenly i'm patriotic” and “That's not a jab that's a knock out”.",
+    "why": "UK audiences love a home-grown answer to a US moment. Local takes on global rows get shared.",
+    "momentum": "Fading",
+    "region": "UK",
+    "platform": "Social clips",
+    "source": "LADbible, 18 Oct",
+    "credit": "Sky / SNL UK via LADbible",
+    "url": "https://www.ladbible.com/entertainment/tv/uk-snl-shane-gillis-response-273063-20261018",
+    "image": "images/snl.jpg"
+   },
+   {
+    "short": "Elizabeth Holmes's stare in a Nathan Fielder teaser feels “uncanny valley”",
+    "headline": "Elizabeth Holmes's stare in a new teaser feels *“uncanny valley”*",
+    "what": "The teaser for Nathan Fielder's documentary You Can See Everything shows Holmes asking him: “Why would I deceive you?” Viewers called it “creepy and awkward” and “uncanny valley”. Microexpressions expert Annie Särnblad broke down the stare on Instagram after a “ton of DMs”.",
+    "why": "One unsettling expression became a format: experts and creators react to the clip frame by frame.",
+    "momentum": "Rising",
+    "region": "Global",
+    "platform": "Instagram",
+    "source": "LADbible, 20 Oct",
+    "credit": "LADbible",
+    "url": "https://www.ladbible.com/entertainment/film/experts-elizabeth-holmes-you-can-see-everything-expression-creepy-912437-20261020",
+    "image": "images/holmes.jpg"
+   }
+  ],
+  "platform": [
+   {
+    "short": "TikTok Shop adds shoppable carousels and group deals for UK sellers",
+    "headline": "TikTok Shop adds *shoppable carousels* for UK sellers",
+    "what": "UK merchants can now post shoppable carousels of two or more images (five to seven recommended). New live tools include group deals that unlock a discount at a sales target, “second chance” auctions and stock reserved for lives.",
+    "why": "Carousels become a shopping format on TikTok in the UK, just in time for Christmas gifting.",
+    "momentum": "Rising",
+    "region": "UK",
+    "platform": "TikTok",
+    "source": "Social Media Today, 14 Oct",
+    "credit": "TikTok via Social Media Today",
+    "url": "https://www.socialmediatoday.com/news/tiktok-shop-offers-uk-merchants-more-engagement-tools/833064/",
+    "image": "images/tiktokshop.jpg"
+   },
+   {
+    "short": "YouTube Shopping adds AliExpress, including in the UK",
+    "headline": "YouTube Shopping adds *AliExpress*, including in the UK",
+    "what": "Creators in the US, Brazil, the UK and Germany can now tag AliExpress products through YouTube's affiliate programme. It launched in South Korea in March. UK creators joined the affiliate programme in August, and YouTube aims for 35 markets by the end of 2026.",
+    "why": "More creators can earn from product tags, so expect more haul and try-on videos in the run-up to Christmas.",
+    "momentum": "Rising",
+    "region": "UK",
+    "platform": "YouTube",
+    "source": "Social Media Today, 20 Oct",
+    "credit": "YouTube via Social Media Today",
+    "url": "https://www.socialmediatoday.com/news/youtube-inks-affiliate-deal-with-aliexpress/833542/",
+    "image": "images/aliexpress.jpg"
+   },
+   {
+    "short": "Snap hires Robert Downey Jr to sell its Specs glasses",
+    "headline": "Snap hires *Robert Downey Jr* to sell its Specs glasses",
+    "what": "Robert Downey Jr is Snap's new “Chief Customer Experience Officer” for Specs, its AR glasses. He'll front original video episodes on the Specs site and YouTube. Specs are on pre-order in the US at $2,195.",
+    "why": "A celebrity title instead of a plain ad. Expect more brands to give famous faces made-up job titles.",
+    "momentum": "Rising",
+    "region": "Global",
+    "platform": "Snapchat",
+    "source": "Social Media Today, 20 Oct",
+    "credit": "Snap via Social Media Today",
+    "url": "https://www.socialmediatoday.com/news/snap-taps-robert-downey-jr-to-promote-specs/833539/",
+    "image": "images/specs.jpg"
+   }
+  ]
+ },
+ "watch": [
+  {
+   "when": "Sun 25 Oct",
+   "title": "Clocks go back",
+   "note": "The first dark evenings. A natural hook for cosy-night, home and comfort content."
+  },
+  {
+   "when": "26–30 Oct",
+   "title": "October half-term",
+   "note": "Half-term in most of England; academies set their own dates. Family days out and home plans fill feeds."
+  },
+  {
+   "when": "Wed 28 Oct",
+   "title": "Instagram removes Reels series links",
+   "note": "Check any posts or plans that rely on linking Reels in a series."
+  },
+  {
+   "when": "Sat 31 Oct",
+   "title": "Halloween",
+   "note": "Content peaks from Thursday. Get costume and Halloween posts out early."
+  },
+  {
+   "when": "Pending",
+   "title": "£100 fines for loud phones on buses",
+   "note": "The government's “Share the journey, not the noise” push started on 19 Oct. Fines still need the Transport Secretary's sign-off."
+  }
+ ],
+ "desks": [
+  {
+   "id": "disney",
+   "name": "Disney UK",
+   "short": "Disney UK",
+   "byline": "Pip · Disney UK desk",
+   "color": "#4a74c9",
+   "logo": "logos/disney.png",
+   "ideas": [
+    {
+     "from": "Dune IMAX queues",
+     "idea": "A Hexed big-screen countdown: “which seat are you booking?”",
+     "note": "Ride the cinema-queue mood without naming rival films. Hexed opens 27 Nov."
+    },
+    {
+     "from": "Holmes teaser",
+     "idea": "A Hexed villain stare-down captioned “Why would I deceive you?”",
+     "note": "A playful, uncanny close-up. Uses owned footage only."
+    }
+   ],
+   "watch": "Keep posts about Hexed. Don't name rival films or tie Disney to the Holmes story itself."
+  },
+  {
+   "id": "family",
+   "name": "Disney Family UK",
+   "short": "Disney Family",
+   "byline": "Bo · Disney Family UK desk",
+   "color": "#a983cf",
+   "logo": "logos/disney.png",
+   "ideas": [
+    {
+     "from": "Pumpkin patch",
+     "idea": "A free at-home pumpkin carving with Disney character stencils.",
+     "note": "An easy half-term plan, no tickets needed. Don't name the patch."
+    },
+    {
+     "from": "TikTok Shop carousels",
+     "idea": "A six-slide half-term plan: activities paired with a film pick.",
+     "note": "Carousel format works without shop links."
+    }
+   ],
+   "watch": "Don't mention the pumpkin patch row. Never mock families or small businesses."
+  },
+  {
+   "id": "store",
+   "name": "Disney Store UK",
+   "short": "Disney Store",
+   "byline": "Lulu · Disney Store UK desk",
+   "color": "#d4567f",
+   "logo": "logos/disney-store.png",
+   "ideas": [
+    {
+     "from": "TikTok Shop group deals",
+     "idea": "A costume group deal that unlocks a discount at a sales target.",
+     "note": "Check the account can run group deals first."
+    },
+    {
+     "from": "YouTube Shopping",
+     "idea": "A Halloween costume try-on Short with product tags.",
+     "note": "Tags depend on channel eligibility. Check before planning."
+    }
+   ],
+   "watch": "Keep stock and price claims out of posts. Check every product is live before posting."
+  },
+  {
+   "id": "muti",
+   "name": "Mutti UK",
+   "short": "Mutti",
+   "byline": "Kiki · Mutti UK desk",
+   "color": "#d8302b",
+   "logo": "logos/mutti.png",
+   "ideas": [
+    {
+     "from": "Clocks go back",
+     "idea": "“First dark evening”: a 20-minute passata pasta.",
+     "note": "A cosy, timely recipe for Sunday night."
+    },
+    {
+     "from": "TikTok Shop carousels",
+     "idea": "A six-slide carousel: three weeknight dishes, one jar each.",
+     "note": "A recipe carousel that works organically first."
+    }
+   ],
+   "watch": "Stick to taste and cooking. No health or “healthier” claims about tomatoes."
+  },
+  {
+   "id": "on",
+   "name": "Optimum Nutrition UK",
+   "short": "Optimum Nutrition",
+   "byline": "Rex · Optimum Nutrition UK desk",
+   "color": "#c9962c",
+   "logo": "logos/on.png",
+   "ideas": [
+    {
+     "from": "Clocks go back",
+     "idea": "A “first dark-evening session” gym-bag post.",
+     "note": "Real gym-goers, real routines. No results claims."
+    },
+    {
+     "from": "TikTok Shop group deals",
+     "idea": "A training bundle that unlocks a discount at a sales target.",
+     "note": "Check TikTok Shop UK rules for supplements first."
+    }
+   ],
+   "watch": "UK nutrition and health claims are regulated. No “build muscle faster” lines or before-and-after images."
+  },
+  {
+   "id": "dfs",
+   "name": "DFS",
+   "short": "DFS",
+   "byline": "Dot · DFS desk",
+   "color": "#2f9c8f",
+   "logo": "logos/dfs.png",
+   "ideas": [
+    {
+     "from": "Dune IMAX queues",
+     "idea": "A film-night setup reel: “skip the queue, the front row is your sofa”.",
+     "note": "The sofa is the hero, not any film."
+    },
+    {
+     "from": "Clocks go back",
+     "idea": "A cosy first-dark-evening sofa scene.",
+     "note": "Warm and low-key, timed for Sunday."
+    }
+   ],
+   "watch": "No finance, interest-free or delivery-date promises without client-approved wording."
+  }
+ ]
+}
