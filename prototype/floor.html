@@ -49,7 +49,19 @@ body{background:#2a1d14;color:var(--ink);font-family:var(--body);font-size:15px;
 .btn:hover{transform:translate(-1px,-1px);box-shadow:5px 5px 0 var(--ink)}
 .btn:active{transform:translate(3px,3px);box-shadow:1px 1px 0 var(--ink)}
 .btn:disabled{opacity:.6;cursor:default;transform:none}
-button:focus-visible{outline:3px solid var(--mustard);outline-offset:2px}
+/* top right: open the day's carousel, replay the run */
+.actions{display:flex;flex-direction:column;align-items:flex-end;gap:8px}
+a.btn{text-decoration:none;display:inline-block}
+.btn.red{background:var(--red)}
+.btn[hidden]{display:none}
+.btn .short{display:none}
+/* the date pill steps between editions */
+.dateline{padding-left:4px}
+.day{display:flex;align-items:center;gap:5px}
+.day-nav{font:inherit;font-family:var(--display);font-weight:800;font-size:15px;line-height:1;width:22px;height:22px;flex:none;border-radius:50%;border:2px solid var(--ink);background:#fff8e6;color:var(--ink);cursor:pointer;display:grid;place-items:center;padding:0 0 2px}
+.day-nav:hover:not(:disabled){background:var(--mustard)}
+.day-nav:disabled{opacity:.3;cursor:default}
+button:focus-visible,a:focus-visible{outline:3px solid var(--mustard);outline-offset:2px}
 
 /* crew card */
 #panel{position:absolute;right:max(16px,env(safe-area-inset-right,0px));top:calc(84px + env(safe-area-inset-top,0px));bottom:calc(84px + env(safe-area-inset-bottom,0px));width:340px;
@@ -96,6 +108,7 @@ dl.facts .up{display:inline-block;margin-top:5px;font-size:12.5px;line-height:1.
 .stamp{display:inline-block;font-family:var(--display);font-size:11px;letter-spacing:.06em;color:var(--red);border:2px solid var(--red);border-radius:6px;padding:1px 6px;transform:rotate(-3deg);margin-left:6px;vertical-align:middle;font-weight:800}
 .items{list-style:none;margin:6px 0 0;padding:0;display:grid;gap:8px}
 .item{border:2px solid var(--ink);border-radius:12px;padding:8px 10px;background:#fff8e6}
+.item a{color:inherit;text-underline-offset:3px}
 .tags{display:flex;flex-wrap:wrap;gap:4px;margin-bottom:4px}
 .tags span{font-family:var(--type);font-weight:500;font-size:11px;border:1.5px solid var(--ink);border-radius:999px;padding:0 7px;background:var(--paper)}
 .tags .up{background:#a9cf8c}.tags .peak{background:var(--mustard)}.tags .down{background:#d8c7a8}
@@ -168,7 +181,11 @@ dl.facts .up{display:inline-block;margin-top:5px;font-size:12.5px;line-height:1.
   #panel{left:max(12px,env(safe-area-inset-left,0px));right:max(12px,env(safe-area-inset-right,0px));top:auto;bottom:calc(72px + env(safe-area-inset-bottom,0px));width:auto;max-height:38%}
   #panel.collapsed{max-height:none;width:auto;bottom:calc(72px + env(safe-area-inset-bottom,0px))}
   .dateline{font-size:11px;white-space:nowrap;padding:3px 9px}
-  #runBtn{font-size:11.5px;padding:.5em .7em}
+  #runBtn,#carouselBtn{font-size:11.5px;padding:.5em .7em}
+  .btn .long{display:none}
+  .btn .short{display:inline}
+  .actions{gap:6px}
+  .day-nav{width:20px;height:20px;font-size:13px}
   #ticker{font-size:11px}
 }
 @media (prefers-reduced-motion: reduce){
@@ -187,10 +204,13 @@ dl.facts .up{display:inline-block;margin-top:5px;font-size:12.5px;line-height:1.
   <header class="hud">
     <div class="masthead">
       <div class="ribbon-wrap"><div class="ribbon"><img src="logos/jungle-wordmark-white.png" alt="Jungle"><span>Newsroom</span></div></div>
-      <div class="dateline"><span id="dateTxt"></span><b id="themeTxt"></b></div>
+      <div class="dateline"><span class="day"><button class="day-nav" id="prevDay" type="button" aria-label="Previous edition">‹</button><span id="dateTxt" aria-live="polite"></span><button class="day-nav" id="nextDay" type="button" aria-label="Next edition">›</button></span><b id="themeTxt"></b></div>
       <div id="ticker" role="status"></div>
     </div>
-    <button class="btn" id="runBtn" type="button">Replay morning run</button>
+    <div class="actions">
+      <a class="btn red" id="carouselBtn" target="_blank" rel="noopener" hidden><span class="long">Open the carousel</span><span class="short">Carousel</span> →</a>
+      <button class="btn" id="runBtn" type="button">Replay<span class="long"> morning run</span></button>
+    </div>
   </header>
 
   <aside id="panel" class="card" aria-label="Crew">
@@ -228,45 +248,16 @@ const CREW = [
    out:'Claim-by-claim check', step:'Tracing claims to the source…', doneTxt:'Every claim traced'},
   {id:'chief', name:'Sterling', species:'Silverback', role:'Editor-in-chief · Jungle desk', group:'shared', color:'#4a4441', tier:'Strong model',
    job:'Runs the floor and leads the Jungle desk: prompts for thought leadership pieces for Strategy and Data & Insight, plus quick reactive ideas for Jungle’s own social.',
-   out:'The Jungle daily update', reads:'Strategy, Data & Insight', step:'Picking the Jungle angles…', doneTxt:'Jungle update ready',
-   items:[
-     {tags:[['Prompt',''],['Strategy','']], t:'What does the comment section now do that the caption used to? A piece on comments as the real headline.'},
-     {tags:[['Prompt',''],['Data & Insight','']], t:'Costume trends now move from TikTok to the high street in days. How fast is “fast” this year?'},
-     {tags:[['Reactive','peak'],['Jungle social','']], t:'A Jungle-voiced take on the week’s biggest UK meme format, live within 24 hours.'}
-   ]},
+   out:'The Jungle daily update', reads:'Strategy, Data & Insight', step:'Picking the Jungle angles…', doneTxt:'Jungle update ready'},
   {id:'critic', name:'Ozzie', species:'Owl', role:'Strategist · the critic', group:'shared', color:'#9c7b5b', tier:'Strong model',
    job:'Tests every angle from every desk against that client’s goals. Sends weak work back with a one-line reason. Correct but dull fails.',
    out:'Pass, rework or drop, with reasons', step:'Sending weak angles back…', doneTxt:'All angles challenged'},
-  {id:'disney', name:'Pip', species:'Monkey', role:'Disney UK desk', group:'desk', color:'#4a74c9', tier:'Fast model', reads:'Social & creative team', plate:'DISNEY UK',
-   items:[
-     {tags:[['Rising','up'],['UK',''],['TikTok','']], t:'“Villain era” edits building ahead of Halloween.', idea:'A cut of classic villain moments set to the format’s audio.'},
-     {tags:[['Peaking','peak'],['Global',''],['Instagram','']], t:'Cosy autumn “reset” carousels.', idea:'Comfort-watch lists for when the clocks go back.'}
-   ]},
-  {id:'family', name:'Bo', species:'Monkey', role:'Disney Family UK desk', group:'desk', color:'#a983cf', tier:'Fast model', reads:'Social & creative team', plate:'DISNEY FAMILY UK',
-   items:[
-     {tags:[['Rising','up'],['UK',''],['Instagram','']], t:'Half-term “what we did today” family reels.', idea:'Family movie-night setups for half-term week.'},
-     {tags:[['Fading','down'],['UK',''],['TikTok','']], t:'Costume-reveal transitions.', idea:'Already past its peak. Skip.'}
-   ]},
-  {id:'store', name:'Lulu', species:'Monkey', role:'Disney Store UK desk', group:'desk', color:'#d4567f', tier:'Fast model', reads:'Social & creative team', plate:'DISNEY STORE',
-   items:[
-     {tags:[['Peaking','peak'],['UK',''],['TikTok','']], t:'Costume reveals ahead of Halloween.', idea:'A dress-up strut reveal built around the Disney Store costume range.'},
-     {tags:[['Rising','up'],['UK',''],['TikTok Shop','']], t:'Shoppable photo carousels for UK sellers.', idea:'A swipeable Halloween dress-up carousel (check if Disney Store sells on TikTok Shop UK).'}
-   ]},
-  {id:'muti', name:'Kiki', species:'Monkey', role:'Mutti UK desk', group:'desk', color:'#d8302b', tier:'Fast model', reads:'Social & creative team', plate:'MUTTI UK',
-   items:[
-     {tags:[['Rising','up'],['UK',''],['TikTok','']], t:'Three-ingredient \u201cstore-cupboard\u201d pasta videos.', idea:'A passata weeknight pasta for when the clocks go back.'},
-     {tags:[['Peaking','peak'],['Global',''],['Instagram','']], t:'Nonna-style cooking reels.', idea:'A slow Sunday sugo, told by an Italian grandmother.'}
-   ]},
-  {id:'dfs', name:'Dot', species:'Monkey', role:'DFS desk', group:'desk', color:'#2f9c8f', tier:'Fast model', reads:'Social & creative team', plate:'DFS',
-   items:[
-     {tags:[['Rising','up'],['UK',''],['TikTok','']], t:'“Sofa-to-screen” night-in setups as the evenings draw in.', idea:'The cosiest corner for the clocks going back.'},
-     {tags:[['Rising','up'],['Global',''],['Pinterest','']], t:'Warm autumn colour palettes in living rooms.', idea:'A swatch-led carousel built from the autumn range.'}
-   ]},
-  {id:'on', name:'Rex', species:'Monkey', role:'Optimum Nutrition UK desk', group:'desk', color:'#c9962c', tier:'Fast model', reads:'Social & creative team', plate:'OPTIMUM NUTRITION',
-   items:[
-     {tags:[['Rising','up'],['UK',''],['TikTok','']], t:'Gym-floor versions of the \u201cBoo\u201d prank.', idea:'A spotter tries the boo mid-set. The reaction shot does the work.'},
-     {tags:[['Peaking','peak'],['UK',''],['Instagram','']], t:'Protein bakes for Halloween.', idea:'A spooky protein pancake stack as a quick recipe Reel.'}
-   ]}
+  {id:'disney', name:'Pip', species:'Monkey', role:'Disney UK desk', group:'desk', color:'#4a74c9', tier:'Fast model', reads:'Social & creative team', plate:'DISNEY UK'},
+  {id:'family', name:'Bo', species:'Monkey', role:'Disney Family UK desk', group:'desk', color:'#a983cf', tier:'Fast model', reads:'Social & creative team', plate:'DISNEY FAMILY UK'},
+  {id:'store', name:'Lulu', species:'Monkey', role:'Disney Store UK desk', group:'desk', color:'#d4567f', tier:'Fast model', reads:'Social & creative team', plate:'DISNEY STORE'},
+  {id:'muti', name:'Kiki', species:'Monkey', role:'Mutti UK desk', group:'desk', color:'#d8302b', tier:'Fast model', reads:'Social & creative team', plate:'MUTTI UK'},
+  {id:'dfs', name:'Dot', species:'Monkey', role:'DFS desk', group:'desk', color:'#2f9c8f', tier:'Fast model', reads:'Social & creative team', plate:'DFS'},
+  {id:'on', name:'Rex', species:'Monkey', role:'Optimum Nutrition UK desk', group:'desk', color:'#c9962c', tier:'Fast model', reads:'Social & creative team', plate:'OPTIMUM NUTRITION'}
 ];
 // Client logos live in prototype/logos/. A desk without one shows a painted wordmark in its colour.
 const LOGOS = {disney:'logos/disney.png', family:'logos/disney.png', store:'logos/disney-store.png', muti:'logos/mutti.png', dfs:'logos/dfs.png', on:'logos/on.png'};
@@ -297,6 +288,11 @@ const MODEL_PLAN = {
 };
 for (const c of CREW) { const p = MODEL_PLAN[c.id] || MODEL_PLAN.desk; c.model = Object.assign({}, MODELS[p.m], p); }
 const byId = Object.fromEntries(CREW.map(c => [c.id, c]));
+
+// Every published edition, oldest first. Written by newsroom/floor-sync.js after each run.
+/* editions:start */
+const EDITIONS = [{"date":"2026-10-19","label":"Monday 19 October","edition":"Weekend wrap-up","carousel":"https://claude.ai/artifact/Nu8FaK2BeMmzHHW337zLYH","stories":[{"tags":[["Rising","up"],["Global",""],["X",""]],"t":"Tesla's flying Roadster becomes an AI meme machine","note":"AI video tools now turn a launch into a meme format in hours, and creators name the tool they used in the post.","url":"https://gigazine.net/gsc_news/en/20261018-tesla-roadster-ai-meme/"},{"tags":[["Rising","up"],["UK",""],["Instagram",""]],"t":"Hundreds turn out for Lime bike jousting in Hackney","note":"A local in-joke became a real crowd and then went back online as content. Lime got the spotlight without lifting a finger.","url":"https://www.lbc.co.uk/article/lime-bike-joust-london-5Hjdk5M_2/"},{"tags":[["Rising","up"],["UK",""],["X & Instagram",""]],"t":"Strictly fans call out a couple for not saying thank you","note":"Audiences now judge the moments between the performance. A thank-you or a tone of voice is part of the content.","url":"https://britbrief.co.uk/entertainment/television/strictly-fans-slam-cach-mercer-and-maddie-as-rude.html"},{"tags":[["Peaking","peak"],["UK",""],["TikTok",""]],"t":"The UK's Halloween costume of the year: Nikki from Obsession","note":"Costume season is peaking, and the Ramalama (Bang Bang) strut is back as the go-to reveal format.","url":"https://www.aol.co.uk/articles/not-sure-wear-halloween-outfits-232708000.html"},{"tags":[["Rising","up"],["Global",""],["TikTok",""]],"t":"The “Boo” prank is TikTok's trend of the month","note":"Low effort, made for a reaction shot and easy to join: a ready-made format for talent if it fits the brand.","url":"https://trending.knowyourmeme.com/editorials/guides/what-is-the-boo-trend-on-tiktok-the-origin-of-the-viral-trend-and-prank-explained"},{"tags":[["Rising","up"],["Global",""],["Instagram",""]],"t":"Instagram's “Use as reference” makes response Reels easier","note":"Side-by-side recreations are about to get easier on Instagram, so expect more of them in feeds.","url":"https://www.socialmediatoday.com/news/meta-adds-audio-links-and-reference-reels-to-edits/833192/"},{"tags":[["Rising","up"],["UK",""],["TikTok Shop",""]],"t":"TikTok Shop UK adds shoppable photo carousels","note":"Brands without video can now sell straight from the feed with product photos they already have.","url":"https://www.socialmediatoday.com/news/tiktok-shop-offers-uk-merchants-more-engagement-tools/833064/"},{"tags":[["Rising","up"],["Global",""],["LinkedIn",""]],"t":"LinkedIn brings back the business card","note":"Events are where B2B relationships start. This makes LinkedIn the default handshake again.","url":"https://www.socialmediatoday.com/news/linkedin-adds-digital-business-cards/833306/"}],"desks":{"disney":[{"tags":[["Costume of the year",""]],"t":"A Ramalama-style witch reveal for Hexed.","note":"Strut reveal ending on the Hexed poster. In cinemas 27 November."},{"tags":[["Use as reference",""]],"t":"Fans recreate a classic Disney scene side by side.","note":"Invite recreations of one iconic moment with the new reference tool."},{"tags":[["Watch out","peak"]],"t":"Unofficial AI “what if” clips of famous characters are the format of the week. Agree now how to respond if Disney ones spread."}],"family":[{"tags":[["Costume of the year",""]],"t":"Parent and child matching costume reveals.","note":"A family strut reveal in Disney costumes for Halloween week."},{"tags":[["The Boo prank",""]],"t":"The Boo prank, family edition.","note":"A parent tries the boo on their kids. Reaction shot does the work."},{"tags":[["Watch out","peak"]],"t":"This year's top adult costumes are horror looks (Nikki, Scream). Keep family content clear of that imagery."}],"store":[{"tags":[["Costume of the year",""]],"t":"A Disney dress-up strut reveal.","note":"The Ramalama strut, ending on a Disney Store costume. Live before Halloween weekend."},{"tags":[["TikTok Shop carousels",""]],"t":"A swipeable Halloween dress-up carousel.","note":"One costume per image. If Disney Store sells on TikTok Shop UK, link each one (check first)."},{"tags":[["Watch out","peak"]],"t":"KPop Demon Hunters is the top kids' costume at one UK shop. Push Disney dress-up hard before Saturday 31 Oct."}],"muti":[{"tags":[["TikTok Shop carousels",""]],"t":"A five-image passata recipe carousel.","note":"One photo per step. If Mutti sells on TikTok Shop UK, link the product (check first)."},{"tags":[["Halloween",""]],"t":"A blood-red Halloween pasta for party night.","note":"A spooky-styled passata dish as a quick recipe Reel."},{"tags":[["Watch out","peak"]],"t":"Halloween is Saturday 31 Oct. Spooky recipes need to be live by Thursday 29th to catch people planning."}],"on":[{"tags":[["The Boo prank",""]],"t":"The Boo prank, gym-floor edition.","note":"A spotter tries the boo mid-set. The reaction shot does the work."},{"tags":[["Halloween",""]],"t":"A spooky protein pancake stack.","note":"A quick recipe Reel for Halloween weekend."},{"tags":[["Watch out","peak"]],"t":"Nutrition and health claims are regulated in the UK. Keep any protein claims in recipe content to approved wording."}],"dfs":[{"tags":[["TikTok Shop carousels",""]],"t":"One sofa, styled for day and for night.","note":"A shoppable carousel borrowing the “day vs night” decor format."},{"tags":[["Use as reference",""]],"t":"Recreate a viral room makeover with a DFS sofa.","note":"A side-by-side Reel made with the new reference tool."},{"tags":[["Watch out","peak"]],"t":"Shoppable photo carousels are new for UK sellers. Test them now, before Black Friday (27 Nov) gets crowded."}]}},{"date":"2026-10-20","label":"Tuesday 20 October","edition":"The daily","carousel":"https://claude.ai/artifact/M3z5UF53GysxgxzfBp2H8C","stories":[{"tags":[["Rising","up"],["Global",""],["Instagram & TikTok",""]],"t":"“Scientists reveal the hi” cat becomes the recaption meme of the month","note":"A swap-the-caption template anyone can join. Brands can play with it using their own product in place of the cat.","url":"https://knowyourmeme.com/memes/scientists-reveal-the-hi"},{"tags":[["Peaking","peak"],["UK",""],["TikTok",""]],"t":"Welsh singer Jamie Miller's “Babydoll” takes over TikTok dance feeds","note":"A UK artist's song is driving a global dance trend. The easy routine makes it simple to copy.","url":"https://knowyourmeme.com/editorials/whats-the-babydoll-dance-trend-how-welsh-singer-jamie-millers-song-took-over-tiktok-explained"},{"tags":[["Rising","up"],["UK",""],["Instagram & TikTok",""]],"t":"An artist sketches friends in a Belfast pub, and their reaction goes viral","note":"Wholesome, real-life surprise moments still travel. The reaction is the content.","url":"https://knowyourmeme.com/editorials/artist-goes-viral-for-drawing-a-group-of-friends-at-a-belfast-pub-and-capturing-their-wholesome-reactions"},{"tags":[["Rising","up"],["Global",""],["Instagram",""]],"t":"A real Paris metro video gets accused of being AI","note":"“Is it AI?” is now the first reaction to anything surprising. Real footage needs proof it's real.","url":"https://www.ladbible.com/news/world-news/red-bikini-girl-instagram-post-train-trend-backlash-ai-allegations-324141-20261018"},{"tags":[["Rising","up"],["UK",""],["YouTube",""]],"t":"YouTube tests new bonuses for Shorts creators, including in the UK","note":"More reasons for creators to post Shorts, and to keep shoppable videos up longer.","url":"https://www.socialmediatoday.com/news/youtube-tests-new-shorts-incentives/833420/"},{"tags":[["Rising","up"],["Global",""],["Instagram",""]],"t":"Instagram's chief says more AI labels are coming","note":"Labels are spreading, but AI posts aren't being held back. Being clearly real is becoming a selling point.","url":"https://www.socialmediatoday.com/news/instagram-chief-says-stronger-ai-slop-prevention-is-needed/833416/"},{"tags":[["Rising","up"],["Global",""],["Pinterest",""]],"t":"Pinterest adds a Barbie DreamHouse style to Restyle","note":"Pinterest is turning aesthetic trends into tools. Not in the UK yet.","url":"https://www.socialmediatoday.com/news/pinterest-adds-barbie-pink-to-restyle/833419/"}],"desks":{"disney":[{"tags":[["Babydoll",""]],"t":"A film-themed Babydoll dance.","note":"Characters or cast do the routine. Check music licensing first."},{"tags":[["Scientists reveal the hi",""]],"t":"“Scientists reveal the hex.”","note":"A recaption using owned Hexed assets."},{"tags":[["Watch out","peak"]],"t":"Hexed opens 27 Nov. Halloween posts must make clear it isn't out yet."}],"family":[{"tags":[["Is it AI?",""]],"t":"A “Real or AI?” family guessing game.","note":"A Stories quiz with real and AI images."},{"tags":[["Belfast pub portrait",""]],"t":"A family surprise-portrait reveal.","note":"Film the reaction. Get written permission."},{"tags":[["Watch out","peak"]],"t":"Kids' images need parental consent. Post before Sat 31 Oct."}],"store":[{"tags":[["Shorts bonuses",""]],"t":"Halloween costume Shorts with shoppable links.","note":"Keep them public 30+ days. Check eligibility."},{"tags":[["Babydoll",""]],"t":"A costume dance clip.","note":"Store team or fans in costume. Check music licensing."},{"tags":[["Watch out","peak"]],"t":"Halloween is Sat 31 Oct. Costume posts need to go live before then."}],"muti":[{"tags":[["Is it AI?",""]],"t":"A phone-shot, no-filter passata clip.","note":"Lean into “it's real”."},{"tags":[["Scientists reveal the hi",""]],"t":"“Scientists reveal the secret sauce.”","note":"A tomato recaption of the meme."},{"tags":[["Watch out","peak"]],"t":"More AI labels are coming. Keep proof that footage is real."}],"on":[{"tags":[["Babydoll",""]],"t":"A gym-friends Babydoll challenge with a shaker.","note":"No product claims."},{"tags":[["Belfast pub portrait",""]],"t":"A commissioned sketch of a training crew.","note":"Film the reveal. Get consent."},{"tags":[["Watch out","peak"]],"t":"UK nutrition and health claims are regulated. No implied results."}],"dfs":[{"tags":[["Scientists reveal the hi",""]],"t":"A sofa-cat “Scientists reveal the…” recaption contest.","note":"Customers recaption their own cat on a DFS sofa."},{"tags":[["Belfast pub portrait",""]],"t":"A customer's wall-hung portrait reveal.","note":"A portrait of a family on their sofa, hung at home."},{"tags":[["Watch out","peak"]],"t":"Pinterest's Barbie Restyle is a US/Canada beta. Don't promise it in the UK."}]}},{"date":"2026-10-21","label":"Wednesday 21 October","edition":"The daily","carousel":"https://claude.ai/artifact/5GtJH6CuigBtZXajioxPeF","stories":[{"tags":[["Rising","up"],["UK",""],["Instagram",""]],"t":"A creator calls a Suffolk pumpkin patch the UK's “most depressing”","note":"Half-term days out are under the microscope. Honest reviews of family attractions travel fast in Halloween week.","url":"https://www.ladbible.com/news/uk-news/pumpkin-patch-halloween-compared-to-willy-wonka-experience-260881-20261020"},{"tags":[["Rising","up"],["UK",""],["X",""]],"t":"Dune: Part Three IMAX 70mm tickets spark huge UK online queues","note":"Queue screenshots are content in their own right. Fans turn a ticket sale into a shared event.","url":"https://www.ladbible.com/entertainment/film/dune-part-3-cinema-tickets-imax-discounts-333702-20261020"},{"tags":[["Fading","down"],["UK",""],["Social clips",""]],"t":"SNL UK calls out Shane Gillis, and UK viewers feel “patriotic”","note":"UK audiences love a home-grown answer to a US moment. Local takes on global rows get shared.","url":"https://www.ladbible.com/entertainment/tv/uk-snl-shane-gillis-response-273063-20261018"},{"tags":[["Rising","up"],["Global",""],["Instagram",""]],"t":"Elizabeth Holmes's stare in a Nathan Fielder teaser feels “uncanny valley”","note":"One unsettling expression became a format: experts and creators react to the clip frame by frame.","url":"https://www.ladbible.com/entertainment/film/experts-elizabeth-holmes-you-can-see-everything-expression-creepy-912437-20261020"},{"tags":[["Rising","up"],["UK",""],["TikTok",""]],"t":"TikTok Shop adds shoppable carousels and group deals for UK sellers","note":"Carousels become a shopping format on TikTok in the UK, just in time for Christmas gifting.","url":"https://www.socialmediatoday.com/news/tiktok-shop-offers-uk-merchants-more-engagement-tools/833064/"},{"tags":[["Rising","up"],["UK",""],["YouTube",""]],"t":"YouTube Shopping adds AliExpress, including in the UK","note":"More creators can earn from product tags, so expect more haul and try-on videos in the run-up to Christmas.","url":"https://www.socialmediatoday.com/news/youtube-inks-affiliate-deal-with-aliexpress/833542/"},{"tags":[["Rising","up"],["Global",""],["Snapchat",""]],"t":"Snap hires Robert Downey Jr to sell its Specs glasses","note":"A celebrity title instead of a plain ad. Expect more brands to give famous faces made-up job titles.","url":"https://www.socialmediatoday.com/news/snap-taps-robert-downey-jr-to-promote-specs/833539/"}],"desks":{"disney":[{"tags":[["Dune IMAX queues",""]],"t":"A Hexed big-screen countdown: “which seat are you booking?”","note":"Ride the cinema-queue mood without naming rival films. Hexed opens 27 Nov."},{"tags":[["Holmes teaser",""]],"t":"A Hexed villain stare-down captioned “Why would I deceive you?”","note":"A playful, uncanny close-up. Uses owned footage only."},{"tags":[["Watch out","peak"]],"t":"Keep posts about Hexed. Don't name rival films or tie Disney to the Holmes story itself."}],"family":[{"tags":[["Pumpkin patch",""]],"t":"A free at-home pumpkin carving with Disney character stencils.","note":"An easy half-term plan, no tickets needed. Don't name the patch."},{"tags":[["TikTok Shop carousels",""]],"t":"A six-slide half-term plan: activities paired with a film pick.","note":"Carousel format works without shop links."},{"tags":[["Watch out","peak"]],"t":"Don't mention the pumpkin patch row. Never mock families or small businesses."}],"store":[{"tags":[["TikTok Shop group deals",""]],"t":"A costume group deal that unlocks a discount at a sales target.","note":"Check the account can run group deals first."},{"tags":[["YouTube Shopping",""]],"t":"A Halloween costume try-on Short with product tags.","note":"Tags depend on channel eligibility. Check before planning."},{"tags":[["Watch out","peak"]],"t":"Keep stock and price claims out of posts. Check every product is live before posting."}],"muti":[{"tags":[["Clocks go back",""]],"t":"“First dark evening”: a 20-minute passata pasta.","note":"A cosy, timely recipe for Sunday night."},{"tags":[["TikTok Shop carousels",""]],"t":"A six-slide carousel: three weeknight dishes, one jar each.","note":"A recipe carousel that works organically first."},{"tags":[["Watch out","peak"]],"t":"Stick to taste and cooking. No health or “healthier” claims about tomatoes."}],"on":[{"tags":[["Clocks go back",""]],"t":"A “first dark-evening session” gym-bag post.","note":"Real gym-goers, real routines. No results claims."},{"tags":[["TikTok Shop group deals",""]],"t":"A training bundle that unlocks a discount at a sales target.","note":"Check TikTok Shop UK rules for supplements first."},{"tags":[["Watch out","peak"]],"t":"UK nutrition and health claims are regulated. No “build muscle faster” lines or before-and-after images."}],"dfs":[{"tags":[["Dune IMAX queues",""]],"t":"A film-night setup reel: “skip the queue, the front row is your sofa”.","note":"The sofa is the hero, not any film."},{"tags":[["Clocks go back",""]],"t":"A cosy first-dark-evening sofa scene.","note":"Warm and low-key, timed for Sunday."},{"tags":[["Watch out","peak"]],"t":"No finance, interest-free or delivery-date promises without client-approved wording."}]}}];
+/* editions:end */
 
 const THEMES = {
   autumn:   {label:'Autumn', when:'Sep – Nov, between events', episode:'Falling Leaves Edition',
@@ -329,6 +325,7 @@ function themeForDate(d){
 const TODAY = new Date();
 const TODAY_THEME = themeForDate(TODAY);
 const DATE_TXT = TODAY.toLocaleDateString('en-GB', {weekday:'long', day:'numeric', month:'long'});
+const TODAY_ISO = TODAY.toLocaleDateString('en-CA');
 
 /* ------------------------------------------------------------ title card */
 
@@ -1348,7 +1345,8 @@ function renderList(){
     b.addEventListener('pointerleave', () => { if (hovered === b.dataset.id) hovered = null; });
   });
 }
-function tagHtml(t){ return '<span class="' + t[1] + '">' + t[0] + '</span>'; }
+const esc = v => String(v).replace(/[&<>"]/g, ch => ({'&':'&amp;', '<':'&lt;', '>':'&gt;', '"':'&quot;'})[ch]);
+function tagHtml(t){ return '<span class="' + t[1] + '">' + esc(t[0]) + '</span>'; }
 function renderDetail(id){
   const c = byId[id], s = ACTORS[id].state;
   let h = '<button class="back" type="button" id="backBtn">← All crew</button>' +
@@ -1363,16 +1361,20 @@ function renderDetail(id){
       '<br><span class="up">' + (c.id === 'critic' ? 'Steps up to xhigh effort if you flag weak work getting through.' : 'Steps up to ' + c.model.up + ' if Ozzie sends the work back twice, then back to base next run.') + '</span></dd>' +
     '<dt>Runs</dt><dd>' + (c.group === 'desk' ? 'Daily, after the shared crew' : 'Daily, once for every desk') + '</dd></dl>';
   if (c.group === 'desk' || c.id === 'chief') {
-    h += '<h2>Brief pack</h2><ul class="pack"><li>Brand book</li><li>Point of view</li><li>Audience</li><li>Sources</li><li>Risk list</li></ul>' +
-         '<p class="hint" style="margin-top:6px">Not added yet for any desk.</p>';
-    h += '<h2>Today’s update <span class="stamp">EXAMPLE</span></h2>';
+    const e = edition();
+    h += '<h2>' + (c.id === 'chief' ? 'Stories picked' : 'Desk update') + '</h2>';
     if (c.blocked) {
       h += '<div class="empty">No items yet. This desk needs its brief pack before it can pick from the day’s stories.</div>';
+    } else if (!c.items || !c.items.length) {
+      h += '<div class="empty">Nothing from this desk in ' + (e ? 'the ' + esc(e.label) + ' edition' : 'an edition yet') + '.</div>';
     } else {
-      h += '<p class="hint">Layout only. Real items arrive with the first daily run.</p><ul class="items">' +
-        c.items.map(it => '<li class="item"><div class="tags">' + it.tags.map(tagHtml).join('') + '</div><p>' + it.t + '</p>' +
-          (it.idea ? '<p class="idea"><b>Idea:</b> ' + it.idea + '</p>' : '') + '</li>').join('') + '</ul>';
+      h += '<p class="hint">From ' + esc(e.edition) + ', ' + esc(e.label) + '.</p><ul class="items">' +
+        c.items.map(it => '<li class="item"><div class="tags">' + it.tags.map(tagHtml).join('') + '</div><p>' +
+          (it.url ? '<a href="' + esc(it.url) + '" target="_blank" rel="noopener">' + esc(it.t) + '</a>' : esc(it.t)) + '</p>' +
+          (it.note ? '<p class="idea">' + esc(it.note) + '</p>' : '') + '</li>').join('') + '</ul>';
     }
+    h += '<h2>Brief pack</h2><ul class="pack"><li>Brand book</li><li>Point of view</li><li>Audience</li><li>Sources</li><li>Risk list</li></ul>' +
+         '<p class="hint" style="margin-top:6px">Not added yet for any desk.</p>';
   }
   panelBody.innerHTML = h;
   panelBody.scrollTop = 0;
@@ -1407,6 +1409,32 @@ const RUN = [
 const ticker = $('#ticker');
 const RESTING_TICKER = 'This morning\u2019s run is done';
 let running = false;
+
+/* ------------------------------------------------------ stepping between days */
+
+let edIdx = EDITIONS.length - 1;
+const edition = () => EDITIONS[edIdx] || null;
+// today's edition gets the resting line; an older one says which edition it is
+function restingTicker(){
+  const e = edition();
+  return !e || e.date === TODAY_ISO ? RESTING_TICKER : e.edition + ' \u00b7 an earlier edition';
+}
+function showEdition(i){
+  edIdx = i;
+  const e = edition();
+  $('#dateTxt').textContent = e ? e.label : DATE_TXT;
+  $('#prevDay').disabled = !e || i <= 0;
+  $('#nextDay').disabled = !e || i >= EDITIONS.length - 1;
+  const cb = $('#carouselBtn');
+  cb.hidden = !(e && e.carousel);
+  if (e && e.carousel) { cb.href = e.carousel; cb.setAttribute('aria-label', 'Open the carousel for ' + e.label); }
+  for (const c of CREW) c.items = e ? (c.id === 'chief' ? e.stories : e.desks[c.id]) : null;
+  if (!running) ticker.textContent = restingTicker();
+  renderPanel();
+}
+$('#prevDay').addEventListener('click', () => showEdition(edIdx - 1));
+$('#nextDay').addEventListener('click', () => showEdition(edIdx + 1));
+
 function setState(id, s){ ACTORS[id].state = s; }
 async function runMorning(){
   if (running) return; running = true;
@@ -1433,7 +1461,7 @@ async function runMorning(){
   ticker.textContent = 'Morning run finished · seven desk updates ready';
   await wait(2600);
   CREW.forEach(c => say(c.id, null));
-  ticker.textContent = RESTING_TICKER;
+  ticker.textContent = restingTicker();
   btn.disabled = false; running = false;
 }
 const wait = ms => new Promise(r => setTimeout(r, ms));
@@ -1667,8 +1695,7 @@ function start(){
   buildThemeMenu();
   buildTags();
   applyTheme(TODAY_THEME);
-  renderPanel();
-  ticker.textContent = RESTING_TICKER;
+  showEdition(edIdx);
   if (matchMedia('(max-width:760px)').matches) { $('#panel').classList.add('collapsed'); $('#sheetHandle').setAttribute('aria-expanded', 'false'); }
   resize();
   camera.position.copy(HOME_TARGET).add(new THREE.Vector3(1, 1.3, 1).setLength(homeDist));
