@@ -72,7 +72,7 @@ Test every story and idea against the five gates: forward, business, accessible,
 3. Commit and push the edition folder.
 4. Publish `carousel.html` as an artifact (with the `logos/` files).
 5. Add the artifact link to `edition.json` as `carouselUrl`, run `node newsroom/floor-sync.js` and republish `prototype/floor.html` to the newsroom island (https://claude.ai/artifact/QByUaU2dzAX6fAwH2X3jVb). The floor then opens on the new edition, its "Open the carousel" button points at it, and the arrows on the date step back through earlier days. Commit and push the floor too.
-6. Deliver to Jules on Slack as a message to self (user `U0B6CN0B6NS`): the edition name, the headlines, the carousel link and the PDF attached (find the self-DM `D…` channel ID with the user's IM channels before uploading). If Slack is unavailable, fall back to a Gmail draft to Jules with the same content.
+6. Post to the #agency-hq Slack channel (`CHFPZ108P`): upload `carousel.pdf` with a short recap (edition name and date, the headlines under "Things we saw" and "Platform highlights", and the "See the newsroom island" link). Leave out the carousel artifact link, which is private to Jules, and model step-ups, which go to Jules only. If Slack is unavailable, don't post anywhere else: make a Gmail draft to Jules with the same content.
 
 ## Style
 Reference edition: `editions/2026-10-19/` (the second version Jules approved) sets the bar for structure, tone, images and links.
