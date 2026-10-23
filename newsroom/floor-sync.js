@@ -25,7 +25,8 @@ const editions = fs.readdirSync(dir).filter(d => /^\d{4}-\d{2}-\d{2}$/.test(d)).
 });
 
 const html = fs.readFileSync(floor, 'utf8');
-const block = '/* editions:start */\nconst EDITIONS = ' + JSON.stringify(editions).replace(/</g, '\\u003c') + ';\n/* editions:end */';
+const site = JSON.parse(fs.readFileSync(path.join(__dirname, 'site.json'), 'utf8'));
+const block = '/* editions:start */\nconst SITE_URL = ' + JSON.stringify((site.siteUrl || '').replace(/\/+$/, '')) + ';\nconst HOSTED = false;\nconst EDITIONS = ' + JSON.stringify(editions).replace(/</g, '\\u003c') + ';\n/* editions:end */';
 const next = html.replace(/\/\* editions:start \*\/[\s\S]*?\/\* editions:end \*\//, block);
 if (next === html && !html.includes(block)) throw new Error('editions block not found in floor.html');
 fs.writeFileSync(floor, next);

@@ -1,0 +1,12 @@
+{
+  "name": "jungle-newsroom",
+  "private": true,
+  "description": "The Jungle Newsroom: the island and every morning's carousel, served as a static site.",
+  "scripts": {
+    "start": "node server.js",
+    "build": "node newsroom/build-site.js"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}

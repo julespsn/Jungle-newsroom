@@ -1,0 +1,192 @@
+<title>Jungle Newsroom Edition</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap">
+<style>
+/* Layout: 1080x1350 slides in Jungle's Instagram carousel style (dark concrete texture, hairline top bar,
+   Poppins, Jungle green for the key words, the jungle wordmark bottom right). Story slides lead with a picture.
+   Viewer mode (default) shows one slide at a time; print mode (set by render.js) stacks them for PNG/PDF export. */
+:root{
+  --bg:#3b3936; --white:#ffffff; --soft:#dedad3; --dim:#aaa59d; --green:#7ef25c; --amber:#ffc94a; --grey:#8d8880;
+  --sans:'Poppins','Helvetica Neue',Arial,sans-serif;
+  color-scheme: dark;
+}
+[hidden]{display:none!important}
+html,body{margin:0}
+body{background:#161514;color:var(--white);font-family:var(--sans)}
+a{color:inherit}
+
+.slide{position:relative;width:1080px;height:1350px;box-sizing:border-box;padding:136px 76px 150px;overflow:hidden;background:var(--bg);
+  background-image:radial-gradient(ellipse at 30% 20%,rgba(255,255,255,.06),transparent 60%),radial-gradient(ellipse at 80% 100%,rgba(0,0,0,.35),transparent 60%)}
+.slide::before{content:"";position:absolute;inset:0;pointer-events:none;opacity:.55;mix-blend-mode:overlay;
+  background-image:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='400' height='400'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='.65' numOctaves='4' stitchTiles='stitch'/><feColorMatrix values='0 0 0 0 .5  0 0 0 0 .5  0 0 0 0 .5  0 0 0 1.6 -.45'/></filter><rect width='100%' height='100%' filter='url(%23n)'/></svg>")}
+.slide > *{position:relative;z-index:1}
+em{font-style:normal;color:var(--green)}
+
+.bar{position:absolute;top:52px;left:76px;right:76px;display:flex;justify-content:space-between;align-items:center;padding-bottom:20px;border-bottom:2px solid rgba(255,255,255,.55);
+  font-size:21px;font-weight:600;letter-spacing:.03em;text-transform:uppercase}
+.bar span:last-child{text-transform:none;font-weight:500}
+.mark{position:absolute;right:70px;bottom:56px;height:52px}
+.mark img{height:100%;display:block}
+.foot{position:absolute;left:76px;bottom:58px;max-width:700px;font-size:19px;line-height:1.45;color:var(--dim)}
+.foot a{color:var(--green);text-decoration:none;font-weight:600;word-break:break-all}
+
+/* cover */
+.cover{display:flex;flex-direction:column;justify-content:center}
+.cover .kick{font-size:28px;font-weight:600;color:var(--soft);margin:0 0 4px}
+.cover h1{font-size:132px;font-weight:800;line-height:.95;letter-spacing:-.04em;margin:0;color:var(--green)}
+.cover .sub{font-size:62px;font-weight:700;line-height:1.05;letter-spacing:-.03em;margin:8px 0 44px}
+.cover h3{font-size:22px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--green);margin:22px 0 10px}
+.cover ol{list-style:none;margin:0;padding:0;display:grid;gap:8px}
+.cover li{font-size:27px;font-weight:500;line-height:1.25;color:var(--soft);padding-left:26px;position:relative}
+.cover li::before{content:"";position:absolute;left:0;top:.5em;width:10px;height:10px;border-radius:50%;background:var(--green)}
+
+/* story */
+.pic{height:500px;border-radius:30px;overflow:hidden;background:#222;margin:0 0 30px}
+.pic img{width:100%;height:100%;object-fit:cover;display:block}
+.chips{display:flex;flex-wrap:wrap;gap:10px;margin:0 0 20px}
+.chip{font-size:19px;font-weight:600;border:2px solid rgba(255,255,255,.6);border-radius:999px;padding:4px 16px;color:var(--soft)}
+.chip.up{border-color:var(--green);color:var(--green)}
+.chip.peak{border-color:var(--amber);color:var(--amber)}
+.chip.down{border-color:var(--grey);color:var(--grey)}
+.story h2{font-size:56px;font-weight:700;line-height:1.08;letter-spacing:-.03em;margin:0 0 18px;text-wrap:balance}
+.story .what{font-size:25px;font-weight:400;line-height:1.5;margin:0 0 20px;color:var(--soft)}
+.why{border-left:5px solid var(--green);padding:2px 0 2px 22px}
+.why p{margin:0;font-size:24px;font-weight:500;line-height:1.45}
+.why b{color:var(--green);font-weight:700}
+
+/* watch list */
+.watch h2{font-size:84px;font-weight:800;line-height:1;letter-spacing:-.04em;margin:30px 0 44px}
+.wl{list-style:none;margin:0;padding:0;display:grid;gap:22px}
+.wl li{display:grid;grid-template-columns:150px 1fr;gap:24px;align-items:start;background:rgba(0,0,0,.25);border-radius:26px;padding:24px 28px}
+.wl .when{font-size:20px;font-weight:700;color:#1d1c1a;background:var(--green);border-radius:999px;text-align:center;padding:6px 10px;align-self:start}
+.wl .t{font-size:29px;font-weight:700;line-height:1.2;margin:0}
+.wl .n{font-size:22px;font-weight:400;line-height:1.45;margin:6px 0 0;color:var(--soft)}
+
+/* desk */
+.desk .head{display:flex;align-items:center;gap:28px;margin:12px 0 34px}
+.desk .tile{width:150px;height:150px;border-radius:28px;background:var(--white);display:grid;place-items:center;flex:none;box-shadow:inset 0 -10px 0 var(--c)}
+.desk .tile img{max-width:112px;max-height:74px;margin-bottom:8px}
+.desk h2{font-size:58px;font-weight:700;line-height:1.02;letter-spacing:-.03em;margin:0}
+.desk .who{font-size:21px;font-weight:500;color:var(--dim);margin:8px 0 0}
+.ideas{list-style:none;margin:0;padding:0;display:grid;gap:20px}
+.ideas li{background:rgba(0,0,0,.28);border-radius:26px;padding:24px 28px;border-top:6px solid var(--c)}
+.lbl{font-size:18px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--dim);margin:0 0 8px}
+.ideas .idea{font-size:30px;font-weight:700;line-height:1.25;margin:0}
+.ideas .note{font-size:22px;font-weight:400;line-height:1.45;margin:8px 0 0;color:var(--soft)}
+.wo{margin-top:24px;border:2px solid var(--amber);border-radius:26px;padding:22px 28px}
+.wo .lbl{color:var(--amber)}
+.wo p.t{font-size:25px;font-weight:600;line-height:1.4;margin:0}
+
+/* end */
+.end{display:flex;flex-direction:column;justify-content:center}
+.end h2{font-size:112px;font-weight:800;line-height:.98;letter-spacing:-.04em;margin:0 0 30px}
+.end p{font-size:32px;font-weight:500;line-height:1.45;margin:0 0 40px;color:var(--soft);max-width:24ch}
+.end .go{align-self:flex-start;display:inline-flex;align-items:center;gap:14px;font-size:30px;font-weight:700;color:#1d1c1a;background:var(--green);border-radius:999px;padding:18px 36px;text-decoration:none}
+.end .url{font-size:19px;color:var(--dim);margin-top:18px;word-break:break-all}
+
+/* viewer (artifact) */
+body:not([data-mode="print"]){min-height:100vh;display:flex;flex-direction:column;align-items:center;gap:16px;padding:20px max(16px,env(safe-area-inset-left,0px)) 24px max(16px,env(safe-area-inset-right,0px));box-sizing:border-box}
+body:not([data-mode="print"]) #deck{position:relative;width:min(540px,100%);aspect-ratio:1080/1350}
+body:not([data-mode="print"]) .slide{position:absolute;top:0;left:0;transform-origin:top left;display:none}
+body:not([data-mode="print"]) .slide.on{display:block}
+body:not([data-mode="print"]) .slide.on.cover,body:not([data-mode="print"]) .slide.on.end{display:flex}
+.nav{display:flex;align-items:center;gap:14px;font-weight:600;color:var(--soft)}
+.nav button{font:inherit;font-weight:700;color:#1d1c1a;background:var(--green);border:none;border-radius:999px;padding:10px 22px;cursor:pointer}
+.nav button:disabled{opacity:.35;cursor:default}
+.nav button:focus-visible{outline:3px solid var(--white);outline-offset:3px}
+body[data-mode="print"] .nav{display:none}
+body[data-mode="print"] .slide{page-break-after:always;break-after:page}
+@page{size:1080px 1350px;margin:0}
+</style>
+
+<div id="deck"></div>
+<div class="nav"><button id="prev" type="button">Back</button><span id="pos"></span><button id="next" type="button">Next</button></div>
+
+<script id="edition" type="application/json">{"edition":"The daily","coverTitle":"The daily","coverSub":"what's *moving* on social","dateLabel":"Wednesday 21 October","floorUrl":"../../","sections":{"saw":[{"short":"A creator calls a Suffolk pumpkin patch the UK's “most depressing”","headline":"A creator calls a Suffolk pumpkin patch the *UK's “most depressing”*","what":"Instagram creator @alexdodman posted “a real review” of Suffolk's Pumpkin Patch in Barton Mills, with “Glasgow Willy Wonka vibes”. He said it cost £19.52 for a family of five. The family-run organisers, in their first year, replied: “At the end of the day we are only humans.”","why":"Half-term days out are under the microscope. Honest reviews of family attractions travel fast in Halloween week.","momentum":"Rising","region":"UK","platform":"Instagram","source":"LADbible, 20 Oct","credit":"@alexdodman via LADbible","url":"https://www.ladbible.com/news/uk-news/pumpkin-patch-halloween-compared-to-willy-wonka-experience-260881-20261020","image":"images/pumpkin.jpg"},{"short":"Dune: Part Three IMAX 70mm tickets spark huge UK online queues","headline":"Dune: Part Three tickets spark *huge online queues*","what":"IMAX 70mm tickets went on sale on Tuesday morning at only three UK cinemas: BFI IMAX, the Science Museum and Vue Manchester Printworks. One X user claimed “at least 65,000 people” were in the BFI queue in the first minute. The film opens on 18 Dec.","why":"Queue screenshots are content in their own right. Fans turn a ticket sale into a shared event.","momentum":"Rising","region":"UK","platform":"X","source":"LADbible, 20 Oct","credit":"LADbible","url":"https://www.ladbible.com/entertainment/film/dune-part-3-cinema-tickets-imax-discounts-333702-20261020","image":"images/dune.jpg"},{"short":"SNL UK calls out Shane Gillis, and UK viewers feel “patriotic”","headline":"SNL UK calls out Shane Gillis, and viewers feel *“patriotic”*","what":"Cast member Ania Magliano used a mock news segment to answer Shane Gillis's controversial monologue on the US show, with a photo of him on screen and some strong language. Viewers replied “suddenly i'm patriotic” and “That's not a jab that's a knock out”.","why":"UK audiences love a home-grown answer to a US moment. Local takes on global rows get shared.","momentum":"Fading","region":"UK","platform":"Social clips","source":"LADbible, 18 Oct","credit":"Sky / SNL UK via LADbible","url":"https://www.ladbible.com/entertainment/tv/uk-snl-shane-gillis-response-273063-20261018","image":"images/snl.jpg"},{"short":"Elizabeth Holmes's stare in a Nathan Fielder teaser feels “uncanny valley”","headline":"Elizabeth Holmes's stare in a new teaser feels *“uncanny valley”*","what":"The teaser for Nathan Fielder's documentary You Can See Everything shows Holmes asking him: “Why would I deceive you?” Viewers called it “creepy and awkward” and “uncanny valley”. Microexpressions expert Annie Särnblad broke down the stare on Instagram after a “ton of DMs”.","why":"One unsettling expression became a format: experts and creators react to the clip frame by frame.","momentum":"Rising","region":"Global","platform":"Instagram","source":"LADbible, 20 Oct","credit":"LADbible","url":"https://www.ladbible.com/entertainment/film/experts-elizabeth-holmes-you-can-see-everything-expression-creepy-912437-20261020","image":"images/holmes.jpg"}],"platform":[{"short":"TikTok Shop adds shoppable carousels and group deals for UK sellers","headline":"TikTok Shop adds *shoppable carousels* for UK sellers","what":"UK merchants can now post shoppable carousels of two or more images (five to seven recommended). New live tools include group deals that unlock a discount at a sales target, “second chance” auctions and stock reserved for lives.","why":"Carousels become a shopping format on TikTok in the UK, just in time for Christmas gifting.","momentum":"Rising","region":"UK","platform":"TikTok","source":"Social Media Today, 14 Oct","credit":"TikTok via Social Media Today","url":"https://www.socialmediatoday.com/news/tiktok-shop-offers-uk-merchants-more-engagement-tools/833064/","image":"images/tiktokshop.jpg"},{"short":"YouTube Shopping adds AliExpress, including in the UK","headline":"YouTube Shopping adds *AliExpress*, including in the UK","what":"Creators in the US, Brazil, the UK and Germany can now tag AliExpress products through YouTube's affiliate programme. It launched in South Korea in March. UK creators joined the affiliate programme in August, and YouTube aims for 35 markets by the end of 2026.","why":"More creators can earn from product tags, so expect more haul and try-on videos in the run-up to Christmas.","momentum":"Rising","region":"UK","platform":"YouTube","source":"Social Media Today, 20 Oct","credit":"YouTube via Social Media Today","url":"https://www.socialmediatoday.com/news/youtube-inks-affiliate-deal-with-aliexpress/833542/","image":"images/aliexpress.jpg"},{"short":"Snap hires Robert Downey Jr to sell its Specs glasses","headline":"Snap hires *Robert Downey Jr* to sell its Specs glasses","what":"Robert Downey Jr is Snap's new “Chief Customer Experience Officer” for Specs, its AR glasses. He'll front original video episodes on the Specs site and YouTube. Specs are on pre-order in the US at $2,195.","why":"A celebrity title instead of a plain ad. Expect more brands to give famous faces made-up job titles.","momentum":"Rising","region":"Global","platform":"Snapchat","source":"Social Media Today, 20 Oct","credit":"Snap via Social Media Today","url":"https://www.socialmediatoday.com/news/snap-taps-robert-downey-jr-to-promote-specs/833539/","image":"images/specs.jpg"}]},"watch":[{"when":"Sun 25 Oct","title":"Clocks go back","note":"The first dark evenings. A natural hook for cosy-night, home and comfort content."},{"when":"26–30 Oct","title":"October half-term","note":"Half-term in most of England; academies set their own dates. Family days out and home plans fill feeds."},{"when":"Wed 28 Oct","title":"Instagram removes Reels series links","note":"Check any posts or plans that rely on linking Reels in a series."},{"when":"Sat 31 Oct","title":"Halloween","note":"Content peaks from Thursday. Get costume and Halloween posts out early."},{"when":"Pending","title":"£100 fines for loud phones on buses","note":"The government's “Share the journey, not the noise” push started on 19 Oct. Fines still need the Transport Secretary's sign-off."}],"desks":[{"id":"disney","name":"Disney UK","short":"Disney UK","byline":"Pip · Disney UK desk","color":"#4a74c9","logo":"logos/disney.png","ideas":[{"from":"Dune IMAX queues","idea":"A Hexed big-screen countdown: “which seat are you booking?”","note":"Ride the cinema-queue mood without naming rival films. Hexed opens 27 Nov."},{"from":"Holmes teaser","idea":"A Hexed villain stare-down captioned “Why would I deceive you?”","note":"A playful, uncanny close-up. Uses owned footage only."}],"watch":"Keep posts about Hexed. Don't name rival films or tie Disney to the Holmes story itself."},{"id":"family","name":"Disney Family UK","short":"Disney Family","byline":"Bo · Disney Family UK desk","color":"#a983cf","logo":"logos/disney.png","ideas":[{"from":"Pumpkin patch","idea":"A free at-home pumpkin carving with Disney character stencils.","note":"An easy half-term plan, no tickets needed. Don't name the patch."},{"from":"TikTok Shop carousels","idea":"A six-slide half-term plan: activities paired with a film pick.","note":"Carousel format works without shop links."}],"watch":"Don't mention the pumpkin patch row. Never mock families or small businesses."},{"id":"store","name":"Disney Store UK","short":"Disney Store","byline":"Lulu · Disney Store UK desk","color":"#d4567f","logo":"logos/disney-store.png","ideas":[{"from":"TikTok Shop group deals","idea":"A costume group deal that unlocks a discount at a sales target.","note":"Check the account can run group deals first."},{"from":"YouTube Shopping","idea":"A Halloween costume try-on Short with product tags.","note":"Tags depend on channel eligibility. Check before planning."}],"watch":"Keep stock and price claims out of posts. Check every product is live before posting."},{"id":"muti","name":"Mutti UK","short":"Mutti","byline":"Kiki · Mutti UK desk","color":"#d8302b","logo":"logos/mutti.png","ideas":[{"from":"Clocks go back","idea":"“First dark evening”: a 20-minute passata pasta.","note":"A cosy, timely recipe for Sunday night."},{"from":"TikTok Shop carousels","idea":"A six-slide carousel: three weeknight dishes, one jar each.","note":"A recipe carousel that works organically first."}],"watch":"Stick to taste and cooking. No health or “healthier” claims about tomatoes."},{"id":"on","name":"Optimum Nutrition UK","short":"Optimum Nutrition","byline":"Rex · Optimum Nutrition UK desk","color":"#c9962c","logo":"logos/on.png","ideas":[{"from":"Clocks go back","idea":"A “first dark-evening session” gym-bag post.","note":"Real gym-goers, real routines. No results claims."},{"from":"TikTok Shop group deals","idea":"A training bundle that unlocks a discount at a sales target.","note":"Check TikTok Shop UK rules for supplements first."}],"watch":"UK nutrition and health claims are regulated. No “build muscle faster” lines or before-and-after images."},{"id":"dfs","name":"DFS","short":"DFS","byline":"Dot · DFS desk","color":"#2f9c8f","logo":"logos/dfs.png","ideas":[{"from":"Dune IMAX queues","idea":"A film-night setup reel: “skip the queue, the front row is your sofa”.","note":"The sofa is the hero, not any film."},{"from":"Clocks go back","idea":"A cosy first-dark-evening sofa scene.","note":"Warm and low-key, timed for Sunday."}],"watch":"No finance, interest-free or delivery-date promises without client-approved wording."}]}</script>
+<script>
+(function(){
+const E = JSON.parse(document.getElementById('edition').textContent || '{}');
+const deck = document.getElementById('deck');
+const esc = s => String(s == null ? '' : s).replace(/[&<>"]/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+// *words* in headlines are set in Jungle green
+const hi = s => esc(s).replace(/\*(.+?)\*/g, '<em>$1</em>');
+const plain = s => String(s == null ? '' : s).replace(/\*/g, '');
+const short = u => String(u || '').replace(/^https?:\/\/(www\.)?/, '').replace(/[?#].*$/, '').replace(/\/$/, '');
+const link = u => '<a href="' + esc(u) + '">' + esc(short(u).length > 60 ? short(u).slice(0, 58) + '…' : short(u)) + '</a>';
+const MOM = {Rising:'up', Peaking:'peak', Fading:'down'};
+const edition = E.edition || 'The daily';
+const bar = (l, r) => '<div class="bar"><span>' + esc(l) + '</span><span>' + esc(r) + '</span></div>';
+const mark = '<div class="mark"><img src="logos/jungle-wordmark-white.png" alt="jungle"></div>';
+const SECTIONS = [['saw', 'Things we saw'], ['platform', 'Platform highlights']];
+const S = E.sections || {};
+const slides = [];
+
+slides.push('<section class="slide cover">' + bar(edition, 'The Jungle Newsroom · ' + (E.dateLabel || '')) +
+  '<p class="kick">The Jungle Newsroom</p><h1>' + hi(E.coverTitle || edition) + '</h1>' +
+  '<p class="sub">' + hi(E.coverSub || 'what’s moving on social') + '</p>' +
+  SECTIONS.filter(([k]) => (S[k] || []).length).map(([k, name]) => '<h3>' + name + '</h3><ol>' + S[k].map(s => '<li>' + esc(plain(s.short || s.headline)) + '</li>').join('') + '</ol>').join('') +
+  mark + '</section>');
+
+SECTIONS.forEach(([k, name]) => {
+  const list = S[k] || [];
+  list.forEach((s, i) => {
+    slides.push('<section class="slide story">' + bar(name, String(i + 1).padStart(2, '0') + ' / ' + String(list.length).padStart(2, '0') + ' · ' + (E.dateLabel || '')) +
+      (s.image ? '<div class="pic"><img src="' + esc(s.image) + '" alt=""></div>' : '') +
+      '<div class="chips"><span class="chip ' + (MOM[s.momentum] || '') + '">' + esc(s.momentum) + '</span><span class="chip">' + esc(s.region) + '</span><span class="chip">' + esc(s.platform) + '</span></div>' +
+      '<h2>' + hi(s.headline) + '</h2><p class="what">' + esc(s.what) + '</p>' +
+      '<div class="why"><p><b>Why it matters: </b>' + esc(s.why) + '</p></div>' +
+      '<div class="foot">' + esc(s.source) + (s.credit ? ' · Image: ' + esc(s.credit) : '') + (s.url ? '<br>' + link(s.url) : '') + '</div>' + mark + '</section>');
+  });
+});
+
+if ((E.watch || []).length) {
+  slides.push('<section class="slide watch">' + bar('This week', E.dateLabel || '') +
+    '<h2>Things to watch <em>this week</em></h2><ul class="wl">' +
+    E.watch.map(w => '<li><span class="when">' + esc(w.when) + '</span><div><p class="t">' + esc(w.title) + '</p>' + (w.note ? '<p class="n">' + esc(w.note) + '</p>' : '') + '</div></li>').join('') +
+    '</ul>' + mark + '</section>');
+}
+
+(E.desks || []).forEach(d => {
+  if (!(d.ideas || []).length && !d.watch) return;
+  slides.push('<section class="slide desk" style="--c:' + d.color + '">' + bar('For our clients', d.short) +
+    '<div class="head"><div class="tile">' + (d.logo ? '<img src="' + esc(d.logo) + '" alt="' + esc(d.name) + '">' : '') + '</div>' +
+    '<div><h2>' + hi(d.title || ('For *' + d.name + '*')) + '</h2><p class="who">' + esc(d.byline) + '</p></div></div>' +
+    '<ul class="ideas">' + (d.ideas || []).map(it => '<li><p class="lbl">Idea · ' + esc(it.from) + '</p><p class="idea">' + esc(it.idea) + '</p>' + (it.note ? '<p class="note">' + esc(it.note) + '</p>' : '') + '</li>').join('') + '</ul>' +
+    (d.watch ? '<div class="wo"><p class="lbl">Watch out</p><p class="t">' + esc(d.watch) + '</p></div>' : '') +
+    mark + '</section>');
+});
+
+slides.push('<section class="slide end">' + bar('The Jungle Newsroom', E.dateLabel || '') +
+  '<h2>Did we <em>miss</em> something?</h2>' +
+  '<p>Let us know what we missed and what you want more of tomorrow.</p>' +
+  (E.floorUrl ? '<a class="go" href="' + esc(E.floorUrl) + '">See the newsroom island →</a><p class="url">' + esc(short(E.floorUrl)) + '</p>' : '') +
+  mark + '</section>');
+
+deck.innerHTML = slides.join('');
+const els = [...deck.querySelectorAll('.slide')];
+
+// viewer: one slide at a time, scaled to fit
+let cur = 0;
+const pos = document.getElementById('pos'), prev = document.getElementById('prev'), next = document.getElementById('next');
+function fit(){
+  if (document.body.dataset.mode === 'print') return;
+  const s = deck.clientWidth / 1080;
+  els.forEach(el => { el.style.transform = 'scale(' + s + ')'; });
+}
+function show(i){
+  cur = Math.max(0, Math.min(els.length - 1, i));
+  els.forEach((el, k) => el.classList.toggle('on', k === cur));
+  pos.textContent = (cur + 1) + ' / ' + els.length;
+  prev.disabled = cur === 0; next.disabled = cur === els.length - 1;
+}
+prev.addEventListener('click', () => show(cur - 1));
+next.addEventListener('click', () => show(cur + 1));
+document.addEventListener('keydown', e => { if (e.key === 'ArrowRight') show(cur + 1); if (e.key === 'ArrowLeft') show(cur - 1); });
+let sx = null;
+deck.addEventListener('pointerdown', e => { sx = e.clientX; });
+deck.addEventListener('pointerup', e => { if (sx != null && Math.abs(e.clientX - sx) > 40) show(cur + (e.clientX < sx ? 1 : -1)); sx = null; });
+window.addEventListener('resize', fit);
+fit(); show(0);
+})();
+</script>

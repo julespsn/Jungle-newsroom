@@ -1,0 +1,3 @@
+node_modules/
+newsroom/editions/*/slides/
+newsroom/editions/*/_print.html

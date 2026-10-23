@@ -11,6 +11,10 @@ const { chromium } = require('playwright');
 (async () => {
   const dir = path.resolve(process.argv[2] || '.');
   const edition = JSON.parse(fs.readFileSync(path.join(dir, 'edition.json'), 'utf8'));
+  // once the site is live, the carousel's links point at it instead of at Claude artifacts
+  const site = JSON.parse(fs.readFileSync(path.join(__dirname, 'site.json'), 'utf8'));
+  const siteUrl = (site.siteUrl || '').replace(/\/+$/, '');
+  if (siteUrl) edition.floorUrl = siteUrl + '/';
   const template = fs.readFileSync(path.join(__dirname, 'template.html'), 'utf8');
   const json = JSON.stringify(edition).replace(/</g, '\\u003c');
   const html = template.replace('<script id="edition" type="application/json">{}</script>',
