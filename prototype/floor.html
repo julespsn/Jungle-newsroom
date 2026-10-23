@@ -50,7 +50,7 @@ body{background:#2a1d14;color:var(--ink);font-family:var(--body);font-size:15px;
 .btn:active{transform:translate(3px,3px);box-shadow:1px 1px 0 var(--ink)}
 .btn:disabled{opacity:.6;cursor:default;transform:none}
 /* top right: open the day's carousel, replay the run */
-.actions{display:flex;flex-direction:column;align-items:flex-end;gap:8px}
+.actions{display:flex;flex-wrap:wrap;justify-content:flex-end;align-items:flex-start;gap:10px}
 a.btn{text-decoration:none;display:inline-block}
 .btn.red{background:var(--red)}
 .btn[hidden]{display:none}
