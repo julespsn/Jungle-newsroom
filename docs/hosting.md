@@ -12,7 +12,7 @@ railway add --service newsroom --repo julespsn/Jungle-newsroom --branch claude/d
 railway domain
 ```
 
-Then put the address `railway domain` prints (for example `https://newsroom-production-xxxx.up.railway.app`) in `newsroom/site.json` as `siteUrl`. From then on the carousel's last page, the Slack recap and the island's buttons all point at the site.
+Then set up the Jungle login (docs/jungle-login.md): the site shows "Login isn't set up yet" until its Google sign-in settings are in. Then put the address `railway domain` prints (for example `https://newsroom-production-xxxx.up.railway.app`) in `newsroom/site.json` as `siteUrl`. From then on the carousel's last page, the Slack recap and the island's buttons all point at the site.
 
 Each morning: `node newsroom/floor-sync.js`, `node newsroom/render.js newsroom/editions/YYYY-MM-DD`, `node newsroom/build-site.js`, commit `site/` and push. Railway redeploys in a minute or two.
 

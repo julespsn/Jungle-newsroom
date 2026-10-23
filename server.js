@@ -4,6 +4,8 @@ const fs = require('fs');
 const path = require('path');
 
 const root = path.join(__dirname, 'site');
+// Jungle accounts only: Google sign-in in front of everything (see docs/jungle-login.md)
+const auth = require('./auth/jungle-auth')({ appName: 'The Jungle Newsroom' });
 const types = {
   '.html': 'text/html; charset=utf-8', '.css': 'text/css; charset=utf-8', '.js': 'text/javascript; charset=utf-8',
   '.json': 'application/json; charset=utf-8', '.png': 'image/png', '.jpg': 'image/jpeg', '.jpeg': 'image/jpeg',
@@ -11,6 +13,7 @@ const types = {
 };
 
 http.createServer((req, res) => {
+  if (auth.handle(req, res)) return;
   let rel;
   try { rel = decodeURIComponent(new URL(req.url, 'http://x').pathname); } catch { res.writeHead(400); return res.end('Bad request'); }
   let file = path.join(root, rel);
