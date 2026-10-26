@@ -7,6 +7,7 @@ What it enforces (tested in `auth/jungle-auth.test.js`; run `node --test auth/ju
 - login uses state, a nonce and PKCE; the session is a signed, HttpOnly cookie for 7 days;
 - if it isn't configured, the app shows a 503 and serves nothing. It never falls back to open;
 - `AUTH_MODE=off` works for local development only and is ignored on Railway.
+- `AUTH_MODE=public` opens the app to anyone, on Railway too. It is an explicit, temporary switch for while the Google OAuth client is being set up; remove the variable to turn the login back on.
 
 ## Add it to an app
 

@@ -14,6 +14,7 @@
 //   ALLOWED_DOMAINS                          comma-separated, default junglecreations.com
 //   ALLOWED_EMAILS                           optional comma-separated extras (individual outside addresses)
 //   AUTH_MODE=off                            local development only; ignored when running on Railway
+//   AUTH_MODE=public                         deliberately open to anyone, anywhere (temporary, until OAuth is set up)
 //
 // If it isn't configured the app refuses to serve anything (503). It never falls back to open.
 const crypto = require('crypto');
@@ -41,7 +42,8 @@ module.exports = function createAuth(opts = {}) {
     fetch: opts.fetch || fetch,
     appName: opts.appName || 'The Jungle Newsroom'
   };
-  const off = (opts.mode || env.AUTH_MODE) === 'off' && !env.RAILWAY_ENVIRONMENT;
+  const mode = opts.mode || env.AUTH_MODE;
+  const off = (mode === 'off' && !env.RAILWAY_ENVIRONMENT) || mode === 'public';
   const configured = cfg.clientId && cfg.clientSecret && cfg.secret && cfg.secret.length >= 32;
 
   const sign = v => crypto.createHmac('sha256', cfg.secret).update(v).digest('base64url');

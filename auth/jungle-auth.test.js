@@ -123,3 +123,12 @@ test('AUTH_MODE=off is ignored on Railway', async () => {
   assert.equal((await get('http://localhost:' + srv.address().port + '/')).status, 503);
   delete process.env.RAILWAY_ENVIRONMENT; srv.close();
 });
+
+test('AUTH_MODE=public opens the app, including on Railway', async () => {
+  process.env.RAILWAY_ENVIRONMENT = 'production';
+  const auth = createAuth({ mode: 'public' });
+  const srv = http.createServer((q, s) => { if (auth.handle(q, s)) return; s.end('OPEN'); });
+  await new Promise(r => srv.listen(0, r));
+  assert.equal((await get('http://localhost:' + srv.address().port + '/')).status, 200);
+  delete process.env.RAILWAY_ENVIRONMENT; srv.close();
+});
