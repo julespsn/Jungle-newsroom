@@ -56,6 +56,7 @@ Open every source. Check each claim, figure and date. Drop anything that cannot 
 2. **Platform highlights**: 2 or 3 product or policy updates.
 3. **Things to watch this week**: 3 to 5 dated items.
 4. **Client slides**: 1 or 2 ideas plus one watch-out per client.
+**No spoilers.** Never put the outcome of a show people watch live or on catch-up (who was murdered, banished, eliminated or won) in a headline, the cover list, a `short` line or the Slack recap. Name the show and the talking point instead ("fans spotted a clue before the twist"). If the outcome matters for the story, keep it to the card's body text and set `"spoiler": true` on the story, which adds a visible "Spoilers" tag. Jules's team asked for this (feedback, 26 Oct: "No Traitors spoilers please Claude!!"), so check Traitors, Strictly, Love Island, Bake Off and similar before shipping.
 Every story has a link to the post or article and an image taken from it (saved in `images/`, credited on the slide). Font: Poppins. Wordmark: `logos/jungle-wordmark-white.png`.
 
 ## 4. Desks

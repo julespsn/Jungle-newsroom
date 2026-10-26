@@ -48,6 +48,7 @@ em{font-style:normal;color:var(--green)}
 .chip{font-size:19px;font-weight:600;border:2px solid rgba(255,255,255,.6);border-radius:999px;padding:4px 16px;color:var(--soft)}
 .chip.up{border-color:var(--green);color:var(--green)}
 .chip.peak{border-color:var(--amber);color:var(--amber)}
+.chip.spoil{border-color:#ff7a66;color:#ff7a66}
 .chip.down{border-color:var(--grey);color:var(--grey)}
 .story h2{font-size:56px;font-weight:700;line-height:1.08;letter-spacing:-.03em;margin:0 0 18px;text-wrap:balance}
 .story .what{font-size:25px;font-weight:400;line-height:1.5;margin:0 0 20px;color:var(--soft)}
@@ -133,7 +134,7 @@ SECTIONS.forEach(([k, name]) => {
   list.forEach((s, i) => {
     slides.push('<section class="slide story">' + bar(name, String(i + 1).padStart(2, '0') + ' / ' + String(list.length).padStart(2, '0') + ' · ' + (E.dateLabel || '')) +
       (s.image ? '<div class="pic"><img src="' + esc(s.image) + '" alt=""></div>' : '') +
-      '<div class="chips"><span class="chip ' + (MOM[s.momentum] || '') + '">' + esc(s.momentum) + '</span><span class="chip">' + esc(s.region) + '</span><span class="chip">' + esc(s.platform) + '</span></div>' +
+      '<div class="chips">' + (s.spoiler ? '<span class="chip spoil">Spoilers</span>' : '') + '<span class="chip ' + (MOM[s.momentum] || '') + '">' + esc(s.momentum) + '</span><span class="chip">' + esc(s.region) + '</span><span class="chip">' + esc(s.platform) + '</span></div>' +
       '<h2>' + hi(s.headline) + '</h2><p class="what">' + esc(s.what) + '</p>' +
       '<div class="why"><p><b>Why it matters: </b>' + esc(s.why) + '</p></div>' +
       '<div class="foot">' + esc(s.source) + (s.credit ? ' · Image: ' + esc(s.credit) : '') + (s.url ? '<br>' + link(s.url) : '') + '</div>' + mark + '</section>');

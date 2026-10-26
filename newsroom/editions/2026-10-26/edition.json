@@ -8,9 +8,9 @@
  "sections": {
   "saw": [
    {
-    "short": "Celebrity Traitors fans guessed the murder before it aired",
-    "headline": "Celebrity Traitors fans *guessed the murder* before it aired",
-    "what": "Miranda Hart was murdered on Friday's episode. The night before, some viewers guessed from King Kenny's pen position that he was writing an “M”, and they were right. The finale is reported for Fri 30 Oct, 8pm on BBC One.",
+    "short": "Celebrity Traitors fans spotted a clue before the twist",
+    "headline": "Celebrity Traitors fans *spotted a clue* before the twist",
+    "what": "Friday's episode ended with a murder. The night before, some viewers guessed from King Kenny's pen position who was next, and they were right. The finale is reported for Fri 30 Oct, 8pm on BBC One.",
     "why": "Fans treat tiny details as clues, and a correct guess becomes the story. Expect more of it before the finale.",
     "momentum": "Rising",
     "region": "UK",
@@ -18,12 +18,13 @@
     "source": "LADbible and The Tab, 23 Oct",
     "credit": "BBC via LADbible",
     "url": "https://www.ladbible.com/entertainment/tv/the-celebrity-traitors-murder-681442-20261023",
-    "image": "images/traitors.jpg"
+    "image": "images/traitors.jpg",
+    "spoiler": true
    },
    {
     "short": "Strictly's wrong on-screen score gets spotted live",
     "headline": "Strictly's *wrong on-screen score* gets spotted live",
-    "what": "On Saturday the graphic showed Shirley Ballas's 6 for Lacey Turner and Vito Coppola as a 7, so the total read 29 instead of 28. Emma Willis apologised on air. On Sunday Shaun Wright-Phillips and Alexis Warr went home.",
+    "what": "On Saturday the graphic showed Shirley Ballas's 6 for Lacey Turner and Vito Coppola as a 7, so the total read 29 instead of 28. Emma Willis apologised on air. Sunday's results show sent one couple home.",
     "why": "Viewers watch with a phone in hand, so any slip becomes a post within minutes.",
     "momentum": "Peaking",
     "region": "UK",
@@ -31,7 +32,8 @@
     "source": "Radio Times, 24 Oct; Digital Spy, 25 Oct",
     "credit": "BBC / Radio Times",
     "url": "https://www.radiotimes.com/tv/entertainment/strictly-come-dancing-leaderboard-mistake-emma-willis-newsupdate/",
-    "image": "images/strictly.jpg"
+    "image": "images/strictly.jpg",
+    "spoiler": true
    },
    {
     "short": "SNL UK's Cynthia Erivo plays Glinda in “Nigerian Wicked”",
