@@ -1,0 +1,259 @@
+{
+ "edition": "The daily",
+ "coverTitle": "The daily",
+ "coverSub": "what's *moving* on social",
+ "dateLabel": "Tuesday 27 October",
+ "floorUrl": "https://claude.ai/artifact/QByUaU2dzAX6fAwH2X3jVb",
+ "sections": {
+  "saw": [
+   {
+    "short": "Just Eat's AI menu photos get ridiculed, then paused",
+    "headline": "Just Eat's *AI menu photos* get ridiculed, then paused",
+    "what": "Just Eat's AI-made dish photos went viral: bacon-and-egg soda bread became a glass of cola with an egg and bacon in it, and garlic bread became a plane. Just Eat said “We're sorry for any inaccurate images that have been posted”, is removing them and has paused the rollout.",
+    "why": "AI-made food photos got ridiculed fast. The gap between the picture and the real dish became the joke.",
+    "momentum": "Fading",
+    "region": "UK",
+    "platform": "Reddit, Instagram & X",
+    "source": "Dexerto, 23 Oct (citing the BBC and The Journal)",
+    "credit": "Dexerto / Just Eat",
+    "url": "https://www.dexerto.com/food/just-eat-apologizes-after-ai-turns-food-into-literal-potato-jackets-tiger-cubs-bacon-soda-3421330/",
+    "image": "images/justeat.jpg"
+   },
+   {
+    "short": "Harry Kane wins the Ballon d'Or in London, after a website leak",
+    "headline": "Harry Kane wins the *Ballon d'Or* in London, after a website leak",
+    "what": "Harry Kane won on Monday, the first Englishman since Michael Owen in 2001. Hours earlier the awards website wrongly published articles naming Kane, Kylian Mbappé and Lamine Yamal each as winner. Organisers said the profiles were “inadvertently published”.",
+    "why": "A British winner and an accidental leak gave people two reasons to post: the celebration and the jokes.",
+    "momentum": "Peaking",
+    "region": "UK",
+    "platform": "X",
+    "source": "LADbible, 26 Oct; ESPN, 26 Oct",
+    "credit": "Getty via LADbible",
+    "url": "https://www.ladbible.com/news/sport/harry-kane-wins-ballon-d-or-becoming-first-englishman-25-years-440675-20261026",
+    "image": "images/kane.jpg"
+   },
+   {
+    "short": "“Maxxing” is Dictionary.com's Word of the Year",
+    "headline": "“Maxxing” is Dictionary.com's *Word of the Year*",
+    "what": "Dictionary.com picked “maxxing”: pursuing an activity to the fullest or optimising an aspect of your life. Offshoots include looksmaxxing, cozymaxxing (at-home relaxing) and nonnamaxxing, the habits of an Italian grandmother.",
+    "why": "A ready-made template for brands: “[thing]-maxxing”. Cozymaxxing suits the dark evenings.",
+    "momentum": "Rising",
+    "region": "Global",
+    "platform": "TikTok & X",
+    "source": "Dexerto, 26 Oct (citing Dictionary.com)",
+    "credit": "Dictionary.com via Dexerto",
+    "url": "https://www.dexerto.com/entertainment/maxxing-named-2026-word-of-the-year-after-67-and-rage-bait-3421840/",
+    "image": "images/maxxing.jpg"
+   },
+   {
+    "short": "Asda's custard-cream chocolate bar gets the “M&S-coded” treatment",
+    "headline": "Asda's custard-cream bar gets the *“M&S-coded”* treatment",
+    "what": "Asda launched a £2 milk chocolate bar with a custard-cream filling, plus a jammy donut version and Malted Choc Balls, which Metro links to M&S's Malt Ball. Some shoppers pointed out that Morrisons already sells a £2 custard-cream bar.",
+    "why": "Supermarkets copy each other in public and shoppers score it in the comments. Low stakes, lots of replies.",
+    "momentum": "Rising",
+    "region": "UK",
+    "platform": "Facebook & Instagram",
+    "source": "Metro, 26 Oct",
+    "credit": "Metro",
+    "url": "https://metro.co.uk/2026/10/26/asda-launches-new-items-rival-m-s-including-10-10-custard-cream-treat-29739966/",
+    "image": "images/asda.jpg"
+   },
+   {
+    "short": "TikTok's “brain stacking” trend swaps scrolling for books and puzzles",
+    "headline": "TikTok's *“brain stacking”* swaps scrolling for books and puzzles",
+    "what": "Creators on TikTok and Reels keep a “stack” of books, Sudoku, crosswords and journals within reach to replace scrolling, often in morning and bedtime routines. Mashable says the origin of the term is unclear.",
+    "why": "Anti-scroll content on the platforms people scroll. Cosy, screen-free routines suit the dark evenings.",
+    "momentum": "Rising",
+    "region": "Global",
+    "platform": "TikTok",
+    "source": "Mashable, 21 Oct",
+    "credit": "Mashable",
+    "url": "https://mashable.com/life/brain-stacking-analog-trend-explained",
+    "image": "images/brain.jpg"
+   }
+  ],
+  "platform": [
+   {
+    "short": "Instagram tests 90-minute videos with select US creators",
+    "headline": "Instagram tests *90-minute videos* with US creators",
+    "what": "Instagram has begun testing “Features”: uploads of up to 90 minutes, such as podcasts and vlogs, with select US creators. Creators can link Reels clips to the full video, and it isn't exclusive to Instagram. No UK date has been given.",
+    "why": "Instagram is going after long-form video. Don't plan around it in the UK yet.",
+    "momentum": "Rising",
+    "region": "Global",
+    "platform": "Instagram",
+    "source": "Social Media Today, 26 Oct",
+    "credit": "Instagram via Social Media Today",
+    "url": "https://www.socialmediatoday.com/news/instagram-rolls-out-limited-features-test-in-the-us/872825/",
+    "image": "images/features.jpg"
+   },
+   {
+    "short": "Meta pushes its business terms update back to 20 Nov",
+    "headline": "Meta *pushes back* its business terms update to 20 Nov",
+    "what": "Meta has moved its updated business terms from 30 Oct to 20 Nov, after the UK's CMA and the European Publishers Council asked about wording on scraping and training. Meta says it's largely a misunderstanding and removed the “training” references last week.",
+    "why": "Anything planned around 30 Oct can wait. The new date comes from Social Media Today, citing Reuters.",
+    "momentum": "Peaking",
+    "region": "UK",
+    "platform": "Facebook & Instagram",
+    "source": "Social Media Today, 25 Oct",
+    "credit": "Meta via Social Media Today",
+    "url": "https://www.socialmediatoday.com/news/meta-delays-business-terms-update-over-data-scraping-concerns/833905/",
+    "image": "images/metaterms.jpg"
+   }
+  ]
+ },
+ "watch": [
+  {
+   "when": "Now",
+   "title": "October half-term, until Fri 30 Oct",
+   "note": "Family days out and at-home plans fill feeds. Keep weather jokes out after the weekend storms."
+  },
+  {
+   "when": "Wed 28 Oct",
+   "title": "Instagram removes Reels series links",
+   "note": "Check any posts or plans that rely on linking Reels in a series."
+  },
+  {
+   "when": "Thu 29–Fri 30 Oct",
+   "title": "Celebrity Traitors' last two episodes",
+   "note": "Reported for 8pm on BBC One. Expect the conversation to peak on Friday night."
+  },
+  {
+   "when": "Sat 31 Oct",
+   "title": "Halloween, and Strictly's Halloween special",
+   "note": "Costume and Halloween content peaks from Thursday. Get posts out early."
+  },
+  {
+   "when": "Fri 20 Nov",
+   "title": "Meta's business terms update (moved from 30 Oct)",
+   "note": "Per Social Media Today, citing Reuters. Meta says the scraping concern is a misunderstanding."
+  }
+ ],
+ "desks": [
+  {
+   "id": "disney",
+   "name": "Disney UK",
+   "short": "Disney UK",
+   "byline": "Pip · Disney UK desk",
+   "color": "#4a74c9",
+   "logo": "logos/disney.png",
+   "ideas": [
+    {
+     "from": "Hexed",
+     "idea": "Carve Hexed's 27 November date into a pumpkin.",
+     "note": "A Halloween hook that uses only the confirmed cinema date."
+    },
+    {
+     "from": "Half-term",
+     "idea": "A “never seen it” challenge: one classic Disney film each night.",
+     "note": "Use titles already out. No release or cast promises."
+    }
+   ],
+   "watch": "Post confirmed facts only: no Hexed plot, and nothing on Glee beyond the announcement."
+  },
+  {
+   "id": "family",
+   "name": "Disney Family UK",
+   "short": "Disney Family",
+   "byline": "Bo · Disney Family UK desk",
+   "color": "#a983cf",
+   "logo": "logos/disney.png",
+   "ideas": [
+    {
+     "from": "Brain stacking",
+     "idea": "A half-term swap: a basket of books and puzzles beside the sofa.",
+     "note": "Ties the trend to half-term. Don't claim it helps focus."
+    },
+    {
+     "from": "Clocks went back",
+     "idea": "A cosy film-night plan for early-dark teatimes.",
+     "note": "Dark evenings are the hook. A family plan, not a product push."
+    }
+   ],
+   "watch": "Keep content free of scary Halloween imagery for under-fives, and don't frame screens as a reward."
+  },
+  {
+   "id": "store",
+   "name": "Disney Store UK",
+   "short": "Disney Store",
+   "byline": "Lulu · Disney Store UK desk",
+   "color": "#d4567f",
+   "logo": "logos/disney-store.png",
+   "ideas": [
+    {
+     "from": "Halloween",
+     "idea": "Last-minute Halloween: three costume picks for Saturday night.",
+     "note": "Post by Friday, since Halloween is Saturday itself."
+    },
+    {
+     "from": "Cozymaxxing",
+     "idea": "Cozymaxxing: a plush-and-blanket corner for dark evenings.",
+     "note": "Pairs the word with the clocks going back. No sleep claims."
+    }
+   ],
+   "watch": "Costume and plush posts only. Show age labels, keep scares light, and make no unsafe-costume jokes."
+  },
+  {
+   "id": "muti",
+   "name": "Mutti UK",
+   "short": "Mutti",
+   "byline": "Kiki · Mutti UK desk",
+   "color": "#d8302b",
+   "logo": "logos/mutti.png",
+   "ideas": [
+    {
+     "from": "AI menu photos",
+     "idea": "Photo vs pan: cook a real Mutti dish live, unretouched.",
+     "note": "Show the process, not a render. Don't name any other brand."
+    },
+    {
+     "from": "Nonnamaxxing",
+     "idea": "Nonnamaxxing: cook like an Italian grandmother, passata from the jar.",
+     "note": "The word's own definition is an Italian grandmother's habits. Food first."
+    }
+   ],
+   "watch": "Use only real, unedited food shots. An AI-made image risks the same joke on us."
+  },
+  {
+   "id": "on",
+   "name": "Optimum Nutrition UK",
+   "short": "Optimum Nutrition",
+   "byline": "Rex · Optimum Nutrition UK desk",
+   "color": "#c9962c",
+   "logo": "logos/on.png",
+   "ideas": [
+    {
+     "from": "Maxxing",
+     "idea": "Maxxing your gym week: plan three half-term sessions and share the plan.",
+     "note": "Frames training habits only. No results or body claims."
+    },
+    {
+     "from": "Brain stacking",
+     "idea": "A phone-free session: leave the phone in the locker and log it in a notebook.",
+     "note": "Echoes the trend. Real members only, no results claims."
+    }
+   ],
+   "watch": "Teens may be in gyms at half-term. No supplement content aimed at under-18s, and no before-and-after framing."
+  },
+  {
+   "id": "dfs",
+   "name": "DFS",
+   "short": "DFS",
+   "byline": "Dot · DFS desk",
+   "color": "#2f9c8f",
+   "logo": "logos/dfs.png",
+   "ideas": [
+    {
+     "from": "Cozymaxxing",
+     "idea": "Cozymaxxing: build the sofa corner for at-home relaxing.",
+     "note": "Show real, lived-in rooms, not staged wellbeing claims."
+    },
+    {
+     "from": "Brain stacking",
+     "idea": "A brain-stack corner: a sofa-side basket of puzzles and books.",
+     "note": "Show the basket, not a claimed benefit."
+    }
+   ],
+   "watch": "No claims that furniture improves sleep, focus or wellbeing."
+  }
+ ]
+}
