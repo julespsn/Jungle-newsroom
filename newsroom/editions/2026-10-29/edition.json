@@ -1,0 +1,285 @@
+{
+ "edition": "The daily",
+ "coverTitle": "The daily",
+ "coverSub": "what's *moving* on social",
+ "dateLabel": "Thursday 29 October",
+ "floorUrl": "https://claude.ai/artifact/QByUaU2dzAX6fAwH2X3jVb",
+ "sections": {
+  "saw": [
+   {
+    "short": "Bradley Walsh's new Channel 4 quiz has viewers guessing",
+    "headline": "Bradley Walsh's new quiz has *viewers guessing*",
+    "what": "Channel 4 has advertised “The Million Pound Shot”, due Sunday at 9pm, with a trailer only on live TV. Viewers recorded and shared it online. The only detail is a TV guide line: three contestants, £1m and “one huge secret twist”. Channel 4 hasn't released details.",
+    "why": "A mystery drop turns viewers into the marketing. People guess before anything is confirmed.",
+    "momentum": "Rising",
+    "region": "UK",
+    "platform": "X & Bluesky",
+    "source": "Metro, 28 Oct",
+    "credit": "Channel 4 via Metro",
+    "url": "https://metro.co.uk/2026/10/28/bradley-walshs-new-tv-show-really-a-hoax-29745610/",
+    "image": "images/walsh.jpg"
+   },
+   {
+    "short": "Netflix's new Pride and Prejudice trailer lands",
+    "headline": "Netflix's new *Pride and Prejudice* trailer lands",
+    "what": "Netflix released a new Pride and Prejudice trailer on Wednesday, with Emma Corrin as Lizzie, Jack Lowden as Darcy and Olivia Colman as Mrs Bennet, who gets the opening line. The six-part series is reported for 3 Dec.",
+    "why": "Fans pick period dramas apart frame by frame. Even Mr Collins's sideburns are getting attention, per Metro.",
+    "momentum": "Rising",
+    "region": "Global",
+    "platform": "Netflix",
+    "source": "Metro, 28 Oct",
+    "credit": "Netflix via Metro",
+    "url": "https://metro.co.uk/2026/10/28/new-netflix-pride-prejudice-trailer-reveals-a-major-change-olivia-colmans-character-29746694/",
+    "image": "images/pride.jpg"
+   },
+   {
+    "short": "The niche Halloween costume meme is back",
+    "headline": "The *niche Halloween costume* meme is back",
+    "what": "The annual format is back on X: people caption deep-cut costume ideas, such as Dakota Johnson and limes or Princess Diana's revenge dress. The Tab, citing Know Your Meme, traces it to 2022–2023, and it went massively viral in 2024.",
+    "why": "The more obscure the costume, the better the post. Brands can play with deep cuts from their own world.",
+    "momentum": "Rising",
+    "region": "Global",
+    "platform": "X",
+    "source": "The Tab, 28 Oct",
+    "credit": "The Tab",
+    "url": "https://thetab.com/2026/10/28/the-origins-of-the-i-hate-gay-halloween-meme-as-queer-people-dress-up-in-stupidly-niche-costumes",
+    "image": "images/niche.jpg"
+   },
+   {
+    "short": "Firefox reunites YouTube-era meme legends in an ad",
+    "headline": "Firefox reunites *YouTube-era meme legends* in an ad",
+    "what": "Firefox posted a one-minute ad on 25 Oct with Numa Numa guy, Chuck Testa, Overly Attached Girlfriend, Annoying Orange and Tay Zonday, asking “What happened to the internet?” Dexerto reports 8m+ views.",
+    "why": "Nostalgia sells. Real internet characters beat a mascot when the joke is shared memory.",
+    "momentum": "Peaking",
+    "region": "Global",
+    "platform": "X & YouTube",
+    "source": "Dexerto, 27 Oct",
+    "credit": "Firefox via Dexerto",
+    "url": "https://www.dexerto.com/youtube/firefox-brings-back-numa-numa-guy-chuck-testa-more-in-ad-better-than-youtube-rewind-3422137/",
+    "image": "images/firefox.jpg"
+   },
+   {
+    "short": "A Walmart x Disney Muppets Christmas ad kicks off ad season",
+    "headline": "A Walmart × Disney *Muppets Christmas ad* kicks off ad season",
+    "what": "Walmart's US ad “A Who Knew Carol”, made with Disney and The Muppets Studio, riffs on The Muppet Christmas Carol, with Walton Goggins as Scrooge. It ends by teasing three more ghosts: Christmas Presents, Deals to Come and Christmas Fast. It's a US campaign.",
+    "why": "Christmas ads are starting, and this one borrows a Disney classic. Watch for UK launches.",
+    "momentum": "Rising",
+    "region": "Global",
+    "platform": "YouTube",
+    "source": "TheWrap and Adweek, 26 Oct",
+    "credit": "Walmart / Disney via TheWrap",
+    "url": "https://www.thewrap.com/culture-lifestyle/culture/muppet-christmas-carol-walmart-ad-walton-goggins/",
+    "image": "images/muppets.jpg"
+   },
+   {
+    "short": "U2 announce a secret BBC gig for 3 Nov",
+    "headline": "U2 announce a *secret BBC gig* for 3 Nov",
+    "what": "Jo Whiley announced on Radio 2 that U2 will play an exclusive BBC show at a secret central London venue on Tuesday 3 Nov. Free tickets are by BBC Audiences ballot, which closes tonight. It airs on Radio 2 and BBC Sounds on 30 Nov.",
+    "why": "A surprise gig with a ballot gets people posting to win. Guessing the venue is part of the fun.",
+    "momentum": "Rising",
+    "region": "UK",
+    "platform": "BBC Radio 2 & social",
+    "source": "NME and Metro, 28 Oct",
+    "credit": "BBC via Metro",
+    "url": "https://metro.co.uk/2026/10/28/glastonbury-2027-headliner-favourites-fuel-rumours-special-announcement-29747621/",
+    "image": "images/u2.jpg"
+   }
+  ],
+  "platform": [
+   {
+    "short": "Meta launches kids' AI apps, but not in the UK",
+    "headline": "Meta launches *kids' AI apps*, but not in the UK",
+    "what": "Meta has launched “Waddle World”, a 16-bit pet game whose pet remembers what users say, and “Style Sketch”, which builds outfits from users' clothes. Social Media Today reports Waddle World is only in the Philippines, and Style Sketch only in Indonesia, Singapore and Thailand.",
+    "why": "Parents will ask about kids and AI apps. Neither is available in the UK yet.",
+    "momentum": "Rising",
+    "region": "Global",
+    "platform": "Meta",
+    "source": "Social Media Today, 28 Oct",
+    "credit": "Meta via Social Media Today",
+    "url": "https://www.socialmediatoday.com/news/meta-launches-two-new-ai-apps-including-one-aimed-at-kids/873118/",
+    "image": "images/waddle.jpg"
+   },
+   {
+    "short": "YouTube says microdramas passed 6.5bn views",
+    "headline": "YouTube says *microdramas* passed 6.5bn views",
+    "what": "YouTube says microdramas, short serialised dramas, passed 6.5bn views in the first half of 2026, up more than 50% on last year. It will also revamp members-only episodes on mobile in the coming weeks. The figure first came out in September.",
+    "why": "Serialised short stories are a format brands can borrow. The numbers are YouTube's own.",
+    "momentum": "Rising",
+    "region": "Global",
+    "platform": "YouTube",
+    "source": "Social Media Today, 27 Oct",
+    "credit": "YouTube via Social Media Today",
+    "url": "https://www.socialmediatoday.com/news/youtube-adds-microdrama-subscriptions/872982/",
+    "image": "images/microdrama.jpg"
+   },
+   {
+    "short": "X lets you re-share photos with credit",
+    "headline": "X lets you *re-share photos with credit*",
+    "what": "On X you can long-press a photo and tap “Post photo”. The original author gets a credit link, and both accounts earn under Original Content Rewards, which is for Premium accounts. UK availability isn't stated.",
+    "why": "Reposting other people's photos with credit is now built in. Check eligibility before relying on it.",
+    "momentum": "Rising",
+    "region": "Global",
+    "platform": "X",
+    "source": "Social Media Today, 28 Oct",
+    "credit": "X via Social Media Today",
+    "url": "https://www.socialmediatoday.com/news/x-lets-users-share-credit-on-reposted-images/873100/",
+    "image": "images/xphoto.jpg"
+   }
+  ]
+ },
+ "watch": [
+  {
+   "when": "Thu 29–Fri 30 Oct",
+   "title": "Celebrity Traitors: episode 9 and the finale",
+   "note": "8pm on BBC One both nights, per the BBC schedule. Keep captions spoiler-free."
+  },
+  {
+   "when": "Sat 31 Oct",
+   "title": "Halloween, and Strictly's Halloween special",
+   "note": "Costume and Halloween content peaks from today. Get posts out early."
+  },
+  {
+   "when": "Sun 1 Nov",
+   "title": "Bradley Walsh's new Channel 4 quiz",
+   "note": "9pm, per Metro. Channel 4 hasn't released details, so expect guessing until then."
+  },
+  {
+   "when": "Tue 3 Nov",
+   "title": "U2's secret BBC gig",
+   "note": "Free tickets by BBC Audiences ballot, which closes tonight at 11.59pm."
+  },
+  {
+   "when": "Fri 20 Nov",
+   "title": "Meta's business terms update",
+   "note": "Moved from 30 Oct, per Social Media Today citing Reuters."
+  }
+ ],
+ "desks": [
+  {
+   "id": "disney",
+   "name": "Disney UK",
+   "short": "Disney UK",
+   "byline": "Pip · Disney UK desk",
+   "color": "#4a74c9",
+   "logo": "logos/disney.png",
+   "ideas": [
+    {
+     "from": "Mystery trailer",
+     "idea": "A title-less Hexed teaser, with the reveal nearer 27 Nov.",
+     "note": "Approved footage only. The mystery is the hook, not the plot."
+    },
+    {
+     "from": "Cinema nostalgia",
+     "idea": "Share the first Disney film you saw on the big screen.",
+     "note": "Ties to Hexed in cinemas on 27 Nov. Films already out only."
+    }
+   ],
+   "watch": "The Glee reboot is announced, but the cast and date aren't. Don't confirm either."
+  },
+  {
+   "id": "family",
+   "name": "Disney Family UK",
+   "short": "Disney Family",
+   "byline": "Bo · Disney Family UK desk",
+   "color": "#a983cf",
+   "logo": "logos/disney.png",
+   "ideas": [
+    {
+     "from": "Niche costumes",
+     "idea": "Kids invent their own deep-cut costume from the dressing-up box.",
+     "note": "Get parental consent before showing children. No meme caption wording."
+    },
+    {
+     "from": "Half-term ends Fri 30 Oct",
+     "idea": "Half-term's last day: plan a family film night before Monday.",
+     "note": "Check titles are available in the UK on Disney+ first."
+    }
+   ],
+   "watch": "Kids' AI apps are in the news. Don't tell parents any app is safe or unsafe; point to official guidance."
+  },
+  {
+   "id": "store",
+   "name": "Disney Store UK",
+   "short": "Disney Store",
+   "byline": "Lulu · Disney Store UK desk",
+   "color": "#d4567f",
+   "logo": "logos/disney-store.png",
+   "ideas": [
+    {
+     "from": "Niche costumes",
+     "idea": "A deep-cut Disney costume grid: which one are fans wearing Saturday?",
+     "note": "Post by Friday. Halloween is Saturday."
+    },
+    {
+     "from": "Muppets Christmas ad",
+     "idea": "A guess-the-ghosts post ahead of any Muppet Christmas Carol range.",
+     "note": "UK stock isn't confirmed. Check Disney Store UK before any link."
+    }
+   ],
+   "watch": "Check UK stock and prices before posting any Muppet product. No “limited” or deadline claims unless confirmed."
+  },
+  {
+   "id": "muti",
+   "name": "Mutti UK",
+   "short": "Mutti",
+   "byline": "Kiki · Mutti UK desk",
+   "color": "#d8302b",
+   "logo": "logos/mutti.png",
+   "ideas": [
+    {
+     "from": "Celebrity Traitors finale",
+     "idea": "Finale night: a passata pasta you can have on before 8pm.",
+     "note": "Mention the show only. No logos, footage or spoilers."
+    },
+    {
+     "from": "Nostalgia reunion",
+     "idea": "Remember the Sunday sauce from your nonna's kitchen?",
+     "note": "Borrow the nostalgia format only."
+    }
+   ],
+   "watch": "No health or “healthy” claims about tomatoes. Check any Italian-origin wording against the label."
+  },
+  {
+   "id": "on",
+   "name": "Optimum Nutrition UK",
+   "short": "Optimum Nutrition",
+   "byline": "Rex · Optimum Nutrition UK desk",
+   "color": "#c9962c",
+   "logo": "logos/on.png",
+   "ideas": [
+    {
+     "from": "Half-term ends Fri 30 Oct",
+     "idea": "Last half-term week: a gym-bag checklist, no shortcuts.",
+     "note": "Adults only in targeting. No supplement pitches to teens."
+    },
+    {
+     "from": "Niche costumes",
+     "idea": "Ask followers for their most niche gym-bag item, shown in a grid.",
+     "note": "Keep it light. No meme caption wording and nothing about bodies."
+    }
+   ],
+   "watch": "No muscle, weight or recovery promises. Show gym culture, not transformation or before-and-after shots."
+  },
+  {
+   "id": "dfs",
+   "name": "DFS",
+   "short": "DFS",
+   "byline": "Dot · DFS desk",
+   "color": "#2f9c8f",
+   "logo": "logos/dfs.png",
+   "ideas": [
+    {
+     "from": "Clocks went back",
+     "idea": "A lamp-lit sofa corner for the early dark.",
+     "note": "Use real range products. No mood or wellbeing claims."
+    },
+    {
+     "from": "Celebrity Traitors finale",
+     "idea": "Finale night: which sofa would you hide a secret on?",
+     "note": "No show logos or footage. Keep it playful."
+    }
+   ],
+   "watch": "Avoid storm or power-cut angles. The storms last weekend killed two people."
+  }
+ ]
+}
