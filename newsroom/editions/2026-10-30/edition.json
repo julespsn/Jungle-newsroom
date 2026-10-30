@@ -1,0 +1,285 @@
+{
+ "edition": "Best of the week",
+ "coverTitle": "Best of the week",
+ "coverSub": "what *kept moving* on social",
+ "dateLabel": "Friday 30 October",
+ "floorUrl": "https://claude.ai/artifact/QByUaU2dzAX6fAwH2X3jVb",
+ "sections": {
+  "saw": [
+   {
+    "short": "Celebrity Traitors fans spend a week hunting clues before the finale",
+    "headline": "Celebrity Traitors fans spent the week *hunting clues*",
+    "what": "Fans treated tiny details as evidence, such as King Kenny's pen position, which some read as a clue to who was next. The finale is tonight at 8pm on BBC One, with Uncloaked at 9.20pm.",
+    "why": "Fans do the guessing, so every episode restarts the theories. Tonight is the peak.",
+    "momentum": "Peaking",
+    "region": "UK",
+    "platform": "X & Reddit",
+    "source": "LADbible, 23 Oct; BBC schedule",
+    "credit": "BBC via LADbible",
+    "url": "https://www.ladbible.com/entertainment/tv/the-celebrity-traitors-murder-681442-20261023",
+    "image": "images/traitors.jpg"
+   },
+   {
+    "short": "Bradley Walsh's mystery quiz is explained, and it airs on Sunday",
+    "headline": "Bradley Walsh's *mystery quiz* is explained",
+    "what": "A live-TV-only trailer had people guessing. Channel 4's synopsis, out on Wednesday, says contestants bring their own bank cards and bet cash on general-knowledge questions, winning “Bet Balls” they can cash out or fire into the “Million Pound Shot Machine” for £1m. It's a one-off on Sunday at 9pm.",
+    "why": "The mystery trailer did its job: people guessed, then the format landed days before the show.",
+    "momentum": "Rising",
+    "region": "UK",
+    "platform": "X & Bluesky",
+    "source": "GB News, 28 Oct",
+    "credit": "Channel 4 via GB News",
+    "url": "https://www.gbnews.com/celebrity/bradley-walsh-channel-4-quiz-show-million-pound-shot-hoax",
+    "image": "images/walsh.jpg"
+   },
+   {
+    "short": "Asda's £30-off deal becomes a half-price video game hack",
+    "headline": "Asda's £30-off deal becomes a *half-price game hack*",
+    "what": "Asda offered £30 off a £60+ shop to first-time online customers who sign up to marketing emails. It worked on electronics, including Call of Duty: Modern Warfare 4 at half price. By Tuesday 27 Oct Asda had paused it, citing “a significant number of orders that do not qualify”.",
+    "why": "Promo terms get tested in public within days, and receipts and how-to videos become the content.",
+    "momentum": "Fading",
+    "region": "UK",
+    "platform": "X & TikTok",
+    "source": "LADbible, 27 Oct",
+    "credit": "LADbible",
+    "url": "https://www.ladbible.com/news/uk-news/asda-30-pound-off-loophole-call-of-duty-990841-20261027",
+    "image": "images/asda.jpg"
+   },
+   {
+    "short": "Harry Kane wins the Ballon d'Or in London, after a website leak",
+    "headline": "Harry Kane wins the *Ballon d'Or* in London",
+    "what": "Harry Kane won on Monday, the first Englishman since Michael Owen in 2001. Hours earlier the awards website wrongly published articles naming Kane, Kylian Mbappé and Lamine Yamal each as winner. Organisers said the profiles were “inadvertently published”.",
+    "why": "A British winner and an accidental leak gave people two reasons to post.",
+    "momentum": "Fading",
+    "region": "UK",
+    "platform": "X",
+    "source": "LADbible, 26 Oct; ESPN, 26 Oct",
+    "credit": "Getty via LADbible",
+    "url": "https://www.ladbible.com/news/sport/harry-kane-wins-ballon-d-or-becoming-first-englishman-25-years-440675-20261026",
+    "image": "images/kane.jpg"
+   },
+   {
+    "short": "Just Eat's AI menu photos get ridiculed, then paused",
+    "headline": "Just Eat's *AI menu photos* get ridiculed, then paused",
+    "what": "Just Eat's AI-made dish photos went viral: bacon-and-egg soda bread became a glass of cola with an egg and bacon in it, and garlic bread became a plane. Just Eat said “We're sorry for any inaccurate images that have been posted” and paused the rollout.",
+    "why": "The gap between the picture and the real dish became the joke. Real photos beat AI that gets it wrong.",
+    "momentum": "Fading",
+    "region": "UK",
+    "platform": "Reddit, Instagram & X",
+    "source": "Dexerto, 23 Oct (citing the BBC and The Journal)",
+    "credit": "Dexerto / Just Eat",
+    "url": "https://www.dexerto.com/food/just-eat-apologizes-after-ai-turns-food-into-literal-potato-jackets-tiger-cubs-bacon-soda-3421330/",
+    "image": "images/justeat.jpg"
+   },
+   {
+    "short": "The niche Halloween costume meme is back, a day before Halloween",
+    "headline": "The *niche Halloween costume* meme is back",
+    "what": "The annual format is back on X: people caption deep-cut costume ideas, such as Dakota Johnson and limes or Princess Diana's revenge dress. The Tab, citing Know Your Meme, traces it to 2022–2023, and it went massively viral in 2024. Halloween is tomorrow.",
+    "why": "The more obscure the costume, the better the post. Brands can play with deep cuts from their own world.",
+    "momentum": "Peaking",
+    "region": "Global",
+    "platform": "X",
+    "source": "The Tab, 28 Oct",
+    "credit": "The Tab",
+    "url": "https://thetab.com/2026/10/28/the-origins-of-the-i-hate-gay-halloween-meme-as-queer-people-dress-up-in-stupidly-niche-costumes",
+    "image": "images/niche.jpg"
+   }
+  ],
+  "platform": [
+   {
+    "short": "Meta pushes its new business terms back to 20 Nov",
+    "headline": "Meta *pushes back* its business terms to 20 Nov",
+    "what": "Meta moved its new commercial terms from 30 Oct to 20 Nov “to allow more time for us to explain”, after complaints from publishers and advertisers to EU and UK antitrust authorities. Critics say the terms give Meta broad rights to use content for AI. Meta rejects that.",
+    "why": "Anything planned around 30 Oct can wait. The dispute is about AI training rights over business content.",
+    "momentum": "Peaking",
+    "region": "UK",
+    "platform": "Facebook & Instagram",
+    "source": "Reuters, 23 Oct",
+    "credit": "Meta via Reuters",
+    "url": "https://wsau.com/2026/10/23/meta-to-delay-new-commercial-terms-criticised-by-publishers-advertisers/",
+    "image": "images/metaterms.jpg"
+   },
+   {
+    "short": "Instagram tests 90-minute videos with select US creators",
+    "headline": "Instagram tests *90-minute videos* with US creators",
+    "what": "Instagram has begun testing “Features”: uploads of up to 90 minutes, such as podcasts and vlogs, with select US creators. Creators can link Reels clips to the full video, and it isn't exclusive to Instagram. No UK date has been given.",
+    "why": "Instagram is going after long-form video. Don't plan around it in the UK yet.",
+    "momentum": "Rising",
+    "region": "Global",
+    "platform": "Instagram",
+    "source": "Social Media Today, 26 Oct",
+    "credit": "Instagram via Social Media Today",
+    "url": "https://www.socialmediatoday.com/news/instagram-rolls-out-limited-features-test-in-the-us/872825/",
+    "image": "images/features.jpg"
+   },
+   {
+    "short": "Discord will put public server messages into Google",
+    "headline": "Discord will put *public server messages* into Google",
+    "what": "From 16 Nov, Discord will create public web pages for big “Discoverable Servers”. From mid-December, messages in eligible public channels may appear there and in search. In the UK a user setting is off by default, so messages show only if people opt in.",
+    "why": "Public community chat becomes searchable. Brands with open Discords should check what's on show.",
+    "momentum": "Rising",
+    "region": "Global",
+    "platform": "Discord",
+    "source": "Dexerto, 27 Oct (citing Discord)",
+    "credit": "Discord via Dexerto",
+    "url": "https://www.dexerto.com/entertainment/discord-will-soon-let-anyone-find-public-server-messages-through-google-3422244/",
+    "image": "images/discord.jpg"
+   }
+  ]
+ },
+ "watch": [
+  {
+   "when": "Tonight",
+   "title": "Celebrity Traitors finale",
+   "note": "8pm on BBC One, then Uncloaked at 9.20pm, per the BBC schedule. Keep captions spoiler-free."
+  },
+  {
+   "when": "Sat 31 Oct",
+   "title": "Halloween, and Strictly's Halloween special",
+   "note": "Strictly's special is at 6:30pm on BBC One. Halloween content peaks today."
+  },
+  {
+   "when": "Sun 1 Nov",
+   "title": "Bradley Walsh's The Million Pound Shot",
+   "note": "9pm on Channel 4, a one-off."
+  },
+  {
+   "when": "Tue 3 Nov",
+   "title": "U2's secret BBC gig",
+   "note": "Recorded at a central London venue revealed only to ticket holders. On BBC Two later in November and Radio 2 on Mon 30 Nov."
+  },
+  {
+   "when": "Thu 5 Nov",
+   "title": "Bonfire Night",
+   "note": "Fireworks and bonfire content peaks. Keep safety in mind in anything with children."
+  }
+ ],
+ "desks": [
+  {
+   "id": "disney",
+   "name": "Disney UK",
+   "short": "Disney UK",
+   "byline": "Pip · Disney UK desk",
+   "color": "#4a74c9",
+   "logo": "logos/disney.png",
+   "ideas": [
+    {
+     "from": "Niche costumes",
+     "idea": "Caption your Halloween costume with a film's least-quoted line.",
+     "note": "Halloween is Sat 31 Oct. Titles only, no cast names."
+    },
+    {
+     "from": "Hexed",
+     "idea": "Four weeks to go: start a weekly Hexed countdown on Friday.",
+     "note": "Use the 27 Nov cinema date only. No plot claims."
+    }
+   ],
+   "watch": "The Glee reboot is announced, but the cast and date aren't. Keep posts to “announced” only."
+  },
+  {
+   "id": "family",
+   "name": "Disney Family UK",
+   "short": "Disney Family",
+   "byline": "Bo · Disney Family UK desk",
+   "color": "#a983cf",
+   "logo": "logos/disney.png",
+   "ideas": [
+    {
+     "from": "Clue-hunt fandom",
+     "idea": "A hidden Halloween clue in each post for kids to find in the comments.",
+     "note": "No prizes or personal details in the comments."
+    },
+    {
+     "from": "Bonfire Night",
+     "idea": "A Bonfire Night calm kit: ear defenders, a torch and a bedtime film list.",
+     "note": "Thu 5 Nov. Safety tips from official sources only."
+    }
+   ],
+   "watch": "No school names, uniform close-ups or children's faces without parental sign-off."
+  },
+  {
+   "id": "store",
+   "name": "Disney Store UK",
+   "short": "Disney Store",
+   "byline": "Lulu · Disney Store UK desk",
+   "color": "#d4567f",
+   "logo": "logos/disney-store.png",
+   "ideas": [
+    {
+     "from": "Halloween",
+     "idea": "Last-minute costume: one plush, one hat, one-line caption.",
+     "note": "Tag only lines that are in stock. Confirm before posting."
+    },
+    {
+     "from": "Bonfire Night",
+     "idea": "Bonfire Night in: three cosy plush picks for a film night.",
+     "note": "Check stock first. No sale or deadline claims."
+    }
+   ],
+   "watch": "Don't imply costumes or plush are safe or age-rated unless the label says so."
+  },
+  {
+   "id": "muti",
+   "name": "Mutti UK",
+   "short": "Mutti",
+   "byline": "Kiki · Mutti UK desk",
+   "color": "#d8302b",
+   "logo": "logos/mutti.png",
+   "ideas": [
+    {
+     "from": "AI menu photos",
+     "idea": "No AI tomatoes: a real jar, a real pan, a real Tuesday.",
+     "note": "Real photos beat AI that gets it wrong. Don't name anyone else."
+    },
+    {
+     "from": "Halloween",
+     "idea": "A slow passata pour, filmed once, no edits, for a spooky reveal.",
+     "note": "Food, not gore. Keep it appetising."
+    }
+   ],
+   "watch": "Show the real jar and pan. No health claims and no colour promises."
+  },
+  {
+   "id": "on",
+   "name": "Optimum Nutrition UK",
+   "short": "Optimum Nutrition",
+   "byline": "Rex · Optimum Nutrition UK desk",
+   "color": "#c9962c",
+   "logo": "logos/on.png",
+   "ideas": [
+    {
+     "from": "Halloween",
+     "idea": "A gym-culture costume: shaker, tank top and a 6am alarm.",
+     "note": "Keep it light. No body-shape jokes."
+    },
+    {
+     "from": "Promo terms gamed",
+     "idea": "A bundle deal explained in one plain sentence, with terms pinned.",
+     "note": "Offer terms get gamed in public. No health or results claims."
+    }
+   ],
+   "watch": "Teens may be in gyms. No supplement offers aimed at under-18s."
+  },
+  {
+   "id": "dfs",
+   "name": "DFS",
+   "short": "DFS",
+   "byline": "Dot · DFS desk",
+   "color": "#2f9c8f",
+   "logo": "logos/dfs.png",
+   "ideas": [
+    {
+     "from": "Promo terms gamed",
+     "idea": "The sofa offer in one plain sentence, with the terms pinned below.",
+     "note": "Offer terms get gamed in public, so state them plainly."
+    },
+    {
+     "from": "AI menu photos",
+     "idea": "Real living rooms in real light: no AI-rendered sofa sets this week.",
+     "note": "Real photos beat AI. Label any render as a render."
+    }
+   ],
+   "watch": "Don't claim a fabric is “stain-proof” or “pet-proof” unless it's tested and certified."
+  }
+ ]
+}
