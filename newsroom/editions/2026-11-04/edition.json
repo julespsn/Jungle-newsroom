@@ -1,0 +1,259 @@
+{
+ "edition": "The daily",
+ "coverTitle": "The daily",
+ "coverSub": "what's *moving* on social",
+ "dateLabel": "Wednesday 4 November",
+ "floorUrl": "https://claude.ai/artifact/QByUaU2dzAX6fAwH2X3jVb",
+ "sections": {
+  "saw": [
+   {
+    "short": "Karl Bushby finishes his 28-year walk home to Hull",
+    "headline": "Karl Bushby *finishes his 28-year walk* home to Hull",
+    "what": "Karl Bushby, 57, walked into Hull on Monday, 28 years and a day after setting off from Chile, an estimated 75 million steps with no motorised transport, per CBS. He swam the Channel last month on the way. On arrival he said: “the biggest team: Earth”.",
+    "why": "A very long journey with a clear finish line. People love watching someone arrive.",
+    "momentum": "Peaking",
+    "region": "UK",
+    "platform": "News & social",
+    "source": "CBS News, 2 Nov; Reuters, 2 Nov",
+    "credit": "Getty via CBS News",
+    "url": "https://www.cbsnews.com/news/englishman-karl-bushby-returns-home-walking-goliath-expedition/",
+    "image": "images/bushby.jpg"
+   },
+   {
+    "short": "Aldi's Kevin the Carrot teaser: Cauli Dog is missing",
+    "headline": "Aldi's Kevin the Carrot teaser: *Cauli Dog is missing*",
+    "what": "Aldi released a 10-second Christmas teaser in which Kevin and his daughter Chantenay put up “LOST” posters for Cauli Dog, who “stole the nation's hearts last Christmas”. Aldi says the rest of the story is “firmly under wraps”. The full ad has no release date yet.",
+    "why": "A mystery teaser builds the audience before the reveal. The missing posters invite guesses.",
+    "momentum": "Rising",
+    "region": "UK",
+    "platform": "YouTube & social",
+    "source": "Metro, 3 Nov",
+    "credit": "Aldi via Metro",
+    "url": "https://metro.co.uk/2026/11/03/biggest-2026-christmas-ad-far-including-john-lewis-aldis-kevin-carrot-29761449/",
+    "image": "images/aldi.jpg"
+   },
+   {
+    "short": "Which? names £1.99 Aldi and Lidl Yorkshire puddings joint best",
+    "headline": "Which? names *£1.99 Yorkshire puddings* joint best",
+    "what": "In Which?'s blind test with 69 tasters, Aldi's Specially Selected Large Beef Dripping (£1.99 for 290g) and Lidl's Deluxe (£1.99 for 288g) tied top at 76%, and both are Best Buys. Aldi's are in-store only.",
+    "why": "Own-brand beating the famous name is catnip for debate, and roast season is here.",
+    "momentum": "Rising",
+    "region": "UK",
+    "platform": "Facebook & X",
+    "source": "Metro, 4 Nov; Which?, 4 Nov",
+    "credit": "Metro",
+    "url": "https://metro.co.uk/2026/11/04/cheap-1-99-supermarket-own-brand-yorkshire-puddings-crowned-better-aunt-bessies-29762805/",
+    "image": "images/yorkshire.jpg"
+   },
+   {
+    "short": "A man with a Tesco Clubcard tattoo says he can't afford Tesco now",
+    "headline": "A man with a *Tesco Clubcard tattoo* says he can't afford Tesco now",
+    "what": "Dean Mayhew, 34, from Bideford, had his Clubcard QR code tattooed in July 2022. He tells Metro he can't afford Tesco now: about £200 for a midweek shop for his family. Metro notes Which? price comparisons have found Asda cheaper than Tesco, though Which?'s comparisons vary.",
+    "why": "Loyalty schemes meet cost-of-living pressure in a single image. Quirky stories like this travel on Facebook and TikTok.",
+    "momentum": "Peaking",
+    "region": "UK",
+    "platform": "Facebook & TikTok",
+    "source": "Metro, 3 Nov",
+    "credit": "SWNS via Metro",
+    "url": "https://metro.co.uk/2026/11/03/tesco-fan-got-clubcard-tattooed-arm-says-cant-afford-shop-now-29763564/",
+    "image": "images/tattoo.jpg"
+   }
+  ],
+  "platform": [
+   {
+    "short": "Reddit tests ads in search results",
+    "headline": "Reddit tests *ads in search results*",
+    "what": "Reddit is testing ads in in-app search results, targeted by the search query and carrying a small ad marker. It's starting with “a select group of eligible advertisers”. Reddit says search results have “high purchase and search intent”. No regions are given.",
+    "why": "Reddit is selling search intent. Worth watching if your clients use Reddit.",
+    "momentum": "Rising",
+    "region": "Global",
+    "platform": "Reddit",
+    "source": "Social Media Today, 3 Nov",
+    "credit": "Reddit via Social Media Today",
+    "url": "https://www.socialmediatoday.com/news/reddit-tests-ads-in-search-results/873676/",
+    "image": "images/reddit.jpg"
+   },
+   {
+    "short": "TikTok adds a brand safety centre and brand protection tools",
+    "headline": "TikTok adds a *brand safety centre* and protection tools",
+    "what": "TikTok has launched a brand safety centre website, a Brand Protection Playbook and an AI Safety Essentials overview. New tools include a brand perception insights tool, copyright and trademark reporting and counterfeit protections for sellers. They were announced at a forum in Singapore, and UK availability isn't stated.",
+    "why": "Brand safety is a standing client question. Ask TikTok which tools apply in the UK.",
+    "momentum": "Rising",
+    "region": "Global",
+    "platform": "TikTok",
+    "source": "Social Media Today, 2 Nov",
+    "credit": "TikTok via Social Media Today",
+    "url": "https://www.socialmediatoday.com/news/tiktok-adds-new-brand-safety-resources/873529/",
+    "image": "images/tiktoksafe.jpg"
+   },
+   {
+    "short": "Pinterest reports 661 million monthly users in Q3",
+    "headline": "Pinterest reports *661 million monthly users* in Q3",
+    "what": "Pinterest's Q3 results, filed on 29 Oct, show 661 million monthly active users, up 10% on a year ago. Europe grew 7% to 161 million, and revenue rose 12% to $1.17bn.",
+    "why": "Pinterest keeps growing, and Europe is growing with it. A shopping-planning platform before Christmas.",
+    "momentum": "Rising",
+    "region": "Global",
+    "platform": "Pinterest",
+    "source": "Social Media Today, 29 Oct (Pinterest results)",
+    "credit": "Pinterest via Social Media Today",
+    "url": "https://www.socialmediatoday.com/news/pinterest-reports-solid-user-growth-in-q3/873274/",
+    "image": "images/pinterest.jpg"
+   }
+  ]
+ },
+ "watch": [
+  {
+   "when": "Thu 5 Nov",
+   "title": "Bonfire Night",
+   "note": "Fireworks and bonfire content peaks. Keep safety in mind in anything with children."
+  },
+  {
+   "when": "Sat 7 Nov",
+   "title": "Strictly Come Dancing returns",
+   "note": "A live Saturday show. Check the BBC listing for the time."
+  },
+  {
+   "when": "Sun 8 Nov",
+   "title": "Remembrance Sunday",
+   "note": "Keep brand content respectful, or stay off it entirely."
+  },
+  {
+   "when": "Mon 16 Nov",
+   "title": "I'm A Celebrity, rumoured start",
+   "note": "ITV hasn't confirmed a date, per Heart. Ant and Dec have posted a first teaser."
+  },
+  {
+   "when": "Fri 27 Nov",
+   "title": "Hexed in UK cinemas",
+   "note": "Disney UK press gives 27 Nov for the UK. The US date is 25 Nov."
+  }
+ ],
+ "desks": [
+  {
+   "id": "disney",
+   "name": "Disney UK",
+   "short": "Disney UK",
+   "byline": "Pip · Disney UK desk",
+   "color": "#4a74c9",
+   "logo": "logos/disney.png",
+   "ideas": [
+    {
+     "from": "Hexed cinema date",
+     "idea": "A daily countdown to Hexed's 27 Nov UK release, using approved assets.",
+     "note": "Cinema date Fri 27 Nov only. No other release claims."
+    },
+    {
+     "from": "Mystery teaser",
+     "idea": "A ten-second Hexed teaser, with the reveal saved for 27 Nov.",
+     "note": "Approved footage only. The mystery is the hook, not the plot."
+    }
+   ],
+   "watch": "Confirm Hexed's UK rating and approved assets first. No Glee date is confirmed, so none goes out."
+  },
+  {
+   "id": "family",
+   "name": "Disney Family UK",
+   "short": "Disney Family",
+   "byline": "Bo · Disney Family UK desk",
+   "color": "#a983cf",
+   "logo": "logos/disney.png",
+   "ideas": [
+    {
+     "from": "Clocks went back",
+     "idea": "Darker evenings: a family film-night checklist for the weekend.",
+     "note": "Frame it as family time, not a sales pitch."
+    },
+    {
+     "from": "Finish-line walk",
+     "idea": "A family finish-line chart for a winter challenge.",
+     "note": "Borrows the finish-line hook. Don't name or quote the walker."
+    }
+   ],
+   "watch": "Keep challenges optional and kid-safe: no sign-ups or data collection from under-13s."
+  },
+  {
+   "id": "store",
+   "name": "Disney Store UK",
+   "short": "Disney Store",
+   "byline": "Lulu · Disney Store UK desk",
+   "color": "#d4567f",
+   "logo": "logos/disney-store.png",
+   "ideas": [
+    {
+     "from": "Black Friday",
+     "idea": "A plush gift guide for little ones, posted before Black Friday week.",
+     "note": "Hold prices back. No discount claims until confirmed."
+    },
+    {
+     "from": "Pinterest 661m",
+     "idea": "A Christmas plush pin-board, shot vertically for saving.",
+     "note": "Pinterest reports 661m monthly users in Q3."
+    }
+   ],
+   "watch": "Show products accurately: no age or safety claims beyond the label."
+  },
+  {
+   "id": "muti",
+   "name": "Mutti UK",
+   "short": "Mutti",
+   "byline": "Kiki · Mutti UK desk",
+   "color": "#d8302b",
+   "logo": "logos/mutti.png",
+   "ideas": [
+    {
+     "from": "Bonfire Night",
+     "idea": "Bonfire Night pasta: a passata base for a warm meal after fireworks.",
+     "note": "Thu 5 Nov. A recipe, not a cheaper-than claim."
+    },
+    {
+     "from": "Pinterest 661m",
+     "idea": "A pin-ready three-step passata recipe card, shot vertically.",
+     "note": "Keep each step visible. No health claims."
+    }
+   ],
+   "watch": "Don't use the cheaper own-brand story as a stick. Lead with cooking, not price."
+  },
+  {
+   "id": "on",
+   "name": "Optimum Nutrition UK",
+   "short": "Optimum Nutrition",
+   "byline": "Rex · Optimum Nutrition UK desk",
+   "color": "#c9962c",
+   "logo": "logos/on.png",
+   "ideas": [
+    {
+     "from": "Finish-line walk",
+     "idea": "A “finish line” story after a training block, not a result.",
+     "note": "Borrows the finish-line hook. No results or body claims."
+    },
+    {
+     "from": "Black Friday",
+     "idea": "Build a training wishlist before Black Friday, with no discount claims.",
+     "note": "Adult-focused. No supplement pitch to teens."
+    }
+   ],
+   "watch": "No supplement targeting under-18s, no body or results claims, and no before-and-after shots."
+  },
+  {
+   "id": "dfs",
+   "name": "DFS",
+   "short": "DFS",
+   "byline": "Dot · DFS desk",
+   "color": "#2f9c8f",
+   "logo": "logos/dfs.png",
+   "ideas": [
+    {
+     "from": "Clocks went back",
+     "idea": "Darker nights, cosier corners: a room-by-room sofa mood board.",
+     "note": "Use real rooms. No invented room sizes."
+    },
+    {
+     "from": "Pinterest 661m",
+     "idea": "A save-worthy room-refresh board, shot vertically for Pinterest.",
+     "note": "Pinterest's users grew 10% on a year ago. Test vertical."
+    }
+   ],
+   "watch": "No delivery times, prices or “best” rankings unless signed off. Check photos show real items."
+  }
+ ]
+}
