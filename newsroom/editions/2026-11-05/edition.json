@@ -1,0 +1,272 @@
+{
+ "edition": "The daily",
+ "coverTitle": "The daily",
+ "coverSub": "what's *moving* on social",
+ "dateLabel": "Thursday 5 November",
+ "floorUrl": "https://claude.ai/artifact/QByUaU2dzAX6fAwH2X3jVb",
+ "sections": {
+  "saw": [
+   {
+    "short": "Hunger Games film pops up in US election coverage",
+    "headline": "The Hunger Games *crashes the US midterms* coverage",
+    "what": "Viewers spotted an in-universe President Snow video airing during US midterm election coverage, indy100 reports. It showed “Please Standby” and “Break the machine”, with Maya Hawke’s Mags saying “All machines can be broken”, then a 10-second countdown. The film, Sunrise on the Reaping, opens on 20 Nov (UK date to be confirmed).",
+    "why": "A film stunt dropped into a moment everyone was already watching. A neat template for Hexed.",
+    "momentum": "Rising",
+    "region": "Global",
+    "platform": "TV & X",
+    "source": "indy100, 4 Nov",
+    "credit": "Lionsgate via indy100",
+    "url": "https://www.indy100.com/politics/midterm-elections-hunger-games-sunrise-on-the-reaping-advert",
+    "image": "images/hungergames.jpg"
+   },
+   {
+    "short": "KFC UK launches a Marvel Doom menu",
+    "headline": "KFC goes *full Doctor Doom* with a black-bun burger",
+    "what": "KFC’s first Marvel tie-up, for Avengers: Doomsday, includes a black sesame bun Doom Burger with Smoky Green Mayo, Doom Dripped Wings and a Doom Shake. It starts 9 Nov and, Dexerto reports, runs in the UK until January 2027, with items varying by market. The film opens 18 Dec.",
+    "why": "Film marketing through food. A close comparison for any Disney cinema push.",
+    "momentum": "Rising",
+    "region": "UK",
+    "platform": "Brand launch",
+    "source": "Dexerto, 4 Nov",
+    "credit": "KFC via Dexerto",
+    "url": "https://www.dexerto.com/entertainment/kfc-reveals-avengers-doomsday-menu-with-black-burgers-green-mayo-and-doom-dust-3424689/",
+    "image": "images/kfc.jpg"
+   },
+   {
+    "short": "Arsenal beat Slavia Prague 2-1",
+    "headline": "Arsenal *beat Slavia Prague 2‑1* in the Champions League",
+    "what": "Noni Madueke and Viktor Gyokeres scored before Wiktor Nowak pulled one back late on, per Metro. Ezri Konsa went off with a knee problem and William Saliba was on the bench for the first time this season. Arsenal host Hull City on Saturday.",
+    "why": "Midweek football gives a big shared conversation. Single source for now.",
+    "momentum": "Peaking",
+    "region": "UK",
+    "platform": "X",
+    "source": "Metro, 4 Nov",
+    "credit": "Metro",
+    "url": "https://metro.co.uk/2026/11/04/ezri-konsa-injury-update-arsenal-beat-slavia-prague-champions-league-29767085/",
+    "image": "images/arsenal.jpg"
+   },
+   {
+    "short": "Greggs window turkeys spark complaints",
+    "headline": "Greggs’ *begging turkeys* split customers",
+    "what": "Greggs’ Christmas windows show cartoon turkeys begging to be let in, beside lines like “All taste, no turkey”. Some customers said the posters made the Festive Bake seem meat-free. This year’s bake is chicken, ham hock and bacon. Metro reports the ASA has received complaints but opened no investigation.",
+    "why": "Humour that confuses people. A lesson in checking a joke can’t be misread.",
+    "momentum": "Peaking",
+    "region": "UK",
+    "platform": "Instagram",
+    "source": "Metro, 4 Nov",
+    "credit": "Metro",
+    "url": "https://metro.co.uk/2026/11/04/greggs-slammed-controversial-dystopian-festive-bake-christmas-display-29764754/",
+    "image": "images/greggs.jpg"
+   },
+   {
+    "short": "Strictly's Jaime Winstone misses Saturday's show",
+    "headline": "Strictly’s *Jaime Winstone* will miss Saturday",
+    "what": "Jaime Winstone is out of Saturday’s show after doctors advised rest for a torn abdominal muscle. Metro reports she and partner Carlos Gu go through to next week. Her statement says: “I am in considerable pain”.",
+    "why": "Strictly news travels fast on a Thursday. Fans will talk about it all week.",
+    "momentum": "Rising",
+    "region": "UK",
+    "platform": "X & Instagram",
+    "source": "Metro, 4 Nov",
+    "credit": "BBC via Metro",
+    "url": "https://metro.co.uk/2026/11/04/strictly-star-in-considerable-pain-forced-pull-saturday-nights-show-29765867/",
+    "image": "images/strictlyline.jpg"
+   },
+   {
+    "short": "Fans link Andrew Garfield's GQ shoot to American Psycho",
+    "headline": "Fans think *Andrew Garfield’s GQ shoot* is an American Psycho tease",
+    "what": "Fans online are speculating, with no casting confirmed, that Garfield’s GQ shoot nods to American Psycho. Metro says it features pinstripe suits and a black latex-look coat. Director Luca Guadagnino has only said “Maybe one day I would do” it.",
+    "why": "A fan theory with zero confirmation. Interesting for how images get read as clues.",
+    "momentum": "Rising",
+    "region": "Global",
+    "platform": "X & Instagram",
+    "source": "Metro, 4 Nov",
+    "credit": "Metro",
+    "url": "https://metro.co.uk/2026/11/04/andrew-garfield-fans-convinced-new-american-psycho-suspicious-photo-29766837/",
+    "image": "images/garfield.jpg"
+   }
+  ],
+  "platform": [
+   {
+    "short": "Snap hits 495m daily users, no growth in Europe",
+    "headline": "Snap hits *495m daily users*, but not in Europe",
+    "what": "Snap says it had 495 million daily active users in Q3, up from 493 million in Q2, with no growth in North America or Europe. Revenue rose 14% year on year to $1.72bn, according to Social Media Today. Snap’s own release wasn’t checked.",
+    "why": "Growth is coming from outside our markets. UK reach is flat.",
+    "momentum": "Rising",
+    "region": "Global",
+    "platform": "Snapchat",
+    "source": "Social Media Today, 4 Nov",
+    "credit": "Snap via Social Media Today",
+    "url": "https://www.socialmediatoday.com/news/snapchat-posts-modest-user-increase-in-q3/873823/",
+    "image": "images/snap.jpg"
+   },
+   {
+    "short": "LinkedIn adds a Post Performance Table",
+    "headline": "LinkedIn adds a *Post Performance Table*",
+    "what": "LinkedIn has added a table showing impressions, views and watch time for each post in one place. Social Media Today also lists new metrics for saves and sends, and in-network versus out-of-network views. Rollout timing wasn’t given.",
+    "why": "Easier post-by-post reporting for anyone running LinkedIn.",
+    "momentum": "Rising",
+    "region": "Global",
+    "platform": "LinkedIn",
+    "source": "Social Media Today, 4 Nov",
+    "credit": "LinkedIn via Social Media Today",
+    "url": "https://www.socialmediatoday.com/news/linkedin-details-new-creator-insights-options/873675/",
+    "image": "images/linkedin.jpg"
+   }
+  ]
+ },
+ "watch": [
+  {
+   "when": "Thu 5 Nov",
+   "title": "Bonfire Night",
+   "note": "Fireworks and bonfire content peaks. Keep safety in mind in anything with children or pets."
+  },
+  {
+   "when": "Fri 6 Nov",
+   "title": "Boots Christmas ad on TV",
+   "note": "Unconfirmed. Check Boots’ own channels before reacting."
+  },
+  {
+   "when": "Sat 7 Nov",
+   "title": "Strictly Come Dancing",
+   "note": "A live Saturday show. Check the BBC listing for the time."
+  },
+  {
+   "when": "Mon 9 Nov",
+   "title": "KFC Doom menu starts",
+   "note": "Marvel tie-in goes on sale."
+  },
+  {
+   "when": "Fri 20 Nov",
+   "title": "Meta terms change",
+   "note": "Delayed to 20 Nov, per earlier reports."
+  }
+ ],
+ "desks": [
+  {
+   "id": "disney",
+   "name": "Disney UK",
+   "short": "Disney UK",
+   "byline": "Pip · Disney UK desk",
+   "color": "#4a74c9",
+   "logo": "logos/disney.png",
+   "ideas": [
+    {
+     "from": "KFC x Marvel",
+     "idea": "A Hexed 27 Nov countdown post that borrows the idea of a bold, single-colour “takeover”.",
+     "note": "Approved assets only. Keep the release date to 27 Nov."
+    },
+    {
+     "from": "Hunger Games stunt",
+     "idea": "A short in-world Hexed teaser, with the reveal saved for 27 Nov.",
+     "note": "Approved footage only. Nothing copied from another film."
+    }
+   ],
+   "watch": "Hexed’s UK rating and assets need sign-off first. No other release dates go out."
+  },
+  {
+   "id": "family",
+   "name": "Disney Family UK",
+   "short": "Disney Family",
+   "byline": "Bo · Disney Family UK desk",
+   "color": "#a983cf",
+   "logo": "logos/disney.png",
+   "ideas": [
+    {
+     "from": "Bonfire Night",
+     "idea": "A cosy “sparkler-safe” family post with an evening watch-list.",
+     "note": "Only titles on Disney+ UK. Safety first."
+    },
+    {
+     "from": "Strictly Saturday",
+     "idea": "A “get the family on the sofa” Saturday post.",
+     "note": "No spoilers about the show."
+    }
+   ],
+   "watch": "Fireworks and children means safety wording must be careful."
+  },
+  {
+   "id": "store",
+   "name": "Disney Store UK",
+   "short": "Disney Store",
+   "byline": "Lulu · Disney Store UK desk",
+   "color": "#d4567f",
+   "logo": "logos/disney-store.png",
+   "ideas": [
+    {
+     "from": "KFC x Marvel",
+     "idea": "A “Doom or doughnut?” poll on Disney Store villains merch.",
+     "note": "Check villain products in stock first."
+    },
+    {
+     "from": "Bonfire Night",
+     "idea": "Cosy winter pyjama and blanket content for tonight.",
+     "note": "Keep to stock listed on the site."
+    }
+   ],
+   "watch": "No Marvel or Hexed content without licensing sign-off."
+  },
+  {
+   "id": "muti",
+   "name": "Mutti UK",
+   "short": "Mutti",
+   "byline": "Kiki · Mutti UK desk",
+   "color": "#d8302b",
+   "logo": "logos/mutti.png",
+   "ideas": [
+    {
+     "from": "Bonfire Night",
+     "idea": "A warm “bonfire night chilli with Mutti passata” recipe post.",
+     "note": "Recipe must be tested and approved by Mutti."
+    },
+    {
+     "from": "Greggs posters",
+     "idea": "A cheeky “no turkey, all tomato” line if a Christmas post is planned.",
+     "note": "Make sure the joke can’t be read as a claim."
+    }
+   ],
+   "watch": "Don’t reference Greggs or any competitor by name publicly."
+  },
+  {
+   "id": "on",
+   "name": "Optimum Nutrition UK",
+   "short": "Optimum Nutrition",
+   "byline": "Rex · Optimum Nutrition UK desk",
+   "color": "#c9962c",
+   "logo": "logos/on.png",
+   "ideas": [
+    {
+     "from": "Arsenal midweek",
+     "idea": "A match-night snack idea: protein pancakes with a football angle.",
+     "note": "No club logos without a licence."
+    },
+    {
+     "from": "Bonfire Night",
+     "idea": "A “warm-up before the bonfire” short workout.",
+     "note": "Keep any health claims within approved wording."
+    }
+   ],
+   "watch": "No health or performance claims beyond the approved list."
+  },
+  {
+   "id": "dfs",
+   "name": "DFS",
+   "short": "DFS",
+   "byline": "Dot · DFS desk",
+   "color": "#2f9c8f",
+   "logo": "logos/dfs.png",
+   "ideas": [
+    {
+     "from": "Bonfire Night",
+     "idea": "A “cosy up after the fireworks” sofa post with throws and cushions.",
+     "note": "Use approved product shots."
+    },
+    {
+     "from": "Strictly Saturday",
+     "idea": "A “best seat in the house” sofa shot for Saturday night TV.",
+     "note": "No tagging the show or BBC."
+    }
+   ],
+   "watch": "Any sale or price wording needs approval first."
+  }
+ ]
+}
