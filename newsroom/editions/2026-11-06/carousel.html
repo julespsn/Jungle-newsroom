@@ -1,0 +1,193 @@
+<title>Jungle Newsroom Edition</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap">
+<style>
+/* Layout: 1080x1350 slides in Jungle's Instagram carousel style (dark concrete texture, hairline top bar,
+   Poppins, Jungle green for the key words, the jungle wordmark bottom right). Story slides lead with a picture.
+   Viewer mode (default) shows one slide at a time; print mode (set by render.js) stacks them for PNG/PDF export. */
+:root{
+  --bg:#3b3936; --white:#ffffff; --soft:#dedad3; --dim:#aaa59d; --green:#7ef25c; --amber:#ffc94a; --grey:#8d8880;
+  --sans:'Poppins','Helvetica Neue',Arial,sans-serif;
+  color-scheme: dark;
+}
+[hidden]{display:none!important}
+html,body{margin:0}
+body{background:#161514;color:var(--white);font-family:var(--sans)}
+a{color:inherit}
+
+.slide{position:relative;width:1080px;height:1350px;box-sizing:border-box;padding:136px 76px 150px;overflow:hidden;background:var(--bg);
+  background-image:radial-gradient(ellipse at 30% 20%,rgba(255,255,255,.06),transparent 60%),radial-gradient(ellipse at 80% 100%,rgba(0,0,0,.35),transparent 60%)}
+.slide::before{content:"";position:absolute;inset:0;pointer-events:none;opacity:.55;mix-blend-mode:overlay;
+  background-image:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='400' height='400'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='.65' numOctaves='4' stitchTiles='stitch'/><feColorMatrix values='0 0 0 0 .5  0 0 0 0 .5  0 0 0 0 .5  0 0 0 1.6 -.45'/></filter><rect width='100%' height='100%' filter='url(%23n)'/></svg>")}
+.slide > *{position:relative;z-index:1}
+em{font-style:normal;color:var(--green)}
+
+.bar{position:absolute;top:52px;left:76px;right:76px;display:flex;justify-content:space-between;align-items:center;padding-bottom:20px;border-bottom:2px solid rgba(255,255,255,.55);
+  font-size:21px;font-weight:600;letter-spacing:.03em;text-transform:uppercase}
+.bar span:last-child{text-transform:none;font-weight:500}
+.mark{position:absolute;right:70px;bottom:56px;height:52px}
+.mark img{height:100%;display:block}
+.foot{position:absolute;left:76px;bottom:58px;max-width:700px;font-size:19px;line-height:1.45;color:var(--dim)}
+.foot a{color:var(--green);text-decoration:none;font-weight:600;word-break:break-all}
+
+/* cover */
+.cover{display:flex;flex-direction:column;justify-content:center}
+.cover .kick{font-size:28px;font-weight:600;color:var(--soft);margin:0 0 4px}
+.cover h1{font-size:132px;font-weight:800;line-height:.95;letter-spacing:-.04em;margin:0;color:var(--green)}
+.cover .sub{font-size:62px;font-weight:700;line-height:1.05;letter-spacing:-.03em;margin:8px 0 44px}
+.cover h3{font-size:22px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--green);margin:22px 0 10px}
+.cover ol{list-style:none;margin:0;padding:0;display:grid;gap:8px}
+.cover li{font-size:27px;font-weight:500;line-height:1.25;color:var(--soft);padding-left:26px;position:relative}
+.cover li::before{content:"";position:absolute;left:0;top:.5em;width:10px;height:10px;border-radius:50%;background:var(--green)}
+
+/* story */
+.pic{height:500px;border-radius:30px;overflow:hidden;background:#222;margin:0 0 30px}
+.pic img{width:100%;height:100%;object-fit:cover;display:block}
+.chips{display:flex;flex-wrap:wrap;gap:10px;margin:0 0 20px}
+.chip{font-size:19px;font-weight:600;border:2px solid rgba(255,255,255,.6);border-radius:999px;padding:4px 16px;color:var(--soft)}
+.chip.up{border-color:var(--green);color:var(--green)}
+.chip.peak{border-color:var(--amber);color:var(--amber)}
+.chip.spoil{border-color:#ff7a66;color:#ff7a66}
+.chip.down{border-color:var(--grey);color:var(--grey)}
+.story h2{font-size:56px;font-weight:700;line-height:1.08;letter-spacing:-.03em;margin:0 0 18px;text-wrap:balance}
+.story .what{font-size:25px;font-weight:400;line-height:1.5;margin:0 0 20px;color:var(--soft)}
+.why{border-left:5px solid var(--green);padding:2px 0 2px 22px}
+.why p{margin:0;font-size:24px;font-weight:500;line-height:1.45}
+.why b{color:var(--green);font-weight:700}
+
+/* watch list */
+.watch h2{font-size:84px;font-weight:800;line-height:1;letter-spacing:-.04em;margin:30px 0 44px}
+.wl{list-style:none;margin:0;padding:0;display:grid;gap:22px}
+.wl li{display:grid;grid-template-columns:150px 1fr;gap:24px;align-items:start;background:rgba(0,0,0,.25);border-radius:26px;padding:24px 28px}
+.wl .when{font-size:20px;font-weight:700;color:#1d1c1a;background:var(--green);border-radius:999px;text-align:center;padding:6px 10px;align-self:start}
+.wl .t{font-size:29px;font-weight:700;line-height:1.2;margin:0}
+.wl .n{font-size:22px;font-weight:400;line-height:1.45;margin:6px 0 0;color:var(--soft)}
+
+/* desk */
+.desk .head{display:flex;align-items:center;gap:28px;margin:12px 0 34px}
+.desk .tile{width:150px;height:150px;border-radius:28px;background:var(--white);display:grid;place-items:center;flex:none;box-shadow:inset 0 -10px 0 var(--c)}
+.desk .tile img{max-width:112px;max-height:74px;margin-bottom:8px}
+.desk h2{font-size:58px;font-weight:700;line-height:1.02;letter-spacing:-.03em;margin:0}
+.desk .who{font-size:21px;font-weight:500;color:var(--dim);margin:8px 0 0}
+.ideas{list-style:none;margin:0;padding:0;display:grid;gap:20px}
+.ideas li{background:rgba(0,0,0,.28);border-radius:26px;padding:24px 28px;border-top:6px solid var(--c)}
+.lbl{font-size:18px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--dim);margin:0 0 8px}
+.ideas .idea{font-size:30px;font-weight:700;line-height:1.25;margin:0}
+.ideas .note{font-size:22px;font-weight:400;line-height:1.45;margin:8px 0 0;color:var(--soft)}
+.wo{margin-top:24px;border:2px solid var(--amber);border-radius:26px;padding:22px 28px}
+.wo .lbl{color:var(--amber)}
+.wo p.t{font-size:25px;font-weight:600;line-height:1.4;margin:0}
+
+/* end */
+.end{display:flex;flex-direction:column;justify-content:center}
+.end h2{font-size:112px;font-weight:800;line-height:.98;letter-spacing:-.04em;margin:0 0 30px}
+.end p{font-size:32px;font-weight:500;line-height:1.45;margin:0 0 40px;color:var(--soft);max-width:30ch}
+.end .go{align-self:flex-start;display:inline-flex;align-items:center;gap:14px;font-size:30px;font-weight:700;color:#1d1c1a;background:var(--green);border-radius:999px;padding:18px 36px;text-decoration:none}
+.end .url{font-size:19px;color:var(--dim);margin-top:18px;word-break:break-all}
+
+/* viewer (artifact) */
+body:not([data-mode="print"]){min-height:100vh;display:flex;flex-direction:column;align-items:center;gap:16px;padding:20px max(16px,env(safe-area-inset-left,0px)) 24px max(16px,env(safe-area-inset-right,0px));box-sizing:border-box}
+body:not([data-mode="print"]) #deck{position:relative;width:min(540px,100%);aspect-ratio:1080/1350}
+body:not([data-mode="print"]) .slide{position:absolute;top:0;left:0;transform-origin:top left;display:none}
+body:not([data-mode="print"]) .slide.on{display:block}
+body:not([data-mode="print"]) .slide.on.cover,body:not([data-mode="print"]) .slide.on.end{display:flex}
+.nav{display:flex;align-items:center;gap:14px;font-weight:600;color:var(--soft)}
+.nav button{font:inherit;font-weight:700;color:#1d1c1a;background:var(--green);border:none;border-radius:999px;padding:10px 22px;cursor:pointer}
+.nav button:disabled{opacity:.35;cursor:default}
+.nav button:focus-visible{outline:3px solid var(--white);outline-offset:3px}
+body[data-mode="print"] .nav{display:none}
+body[data-mode="print"] .slide{page-break-after:always;break-after:page}
+@page{size:1080px 1350px;margin:0}
+</style>
+
+<div id="deck"></div>
+<div class="nav"><button id="prev" type="button">Back</button><span id="pos"></span><button id="next" type="button">Next</button></div>
+
+<script id="edition" type="application/json">{"edition":"Best of the week","coverTitle":"Best of the week","coverSub":"what *carried on* growing","dateLabel":"Friday 6 November","floorUrl":"https://newsroom-production-7727.up.railway.app/","sections":{"saw":[{"short":"John Lewis's ad is still the week's big talking point","headline":"The John Lewis ad is *still the week’s big debate*","what":"System1 says the ad scores 5.6 stars, its best John Lewis result since 2019, with 69% reacting positively and 6% showing contempt. That is System1’s own research, shared by its Chief Growth Officer in The Drum. Metro’s columnist says the culture-war backlash is louder than the numbers.","why":"It started the week as a pile-on. The testing says most viewers liked it.","momentum":"Peaking","region":"UK","platform":"TV & X","source":"The Drum, 4 Nov; Metro, 4 Nov","credit":"John Lewis via Metro","url":"https://www.thedrum.com/opinion/andrew-tindall-they-may-be-loud-but-only-6-hated-the-john-lewis-christmas-ad-it-will-work","image":"images/johnlewis.jpg"},{"short":"KFC's Doom menu and the Hunger Games stunt: two film tie-ins","headline":"Two film tie-ins: *KFC’s Doom menu* and a *Hunger Games* TV stunt","what":"KFC’s Doctor Doom menu, with a black sesame bun burger, reaches UK and Ireland restaurants on 9 Nov, ahead of Avengers: Doomsday. Eastern Eye gives the film’s UK date as 16 Dec. Earlier this week viewers also saw an in-universe Hunger Games clip in US election coverage, per indy100. Sunrise on the Reaping opens on 20 Nov, per listings.","why":"Two ways to sell a film: a menu and a stunt in a moment everyone watches.","momentum":"Rising","region":"UK","platform":"Brand launch","source":"Eastern Eye, 5 Nov; Decision Marketing, 4 Nov; indy100, 4 Nov","credit":"KFC via Eastern Eye","url":"https://www.easterneye.biz/kfc-doctor-doom-uk-meal/","image":"images/kfcdoom.jpg"},{"short":"Arsenal's Christmas film stars Colin Firth","headline":"*Colin Firth* stars in Arsenal’s Christmas film","what":"Arsenal’s Christmas film, “’Twas the Season”, has Colin Firth as a fan walking through Islington crowds, with Alessia Russo, Riccardo Calafiori and Gabriel Magalhães. Metro says Firth’s Portuguese exchange with the players nods to Love Actually. The tagline is “Gifts worth waiting all season for”.","why":"A football club making a proper Christmas ad. The cast does the work.","momentum":"Rising","region":"UK","platform":"YouTube & social","source":"Metro, 5 Nov","credit":"Arsenal via Metro","url":"https://metro.co.uk/2026/11/05/colin-firth-makes-love-actually-nod-unexpected-christmas-advert-year-29767623/","image":"images/firth.jpg"},{"short":"Barbour's Christmas short brings back Wallace and Gromit","headline":"*Wallace and Gromit* star in Barbour’s Christmas short","what":"Barbour’s new 90-second Christmas short with Wallace and Gromit, made with Aardman, has Gromit rescuing Wallace’s Walk-o-Matic test. A mischievous sheep also appears. A Metro writer calls it his favourite ad so far, though a colleague prefers another.","why":"Familiar characters, a clear story and a very British feel. Opinion is split on the best ad.","momentum":"Rising","region":"UK","platform":"YouTube","source":"Metro, 5 Nov","credit":"Barbour via Metro","url":"https://metro.co.uk/2026/11/05/forget-muppets-wallace-gromit-best-christmas-advert-this-year-29765712/","image":"images/wallace.jpg"},{"short":"Boots' Christmas ad goes to TV","headline":"*Boots* takes its Christmas campaign to TV","what":"Boots’ campaign, “For Gifts They’ll Really Love”, went online on 4 Nov and goes to TV on 6 Nov, under its new “Give it Some Boots” platform. It is a 60-second film, with the brand’s first 20-second edits. Retail Gazette says the TV roadblock aims to reach six million people over launch weekend.","why":"A big TV launch weekend. The first 20-second edits are the detail to note.","momentum":"Rising","region":"UK","platform":"TV & YouTube","source":"Retail Gazette, 4 Nov","credit":"Boots via Retail Gazette","url":"https://www.retailgazette.co.uk/blog/2026/11/watch-boots-christmas/","image":"images/boots.jpg"},{"short":"GTA 6 has an estimated 7.71 million pre-orders","headline":"*GTA 6* has an estimated *7.71 million* pre-orders","what":"Sensor Tower estimates 7.71 million pre-orders for GTA 6, worth about $751 million, ahead of its 19 Nov launch. GamesIndustry.biz and Metro both report the figure. It is Sensor Tower’s estimate of digital pre-orders, not a Take-Two number.","why":"Two weeks out, a game is already a cultural event. Expect it to fill feeds from 19 Nov.","momentum":"Rising","region":"Global","platform":"X & YouTube","source":"Metro, 5 Nov; GamesIndustry.biz, 5 Nov","credit":"Rockstar via Metro","url":"https://metro.co.uk/2026/11/05/gta-6-isnt-even-yet-already-sold-eight-million-copies-29769852/","image":"images/gta.jpg"}],"platform":[{"short":"Instagram's Edits comes to Mac","headline":"Instagram’s *Edits* video editor comes to Mac","what":"Edits now has a Mac app, launched on 5 Nov. Social Media Today and TechCrunch say it has a multi-track timeline, 4K watermark-free export and syncs with the mobile app. UK availability isn’t stated.","why":"Easier editing on a laptop for anyone making Reels.","momentum":"Rising","region":"Global","platform":"Instagram","source":"Social Media Today, 5 Nov; TechCrunch, 5 Nov","credit":"Instagram via TechCrunch","url":"https://www.socialmediatoday.com/news/edits-launches-for-macos/873949/","image":"images/edits.jpg"},{"short":"Meta's Muse AI can now talk, US first","headline":"Meta’s *Muse AI* can now talk, US first","what":"Meta says its Muse AI assistant now has voice and expressive avatars, with hundreds of voices to choose from. It is rolling out in the US first, so it isn’t in the UK yet. Meta says voice is coming soon to its AI glasses.","why":"A signal of where Meta’s AI is going. Nothing to use in the UK yet.","momentum":"Rising","region":"Global","platform":"Meta","source":"Meta, 5 Nov; Social Media Today, 5 Nov","credit":"Meta","url":"https://about.fb.com/news/2026/11/introducing-muse-ai-voice-expressive-avatars/","image":"images/muse.jpg"}]},"watch":[{"when":"Fri 6 Nov","title":"M&S Christmas ad due","note":"Teased this week with James Norton. Unconfirmed until M&S posts it."},{"when":"Sat 7 Nov","title":"Strictly Come Dancing","note":"A live Saturday show. Jaime Winstone is out this week. Check the BBC listing for the time."},{"when":"Mon 9 Nov","title":"KFC Doom menu starts","note":"UK and Ireland launch of the Marvel tie-in."},{"when":"Thu 19 Nov","title":"GTA 6 launches","note":"Expect feed takeovers around launch."},{"when":"Fri 20 Nov","title":"Hunger Games opens","note":"Sunrise on the Reaping UK date per listings. Confirm with the cinemas."}],"desks":[{"id":"disney","name":"Disney UK","short":"Disney UK","byline":"Pip · Disney UK desk","color":"#4a74c9","logo":"logos/disney.png","ideas":[{"from":"Film tie-ins","idea":"A Hexed 27 Nov countdown that uses one bold, simple visual each day.","note":"Approved assets only. Cinema date Fri 27 Nov."},{"from":"Christmas ads","idea":"A short “get the family to the cinema” teaser for Hexed.","note":"No ratings or reviews claims."}],"watch":"Hexed’s UK rating and assets need sign-off first. No other release dates go out."},{"id":"family","name":"Disney Family UK","short":"Disney Family","byline":"Bo · Disney Family UK desk","color":"#a983cf","logo":"logos/disney.png","ideas":[{"from":"Christmas ads","idea":"A “which Christmas ad is your family’s favourite?” poll.","note":"Don’t name brands we don’t work with."},{"from":"Strictly Saturday","idea":"A family sofa-night Saturday post.","note":"No spoilers about the show."}],"watch":"Keep any Christmas content clear of other brands’ ads."},{"id":"store","name":"Disney Store UK","short":"Disney Store","byline":"Lulu · Disney Store UK desk","color":"#d4567f","logo":"logos/disney-store.png","ideas":[{"from":"Wallace and Gromit","idea":"A cosy winter-gifting post that borrows the “inventor’s gift” idea.","note":"Use only products in stock. No copying the ad."},{"from":"Christmas ads","idea":"An advent-style “first Christmas gifts” gift guide.","note":"Prices and stock must be checked."}],"watch":"No Marvel or Hexed content without licensing sign-off."},{"id":"muti","name":"Mutti UK","short":"Mutti","byline":"Kiki · Mutti UK desk","color":"#d8302b","logo":"logos/mutti.png","ideas":[{"from":"Friday night in","idea":"A sofa-night snack post: tomato toasties for a Friday night in.","note":"Recipe must be tested and approved by Mutti."},{"from":"Boots TV launch","idea":"A quick “festive pasta” recipe for the launch weekend.","note":"Recipe must be approved by Mutti."}],"watch":"Don’t reference other brands’ ads or shortages by name."},{"id":"on","name":"Optimum Nutrition UK","short":"Optimum Nutrition","byline":"Rex · Optimum Nutrition UK desk","color":"#c9962c","logo":"logos/on.png","ideas":[{"from":"GTA 6","idea":"A “game night fuel” post: quick protein snacks.","note":"Don’t use any game imagery or title in the artwork."},{"from":"Weekend","idea":"A short “gym before the weekend” workout.","note":"Keep health claims within approved wording."}],"watch":"No health or performance claims beyond the approved list."},{"id":"dfs","name":"DFS","short":"DFS","byline":"Dot · DFS desk","color":"#2f9c8f","logo":"logos/dfs.png","ideas":[{"from":"Christmas ads","idea":"A “cosy Christmas sofa” post with throws and cushions.","note":"Use approved product shots."},{"from":"Strictly Saturday","idea":"A “best seat in the house” sofa shot for Saturday night TV.","note":"No tagging the show or BBC."}],"watch":"Any sale or price wording needs approval first."}]}</script>
+<script>
+(function(){
+const E = JSON.parse(document.getElementById('edition').textContent || '{}');
+const deck = document.getElementById('deck');
+const esc = s => String(s == null ? '' : s).replace(/[&<>"]/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+// *words* in headlines are set in Jungle green
+const hi = s => esc(s).replace(/\*(.+?)\*/g, '<em>$1</em>');
+const plain = s => String(s == null ? '' : s).replace(/\*/g, '');
+const short = u => String(u || '').replace(/^https?:\/\/(www\.)?/, '').replace(/[?#].*$/, '').replace(/\/$/, '');
+const link = u => '<a href="' + esc(u) + '">' + esc(short(u).length > 60 ? short(u).slice(0, 58) + '…' : short(u)) + '</a>';
+const MOM = {Rising:'up', Peaking:'peak', Fading:'down'};
+const edition = E.edition || 'The daily';
+const bar = (l, r) => '<div class="bar"><span>' + esc(l) + '</span><span>' + esc(r) + '</span></div>';
+const mark = '<div class="mark"><img src="logos/jungle-wordmark-white.png" alt="jungle"></div>';
+const SECTIONS = [['saw', 'Things we saw'], ['platform', 'Platform highlights']];
+const S = E.sections || {};
+const slides = [];
+
+slides.push('<section class="slide cover">' + bar(edition, 'The Jungle Newsroom · ' + (E.dateLabel || '')) +
+  '<p class="kick">The Jungle Newsroom</p><h1>' + hi(E.coverTitle || edition) + '</h1>' +
+  '<p class="sub">' + hi(E.coverSub || 'what’s moving on social') + '</p>' +
+  SECTIONS.filter(([k]) => (S[k] || []).length).map(([k, name]) => '<h3>' + name + '</h3><ol>' + S[k].map(s => '<li>' + esc(plain(s.short || s.headline)) + '</li>').join('') + '</ol>').join('') +
+  mark + '</section>');
+
+SECTIONS.forEach(([k, name]) => {
+  const list = S[k] || [];
+  list.forEach((s, i) => {
+    slides.push('<section class="slide story">' + bar(name, String(i + 1).padStart(2, '0') + ' / ' + String(list.length).padStart(2, '0') + ' · ' + (E.dateLabel || '')) +
+      (s.image ? '<div class="pic"><img src="' + esc(s.image) + '" alt=""></div>' : '') +
+      '<div class="chips">' + (s.spoiler ? '<span class="chip spoil">Spoilers</span>' : '') + '<span class="chip ' + (MOM[s.momentum] || '') + '">' + esc(s.momentum) + '</span><span class="chip">' + esc(s.region) + '</span><span class="chip">' + esc(s.platform) + '</span></div>' +
+      '<h2>' + hi(s.headline) + '</h2><p class="what">' + esc(s.what) + '</p>' +
+      '<div class="why"><p><b>Why it matters: </b>' + esc(s.why) + '</p></div>' +
+      '<div class="foot">' + esc(s.source) + (s.credit ? ' · Image: ' + esc(s.credit) : '') + (s.url ? '<br>' + link(s.url) : '') + '</div>' + mark + '</section>');
+  });
+});
+
+if ((E.watch || []).length) {
+  slides.push('<section class="slide watch">' + bar('This week', E.dateLabel || '') +
+    '<h2>Things to watch <em>this week</em></h2><ul class="wl">' +
+    E.watch.map(w => '<li><span class="when">' + esc(w.when) + '</span><div><p class="t">' + esc(w.title) + '</p>' + (w.note ? '<p class="n">' + esc(w.note) + '</p>' : '') + '</div></li>').join('') +
+    '</ul>' + mark + '</section>');
+}
+
+(E.desks || []).forEach(d => {
+  if (!(d.ideas || []).length && !d.watch) return;
+  slides.push('<section class="slide desk" style="--c:' + d.color + '">' + bar('For our clients', d.short) +
+    '<div class="head"><div class="tile">' + (d.logo ? '<img src="' + esc(d.logo) + '" alt="' + esc(d.name) + '">' : '') + '</div>' +
+    '<div><h2>' + hi(d.title || ('For *' + d.name + '*')) + '</h2><p class="who">' + esc(d.byline) + '</p></div></div>' +
+    '<ul class="ideas">' + (d.ideas || []).map(it => '<li><p class="lbl">Idea · ' + esc(it.from) + '</p><p class="idea">' + esc(it.idea) + '</p>' + (it.note ? '<p class="note">' + esc(it.note) + '</p>' : '') + '</li>').join('') + '</ul>' +
+    (d.watch ? '<div class="wo"><p class="lbl">Watch out</p><p class="t">' + esc(d.watch) + '</p></div>' : '') +
+    mark + '</section>');
+});
+
+slides.push('<section class="slide end">' + bar('The Jungle Newsroom', E.dateLabel || '') +
+  '<h2>Did we <em>miss</em> something?</h2>' +
+  '<p>Spotted something we missed? Or want more of something tomorrow? Reply under this post in #agency-hq.</p>' +
+  (E.floorUrl ? '<a class="go" href="' + esc(E.floorUrl) + '">See the newsroom island →</a><p class="url">' + esc(short(E.floorUrl)) + '</p>' : '') +
+  mark + '</section>');
+
+deck.innerHTML = slides.join('');
+const els = [...deck.querySelectorAll('.slide')];
+
+// viewer: one slide at a time, scaled to fit
+let cur = 0;
+const pos = document.getElementById('pos'), prev = document.getElementById('prev'), next = document.getElementById('next');
+function fit(){
+  if (document.body.dataset.mode === 'print') return;
+  const s = deck.clientWidth / 1080;
+  els.forEach(el => { el.style.transform = 'scale(' + s + ')'; });
+}
+function show(i){
+  cur = Math.max(0, Math.min(els.length - 1, i));
+  els.forEach((el, k) => el.classList.toggle('on', k === cur));
+  pos.textContent = (cur + 1) + ' / ' + els.length;
+  prev.disabled = cur === 0; next.disabled = cur === els.length - 1;
+}
+prev.addEventListener('click', () => show(cur - 1));
+next.addEventListener('click', () => show(cur + 1));
+document.addEventListener('keydown', e => { if (e.key === 'ArrowRight') show(cur + 1); if (e.key === 'ArrowLeft') show(cur - 1); });
+let sx = null;
+deck.addEventListener('pointerdown', e => { sx = e.clientX; });
+deck.addEventListener('pointerup', e => { if (sx != null && Math.abs(e.clientX - sx) > 40) show(cur + (e.clientX < sx ? 1 : -1)); sx = null; });
+window.addEventListener('resize', fit);
+fit(); show(0);
+})();
+</script>

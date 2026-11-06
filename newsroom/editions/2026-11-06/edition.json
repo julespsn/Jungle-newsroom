@@ -1,0 +1,272 @@
+{
+ "edition": "Best of the week",
+ "coverTitle": "Best of the week",
+ "coverSub": "what *carried on* growing",
+ "dateLabel": "Friday 6 November",
+ "floorUrl": "https://claude.ai/artifact/QByUaU2dzAX6fAwH2X3jVb",
+ "sections": {
+  "saw": [
+   {
+    "short": "John Lewis's ad is still the week's big talking point",
+    "headline": "The John Lewis ad is *still the week’s big debate*",
+    "what": "System1 says the ad scores 5.6 stars, its best John Lewis result since 2019, with 69% reacting positively and 6% showing contempt. That is System1’s own research, shared by its Chief Growth Officer in The Drum. Metro’s columnist says the culture-war backlash is louder than the numbers.",
+    "why": "It started the week as a pile-on. The testing says most viewers liked it.",
+    "momentum": "Peaking",
+    "region": "UK",
+    "platform": "TV & X",
+    "source": "The Drum, 4 Nov; Metro, 4 Nov",
+    "credit": "John Lewis via Metro",
+    "url": "https://www.thedrum.com/opinion/andrew-tindall-they-may-be-loud-but-only-6-hated-the-john-lewis-christmas-ad-it-will-work",
+    "image": "images/johnlewis.jpg"
+   },
+   {
+    "short": "KFC's Doom menu and the Hunger Games stunt: two film tie-ins",
+    "headline": "Two film tie-ins: *KFC’s Doom menu* and a *Hunger Games* TV stunt",
+    "what": "KFC’s Doctor Doom menu, with a black sesame bun burger, reaches UK and Ireland restaurants on 9 Nov, ahead of Avengers: Doomsday. Eastern Eye gives the film’s UK date as 16 Dec. Earlier this week viewers also saw an in-universe Hunger Games clip in US election coverage, per indy100. Sunrise on the Reaping opens on 20 Nov, per listings.",
+    "why": "Two ways to sell a film: a menu and a stunt in a moment everyone watches.",
+    "momentum": "Rising",
+    "region": "UK",
+    "platform": "Brand launch",
+    "source": "Eastern Eye, 5 Nov; Decision Marketing, 4 Nov; indy100, 4 Nov",
+    "credit": "KFC via Eastern Eye",
+    "url": "https://www.easterneye.biz/kfc-doctor-doom-uk-meal/",
+    "image": "images/kfcdoom.jpg"
+   },
+   {
+    "short": "Arsenal's Christmas film stars Colin Firth",
+    "headline": "*Colin Firth* stars in Arsenal’s Christmas film",
+    "what": "Arsenal’s Christmas film, “’Twas the Season”, has Colin Firth as a fan walking through Islington crowds, with Alessia Russo, Riccardo Calafiori and Gabriel Magalhães. Metro says Firth’s Portuguese exchange with the players nods to Love Actually. The tagline is “Gifts worth waiting all season for”.",
+    "why": "A football club making a proper Christmas ad. The cast does the work.",
+    "momentum": "Rising",
+    "region": "UK",
+    "platform": "YouTube & social",
+    "source": "Metro, 5 Nov",
+    "credit": "Arsenal via Metro",
+    "url": "https://metro.co.uk/2026/11/05/colin-firth-makes-love-actually-nod-unexpected-christmas-advert-year-29767623/",
+    "image": "images/firth.jpg"
+   },
+   {
+    "short": "Barbour's Christmas short brings back Wallace and Gromit",
+    "headline": "*Wallace and Gromit* star in Barbour’s Christmas short",
+    "what": "Barbour’s new 90-second Christmas short with Wallace and Gromit, made with Aardman, has Gromit rescuing Wallace’s Walk-o-Matic test. A mischievous sheep also appears. A Metro writer calls it his favourite ad so far, though a colleague prefers another.",
+    "why": "Familiar characters, a clear story and a very British feel. Opinion is split on the best ad.",
+    "momentum": "Rising",
+    "region": "UK",
+    "platform": "YouTube",
+    "source": "Metro, 5 Nov",
+    "credit": "Barbour via Metro",
+    "url": "https://metro.co.uk/2026/11/05/forget-muppets-wallace-gromit-best-christmas-advert-this-year-29765712/",
+    "image": "images/wallace.jpg"
+   },
+   {
+    "short": "Boots' Christmas ad goes to TV",
+    "headline": "*Boots* takes its Christmas campaign to TV",
+    "what": "Boots’ campaign, “For Gifts They’ll Really Love”, went online on 4 Nov and goes to TV on 6 Nov, under its new “Give it Some Boots” platform. It is a 60-second film, with the brand’s first 20-second edits. Retail Gazette says the TV roadblock aims to reach six million people over launch weekend.",
+    "why": "A big TV launch weekend. The first 20-second edits are the detail to note.",
+    "momentum": "Rising",
+    "region": "UK",
+    "platform": "TV & YouTube",
+    "source": "Retail Gazette, 4 Nov",
+    "credit": "Boots via Retail Gazette",
+    "url": "https://www.retailgazette.co.uk/blog/2026/11/watch-boots-christmas/",
+    "image": "images/boots.jpg"
+   },
+   {
+    "short": "GTA 6 has an estimated 7.71 million pre-orders",
+    "headline": "*GTA 6* has an estimated *7.71 million* pre-orders",
+    "what": "Sensor Tower estimates 7.71 million pre-orders for GTA 6, worth about $751 million, ahead of its 19 Nov launch. GamesIndustry.biz and Metro both report the figure. It is Sensor Tower’s estimate of digital pre-orders, not a Take-Two number.",
+    "why": "Two weeks out, a game is already a cultural event. Expect it to fill feeds from 19 Nov.",
+    "momentum": "Rising",
+    "region": "Global",
+    "platform": "X & YouTube",
+    "source": "Metro, 5 Nov; GamesIndustry.biz, 5 Nov",
+    "credit": "Rockstar via Metro",
+    "url": "https://metro.co.uk/2026/11/05/gta-6-isnt-even-yet-already-sold-eight-million-copies-29769852/",
+    "image": "images/gta.jpg"
+   }
+  ],
+  "platform": [
+   {
+    "short": "Instagram's Edits comes to Mac",
+    "headline": "Instagram’s *Edits* video editor comes to Mac",
+    "what": "Edits now has a Mac app, launched on 5 Nov. Social Media Today and TechCrunch say it has a multi-track timeline, 4K watermark-free export and syncs with the mobile app. UK availability isn’t stated.",
+    "why": "Easier editing on a laptop for anyone making Reels.",
+    "momentum": "Rising",
+    "region": "Global",
+    "platform": "Instagram",
+    "source": "Social Media Today, 5 Nov; TechCrunch, 5 Nov",
+    "credit": "Instagram via TechCrunch",
+    "url": "https://www.socialmediatoday.com/news/edits-launches-for-macos/873949/",
+    "image": "images/edits.jpg"
+   },
+   {
+    "short": "Meta's Muse AI can now talk, US first",
+    "headline": "Meta’s *Muse AI* can now talk, US first",
+    "what": "Meta says its Muse AI assistant now has voice and expressive avatars, with hundreds of voices to choose from. It is rolling out in the US first, so it isn’t in the UK yet. Meta says voice is coming soon to its AI glasses.",
+    "why": "A signal of where Meta’s AI is going. Nothing to use in the UK yet.",
+    "momentum": "Rising",
+    "region": "Global",
+    "platform": "Meta",
+    "source": "Meta, 5 Nov; Social Media Today, 5 Nov",
+    "credit": "Meta",
+    "url": "https://about.fb.com/news/2026/11/introducing-muse-ai-voice-expressive-avatars/",
+    "image": "images/muse.jpg"
+   }
+  ]
+ },
+ "watch": [
+  {
+   "when": "Fri 6 Nov",
+   "title": "M&S Christmas ad due",
+   "note": "Teased this week with James Norton. Unconfirmed until M&S posts it."
+  },
+  {
+   "when": "Sat 7 Nov",
+   "title": "Strictly Come Dancing",
+   "note": "A live Saturday show. Jaime Winstone is out this week. Check the BBC listing for the time."
+  },
+  {
+   "when": "Mon 9 Nov",
+   "title": "KFC Doom menu starts",
+   "note": "UK and Ireland launch of the Marvel tie-in."
+  },
+  {
+   "when": "Thu 19 Nov",
+   "title": "GTA 6 launches",
+   "note": "Expect feed takeovers around launch."
+  },
+  {
+   "when": "Fri 20 Nov",
+   "title": "Hunger Games opens",
+   "note": "Sunrise on the Reaping UK date per listings. Confirm with the cinemas."
+  }
+ ],
+ "desks": [
+  {
+   "id": "disney",
+   "name": "Disney UK",
+   "short": "Disney UK",
+   "byline": "Pip · Disney UK desk",
+   "color": "#4a74c9",
+   "logo": "logos/disney.png",
+   "ideas": [
+    {
+     "from": "Film tie-ins",
+     "idea": "A Hexed 27 Nov countdown that uses one bold, simple visual each day.",
+     "note": "Approved assets only. Cinema date Fri 27 Nov."
+    },
+    {
+     "from": "Christmas ads",
+     "idea": "A short “get the family to the cinema” teaser for Hexed.",
+     "note": "No ratings or reviews claims."
+    }
+   ],
+   "watch": "Hexed’s UK rating and assets need sign-off first. No other release dates go out."
+  },
+  {
+   "id": "family",
+   "name": "Disney Family UK",
+   "short": "Disney Family",
+   "byline": "Bo · Disney Family UK desk",
+   "color": "#a983cf",
+   "logo": "logos/disney.png",
+   "ideas": [
+    {
+     "from": "Christmas ads",
+     "idea": "A “which Christmas ad is your family’s favourite?” poll.",
+     "note": "Don’t name brands we don’t work with."
+    },
+    {
+     "from": "Strictly Saturday",
+     "idea": "A family sofa-night Saturday post.",
+     "note": "No spoilers about the show."
+    }
+   ],
+   "watch": "Keep any Christmas content clear of other brands’ ads."
+  },
+  {
+   "id": "store",
+   "name": "Disney Store UK",
+   "short": "Disney Store",
+   "byline": "Lulu · Disney Store UK desk",
+   "color": "#d4567f",
+   "logo": "logos/disney-store.png",
+   "ideas": [
+    {
+     "from": "Wallace and Gromit",
+     "idea": "A cosy winter-gifting post that borrows the “inventor’s gift” idea.",
+     "note": "Use only products in stock. No copying the ad."
+    },
+    {
+     "from": "Christmas ads",
+     "idea": "An advent-style “first Christmas gifts” gift guide.",
+     "note": "Prices and stock must be checked."
+    }
+   ],
+   "watch": "No Marvel or Hexed content without licensing sign-off."
+  },
+  {
+   "id": "muti",
+   "name": "Mutti UK",
+   "short": "Mutti",
+   "byline": "Kiki · Mutti UK desk",
+   "color": "#d8302b",
+   "logo": "logos/mutti.png",
+   "ideas": [
+    {
+     "from": "Friday night in",
+     "idea": "A sofa-night snack post: tomato toasties for a Friday night in.",
+     "note": "Recipe must be tested and approved by Mutti."
+    },
+    {
+     "from": "Boots TV launch",
+     "idea": "A quick “festive pasta” recipe for the launch weekend.",
+     "note": "Recipe must be approved by Mutti."
+    }
+   ],
+   "watch": "Don’t reference other brands’ ads or shortages by name."
+  },
+  {
+   "id": "on",
+   "name": "Optimum Nutrition UK",
+   "short": "Optimum Nutrition",
+   "byline": "Rex · Optimum Nutrition UK desk",
+   "color": "#c9962c",
+   "logo": "logos/on.png",
+   "ideas": [
+    {
+     "from": "GTA 6",
+     "idea": "A “game night fuel” post: quick protein snacks.",
+     "note": "Don’t use any game imagery or title in the artwork."
+    },
+    {
+     "from": "Weekend",
+     "idea": "A short “gym before the weekend” workout.",
+     "note": "Keep health claims within approved wording."
+    }
+   ],
+   "watch": "No health or performance claims beyond the approved list."
+  },
+  {
+   "id": "dfs",
+   "name": "DFS",
+   "short": "DFS",
+   "byline": "Dot · DFS desk",
+   "color": "#2f9c8f",
+   "logo": "logos/dfs.png",
+   "ideas": [
+    {
+     "from": "Christmas ads",
+     "idea": "A “cosy Christmas sofa” post with throws and cushions.",
+     "note": "Use approved product shots."
+    },
+    {
+     "from": "Strictly Saturday",
+     "idea": "A “best seat in the house” sofa shot for Saturday night TV.",
+     "note": "No tagging the show or BBC."
+    }
+   ],
+   "watch": "Any sale or price wording needs approval first."
+  }
+ ]
+}
