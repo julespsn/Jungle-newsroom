@@ -1,0 +1,273 @@
+{
+ "edition": "Weekend wrap-up",
+ "coverTitle": "Weekend wrap-up",
+ "coverSub": "what you might have *missed*",
+ "dateLabel": "Monday 9 November",
+ "floorUrl": "https://claude.ai/artifact/QByUaU2dzAX6fAwH2X3jVb",
+ "sections": {
+  "saw": [
+   {
+    "short": "Maya Jama steps down as Love Island host",
+    "headline": "*Maya Jama* is stepping down as Love Island host",
+    "what": "Maya Jama, 32, said on Instagram on Sunday evening that she is stepping down as Love Island host, writing “all good things must come to an end”. She mentions nine series, including the spin-offs. Love Island’s statement, reported by Metro and LADbible, thanks her for “the last three years”. No replacement is confirmed.",
+    "why": "A big name leaving a big show. Expect replacement guesses all week.",
+    "momentum": "Peaking",
+    "region": "UK",
+    "platform": "Instagram",
+    "source": "Metro, 8 Nov; LADbible, 8 Nov",
+    "credit": "Maya Jama via Metro",
+    "url": "https://metro.co.uk/2026/11/08/maya-jama-shocks-announcing-quit-hosting-love-island-29775717/",
+    "image": "images/maya.jpg"
+   },
+   {
+    "short": "Strictly's halfway-point results leave fans divided",
+    "headline": "Strictly’s *halfway-point results* leave fans divided",
+    "what": "Metro says some fans on X think the wrong couple left after Saturday’s show. Judges split 2-2 in the dance-off and Shirley Ballas’s casting vote decided it. Bethany Antonia and Nancy Xu went out, after scoring 30 against Cach Mercer and Maddie Ingoldsby’s 26 on Saturday. Dani Dyer topped the board with 36.",
+    "why": "A tight result with a casting vote. Strictly talk often runs all week.",
+    "momentum": "Peaking",
+    "region": "UK",
+    "platform": "X",
+    "source": "Metro, 8 Nov",
+    "credit": "BBC via Metro",
+    "url": "https://metro.co.uk/2026/11/08/strictly-come-dancing-viewers-outraged-wrong-couple-eliminated-shock-result-29775083/",
+    "image": "images/strictly.jpg",
+    "spoiler": true
+   },
+   {
+    "short": "M&S Christmas ad has James Norton as a beardless Santa",
+    "headline": "M&S’s Christmas ad has *James Norton* as a beardless Santa",
+    "what": "M&S’s ad, “The Home of Christmas”, launched on Friday and runs about three minutes. James Norton’s Santa shaves off his beard, with Lucy Punch as Mrs Claus and Katherine Jenkins singing a new version of “Heaven Is a Place on Earth”. Famous Campaigns says it is the first M&S Christmas campaign to bring food, fashion, home and beauty together since 2017.",
+    "why": "A star-led ad people are still talking about three days on.",
+    "momentum": "Rising",
+    "region": "UK",
+    "platform": "YouTube & Instagram",
+    "source": "Digital Spy, 6 Nov; Famous Campaigns, 6 Nov",
+    "credit": "M&S via Digital Spy",
+    "url": "https://www.digitalspy.com/tv/a74357055/james-norton-topless-santa-ms-christmas-advert/",
+    "image": "images/msad.jpg"
+   },
+   {
+    "short": "Queues for M&S's new cookie split social media",
+    "headline": "Queues for *M&S’s new cookie* split social media",
+    "what": "Videos on TikTok and Instagram show queues for M&S’s Milk Chocolate & Cornflake cookie, launched on 4 Nov. Some commenters called the scenes “dystopian”, others said it was “worth every second waited”. Metro says it has asked M&S for comment. Claims of fighting are second-hand.",
+    "why": "A food launch turned into a shared moment. Videos did the selling.",
+    "momentum": "Peaking",
+    "region": "UK",
+    "platform": "TikTok",
+    "source": "Metro, 8 Nov",
+    "credit": "Getty via Metro",
+    "url": "https://metro.co.uk/2026/11/08/brits-getting-ick-dystopian-new-shopping-trend-m-s-29775613/",
+    "image": "images/mscookie.jpg"
+   },
+   {
+    "short": "Olivia Rodrigo's Christmas single sparks comparisons",
+    "headline": "Olivia Rodrigo’s *Christmas single* sparks comparisons",
+    "what": "Fans compared Olivia Rodrigo’s new single “take me home (4 christmas)”, released on 5 Nov, with “Christmas Wrapping” and Robbie Williams’ “Candy”. Williams then wished her a “happy Christmas” on X, which some read as shade. indy100 says neither camp has commented.",
+    "why": "A song, a rival and a fan theory. Christmas music is part of the season’s feed.",
+    "momentum": "Rising",
+    "region": "Global",
+    "platform": "X",
+    "source": "indy100, 8 Nov; Metro, 7 Nov",
+    "credit": "Metro",
+    "url": "https://www.indy100.com/celebrities/olivia-rodrigo-robbie-williams-christmas",
+    "image": "images/olivia.jpg"
+   },
+   {
+    "short": "Man Utd draw 4-4 with Villa; Sunderland beat Chelsea",
+    "headline": "*Man Utd draw 4-4* with Villa as Chelsea lose at Sunderland",
+    "what": "Metro reports Manchester United drew 4-4 with Aston Villa, with two goals in injury time from Joshua Zirkzee and Patrick Dorgu. It was United’s eighth league game without a win. Sunderland beat Chelsea 1-0 from an Enzo Le Fee penalty. Both results are from Metro reports.",
+    "why": "Big weekend football gives fans plenty to react to. Single source for now.",
+    "momentum": "Peaking",
+    "region": "UK",
+    "platform": "X",
+    "source": "Metro, 8 Nov",
+    "credit": "Metro",
+    "url": "https://metro.co.uk/2026/11/08/roy-keane-slams-manchester-united-star-thrilling-aston-villa-draw-29775620/",
+    "image": "images/football.jpg"
+   }
+  ],
+  "platform": [
+   {
+    "short": "Meta adds spaces to its Muse app",
+    "headline": "Meta adds *spaces* to its Muse app",
+    "what": "Meta says users can describe a custom experience in Muse and pin it to the sidebar. Its examples include a gift tracker, trivia game and wedding planner. The post says spaces are available “everywhere Muse is available”, and doesn’t say which countries that covers.",
+    "why": "Meta is turning an AI chat into an app builder. Not yet clear if the UK has it.",
+    "momentum": "Rising",
+    "region": "Global",
+    "platform": "Meta",
+    "source": "Meta, 6 Nov; Social Media Today, 8 Nov",
+    "credit": "Meta",
+    "url": "https://about.fb.com/news/2026/11/introducing-spaces-customize-muse-app/",
+    "image": "images/spaces.jpg"
+   },
+   {
+    "short": "A specialist says Meta shows detected discounts in ads",
+    "headline": "A specialist says *Meta can show discounts* it finds on your site",
+    "what": "A Meta advertising specialist says Meta can show discounts it detects on a shop’s website in Facebook and Instagram ads, even when promotions are off on the ad being copied. PPC Land says it is one practitioner’s observation. The setting is in Commerce Manager, under Detected offers. Meta hasn’t commented.",
+    "why": "Worth checking your settings if a client runs shopping ads.",
+    "momentum": "Rising",
+    "region": "Global",
+    "platform": "Facebook & Instagram",
+    "source": "PPC Land, 6 Nov; Social Media Today, 8 Nov",
+    "credit": "PPC Land",
+    "url": "https://www.socialmediatoday.com/news/metas-ai-ads-included-unapproved-discounts/874067/",
+    "image": "images/offers.jpg"
+   }
+  ]
+ },
+ "watch": [
+  {
+   "when": "Mon 9 Nov",
+   "title": "KFC Doom menu starts",
+   "note": "UK and Ireland launch of the Marvel tie-in."
+  },
+  {
+   "when": "Tue 10 Nov",
+   "title": "Waitrose Christmas ad",
+   "note": "Keira Knightley and Joe Wilkinson, due 6.30am on YouTube, per Digital Spy."
+  },
+  {
+   "when": "Sat 14 Nov",
+   "title": "Strictly Come Dancing",
+   "note": "A live Saturday show. Check the BBC listing for the time."
+  },
+  {
+   "when": "Thu 19 Nov",
+   "title": "GTA 6 launches",
+   "note": "Expect feed takeovers around launch."
+  },
+  {
+   "when": "Fri 20 Nov",
+   "title": "Hunger Games opens",
+   "note": "Sunrise on the Reaping UK date per listings. Confirm with the cinemas."
+  }
+ ],
+ "desks": [
+  {
+   "id": "disney",
+   "name": "Disney UK",
+   "short": "Disney UK",
+   "byline": "Pip · Disney UK desk",
+   "color": "#4a74c9",
+   "logo": "logos/disney.png",
+   "ideas": [
+    {
+     "from": "M&S ad",
+     "idea": "A Hexed 27 Nov countdown in a “wait for it” style, one reveal per day.",
+     "note": "Approved assets only. Cinema date Fri 27 Nov."
+    },
+    {
+     "from": "Christmas songs",
+     "idea": "A short Hexed sound-led teaser.",
+     "note": "Approved footage and audio only."
+    }
+   ],
+   "watch": "Hexed’s UK rating and assets need sign-off first. No other release dates go out."
+  },
+  {
+   "id": "family",
+   "name": "Disney Family UK",
+   "short": "Disney Family",
+   "byline": "Bo · Disney Family UK desk",
+   "color": "#a983cf",
+   "logo": "logos/disney.png",
+   "ideas": [
+    {
+     "from": "Strictly",
+     "idea": "A “family sofa Saturday” post for the next live show.",
+     "note": "No spoilers about results."
+    },
+    {
+     "from": "Christmas ads",
+     "idea": "A “what’s your family’s favourite Christmas ad?” poll.",
+     "note": "Don’t name brands we don’t work with."
+    }
+   ],
+   "watch": "Keep any Christmas content clear of other brands’ ads."
+  },
+  {
+   "id": "store",
+   "name": "Disney Store UK",
+   "short": "Disney Store",
+   "byline": "Lulu · Disney Store UK desk",
+   "color": "#d4567f",
+   "logo": "logos/disney-store.png",
+   "ideas": [
+    {
+     "from": "M&S ad",
+     "idea": "A “Santa’s getting ready” post with gifting ideas.",
+     "note": "Use products in stock only. Don’t copy the ad."
+    },
+    {
+     "from": "Christmas songs",
+     "idea": "A “Christmas playlist and cosy gifts” post.",
+     "note": "Prices and stock must be checked."
+    }
+   ],
+   "watch": "No Marvel or Hexed content without licensing sign-off."
+  },
+  {
+   "id": "muti",
+   "name": "Mutti UK",
+   "short": "Mutti",
+   "byline": "Kiki · Mutti UK desk",
+   "color": "#d8302b",
+   "logo": "logos/mutti.png",
+   "ideas": [
+    {
+     "from": "M&S cookie queues",
+     "idea": "A light-hearted “queue worth waiting for” post with a comforting pasta bake.",
+     "note": "Recipe must be tested and approved by Mutti."
+    },
+    {
+     "from": "Sunday roast",
+     "idea": "A Sunday “big-batch tomato sauce” post.",
+     "note": "Recipe must be approved by Mutti."
+    }
+   ],
+   "watch": "Don’t reference M&S or other brands by name."
+  },
+  {
+   "id": "on",
+   "name": "Optimum Nutrition UK",
+   "short": "Optimum Nutrition",
+   "byline": "Rex · Optimum Nutrition UK desk",
+   "color": "#c9962c",
+   "logo": "logos/on.png",
+   "ideas": [
+    {
+     "from": "Football weekend",
+     "idea": "A “post-match recovery” snack idea after a long weekend of football.",
+     "note": "No club or league marks."
+    },
+    {
+     "from": "Monday",
+     "idea": "A “first workout of the week” short plan.",
+     "note": "Keep health claims within approved wording."
+    }
+   ],
+   "watch": "No health or performance claims beyond the approved list."
+  },
+  {
+   "id": "dfs",
+   "name": "DFS",
+   "short": "DFS",
+   "byline": "Dot · DFS desk",
+   "color": "#2f9c8f",
+   "logo": "logos/dfs.png",
+   "ideas": [
+    {
+     "from": "Christmas ads",
+     "idea": "A “cosy Christmas sofa” post with throws and cushions.",
+     "note": "Use approved product shots."
+    },
+    {
+     "from": "Strictly Saturday",
+     "idea": "A “best seat in the house” sofa shot for Saturday night TV.",
+     "note": "No tagging the show or BBC."
+    }
+   ],
+   "watch": "Any sale or price wording needs approval first."
+  }
+ ]
+}
