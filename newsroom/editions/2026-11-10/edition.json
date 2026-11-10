@@ -1,0 +1,258 @@
+{
+ "edition": "The daily",
+ "coverTitle": "The daily",
+ "coverSub": "what’s *moving* on social",
+ "dateLabel": "Tuesday 10 November",
+ "floorUrl": "https://claude.ai/artifact/QByUaU2dzAX6fAwH2X3jVb",
+ "sections": {
+  "saw": [
+   {
+    "short": "Waitrose's Christmas ad with Keira Knightley premieres today",
+    "headline": "*Waitrose’s Christmas ad* with Keira Knightley premieres today",
+    "what": "Waitrose is due to premiere its Christmas ad with Keira Knightley and Joe Wilkinson on YouTube at 6.30am today, a follow-up to last year’s romcom, per Digital Spy. A teaser on 5 Nov showed Knightley running down a Waitrose aisle in a wedding dress. Shorter 60-second and 30-second trailers and film-style posters are due to follow. We haven’t seen the full ad or any reaction figures.",
+    "why": "A teaser, a date card and a sequel. The build-up is the story until the ad lands.",
+    "momentum": "Rising",
+    "region": "UK",
+    "platform": "YouTube",
+    "source": "Digital Spy via Yahoo, 6 Nov",
+    "credit": "Waitrose via Digital Spy",
+    "url": "https://uk.news.yahoo.com/keira-knightley-joe-wilkinson-serve-211800091.html",
+    "image": "images/waitrose.jpg"
+   },
+   {
+    "short": "Disney's Christmas short The Invisible Horse lands",
+    "headline": "Disney’s Christmas short *The Invisible Horse* lands",
+    "what": "Disney’s Christmas short “The Invisible Horse”, directed by Dougal Wilson, landed on 9 Nov on Disney+ and YouTube. It follows a boy who has outgrown Christmas. Metro says a Make-A-Wish tie-in runs across the UK and Ireland. Laughing Place confirms the release, and the previous two shorts were directed by Taika Waititi.",
+    "why": "A big brand Christmas film arrives early in the season. Disney’s the benchmark for family ads.",
+    "momentum": "Rising",
+    "region": "Global",
+    "platform": "YouTube & Disney+",
+    "source": "Metro, 9 Nov; Laughing Place, 9 Nov",
+    "credit": "Disney via Metro",
+    "url": "https://metro.co.uk/2026/11/09/disney-delivers-magical-christmas-advert-year-heal-inner-child-29776706/",
+    "image": "images/invisiblehorse.jpg"
+   },
+   {
+    "short": "David Schwimmer revives Ross's red sweater in an ad",
+    "headline": "*David Schwimmer* revives Ross’s red sweater in an ad",
+    "what": "David Schwimmer, 60, hunts for a red sweater in a Christmas ad for Quince, a callback to the Friends episode “The One With the Red Sweater”. Metro reports it is Quince’s first UK campaign. Quince teased it on Instagram on 6 Nov. The ad doesn’t name Friends, per Metro.",
+    "why": "A 25-year-old joke does the work. Nostalgia travels well on social.",
+    "momentum": "Rising",
+    "region": "UK",
+    "platform": "YouTube & Instagram",
+    "source": "Metro, 9 Nov; Daily Beast, 6 Nov",
+    "credit": "Quince via Metro",
+    "url": "https://metro.co.uk/2026/11/09/david-schwimmer-christmas-advert-brings-back-iconic-friends-moment-25-years-later-29777290/",
+    "image": "images/quince.jpg"
+   },
+   {
+    "short": "Selfridges opens a GTA 6 pop-up on Oxford Street",
+    "headline": "Selfridges opens a *GTA 6 pop-up* on Oxford Street",
+    "what": "Selfridges opened a GTA 6-themed pop-up on Oxford Street on 9 Nov with around 60 exclusive items, including a £2,500 varsity jacket, Metro reports. Metro says much of it sold out and neither Selfridges nor Rockstar had announced it in advance. GTA 6 launches on 19 Nov.",
+    "why": "Game launches now come with retail moments. Queues and sell-outs make good content.",
+    "momentum": "Rising",
+    "region": "UK",
+    "platform": "X & Instagram",
+    "source": "Metro, 9 Nov",
+    "credit": "Selfridges via Metro",
+    "url": "https://metro.co.uk/2026/11/09/gta-6-a-dedicated-pop-up-store-selfridges-exclusive-merch-29776922/",
+    "image": "images/selfridges.jpg"
+   },
+   {
+    "short": "Skims offers refunds after advent calendar backlash",
+    "headline": "*Skims* offers refunds after advent calendar backlash",
+    "what": "Skims says it has contacted every buyer of its $148 accessories advent calendar and offered a full refund or Skims credit, per a statement to Metro. IBTimes UK puts the UK price at £158. Unboxing videos on TikTok and Instagram called the contents poor value.",
+    "why": "Value for money drives viral reactions. A fast brand response is the lesson.",
+    "momentum": "Peaking",
+    "region": "Global",
+    "platform": "TikTok & Instagram",
+    "source": "Metro, 9 Nov; IBTimes UK",
+    "credit": "Skims via Metro",
+    "url": "https://metro.co.uk/2026/11/09/kim-kardashians-skims-offering-refunds-148-advent-calendar-filled-hairbands-29778457/",
+    "image": "images/skims.jpg"
+   }
+  ],
+  "platform": [
+   {
+    "short": "Instagram's Effect Builder lets people create AI effects, US-only",
+    "headline": "Instagram’s *Effect Builder* creates AI effects, US-only for now",
+    "what": "Instagram has launched Effect Builder, a web tool where people describe an AI effect for Stories. Effects are reviewed for safety and link back to the creator’s profile. The Edits blog says it is available in the US for people over 18, so it isn’t in the UK yet.",
+    "why": "Instagram is letting creators build effects. Not usable in the UK yet.",
+    "momentum": "Rising",
+    "region": "Global",
+    "platform": "Instagram",
+    "source": "Instagram Edits blog, 9 Nov; Social Media Today, 9 Nov",
+    "credit": "Instagram",
+    "url": "https://edits.instagram.com/blog/introducing-effect-builder/"
+   },
+   {
+    "short": "LinkedIn explains how its feed finds posts from people you don't follow",
+    "headline": "LinkedIn explains how its feed finds *posts from people you don’t follow*",
+    "what": "LinkedIn’s engineering blog says its Profile Relevance system uses LLM embeddings to match posts from outside your network to your professional profile. LinkedIn says it cut feed hide rates by 18.8% in tests, with a 0.94% rise in viral rate.",
+    "why": "Your profile helps decide what the feed shows you. Good to know for anyone running a page.",
+    "momentum": "Rising",
+    "region": "Global",
+    "platform": "LinkedIn",
+    "source": "LinkedIn Engineering, 9 Nov; Social Media Today, 9 Nov",
+    "credit": "LinkedIn",
+    "url": "https://www.linkedin.com/blog/engineering/feed/profile-relevance-boosting-feed-relevance-with-llms-at-linkedin",
+    "image": "images/linkedin.jpg"
+   }
+  ]
+ },
+ "watch": [
+  {
+   "when": "Tue 10 Nov",
+   "title": "Waitrose Christmas ad",
+   "note": "Due 6.30am on YouTube, per Digital Spy. Check the full ad before reacting."
+  },
+  {
+   "when": "Wed 11 Nov",
+   "title": "Armistice Day",
+   "note": "Two-minute silence at 11am. Keep any tone respectful and brand-free."
+  },
+  {
+   "when": "Sat 14 Nov",
+   "title": "Strictly Come Dancing",
+   "note": "A live Saturday show. Check the BBC listing for the time."
+  },
+  {
+   "when": "Thu 19 Nov",
+   "title": "GTA 6 launches",
+   "note": "Expect feed takeovers around launch."
+  },
+  {
+   "when": "Fri 20 Nov",
+   "title": "Hunger Games opens",
+   "note": "Sunrise on the Reaping UK date per listings. Confirm with the cinemas."
+  }
+ ],
+ "desks": [
+  {
+   "id": "disney",
+   "name": "Disney UK",
+   "short": "Disney UK",
+   "byline": "Pip · Disney UK desk",
+   "color": "#4a74c9",
+   "logo": "logos/disney.png",
+   "ideas": [
+    {
+     "from": "Christmas ads",
+     "idea": "A Hexed 27 Nov countdown that borrows the “save the date” card idea.",
+     "note": "Approved assets only. Cinema date Fri 27 Nov."
+    },
+    {
+     "from": "Disney Christmas short",
+     "idea": "A post that points fans to Disney’s Christmas short, if Disney UK approves.",
+     "note": "Use Disney-approved links and clips only."
+    }
+   ],
+   "watch": "Hexed’s UK rating and assets need sign-off first. No other release dates go out."
+  },
+  {
+   "id": "family",
+   "name": "Disney Family UK",
+   "short": "Disney Family",
+   "byline": "Bo · Disney Family UK desk",
+   "color": "#a983cf",
+   "logo": "logos/disney.png",
+   "ideas": [
+    {
+     "from": "Disney Christmas short",
+     "idea": "A “who is your family’s invisible Christmas helper?” prompt for comments.",
+     "note": "Only if Disney UK approves. No plot spoilers."
+    },
+    {
+     "from": "Waitrose ad",
+     "idea": "A “family Christmas ad ranking” poll for the week.",
+     "note": "Don’t name brands we don’t work with."
+    }
+   ],
+   "watch": "Keep any Christmas content clear of other brands’ ads."
+  },
+  {
+   "id": "store",
+   "name": "Disney Store UK",
+   "short": "Disney Store",
+   "byline": "Lulu · Disney Store UK desk",
+   "color": "#d4567f",
+   "logo": "logos/disney-store.png",
+   "ideas": [
+    {
+     "from": "Selfridges pop-up",
+     "idea": "A “limited drop” teaser format for any Disney Store release.",
+     "note": "Only for products Disney Store confirms. No sell-out claims."
+    },
+    {
+     "from": "Disney Christmas short",
+     "idea": "A cosy Christmas product post that sits alongside the short.",
+     "note": "Use products in stock only."
+    }
+   ],
+   "watch": "No Marvel or Hexed content without licensing sign-off."
+  },
+  {
+   "id": "muti",
+   "name": "Mutti UK",
+   "short": "Mutti",
+   "byline": "Kiki · Mutti UK desk",
+   "color": "#d8302b",
+   "logo": "logos/mutti.png",
+   "ideas": [
+    {
+     "from": "Christmas ads",
+     "idea": "A “tonight’s comfort dinner” post with a quick tomato pasta.",
+     "note": "Recipe must be tested and approved by Mutti."
+    },
+    {
+     "from": "Armistice Day",
+     "idea": "Nothing branded. Keep the feed quiet and respectful on the day.",
+     "note": "Check with the client before scheduling anything."
+    }
+   ],
+   "watch": "Don’t reference other brands’ ads or promotions by name."
+  },
+  {
+   "id": "on",
+   "name": "Optimum Nutrition UK",
+   "short": "Optimum Nutrition",
+   "byline": "Rex · Optimum Nutrition UK desk",
+   "color": "#c9962c",
+   "logo": "logos/on.png",
+   "ideas": [
+    {
+     "from": "Skims backlash",
+     "idea": "A “what’s really inside?” ingredients explainer for an ON product.",
+     "note": "Facts must match the approved product claims."
+    },
+    {
+     "from": "Midweek",
+     "idea": "A “midweek reset” short workout idea.",
+     "note": "Keep health claims within approved wording."
+    }
+   ],
+   "watch": "No health or performance claims beyond the approved list."
+  },
+  {
+   "id": "dfs",
+   "name": "DFS",
+   "short": "DFS",
+   "byline": "Dot · DFS desk",
+   "color": "#2f9c8f",
+   "logo": "logos/dfs.png",
+   "ideas": [
+    {
+     "from": "Waitrose ad",
+     "idea": "A romcom-style “first sofa together” post for the Christmas season.",
+     "note": "Use approved product shots. No wedding claims."
+    },
+    {
+     "from": "Christmas ads",
+     "idea": "A “cosy Christmas sofa” post with throws and cushions.",
+     "note": "Use approved product shots."
+    }
+   ],
+   "watch": "Any sale or price wording needs approval first."
+  }
+ ]
+}
