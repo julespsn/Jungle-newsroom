@@ -1,0 +1,272 @@
+{
+ "edition": "The daily",
+ "coverTitle": "The daily",
+ "coverSub": "what’s *moving* on social",
+ "dateLabel": "Wednesday 11 November",
+ "floorUrl": "https://claude.ai/artifact/QByUaU2dzAX6fAwH2X3jVb",
+ "sections": {
+  "saw": [
+   {
+    "short": "ITV confirms the I'm A Celebrity line-up",
+    "headline": "ITV confirms the *I’m A Celebrity line-up*",
+    "what": "ITV has confirmed this year’s I’m A Celebrity line-up, including Wayne Rooney, Chloe Burrows, Ricky Wilson, Joanna Page, Ade Adepitan and YouTuber Sharky. The series starts on Monday 16 November at 9pm on ITV1 and ITVX. TV Zone’s ITV-sourced list also names Leigh Francis as a late entrant.",
+    "why": "A big-name line-up with a Premier League legend and a YouTuber. Expect weeks of chat.",
+    "momentum": "Rising",
+    "region": "UK",
+    "platform": "ITV & TikTok",
+    "source": "Metro, 10 Nov; TV Zone, 10 Nov",
+    "credit": "ITV via Metro",
+    "url": "https://metro.co.uk/2026/11/10/im-a-celebrity-2026-full-lineup-officially-revealed-ahead-start-date-29781283",
+    "image": "images/imaceleb.jpg"
+   },
+   {
+    "short": "Waitrose's six-minute Christmas ad is out",
+    "headline": "*Waitrose’s six-minute Christmas ad* is out",
+    "what": "Waitrose has released “The Perfect Gift 2”, a six-minute sequel to last year’s ad, with Keira Knightley, Joe Wilkinson and Alex Hassell. Waitrose calls it the longest ad made by a UK supermarket, per Metro. Heart reports more than 30,000 Instagram likes in four hours, but doesn’t name the account.",
+    "why": "A sequel with a cinema-style run time. The reaction is strong, so far.",
+    "momentum": "Peaking",
+    "region": "UK",
+    "platform": "Instagram & YouTube",
+    "source": "Metro, 10 Nov; Heart, 10 Nov",
+    "credit": "Waitrose via Metro",
+    "url": "https://metro.co.uk/2026/11/10/keira-knightley-caught-joe-wilkinson-love-triangle-waitrose-2026-christmas-advert-29778169",
+    "image": "images/waitrose.jpg"
+   },
+   {
+    "short": "Man Utd are reviewing Michael Carrick's position",
+    "headline": "Man Utd are *reviewing head coach Michael Carrick’s position*",
+    "what": "The Press Association understands Manchester United are reviewing head coach Michael Carrick’s position during the international break. Sky Sports says the club will not rush a decision. United are in the relegation zone after the 4-4 draw with Aston Villa, with one league win in 10. Nothing was confirmed when we checked on Wednesday morning.",
+    "why": "A big club in trouble. Football fans are filling feeds with takes.",
+    "momentum": "Peaking",
+    "region": "UK",
+    "platform": "X",
+    "source": "PA via Irish News, 9 Nov; Sky Sports, 9 Nov",
+    "credit": "PA via Irish News",
+    "url": "https://www.irishnews.com/sport/soccer/manchester-united-reviewing-michael-carricks-position-over-international-break-C3ECLVKZABLH3FJE7H7TLOTC3A/",
+    "image": "images/carrick.jpg"
+   },
+   {
+    "short": "Reports say Pattinson and Hoult screen-tested for Bond",
+    "headline": "Reports say *Pattinson and Hoult* screen-tested for Bond",
+    "what": "Variety and Deadline report that Robert Pattinson and Nicholas Hoult have screen-tested for James Bond. Deadline says the news is not confirmed and cites insiders. Amazon MGM has confirmed no casting. A separate report that Harry Styles discussed the role is second-hand.",
+    "why": "Casting rumours are easy engagement. Treat every name as unconfirmed.",
+    "momentum": "Rising",
+    "region": "Global",
+    "platform": "X & TikTok",
+    "source": "Variety, 6 Nov; Deadline, 7 Nov",
+    "credit": "Getty via LADbible",
+    "url": "https://deadline.com/2026/11/robert-pattinson-nicholas-hoult-james-bond-1237216183/",
+    "image": "images/bond.jpg"
+   },
+   {
+    "short": "McKenna Grace recreates Finnick's sugar cube scene",
+    "headline": "*McKenna Grace* recreates Finnick’s sugar cube scene",
+    "what": "McKenna Grace, who stars in The Hunger Games: Sunrise on the Reaping, recreated Finnick’s sugar cube scene in a costume video. Sam Claflin, who played Finnick, told Entertainment Tonight he commented “girl on” with a fire emoji. The film is in UK cinemas from 20 Nov, per Flicks.",
+    "why": "A fan-style tribute from the cast is the kind of film content that travels.",
+    "momentum": "Rising",
+    "region": "Global",
+    "platform": "TikTok",
+    "source": "indy100, 10 Nov; ComicBasics, 9 Nov",
+    "credit": "TikTok via indy100",
+    "url": "https://www.indy100.com/celebrities/sam-claflin-mckenna-grace-hunger-games",
+    "image": "images/mckenna.jpg"
+   }
+  ],
+  "platform": [
+   {
+    "short": "X adds a clip video option",
+    "headline": "X adds a *clip video* option for longer videos",
+    "what": "X says users can now clip videos longer than two minutes, sharing a 5 to 60 second clip that credits and links to the original. The post from X Creators says to tap Repost, then Clip video, on iOS and Android. X hasn’t listed countries.",
+    "why": "Reaction clips get easier on X. Original creators stay credited.",
+    "momentum": "Rising",
+    "region": "Global",
+    "platform": "X",
+    "source": "X Creators, 9 Nov; Social Media Today, 10 Nov",
+    "credit": "X",
+    "url": "https://www.socialmediatoday.com/news/x-adds-video-clipping/874341/",
+    "image": "images/xclip.jpg"
+   },
+   {
+    "short": "Threads rolls out advanced search",
+    "headline": "Threads rolls out *advanced search*",
+    "what": "Threads says it’s rolling out advanced search, with filters for date range, community and post type, and an exact-match option. Threads names no countries.",
+    "why": "Easier to find specific posts. Useful for brand and trend research.",
+    "momentum": "Rising",
+    "region": "Global",
+    "platform": "Threads",
+    "source": "Threads, Social Media Today, 10 Nov",
+    "credit": "Threads via Social Media Today",
+    "url": "https://www.socialmediatoday.com/news/threads-adds-advanced-search-filters/874339/",
+    "image": "images/threads.jpg"
+   },
+   {
+    "short": "Reddit tests Reddit Reviews, US first",
+    "headline": "Reddit tests *Reddit Reviews*, US first",
+    "what": "Reddit is testing Reddit Reviews, which uses AI to compile product reviews from community conversations. It starts with US users over the next few weeks, with around 10,000 products to begin with. Some reviews include images, prices and purchase links supplied by brands and retailers.",
+    "why": "Reddit is turning conversation into shopping advice. Not yet in the UK.",
+    "momentum": "Rising",
+    "region": "Global",
+    "platform": "Reddit",
+    "source": "Reddit, 10 Nov; Social Media Today, 10 Nov",
+    "credit": "Reddit via Social Media Today",
+    "url": "https://redditinc.com/news/introducing-reddit-reviews",
+    "image": "images/reddit.jpg"
+   }
+  ]
+ },
+ "watch": [
+  {
+   "when": "Wed 11 Nov",
+   "title": "Armistice Day",
+   "note": "Two-minute silence at 11am. Keep the tone respectful and brand-free."
+  },
+  {
+   "when": "Sat 14 Nov",
+   "title": "Strictly Come Dancing",
+   "note": "A live Saturday show. Check the BBC listing for the time."
+  },
+  {
+   "when": "Mon 16 Nov",
+   "title": "I’m A Celebrity starts",
+   "note": "9pm on ITV1 and ITVX, per ITV-sourced reports."
+  },
+  {
+   "when": "Thu 19 Nov",
+   "title": "GTA 6 launches",
+   "note": "Expect feed takeovers around launch."
+  },
+  {
+   "when": "Fri 20 Nov",
+   "title": "Hunger Games opens",
+   "note": "Sunrise on the Reaping in UK cinemas, per Flicks."
+  }
+ ],
+ "desks": [
+  {
+   "id": "disney",
+   "name": "Disney UK",
+   "short": "Disney UK",
+   "byline": "Pip · Disney UK desk",
+   "color": "#4a74c9",
+   "logo": "logos/disney.png",
+   "ideas": [
+    {
+     "from": "Hunger Games tribute",
+     "idea": "A Hexed fan-style “cast reacts” idea, if approved assets and talent are available.",
+     "note": "Approved assets only. Cinema date Fri 27 Nov."
+    },
+    {
+     "from": "Waitrose ad",
+     "idea": "A “short film” teaser format for Hexed, a story in one clip.",
+     "note": "Approved footage only."
+    }
+   ],
+   "watch": "Hexed’s UK rating and assets need sign-off first. No other release dates go out."
+  },
+  {
+   "id": "family",
+   "name": "Disney Family UK",
+   "short": "Disney Family",
+   "byline": "Bo · Disney Family UK desk",
+   "color": "#a983cf",
+   "logo": "logos/disney.png",
+   "ideas": [
+    {
+     "from": "I’m A Celebrity",
+     "idea": "A “family jungle quiz” for the weeknight launch.",
+     "note": "No spoilers and no tagging ITV."
+    },
+    {
+     "from": "Waitrose ad",
+     "idea": "A “who cried at the ad?” poll for the family feed.",
+     "note": "Don’t name brands we don’t work with."
+    }
+   ],
+   "watch": "Keep any Christmas content clear of other brands’ ads."
+  },
+  {
+   "id": "store",
+   "name": "Disney Store UK",
+   "short": "Disney Store",
+   "byline": "Lulu · Disney Store UK desk",
+   "color": "#d4567f",
+   "logo": "logos/disney-store.png",
+   "ideas": [
+    {
+     "from": "Christmas ads",
+     "idea": "A “gifts worth waiting for” gift-guide post.",
+     "note": "Use products in stock only."
+    },
+    {
+     "from": "Armistice Day",
+     "idea": "Nothing branded. Keep the feed quiet and respectful at 11am.",
+     "note": "Check with the client before scheduling anything."
+    }
+   ],
+   "watch": "No Marvel or Hexed content without licensing sign-off."
+  },
+  {
+   "id": "muti",
+   "name": "Mutti UK",
+   "short": "Mutti",
+   "byline": "Kiki · Mutti UK desk",
+   "color": "#d8302b",
+   "logo": "logos/mutti.png",
+   "ideas": [
+    {
+     "from": "I’m A Celebrity",
+     "idea": "A “bushtucker-free” dinner post: a quick tomato pasta for the show’s launch night.",
+     "note": "Recipe must be tested and approved by Mutti."
+    },
+    {
+     "from": "Waitrose ad",
+     "idea": "A “cosy dinner for two” post with a tomato pasta.",
+     "note": "Recipe must be approved by Mutti."
+    }
+   ],
+   "watch": "Don’t reference other brands’ ads or shows by name."
+  },
+  {
+   "id": "on",
+   "name": "Optimum Nutrition UK",
+   "short": "Optimum Nutrition",
+   "byline": "Rex · Optimum Nutrition UK desk",
+   "color": "#c9962c",
+   "logo": "logos/on.png",
+   "ideas": [
+    {
+     "from": "Man Utd review",
+     "idea": "A “match-day recovery” snack idea, no club marks.",
+     "note": "No club or league marks."
+    },
+    {
+     "from": "I’m A Celebrity",
+     "idea": "A “jungle-ready workout” short plan.",
+     "note": "Keep health claims within approved wording."
+    }
+   ],
+   "watch": "No health or performance claims beyond the approved list."
+  },
+  {
+   "id": "dfs",
+   "name": "DFS",
+   "short": "DFS",
+   "byline": "Dot · DFS desk",
+   "color": "#2f9c8f",
+   "logo": "logos/dfs.png",
+   "ideas": [
+    {
+     "from": "I’m A Celebrity",
+     "idea": "A “best seat for jungle night” sofa shot for the launch.",
+     "note": "Use approved product shots. No tagging ITV."
+    },
+    {
+     "from": "Christmas ads",
+     "idea": "A “cosy Christmas sofa” post with throws and cushions.",
+     "note": "Use approved product shots."
+    }
+   ],
+   "watch": "Any sale or price wording needs approval first."
+  }
+ ]
+}

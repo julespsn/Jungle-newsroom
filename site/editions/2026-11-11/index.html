@@ -1,0 +1,193 @@
+<title>Jungle Newsroom Edition</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap">
+<style>
+/* Layout: 1080x1350 slides in Jungle's Instagram carousel style (dark concrete texture, hairline top bar,
+   Poppins, Jungle green for the key words, the jungle wordmark bottom right). Story slides lead with a picture.
+   Viewer mode (default) shows one slide at a time; print mode (set by render.js) stacks them for PNG/PDF export. */
+:root{
+  --bg:#3b3936; --white:#ffffff; --soft:#dedad3; --dim:#aaa59d; --green:#7ef25c; --amber:#ffc94a; --grey:#8d8880;
+  --sans:'Poppins','Helvetica Neue',Arial,sans-serif;
+  color-scheme: dark;
+}
+[hidden]{display:none!important}
+html,body{margin:0}
+body{background:#161514;color:var(--white);font-family:var(--sans)}
+a{color:inherit}
+
+.slide{position:relative;width:1080px;height:1350px;box-sizing:border-box;padding:136px 76px 150px;overflow:hidden;background:var(--bg);
+  background-image:radial-gradient(ellipse at 30% 20%,rgba(255,255,255,.06),transparent 60%),radial-gradient(ellipse at 80% 100%,rgba(0,0,0,.35),transparent 60%)}
+.slide::before{content:"";position:absolute;inset:0;pointer-events:none;opacity:.55;mix-blend-mode:overlay;
+  background-image:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='400' height='400'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='.65' numOctaves='4' stitchTiles='stitch'/><feColorMatrix values='0 0 0 0 .5  0 0 0 0 .5  0 0 0 0 .5  0 0 0 1.6 -.45'/></filter><rect width='100%' height='100%' filter='url(%23n)'/></svg>")}
+.slide > *{position:relative;z-index:1}
+em{font-style:normal;color:var(--green)}
+
+.bar{position:absolute;top:52px;left:76px;right:76px;display:flex;justify-content:space-between;align-items:center;padding-bottom:20px;border-bottom:2px solid rgba(255,255,255,.55);
+  font-size:21px;font-weight:600;letter-spacing:.03em;text-transform:uppercase}
+.bar span:last-child{text-transform:none;font-weight:500}
+.mark{position:absolute;right:70px;bottom:56px;height:52px}
+.mark img{height:100%;display:block}
+.foot{position:absolute;left:76px;bottom:58px;max-width:700px;font-size:19px;line-height:1.45;color:var(--dim)}
+.foot a{color:var(--green);text-decoration:none;font-weight:600;word-break:break-all}
+
+/* cover */
+.cover{display:flex;flex-direction:column;justify-content:center}
+.cover .kick{font-size:28px;font-weight:600;color:var(--soft);margin:0 0 4px}
+.cover h1{font-size:132px;font-weight:800;line-height:.95;letter-spacing:-.04em;margin:0;color:var(--green)}
+.cover .sub{font-size:62px;font-weight:700;line-height:1.05;letter-spacing:-.03em;margin:8px 0 44px}
+.cover h3{font-size:22px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--green);margin:22px 0 10px}
+.cover ol{list-style:none;margin:0;padding:0;display:grid;gap:8px}
+.cover li{font-size:27px;font-weight:500;line-height:1.25;color:var(--soft);padding-left:26px;position:relative}
+.cover li::before{content:"";position:absolute;left:0;top:.5em;width:10px;height:10px;border-radius:50%;background:var(--green)}
+
+/* story */
+.pic{height:500px;border-radius:30px;overflow:hidden;background:#222;margin:0 0 30px}
+.pic img{width:100%;height:100%;object-fit:cover;display:block}
+.chips{display:flex;flex-wrap:wrap;gap:10px;margin:0 0 20px}
+.chip{font-size:19px;font-weight:600;border:2px solid rgba(255,255,255,.6);border-radius:999px;padding:4px 16px;color:var(--soft)}
+.chip.up{border-color:var(--green);color:var(--green)}
+.chip.peak{border-color:var(--amber);color:var(--amber)}
+.chip.spoil{border-color:#ff7a66;color:#ff7a66}
+.chip.down{border-color:var(--grey);color:var(--grey)}
+.story h2{font-size:56px;font-weight:700;line-height:1.08;letter-spacing:-.03em;margin:0 0 18px;text-wrap:balance}
+.story .what{font-size:25px;font-weight:400;line-height:1.5;margin:0 0 20px;color:var(--soft)}
+.why{border-left:5px solid var(--green);padding:2px 0 2px 22px}
+.why p{margin:0;font-size:24px;font-weight:500;line-height:1.45}
+.why b{color:var(--green);font-weight:700}
+
+/* watch list */
+.watch h2{font-size:84px;font-weight:800;line-height:1;letter-spacing:-.04em;margin:30px 0 44px}
+.wl{list-style:none;margin:0;padding:0;display:grid;gap:22px}
+.wl li{display:grid;grid-template-columns:150px 1fr;gap:24px;align-items:start;background:rgba(0,0,0,.25);border-radius:26px;padding:24px 28px}
+.wl .when{font-size:20px;font-weight:700;color:#1d1c1a;background:var(--green);border-radius:999px;text-align:center;padding:6px 10px;align-self:start}
+.wl .t{font-size:29px;font-weight:700;line-height:1.2;margin:0}
+.wl .n{font-size:22px;font-weight:400;line-height:1.45;margin:6px 0 0;color:var(--soft)}
+
+/* desk */
+.desk .head{display:flex;align-items:center;gap:28px;margin:12px 0 34px}
+.desk .tile{width:150px;height:150px;border-radius:28px;background:var(--white);display:grid;place-items:center;flex:none;box-shadow:inset 0 -10px 0 var(--c)}
+.desk .tile img{max-width:112px;max-height:74px;margin-bottom:8px}
+.desk h2{font-size:58px;font-weight:700;line-height:1.02;letter-spacing:-.03em;margin:0}
+.desk .who{font-size:21px;font-weight:500;color:var(--dim);margin:8px 0 0}
+.ideas{list-style:none;margin:0;padding:0;display:grid;gap:20px}
+.ideas li{background:rgba(0,0,0,.28);border-radius:26px;padding:24px 28px;border-top:6px solid var(--c)}
+.lbl{font-size:18px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--dim);margin:0 0 8px}
+.ideas .idea{font-size:30px;font-weight:700;line-height:1.25;margin:0}
+.ideas .note{font-size:22px;font-weight:400;line-height:1.45;margin:8px 0 0;color:var(--soft)}
+.wo{margin-top:24px;border:2px solid var(--amber);border-radius:26px;padding:22px 28px}
+.wo .lbl{color:var(--amber)}
+.wo p.t{font-size:25px;font-weight:600;line-height:1.4;margin:0}
+
+/* end */
+.end{display:flex;flex-direction:column;justify-content:center}
+.end h2{font-size:112px;font-weight:800;line-height:.98;letter-spacing:-.04em;margin:0 0 30px}
+.end p{font-size:32px;font-weight:500;line-height:1.45;margin:0 0 40px;color:var(--soft);max-width:30ch}
+.end .go{align-self:flex-start;display:inline-flex;align-items:center;gap:14px;font-size:30px;font-weight:700;color:#1d1c1a;background:var(--green);border-radius:999px;padding:18px 36px;text-decoration:none}
+.end .url{font-size:19px;color:var(--dim);margin-top:18px;word-break:break-all}
+
+/* viewer (artifact) */
+body:not([data-mode="print"]){min-height:100vh;display:flex;flex-direction:column;align-items:center;gap:16px;padding:20px max(16px,env(safe-area-inset-left,0px)) 24px max(16px,env(safe-area-inset-right,0px));box-sizing:border-box}
+body:not([data-mode="print"]) #deck{position:relative;width:min(540px,100%);aspect-ratio:1080/1350}
+body:not([data-mode="print"]) .slide{position:absolute;top:0;left:0;transform-origin:top left;display:none}
+body:not([data-mode="print"]) .slide.on{display:block}
+body:not([data-mode="print"]) .slide.on.cover,body:not([data-mode="print"]) .slide.on.end{display:flex}
+.nav{display:flex;align-items:center;gap:14px;font-weight:600;color:var(--soft)}
+.nav button{font:inherit;font-weight:700;color:#1d1c1a;background:var(--green);border:none;border-radius:999px;padding:10px 22px;cursor:pointer}
+.nav button:disabled{opacity:.35;cursor:default}
+.nav button:focus-visible{outline:3px solid var(--white);outline-offset:3px}
+body[data-mode="print"] .nav{display:none}
+body[data-mode="print"] .slide{page-break-after:always;break-after:page}
+@page{size:1080px 1350px;margin:0}
+</style>
+
+<div id="deck"></div>
+<div class="nav"><button id="prev" type="button">Back</button><span id="pos"></span><button id="next" type="button">Next</button></div>
+
+<script id="edition" type="application/json">{"edition":"The daily","coverTitle":"The daily","coverSub":"what’s *moving* on social","dateLabel":"Wednesday 11 November","floorUrl":"../../","sections":{"saw":[{"short":"ITV confirms the I'm A Celebrity line-up","headline":"ITV confirms the *I’m A Celebrity line-up*","what":"ITV has confirmed this year’s I’m A Celebrity line-up, including Wayne Rooney, Chloe Burrows, Ricky Wilson, Joanna Page, Ade Adepitan and YouTuber Sharky. The series starts on Monday 16 November at 9pm on ITV1 and ITVX. TV Zone’s ITV-sourced list also names Leigh Francis as a late entrant.","why":"A big-name line-up with a Premier League legend and a YouTuber. Expect weeks of chat.","momentum":"Rising","region":"UK","platform":"ITV & TikTok","source":"Metro, 10 Nov; TV Zone, 10 Nov","credit":"ITV via Metro","url":"https://metro.co.uk/2026/11/10/im-a-celebrity-2026-full-lineup-officially-revealed-ahead-start-date-29781283","image":"images/imaceleb.jpg"},{"short":"Waitrose's six-minute Christmas ad is out","headline":"*Waitrose’s six-minute Christmas ad* is out","what":"Waitrose has released “The Perfect Gift 2”, a six-minute sequel to last year’s ad, with Keira Knightley, Joe Wilkinson and Alex Hassell. Waitrose calls it the longest ad made by a UK supermarket, per Metro. Heart reports more than 30,000 Instagram likes in four hours, but doesn’t name the account.","why":"A sequel with a cinema-style run time. The reaction is strong, so far.","momentum":"Peaking","region":"UK","platform":"Instagram & YouTube","source":"Metro, 10 Nov; Heart, 10 Nov","credit":"Waitrose via Metro","url":"https://metro.co.uk/2026/11/10/keira-knightley-caught-joe-wilkinson-love-triangle-waitrose-2026-christmas-advert-29778169","image":"images/waitrose.jpg"},{"short":"Man Utd are reviewing Michael Carrick's position","headline":"Man Utd are *reviewing head coach Michael Carrick’s position*","what":"The Press Association understands Manchester United are reviewing head coach Michael Carrick’s position during the international break. Sky Sports says the club will not rush a decision. United are in the relegation zone after the 4-4 draw with Aston Villa, with one league win in 10. Nothing was confirmed when we checked on Wednesday morning.","why":"A big club in trouble. Football fans are filling feeds with takes.","momentum":"Peaking","region":"UK","platform":"X","source":"PA via Irish News, 9 Nov; Sky Sports, 9 Nov","credit":"PA via Irish News","url":"https://www.irishnews.com/sport/soccer/manchester-united-reviewing-michael-carricks-position-over-international-break-C3ECLVKZABLH3FJE7H7TLOTC3A/","image":"images/carrick.jpg"},{"short":"Reports say Pattinson and Hoult screen-tested for Bond","headline":"Reports say *Pattinson and Hoult* screen-tested for Bond","what":"Variety and Deadline report that Robert Pattinson and Nicholas Hoult have screen-tested for James Bond. Deadline says the news is not confirmed and cites insiders. Amazon MGM has confirmed no casting. A separate report that Harry Styles discussed the role is second-hand.","why":"Casting rumours are easy engagement. Treat every name as unconfirmed.","momentum":"Rising","region":"Global","platform":"X & TikTok","source":"Variety, 6 Nov; Deadline, 7 Nov","credit":"Getty via LADbible","url":"https://deadline.com/2026/11/robert-pattinson-nicholas-hoult-james-bond-1237216183/","image":"images/bond.jpg"},{"short":"McKenna Grace recreates Finnick's sugar cube scene","headline":"*McKenna Grace* recreates Finnick’s sugar cube scene","what":"McKenna Grace, who stars in The Hunger Games: Sunrise on the Reaping, recreated Finnick’s sugar cube scene in a costume video. Sam Claflin, who played Finnick, told Entertainment Tonight he commented “girl on” with a fire emoji. The film is in UK cinemas from 20 Nov, per Flicks.","why":"A fan-style tribute from the cast is the kind of film content that travels.","momentum":"Rising","region":"Global","platform":"TikTok","source":"indy100, 10 Nov; ComicBasics, 9 Nov","credit":"TikTok via indy100","url":"https://www.indy100.com/celebrities/sam-claflin-mckenna-grace-hunger-games","image":"images/mckenna.jpg"}],"platform":[{"short":"X adds a clip video option","headline":"X adds a *clip video* option for longer videos","what":"X says users can now clip videos longer than two minutes, sharing a 5 to 60 second clip that credits and links to the original. The post from X Creators says to tap Repost, then Clip video, on iOS and Android. X hasn’t listed countries.","why":"Reaction clips get easier on X. Original creators stay credited.","momentum":"Rising","region":"Global","platform":"X","source":"X Creators, 9 Nov; Social Media Today, 10 Nov","credit":"X","url":"https://www.socialmediatoday.com/news/x-adds-video-clipping/874341/","image":"images/xclip.jpg"},{"short":"Threads rolls out advanced search","headline":"Threads rolls out *advanced search*","what":"Threads says it’s rolling out advanced search, with filters for date range, community and post type, and an exact-match option. Threads names no countries.","why":"Easier to find specific posts. Useful for brand and trend research.","momentum":"Rising","region":"Global","platform":"Threads","source":"Threads, Social Media Today, 10 Nov","credit":"Threads via Social Media Today","url":"https://www.socialmediatoday.com/news/threads-adds-advanced-search-filters/874339/","image":"images/threads.jpg"},{"short":"Reddit tests Reddit Reviews, US first","headline":"Reddit tests *Reddit Reviews*, US first","what":"Reddit is testing Reddit Reviews, which uses AI to compile product reviews from community conversations. It starts with US users over the next few weeks, with around 10,000 products to begin with. Some reviews include images, prices and purchase links supplied by brands and retailers.","why":"Reddit is turning conversation into shopping advice. Not yet in the UK.","momentum":"Rising","region":"Global","platform":"Reddit","source":"Reddit, 10 Nov; Social Media Today, 10 Nov","credit":"Reddit via Social Media Today","url":"https://redditinc.com/news/introducing-reddit-reviews","image":"images/reddit.jpg"}]},"watch":[{"when":"Wed 11 Nov","title":"Armistice Day","note":"Two-minute silence at 11am. Keep the tone respectful and brand-free."},{"when":"Sat 14 Nov","title":"Strictly Come Dancing","note":"A live Saturday show. Check the BBC listing for the time."},{"when":"Mon 16 Nov","title":"I’m A Celebrity starts","note":"9pm on ITV1 and ITVX, per ITV-sourced reports."},{"when":"Thu 19 Nov","title":"GTA 6 launches","note":"Expect feed takeovers around launch."},{"when":"Fri 20 Nov","title":"Hunger Games opens","note":"Sunrise on the Reaping in UK cinemas, per Flicks."}],"desks":[{"id":"disney","name":"Disney UK","short":"Disney UK","byline":"Pip · Disney UK desk","color":"#4a74c9","logo":"logos/disney.png","ideas":[{"from":"Hunger Games tribute","idea":"A Hexed fan-style “cast reacts” idea, if approved assets and talent are available.","note":"Approved assets only. Cinema date Fri 27 Nov."},{"from":"Waitrose ad","idea":"A “short film” teaser format for Hexed, a story in one clip.","note":"Approved footage only."}],"watch":"Hexed’s UK rating and assets need sign-off first. No other release dates go out."},{"id":"family","name":"Disney Family UK","short":"Disney Family","byline":"Bo · Disney Family UK desk","color":"#a983cf","logo":"logos/disney.png","ideas":[{"from":"I’m A Celebrity","idea":"A “family jungle quiz” for the weeknight launch.","note":"No spoilers and no tagging ITV."},{"from":"Waitrose ad","idea":"A “who cried at the ad?” poll for the family feed.","note":"Don’t name brands we don’t work with."}],"watch":"Keep any Christmas content clear of other brands’ ads."},{"id":"store","name":"Disney Store UK","short":"Disney Store","byline":"Lulu · Disney Store UK desk","color":"#d4567f","logo":"logos/disney-store.png","ideas":[{"from":"Christmas ads","idea":"A “gifts worth waiting for” gift-guide post.","note":"Use products in stock only."},{"from":"Armistice Day","idea":"Nothing branded. Keep the feed quiet and respectful at 11am.","note":"Check with the client before scheduling anything."}],"watch":"No Marvel or Hexed content without licensing sign-off."},{"id":"muti","name":"Mutti UK","short":"Mutti","byline":"Kiki · Mutti UK desk","color":"#d8302b","logo":"logos/mutti.png","ideas":[{"from":"I’m A Celebrity","idea":"A “bushtucker-free” dinner post: a quick tomato pasta for the show’s launch night.","note":"Recipe must be tested and approved by Mutti."},{"from":"Waitrose ad","idea":"A “cosy dinner for two” post with a tomato pasta.","note":"Recipe must be approved by Mutti."}],"watch":"Don’t reference other brands’ ads or shows by name."},{"id":"on","name":"Optimum Nutrition UK","short":"Optimum Nutrition","byline":"Rex · Optimum Nutrition UK desk","color":"#c9962c","logo":"logos/on.png","ideas":[{"from":"Man Utd review","idea":"A “match-day recovery” snack idea, no club marks.","note":"No club or league marks."},{"from":"I’m A Celebrity","idea":"A “jungle-ready workout” short plan.","note":"Keep health claims within approved wording."}],"watch":"No health or performance claims beyond the approved list."},{"id":"dfs","name":"DFS","short":"DFS","byline":"Dot · DFS desk","color":"#2f9c8f","logo":"logos/dfs.png","ideas":[{"from":"I’m A Celebrity","idea":"A “best seat for jungle night” sofa shot for the launch.","note":"Use approved product shots. No tagging ITV."},{"from":"Christmas ads","idea":"A “cosy Christmas sofa” post with throws and cushions.","note":"Use approved product shots."}],"watch":"Any sale or price wording needs approval first."}]}</script>
+<script>
+(function(){
+const E = JSON.parse(document.getElementById('edition').textContent || '{}');
+const deck = document.getElementById('deck');
+const esc = s => String(s == null ? '' : s).replace(/[&<>"]/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+// *words* in headlines are set in Jungle green
+const hi = s => esc(s).replace(/\*(.+?)\*/g, '<em>$1</em>');
+const plain = s => String(s == null ? '' : s).replace(/\*/g, '');
+const short = u => String(u || '').replace(/^https?:\/\/(www\.)?/, '').replace(/[?#].*$/, '').replace(/\/$/, '');
+const link = u => '<a href="' + esc(u) + '">' + esc(short(u).length > 60 ? short(u).slice(0, 58) + '…' : short(u)) + '</a>';
+const MOM = {Rising:'up', Peaking:'peak', Fading:'down'};
+const edition = E.edition || 'The daily';
+const bar = (l, r) => '<div class="bar"><span>' + esc(l) + '</span><span>' + esc(r) + '</span></div>';
+const mark = '<div class="mark"><img src="logos/jungle-wordmark-white.png" alt="jungle"></div>';
+const SECTIONS = [['saw', 'Things we saw'], ['platform', 'Platform highlights']];
+const S = E.sections || {};
+const slides = [];
+
+slides.push('<section class="slide cover">' + bar(edition, 'The Jungle Newsroom · ' + (E.dateLabel || '')) +
+  '<p class="kick">The Jungle Newsroom</p><h1>' + hi(E.coverTitle || edition) + '</h1>' +
+  '<p class="sub">' + hi(E.coverSub || 'what’s moving on social') + '</p>' +
+  SECTIONS.filter(([k]) => (S[k] || []).length).map(([k, name]) => '<h3>' + name + '</h3><ol>' + S[k].map(s => '<li>' + esc(plain(s.short || s.headline)) + '</li>').join('') + '</ol>').join('') +
+  mark + '</section>');
+
+SECTIONS.forEach(([k, name]) => {
+  const list = S[k] || [];
+  list.forEach((s, i) => {
+    slides.push('<section class="slide story">' + bar(name, String(i + 1).padStart(2, '0') + ' / ' + String(list.length).padStart(2, '0') + ' · ' + (E.dateLabel || '')) +
+      (s.image ? '<div class="pic"><img src="' + esc(s.image) + '" alt=""></div>' : '') +
+      '<div class="chips">' + (s.spoiler ? '<span class="chip spoil">Spoilers</span>' : '') + '<span class="chip ' + (MOM[s.momentum] || '') + '">' + esc(s.momentum) + '</span><span class="chip">' + esc(s.region) + '</span><span class="chip">' + esc(s.platform) + '</span></div>' +
+      '<h2>' + hi(s.headline) + '</h2><p class="what">' + esc(s.what) + '</p>' +
+      '<div class="why"><p><b>Why it matters: </b>' + esc(s.why) + '</p></div>' +
+      '<div class="foot">' + esc(s.source) + (s.credit ? ' · Image: ' + esc(s.credit) : '') + (s.url ? '<br>' + link(s.url) : '') + '</div>' + mark + '</section>');
+  });
+});
+
+if ((E.watch || []).length) {
+  slides.push('<section class="slide watch">' + bar('This week', E.dateLabel || '') +
+    '<h2>Things to watch <em>this week</em></h2><ul class="wl">' +
+    E.watch.map(w => '<li><span class="when">' + esc(w.when) + '</span><div><p class="t">' + esc(w.title) + '</p>' + (w.note ? '<p class="n">' + esc(w.note) + '</p>' : '') + '</div></li>').join('') +
+    '</ul>' + mark + '</section>');
+}
+
+(E.desks || []).forEach(d => {
+  if (!(d.ideas || []).length && !d.watch) return;
+  slides.push('<section class="slide desk" style="--c:' + d.color + '">' + bar('For our clients', d.short) +
+    '<div class="head"><div class="tile">' + (d.logo ? '<img src="' + esc(d.logo) + '" alt="' + esc(d.name) + '">' : '') + '</div>' +
+    '<div><h2>' + hi(d.title || ('For *' + d.name + '*')) + '</h2><p class="who">' + esc(d.byline) + '</p></div></div>' +
+    '<ul class="ideas">' + (d.ideas || []).map(it => '<li><p class="lbl">Idea · ' + esc(it.from) + '</p><p class="idea">' + esc(it.idea) + '</p>' + (it.note ? '<p class="note">' + esc(it.note) + '</p>' : '') + '</li>').join('') + '</ul>' +
+    (d.watch ? '<div class="wo"><p class="lbl">Watch out</p><p class="t">' + esc(d.watch) + '</p></div>' : '') +
+    mark + '</section>');
+});
+
+slides.push('<section class="slide end">' + bar('The Jungle Newsroom', E.dateLabel || '') +
+  '<h2>Did we <em>miss</em> something?</h2>' +
+  '<p>Spotted something we missed? Or want more of something tomorrow? Reply under this post in #agency-hq.</p>' +
+  (E.floorUrl ? '<a class="go" href="' + esc(E.floorUrl) + '">See the newsroom island →</a><p class="url">' + esc(short(E.floorUrl)) + '</p>' : '') +
+  mark + '</section>');
+
+deck.innerHTML = slides.join('');
+const els = [...deck.querySelectorAll('.slide')];
+
+// viewer: one slide at a time, scaled to fit
+let cur = 0;
+const pos = document.getElementById('pos'), prev = document.getElementById('prev'), next = document.getElementById('next');
+function fit(){
+  if (document.body.dataset.mode === 'print') return;
+  const s = deck.clientWidth / 1080;
+  els.forEach(el => { el.style.transform = 'scale(' + s + ')'; });
+}
+function show(i){
+  cur = Math.max(0, Math.min(els.length - 1, i));
+  els.forEach((el, k) => el.classList.toggle('on', k === cur));
+  pos.textContent = (cur + 1) + ' / ' + els.length;
+  prev.disabled = cur === 0; next.disabled = cur === els.length - 1;
+}
+prev.addEventListener('click', () => show(cur - 1));
+next.addEventListener('click', () => show(cur + 1));
+document.addEventListener('keydown', e => { if (e.key === 'ArrowRight') show(cur + 1); if (e.key === 'ArrowLeft') show(cur - 1); });
+let sx = null;
+deck.addEventListener('pointerdown', e => { sx = e.clientX; });
+deck.addEventListener('pointerup', e => { if (sx != null && Math.abs(e.clientX - sx) > 40) show(cur + (e.clientX < sx ? 1 : -1)); sx = null; });
+window.addEventListener('resize', fit);
+fit(); show(0);
+})();
+</script>
