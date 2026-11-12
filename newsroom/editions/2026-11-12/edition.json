@@ -1,0 +1,272 @@
+{
+ "edition": "The daily",
+ "coverTitle": "The daily",
+ "coverSub": "what’s *moving* on social",
+ "dateLabel": "Thursday 12 November",
+ "floorUrl": "https://claude.ai/artifact/QByUaU2dzAX6fAwH2X3jVb",
+ "sections": {
+  "saw": [
+   {
+    "short": "Dua Lipa, Tame Impala and SZA headline Coachella 2027",
+    "headline": "*Dua Lipa*, Tame Impala and SZA headline Coachella 2027",
+    "what": "Coachella has named Dua Lipa, Tame Impala and SZA as its 2027 headliners, on 9-11 and 16-18 April. BBC News says Dua Lipa is the first solo British woman to headline. Variety and Billboard report passes go on sale on Friday 13 Nov at noon PT.",
+    "why": "A British pop star at the top of a global festival bill. Expect line-up reactions and memes.",
+    "momentum": "Peaking",
+    "region": "UK",
+    "platform": "X & Instagram",
+    "source": "BBC News, 11 Nov; Variety, 11 Nov",
+    "credit": "Coachella via Variety",
+    "url": "https://www.bbc.co.uk/news/articles/cjr4g0n9d1g5o",
+    "image": "images/coachella.jpg"
+   },
+   {
+    "short": "Greggs opens a hotel suite with a sausage roll hotline",
+    "headline": "*Greggs opens a hotel suite* with a sausage roll hotline",
+    "what": "Greggs has opened a permanent suite at Newcastle’s Hotel Gotham, where guests lift a gold rotary phone to order a sausage roll on a silver platter. It sleeps two and costs from £335 a night, per Famous Campaigns. Greggs is also giving away a stay through its app every three months for two years.",
+    "why": "A brand stunt that only works because of its sense of humour. Strong for photos.",
+    "momentum": "Rising",
+    "region": "UK",
+    "platform": "Instagram & TikTok",
+    "source": "Famous Campaigns, 9 Nov",
+    "credit": "Greggs via Famous Campaigns",
+    "url": "https://www.famouscampaigns.com/2026/11/greggs-gives-five-star-room-service-a-sausage-roll-hotline/",
+    "image": "images/greggs.jpg"
+   },
+   {
+    "short": "Boxed GTA 6 copies arrive with a code, not a disc",
+    "headline": "Boxed *GTA 6* copies arrive with a code, not a disc",
+    "what": "Boxed GTA 6 copies have started arriving, with a download code and a poster inside rather than a disc, per Metro and Push Square. Some pre-orderers got theirs a day early. The pre-load is 212GB on PS5 and the game launches on Thu 19 Nov.",
+    "why": "Unboxing clips are doing the work before launch. Game launches are now a social event.",
+    "momentum": "Rising",
+    "region": "Global",
+    "platform": "X & YouTube",
+    "source": "Metro, 11 Nov; Push Square",
+    "credit": "Rockstar via Metro",
+    "url": "https://metro.co.uk/2026/11/11/gta-6-unboxing-videos-show-off-poster-inside-physical-copies-29785210/",
+    "image": "images/gta.jpg"
+   },
+   {
+    "short": "Owain Wyn Evans's Children in Need ride passes £1.2m",
+    "headline": "Owain Wyn Evans’s *Children in Need ride* passes £1.2m",
+    "what": "BBC Radio 2’s Owain Wyn Evans had raised more than £1.2m for Children in Need at the end of Wednesday’s Day 3 of his nearly 400-mile four-nations cycle. The ride finishes in Cardiff on Friday 13 Nov, which is also appeal night. A BBC One film follows on Friday 20 Nov at 7.30pm.",
+    "why": "A feel-good story with a clear finish line. The total will keep rising.",
+    "momentum": "Rising",
+    "region": "UK",
+    "platform": "BBC & Instagram",
+    "source": "BBC live page, 11 Nov; On The Radio",
+    "credit": "BBC",
+    "url": "https://www.bbc.co.uk/live/cj3vq7prxx3rt",
+    "image": "images/owain.jpg"
+   },
+   {
+    "short": "Rivals returns for part 2 on Disney+",
+    "headline": "*Rivals* returns for part 2 on Disney+",
+    "what": "Rivals series 2 part 2 arrived on Disney+ on Wed 11 Nov with a three-episode premiere, then weekly on 18 Nov, 25 Nov and 2 Dec, per indy100. Metro reports some fans criticised one storyline. Reviews of part 2 are mixed, with Hello marking it down.",
+    "why": "A Disney+ show is trending on release week. Useful for any Disney channel.",
+    "momentum": "Rising",
+    "region": "UK",
+    "platform": "Disney+ & X",
+    "source": "Metro, 11 Nov; indy100, 11 Nov",
+    "credit": "Disney+ via indy100",
+    "url": "https://www.indy100.com/tv/rivals-season-2-part-2-critic-reviews",
+    "image": "images/rivals.jpg"
+   }
+  ],
+  "platform": [
+   {
+    "short": "Meta explains how Facebook's Your Algorithm controls work",
+    "headline": "Meta explains how Facebook’s *Your Algorithm* controls work",
+    "what": "Meta’s engineering blog says new interests get extra weight for a limited time, and an LLM builds the interest profile. Requests such as less AI-generated content use separate demotion signals rather than topic matching. The tool was announced in October, and Meta lists no countries.",
+    "why": "Meta shows how topic controls shape the feed. Not confirmed for the UK.",
+    "momentum": "Rising",
+    "region": "Global",
+    "platform": "Facebook",
+    "source": "Meta Engineering, 10 Nov; Social Media Today, 11 Nov",
+    "credit": "Meta",
+    "url": "https://engineering.fb.com/2026/11/10/ml-applications/your-algorithm-giving-people-more-ways-to-personalize-facebook-recommendations/",
+    "image": "images/youralgorithm.jpg"
+   },
+   {
+    "short": "X previews labels that explain AI moderation decisions",
+    "headline": "X previews labels that explain *why its AI flagged a post*",
+    "what": "X’s head of brand safety previewed designs for labels that would tell users why X’s AI flagged a post, how its reach was limited, and let them appeal, Adweek reports. It was shown at the Brand & AI Safety Summit on 10 Nov. It is a design preview, not a confirmed rollout.",
+    "why": "Brands get a clearer view of moderation. Nothing live yet.",
+    "momentum": "Rising",
+    "region": "Global",
+    "platform": "X",
+    "source": "Adweek, 10 Nov; Social Media Today, 11 Nov",
+    "credit": "X via Social Media Today",
+    "url": "https://www.adweek.com/media/x-previews-labels-that-tell-users-why-its-ai-system-flagged-their-posts/",
+    "image": "images/xlabels.jpg"
+   },
+   {
+    "short": "LinkedIn tests a frequent viewer label",
+    "headline": "LinkedIn tests a *frequent viewer* label on profile views",
+    "what": "LinkedIn is testing a “frequent viewer” label for some Premium users, showing when someone has looked at their profile repeatedly, Wired reports. LinkedIn confirmed the test but shared no further details. It isn’t a confirmed rollout.",
+    "why": "Another reason for page admins to check what their profile views show.",
+    "momentum": "Rising",
+    "region": "Global",
+    "platform": "LinkedIn",
+    "source": "Wired, 11 Nov; Social Media Today, 11 Nov",
+    "credit": "Wired",
+    "url": "https://www.wired.com/story/linkedin-is-testing-a-feature-that-lets-you-see-your-profile-stalkers",
+    "image": "images/linkedin.jpg"
+   }
+  ]
+ },
+ "watch": [
+  {
+   "when": "Fri 13 Nov",
+   "title": "Children in Need night",
+   "note": "From 7pm on BBC One. Owain Wyn Evans’s ride ends in Cardiff the same day."
+  },
+  {
+   "when": "Sat 14 Nov",
+   "title": "Strictly Come Dancing",
+   "note": "A live Saturday show. Check the BBC listing for the time."
+  },
+  {
+   "when": "Mon 16 Nov",
+   "title": "I’m A Celebrity starts",
+   "note": "9pm on ITV1 and ITVX, per ITV-sourced reports."
+  },
+  {
+   "when": "Thu 19 Nov",
+   "title": "GTA 6 launches",
+   "note": "Expect feed takeovers around launch."
+  },
+  {
+   "when": "Fri 20 Nov",
+   "title": "Hunger Games opens",
+   "note": "Sunrise on the Reaping in UK cinemas, per Flicks."
+  }
+ ],
+ "desks": [
+  {
+   "id": "disney",
+   "name": "Disney UK",
+   "short": "Disney UK",
+   "byline": "Pip · Disney UK desk",
+   "color": "#4a74c9",
+   "logo": "logos/disney.png",
+   "ideas": [
+    {
+     "from": "Rivals on Disney+",
+     "idea": "A “watch together” prompt that points to a Disney+ show, if the channel is cleared to promote it.",
+     "note": "Only Disney-approved titles and clips."
+    },
+    {
+     "from": "Hexed",
+     "idea": "A Hexed 27 Nov countdown post for the Friday feed.",
+     "note": "Approved assets only. Cinema date Fri 27 Nov."
+    }
+   ],
+   "watch": "Hexed’s UK rating and assets need sign-off first. No other release dates go out."
+  },
+  {
+   "id": "family",
+   "name": "Disney Family UK",
+   "short": "Disney Family",
+   "byline": "Bo · Disney Family UK desk",
+   "color": "#a983cf",
+   "logo": "logos/disney.png",
+   "ideas": [
+    {
+     "from": "Children in Need",
+     "idea": "A “family fundraising idea” post for appeal night.",
+     "note": "Check charity wording and don’t imply a Disney donation."
+    },
+    {
+     "from": "Greggs suite",
+     "idea": "A “family cosy night in” post inspired by a treat.",
+     "note": "Don’t name brands we don’t work with."
+    }
+   ],
+   "watch": "Any charity content needs the client’s sign-off first."
+  },
+  {
+   "id": "store",
+   "name": "Disney Store UK",
+   "short": "Disney Store",
+   "byline": "Lulu · Disney Store UK desk",
+   "color": "#d4567f",
+   "logo": "logos/disney-store.png",
+   "ideas": [
+    {
+     "from": "Greggs suite",
+     "idea": "A “room service” gift-guide post for Disney Store gifting.",
+     "note": "Use products in stock only."
+    },
+    {
+     "from": "GTA 6 unboxing",
+     "idea": "A “what’s in the box” reveal format for a Disney Store product.",
+     "note": "Only products Disney Store has approved."
+    }
+   ],
+   "watch": "No Marvel or Hexed content without licensing sign-off."
+  },
+  {
+   "id": "muti",
+   "name": "Mutti UK",
+   "short": "Mutti",
+   "byline": "Kiki · Mutti UK desk",
+   "color": "#d8302b",
+   "logo": "logos/mutti.png",
+   "ideas": [
+    {
+     "from": "Greggs suite",
+     "idea": "A “room service for tonight” post with a quick tomato pasta.",
+     "note": "Recipe must be tested and approved by Mutti."
+    },
+    {
+     "from": "Children in Need",
+     "idea": "A “bake sale or soup night” family recipe for appeal night.",
+     "note": "Recipe and charity wording must be approved."
+    }
+   ],
+   "watch": "Don’t reference Greggs or other brands by name."
+  },
+  {
+   "id": "on",
+   "name": "Optimum Nutrition UK",
+   "short": "Optimum Nutrition",
+   "byline": "Rex · Optimum Nutrition UK desk",
+   "color": "#c9962c",
+   "logo": "logos/on.png",
+   "ideas": [
+    {
+     "from": "Owain Wyn Evans ride",
+     "idea": "A “400-mile mindset” recovery tip post, no charity claim.",
+     "note": "Keep health claims within approved wording."
+    },
+    {
+     "from": "GTA 6 launch week",
+     "idea": "A “game night fuel” snack idea.",
+     "note": "No game titles or artwork."
+    }
+   ],
+   "watch": "No health or performance claims beyond the approved list."
+  },
+  {
+   "id": "dfs",
+   "name": "DFS",
+   "short": "DFS",
+   "byline": "Dot · DFS desk",
+   "color": "#2f9c8f",
+   "logo": "logos/dfs.png",
+   "ideas": [
+    {
+     "from": "Greggs suite",
+     "idea": "A “five-star at home” sofa post, a hotel-style night in.",
+     "note": "Use approved product shots."
+    },
+    {
+     "from": "I’m A Celebrity",
+     "idea": "A “best seat for jungle night” sofa shot.",
+     "note": "No tagging ITV. Use approved product shots."
+    }
+   ],
+   "watch": "Any sale or price wording needs approval first."
+  }
+ ]
+}
