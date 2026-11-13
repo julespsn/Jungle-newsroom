@@ -1,0 +1,285 @@
+{
+ "edition": "Best of the week",
+ "coverTitle": "Best of the week",
+ "coverSub": "what *carried on* growing",
+ "dateLabel": "Friday 13 November",
+ "floorUrl": "https://claude.ai/artifact/QByUaU2dzAX6fAwH2X3jVb",
+ "sections": {
+  "saw": [
+   {
+    "short": "Man Utd sack Michael Carrick",
+    "headline": "Man Utd *sack Michael Carrick* after one league win in ten",
+    "what": "Manchester United said on Thursday that Michael Carrick has left his role as head coach, with the club in the relegation zone after one win in 10 league games. Sky Sports says Mauricio Pochettino has agreed a deal to replace him. No official announcement had been made when we checked. This follows Wednesday’s report that the club was reviewing his position.",
+    "why": "A story that grew all week, from a review to a sacking. Football fans are filling feeds.",
+    "momentum": "Peaking",
+    "region": "UK",
+    "platform": "X",
+    "source": "Sky Sports, 12 Nov; BBC Sport, 12 Nov",
+    "credit": "PA via Irish News",
+    "url": "https://www.bbc.co.uk/sport/football/articles/cqdr1jlr1707o",
+    "image": "images/carrick.jpg"
+   },
+   {
+    "short": "Harry Kane becomes England's most-capped men's player",
+    "headline": "*Harry Kane* becomes England’s most-capped men’s player",
+    "what": "Harry Kane won his 126th cap on Thursday, passing Peter Shilton’s 125, then scored the winning penalty, his 92nd England goal, in a 2-1 win over Croatia. BBC says Prince William and Shilton presented him with a framed shirt before kick-off. England are through to the Nations League quarter-finals and play Spain on Sunday.",
+    "why": "A record, a winner and a royal presentation in one night. A big shared moment.",
+    "momentum": "Peaking",
+    "region": "UK",
+    "platform": "X & Instagram",
+    "source": "BBC Sport, 12 Nov; Sky Sports, 12 Nov; Metro, 12 Nov",
+    "credit": "Metro",
+    "url": "https://metro.co.uk/2026/11/12/england-player-ratings-vs-croatia-harry-kane-scores-record-breaking-appearance-29789366/",
+    "image": "images/kane.jpg"
+   },
+   {
+    "short": "Owain Wyn Evans's Children in Need ride passes £2.4m",
+    "headline": "Owain Wyn Evans’s *Children in Need ride* passes £2.4m",
+    "what": "BBC Radio 2’s Owain Wyn Evans had raised more than £2.4 million for Children in Need by the end of Thursday’s Day 4, up from £1.2m on Wednesday. His nearly 400-mile ride finishes in Cardiff today, which is also appeal night on BBC One from 7pm. The hosts are Alex Jones, Mel Giedroyc, Rylan, Sara Cox and Tyler West.",
+    "why": "A feel-good story that doubled its total in a day. Appeal night tonight.",
+    "momentum": "Rising",
+    "region": "UK",
+    "platform": "BBC & Instagram",
+    "source": "BBC live page, 12 Nov; BBC media pack",
+    "credit": "BBC",
+    "url": "https://www.bbc.co.uk/live/cj3vq7prxx3rt",
+    "image": "images/cin.jpg"
+   },
+   {
+    "short": "I'm A Celebrity adapts its camp for Ade Adepitan",
+    "headline": "*I’m A Celebrity* adapts its camp for Ade Adepitan",
+    "what": "ITV has adapted the I’m A Celebrity camp for Paralympian Ade Adepitan, with deeper pathways, parking bays, rest areas and a stairlift to the jungle shower, per Radio Times and LADbible. ITV’s line-up was confirmed on Tuesday. The series starts on Monday 16 November at 9pm on ITV1 and ITVX.",
+    "why": "Strong build-up for next week’s biggest TV launch. The camp story adds a human angle.",
+    "momentum": "Rising",
+    "region": "UK",
+    "platform": "ITV & TikTok",
+    "source": "Radio Times, 12 Nov; LADbible, 12 Nov",
+    "credit": "ITV via LADbible",
+    "url": "https://www.ladbible.com/entertainment/tv/im-a-celebrity-new-adapted-camp-ade-adepitan-814253-20261112",
+    "image": "images/imaceleb.jpg"
+   },
+   {
+    "short": "GTA 6 pre-orders are 'far above expectations' as launch nears",
+    "headline": "*GTA 6* pre-orders are “far above expectations” as launch nears",
+    "what": "Take-Two says GTA 6 pre-orders are “tracking far above our initial expectations” but hasn’t given a number. Sensor Tower estimates about 10 million, up from its 7.71 million estimate last week. Selfridges opened a pop-up on Oxford Street on Monday and boxed copies started arriving on Thursday. The game launches on Thu 19 Nov.",
+    "why": "A launch that kept making news all week. Expect a feed takeover next Thursday.",
+    "momentum": "Rising",
+    "region": "Global",
+    "platform": "X & YouTube",
+    "source": "Eurogamer, 9 Nov; Metro, 12 Nov",
+    "credit": "Rockstar via Metro",
+    "url": "https://metro.co.uk/2026/11/12/gta-6-physical-map-leaks-rockstar-teases-non-us-sequel-29789000/",
+    "image": "images/gta.jpg"
+   },
+   {
+    "short": "Christmas ads kept the week talking: Waitrose, M&S and Disney",
+    "headline": "*Christmas ads* kept the week talking: Waitrose, M&S and Disney",
+    "what": "M&S’s “The Home of Christmas”, with James Norton as a beardless Santa, launched on Friday 6 Nov. Disney’s short “The Invisible Horse” followed on 9 Nov. Waitrose released a six-minute sequel on Tuesday, which it calls the longest ad made by a UK supermarket. Quince’s David Schwimmer ad also revived Ross’s red sweater.",
+    "why": "Christmas ads are the season’s biggest shared talking point. Waitrose and M&S led it.",
+    "momentum": "Peaking",
+    "region": "UK",
+    "platform": "YouTube & Instagram",
+    "source": "Digital Spy, 6 Nov; Metro, 9–10 Nov; Famous Campaigns, 6 Nov",
+    "credit": "Waitrose via Metro",
+    "url": "https://metro.co.uk/2026/11/10/keira-knightley-caught-joe-wilkinson-love-triangle-waitrose-2026-christmas-advert-29778169",
+    "image": "images/xmasads.jpg"
+   }
+  ],
+  "platform": [
+   {
+    "short": "Instagram's Edits had a busy week: a Mac app and Effect Builder",
+    "headline": "Instagram’s *Edits* had a busy week: a Mac app and Effect Builder",
+    "what": "Edits launched a Mac app on 5 Nov, with a multi-track timeline and 4K watermark-free export, per Social Media Today and TechCrunch. On 9 Nov Instagram launched Effect Builder, a web tool for AI effects in Stories, but its Edits blog says it is US-only for people over 18.",
+    "why": "Instagram is pushing creators to its editing app. Effect Builder isn’t in the UK yet.",
+    "momentum": "Rising",
+    "region": "Global",
+    "platform": "Instagram",
+    "source": "Social Media Today, 5 Nov; Instagram Edits blog, 9 Nov",
+    "credit": "Instagram via TechCrunch",
+    "url": "https://edits.instagram.com/blog/introducing-effect-builder/",
+    "image": "images/edits.jpg"
+   },
+   {
+    "short": "X added clip video and previewed AI moderation labels",
+    "headline": "X added *clip video* and previewed *AI moderation labels*",
+    "what": "X now lets users clip videos longer than two minutes into 5 to 60 second shares that credit the original, per X Creators. X’s head of brand safety also previewed designs for labels that explain why its AI flagged a post, Adweek reports. The labels are a design preview, not a confirmed rollout.",
+    "why": "X made reaction clips easier and talked about moderation. Neither is a UK-specific launch.",
+    "momentum": "Rising",
+    "region": "Global",
+    "platform": "X",
+    "source": "X Creators, 9 Nov; Adweek, 10 Nov",
+    "credit": "X via Social Media Today",
+    "url": "https://www.socialmediatoday.com/news/x-adds-video-clipping/874341/",
+    "image": "images/xclip.jpg"
+   },
+   {
+    "short": "LinkedIn explained its feed and tested a frequent viewer label",
+    "headline": "LinkedIn *explained its feed* and tested a *frequent viewer* label",
+    "what": "LinkedIn’s engineering blog says its Profile Relevance system uses LLM embeddings to match posts from people you don’t follow, and it cut hide rates by 18.8% in tests. Wired reports LinkedIn is also testing a “frequent viewer” label for some Premium users. LinkedIn confirmed the test.",
+    "why": "LinkedIn is showing how its feed works and testing a profile-view feature.",
+    "momentum": "Rising",
+    "region": "Global",
+    "platform": "LinkedIn",
+    "source": "LinkedIn Engineering, 9 Nov; Wired, 11 Nov",
+    "credit": "Wired",
+    "url": "https://www.wired.com/story/linkedin-is-testing-a-feature-that-lets-you-see-your-profile-stalkers",
+    "image": "images/linkedin.jpg"
+   }
+  ]
+ },
+ "watch": [
+  {
+   "when": "Fri 13 Nov",
+   "title": "Children in Need night",
+   "note": "From 7pm on BBC One. Owain Wyn Evans’s ride finishes in Cardiff today."
+  },
+  {
+   "when": "Sat 14 Nov",
+   "title": "Strictly Come Dancing",
+   "note": "A live Saturday show. Check the BBC listing for the time."
+  },
+  {
+   "when": "Sun 15 Nov",
+   "title": "England v Spain",
+   "note": "Nations League decider in Madrid, evening kick-off on ITV1, per LBC and Sky."
+  },
+  {
+   "when": "Mon 16 Nov",
+   "title": "I’m A Celebrity starts",
+   "note": "9pm on ITV1 and ITVX, per Radio Times."
+  },
+  {
+   "when": "Thu 19 Nov",
+   "title": "GTA 6 launches",
+   "note": "Expect feed takeovers around launch."
+  }
+ ],
+ "desks": [
+  {
+   "id": "disney",
+   "name": "Disney UK",
+   "short": "Disney UK",
+   "byline": "Pip · Disney UK desk",
+   "color": "#4a74c9",
+   "logo": "logos/disney.png",
+   "ideas": [
+    {
+     "from": "Christmas ads week",
+     "idea": "A Hexed 27 Nov countdown with one clear image a day.",
+     "note": "Approved assets only. Cinema date Fri 27 Nov."
+    },
+    {
+     "from": "Disney Christmas short",
+     "idea": "A post that points to Disney’s Christmas short, if Disney UK approves.",
+     "note": "Use Disney-approved links and clips only."
+    }
+   ],
+   "watch": "Hexed’s UK rating and assets need sign-off first. No other release dates go out."
+  },
+  {
+   "id": "family",
+   "name": "Disney Family UK",
+   "short": "Disney Family",
+   "byline": "Bo · Disney Family UK desk",
+   "color": "#a983cf",
+   "logo": "logos/disney.png",
+   "ideas": [
+    {
+     "from": "Children in Need",
+     "idea": "A “family fundraising idea” post for appeal night.",
+     "note": "Check charity wording and don’t imply a Disney donation."
+    },
+    {
+     "from": "Strictly Saturday",
+     "idea": "A “family sofa night” post for the next live show.",
+     "note": "No spoilers about results."
+    }
+   ],
+   "watch": "Any charity content needs the client’s sign-off first."
+  },
+  {
+   "id": "store",
+   "name": "Disney Store UK",
+   "short": "Disney Store",
+   "byline": "Lulu · Disney Store UK desk",
+   "color": "#d4567f",
+   "logo": "logos/disney-store.png",
+   "ideas": [
+    {
+     "from": "Christmas ads week",
+     "idea": "A “gifts worth waiting for” gift-guide post.",
+     "note": "Use products in stock only."
+    },
+    {
+     "from": "GTA 6 launch",
+     "idea": "A “limited drop” teaser format for any confirmed Disney Store release.",
+     "note": "Only products Disney Store confirms. No sell-out claims."
+    }
+   ],
+   "watch": "No Marvel or Hexed content without licensing sign-off."
+  },
+  {
+   "id": "muti",
+   "name": "Mutti UK",
+   "short": "Mutti",
+   "byline": "Kiki · Mutti UK desk",
+   "color": "#d8302b",
+   "logo": "logos/mutti.png",
+   "ideas": [
+    {
+     "from": "England v Spain",
+     "idea": "A “match-night pasta” post for Sunday evening, no team marks.",
+     "note": "Recipe must be tested and approved by Mutti."
+    },
+    {
+     "from": "I’m A Celebrity",
+     "idea": "A “bushtucker-free dinner” post for the launch night.",
+     "note": "Recipe must be approved by Mutti."
+    }
+   ],
+   "watch": "Don’t reference other brands or shows by name."
+  },
+  {
+   "id": "on",
+   "name": "Optimum Nutrition UK",
+   "short": "Optimum Nutrition",
+   "byline": "Rex · Optimum Nutrition UK desk",
+   "color": "#c9962c",
+   "logo": "logos/on.png",
+   "ideas": [
+    {
+     "from": "Kane’s record",
+     "idea": "A “consistency pays off” training tip for the weekend, no player or FA marks.",
+     "note": "Keep health claims within approved wording."
+    },
+    {
+     "from": "GTA 6 launch week",
+     "idea": "A “game night fuel” snack idea.",
+     "note": "No game titles or artwork."
+    }
+   ],
+   "watch": "No health or performance claims beyond the approved list."
+  },
+  {
+   "id": "dfs",
+   "name": "DFS",
+   "short": "DFS",
+   "byline": "Dot · DFS desk",
+   "color": "#2f9c8f",
+   "logo": "logos/dfs.png",
+   "ideas": [
+    {
+     "from": "England v Spain",
+     "idea": "A “best seat for match night” sofa shot.",
+     "note": "Use approved product shots. No team or broadcaster marks."
+    },
+    {
+     "from": "I’m A Celebrity",
+     "idea": "A “jungle night on the sofa” post for Monday.",
+     "note": "No tagging ITV. Use approved product shots."
+    }
+   ],
+   "watch": "Any sale or price wording needs approval first."
+  }
+ ]
+}
