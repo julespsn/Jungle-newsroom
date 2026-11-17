@@ -1,0 +1,285 @@
+{
+ "edition": "The daily",
+ "coverTitle": "The daily",
+ "coverSub": "what’s *moving* on social",
+ "dateLabel": "Tuesday 17 November",
+ "floorUrl": "https://claude.ai/artifact/QByUaU2dzAX6fAwH2X3jVb",
+ "sections": {
+  "saw": [
+   {
+    "short": "Robert Pattinson announced as the next James Bond",
+    "headline": "*Robert Pattinson* announced as the next James Bond",
+    "what": "Amazon MGM Studios confirmed on Monday that Robert Pattinson, 40, will play James Bond, announced on the official 007 Instagram account, per Deadline, Variety and Metro. Denis Villeneuve is directing and Steven Knight is writing. Metro says production is expected to start in 2027, with no exact dates announced.",
+    "why": "The biggest casting reveal of the year. Last week’s rumours are now confirmed.",
+    "momentum": "Peaking",
+    "region": "UK",
+    "platform": "Instagram & X",
+    "source": "Deadline, 16 Nov; Variety, 16 Nov; Metro, 16 Nov",
+    "credit": "Amazon MGM via Variety",
+    "url": "https://deadline.com/2026/11/robert-pattinson-james-bond-role-amazon-mgm-studios-1237225184/",
+    "image": "images/bond.jpg"
+   },
+   {
+    "short": "I'm A Celebrity opens with a day-one head-to-head trial",
+    "headline": "*I’m A Celebrity* opens with a day-one head-to-head trial",
+    "what": "I’m A Celebrity returned on Monday with a launch-night twist: the slowest celebrity in each group faced a head-to-head elimination trial. AJ Odudu lost to Claire Sweeney and was sent home. Fans and writers speculate she may return as a late arrival, but ITV hasn’t said so. The Sun reports viewers compared the format to The Traitors.",
+    "why": "The first episode already has a talking point. Social chatter will run all week.",
+    "momentum": "Peaking",
+    "region": "UK",
+    "platform": "ITV & X",
+    "source": "Digital Spy, 16 Nov; The Sun, 16 Nov; LADbible, 16 Nov",
+    "credit": "ITV via Digital Spy",
+    "url": "https://www.thesun.co.uk/tv/41043148/im-a-celeb-fans-accuse-show-of-copying-traitors/",
+    "image": "images/imaceleb.jpg",
+    "spoiler": true
+   },
+   {
+    "short": "The GTA VI album tracklist has reportedly leaked",
+    "headline": "The *GTA VI album tracklist* has reportedly leaked",
+    "what": "NME reports the full 34-track tracklist for GTA VI: The Album has leaked online, after a record-store employee reportedly sold a vinyl copy early. It lists Dua Lipa, Lana Del Rey, Zara Larsson and Rina Sawayama. Rockstar announced the album in September but hasn’t published the tracklist. Game and album are due on Thursday 19 Nov.",
+    "why": "A music story riding the biggest game launch of the year. The tracklist is unofficial.",
+    "momentum": "Rising",
+    "region": "Global",
+    "platform": "X",
+    "source": "NME, 15 Nov",
+    "credit": "Rockstar via NME",
+    "url": "https://www.nme.com/news/music/lana-del-rey-dua-lipa-zara-larsson-gta-vi-the-album-full-tracklist-3975990",
+    "image": "images/gtaalbum.jpg"
+   },
+   {
+    "short": "Oasis skip their Rock and Roll Hall of Fame induction",
+    "headline": "*Oasis* skip their Rock and Roll Hall of Fame induction",
+    "what": "Oasis were inducted into the Rock and Roll Hall of Fame on Saturday without any band member attending, NME reports. Liam Gallagher posted on X: “It’s too far to be going for the night.” Noel was at London’s Royal Festival Hall for the EFG London Jazz Festival. The ceremony airs on 8 December on ABC.",
+    "why": "A classic Gallagher moment. Oasis stories always travel in the UK.",
+    "momentum": "Peaking",
+    "region": "UK",
+    "platform": "X",
+    "source": "NME, 15 Nov; Rock Hall",
+    "credit": "NME",
+    "url": "https://www.nme.com/news/music/oasis-skip-rock-roll-hall-fame-induction-bob-odenkirk-stephen-wilson-jr-wonderwall-3975994",
+    "image": "images/oasis.jpg"
+   },
+   {
+    "short": "King Charles agrees cheese and beans is the best jacket potato",
+    "headline": "King Charles agrees *cheese and beans* is the best jacket potato",
+    "what": "King Charles met jacket-potato van SpudBros on a visit to Preston on Monday, and appeared to agree with brothers Jacob and Harley Nelson that cheese and beans is the best filling, per a video they posted and Metro. Metro says the video has nearly 2 million views. It was his first visit to the city since becoming King.",
+    "why": "A royal moment with an easy, funny hook. Brands got there by being themselves.",
+    "momentum": "Rising",
+    "region": "UK",
+    "platform": "Instagram",
+    "source": "Metro, 16 Nov",
+    "credit": "PA via Metro",
+    "url": "https://metro.co.uk/2026/11/16/king-charles-says-cheese-beans-favourite-jacket-potato-filling-29797177/",
+    "image": "images/king.jpg"
+   },
+   {
+    "short": "Queen release a reworked Christmas single",
+    "headline": "*Queen* release a reworked Christmas single",
+    "what": "Queen have released a reworked version of “Thank God It’s Christmas”, with new parts from Brian May and Roger Taylor around Freddie Mercury’s original vocal. It was first played on Radio 2 on Monday. A limited 7-inch follows on 18 December, the day the Christmas No.1 tracking week starts, per Official Charts.",
+    "why": "The Christmas No.1 race has its first big name. Expect heritage-act chat.",
+    "momentum": "Rising",
+    "region": "UK",
+    "platform": "Radio 2 & streaming",
+    "source": "Official Charts, 16 Nov; Queen",
+    "credit": "Queen via Official Charts",
+    "url": "https://www.officialcharts.com/chart-news/queen-thank-god-its-christmas-again/",
+    "image": "images/queen.jpg"
+   }
+  ],
+  "platform": [
+   {
+    "short": "Instagram adds Amazon affiliate links",
+    "headline": "Instagram adds *Amazon affiliate links* for creators",
+    "what": "Instagram is adding Amazon affiliate links, letting eligible creators attach up to 30 products to a Reel and 20 to a feed post, Social Media Today reports from an Instagram press release. Creators see the commission rate per item. The report doesn’t say which markets get it.",
+    "why": "Another route to shoppable creator content. UK availability isn’t confirmed.",
+    "momentum": "Rising",
+    "region": "Global",
+    "platform": "Instagram",
+    "source": "Social Media Today, 16 Nov",
+    "credit": "Instagram via Social Media Today",
+    "url": "https://www.socialmediatoday.com/news/instagram-adds-amazon-affiliate-links/874817/",
+    "image": "images/igamazon.jpg"
+   },
+   {
+    "short": "YouTube announces GTA VI launch-week activations",
+    "headline": "YouTube announces *GTA VI launch-week* activations",
+    "what": "YouTube says it will run a 24-hour global launch-day livestream with top gaming creators, plus a GTA VI-themed logo, limited-edition “Wanted Stars” digital gifts and a Shorts effect. Social Media Today dates the announcement to 12 Nov. The livestream is global, and the report doesn’t list markets for the other items.",
+    "why": "Platforms are turning game launches into their own events. Expect a feed takeover on Thursday.",
+    "momentum": "Rising",
+    "region": "Global",
+    "platform": "YouTube",
+    "source": "Social Media Today, 12 Nov; YouTube",
+    "credit": "YouTube via Social Media Today",
+    "url": "https://www.socialmediatoday.com/news/youtube-announces-grand-theft-auto-vi-activations/874583/",
+    "image": "images/ytgta.jpg"
+   },
+   {
+    "short": "LinkedIn opens connected-TV ads to UK advertisers",
+    "headline": "LinkedIn opens *connected-TV ads* to UK advertisers",
+    "what": "LinkedIn has opened its connected-TV ads to UK advertisers, with partners including LG, Paramount+ and Titan OS, PPC Land reports from LinkedIn’s own post. The UK is the third market after the US and Canada. LinkedIn’s effectiveness claims come from US and Canada campaigns, not the UK.",
+    "why": "A new TV-screen route for B2B. The performance numbers aren’t UK results.",
+    "momentum": "Rising",
+    "region": "UK",
+    "platform": "LinkedIn",
+    "source": "PPC Land, 12 Nov; Social Media Today, 12 Nov",
+    "credit": "LinkedIn via Social Media Today",
+    "url": "https://www.socialmediatoday.com/news/linkedin-launches-ctv-ads-in-the-uk/874581/"
+   }
+  ]
+ },
+ "watch": [
+  {
+   "when": "Tue 17 Nov",
+   "title": "I’m A Celebrity episode 2",
+   "note": "9pm on ITV1 and ITVX."
+  },
+  {
+   "when": "Thu 19 Nov",
+   "title": "GTA 6 launches",
+   "note": "Expect feed takeovers, the album and YouTube’s 24-hour livestream."
+  },
+  {
+   "when": "Fri 20 Nov",
+   "title": "Hunger Games opens",
+   "note": "Sunrise on the Reaping in UK cinemas, per Flicks."
+  },
+  {
+   "when": "Sat 21 Nov",
+   "title": "Strictly Blackpool week",
+   "note": "A live Saturday show. Check the BBC listing for the time."
+  },
+  {
+   "when": "Fri 27 Nov",
+   "title": "Hexed in UK cinemas",
+   "note": "Disney UK’s cinema date. Black Friday is the same day."
+  }
+ ],
+ "desks": [
+  {
+   "id": "disney",
+   "name": "Disney UK",
+   "short": "Disney UK",
+   "byline": "Pip · Disney UK desk",
+   "color": "#4a74c9",
+   "logo": "logos/disney.png",
+   "ideas": [
+    {
+     "from": "Bond reveal",
+     "idea": "A Hexed “reveal” post that borrows the idea of one bold portrait and a date.",
+     "note": "Approved assets only. Cinema date Fri 27 Nov."
+    },
+    {
+     "from": "Hunger Games opens",
+     "idea": "A Hexed countdown post for cinema week.",
+     "note": "Approved assets only. No other release dates."
+    }
+   ],
+   "watch": "Hexed’s UK rating and assets need sign-off first. No other release dates go out."
+  },
+  {
+   "id": "family",
+   "name": "Disney Family UK",
+   "short": "Disney Family",
+   "byline": "Bo · Disney Family UK desk",
+   "color": "#a983cf",
+   "logo": "logos/disney.png",
+   "ideas": [
+    {
+     "from": "King and SpudBros",
+     "idea": "A “favourite jacket potato filling” poll for the family feed.",
+     "note": "Don’t name brands we don’t work with or use royal imagery."
+    },
+    {
+     "from": "Strictly Blackpool",
+     "idea": "A “family sofa night” post for Blackpool week.",
+     "note": "No spoilers about results."
+    }
+   ],
+   "watch": "No royal imagery or references in client content."
+  },
+  {
+   "id": "store",
+   "name": "Disney Store UK",
+   "short": "Disney Store",
+   "byline": "Lulu · Disney Store UK desk",
+   "color": "#d4567f",
+   "logo": "logos/disney-store.png",
+   "ideas": [
+    {
+     "from": "Christmas No.1 race",
+     "idea": "A “Christmas playlist and cosy gifts” post.",
+     "note": "Use products in stock only. No music clips."
+    },
+    {
+     "from": "GTA VI launch",
+     "idea": "A “limited drop” teaser format for any confirmed Disney Store release.",
+     "note": "Only products Disney Store confirms. No sell-out claims."
+    }
+   ],
+   "watch": "No Marvel or Hexed content without licensing sign-off."
+  },
+  {
+   "id": "muti",
+   "name": "Mutti UK",
+   "short": "Mutti",
+   "byline": "Kiki · Mutti UK desk",
+   "color": "#d8302b",
+   "logo": "logos/mutti.png",
+   "ideas": [
+    {
+     "from": "King and SpudBros",
+     "idea": "A “best topping on pasta” light poll, a nod to the jacket-potato debate.",
+     "note": "No royal references. Recipe must be approved by Mutti."
+    },
+    {
+     "from": "I’m A Celebrity",
+     "idea": "A “bushtucker-free dinner” post for the weeknight show.",
+     "note": "Recipe must be tested and approved by Mutti."
+    }
+   ],
+   "watch": "Don’t reference the King, other brands or shows by name."
+  },
+  {
+   "id": "on",
+   "name": "Optimum Nutrition UK",
+   "short": "Optimum Nutrition",
+   "byline": "Rex · Optimum Nutrition UK desk",
+   "color": "#c9962c",
+   "logo": "logos/on.png",
+   "ideas": [
+    {
+     "from": "Monday-to-Tuesday",
+     "idea": "A “second week” habit-building post, short and practical.",
+     "note": "Keep health claims within approved wording."
+    },
+    {
+     "from": "GTA VI launch",
+     "idea": "A “game night fuel” snack idea for Thursday.",
+     "note": "No game titles or artwork."
+    }
+   ],
+   "watch": "No health or performance claims beyond the approved list."
+  },
+  {
+   "id": "dfs",
+   "name": "DFS",
+   "short": "DFS",
+   "byline": "Dot · DFS desk",
+   "color": "#2f9c8f",
+   "logo": "logos/dfs.png",
+   "ideas": [
+    {
+     "from": "I’m A Celebrity",
+     "idea": "A “best seat for jungle night” sofa shot.",
+     "note": "No tagging ITV. Use approved product shots."
+    },
+    {
+     "from": "Christmas No.1 race",
+     "idea": "A “cosy Christmas playlist on the sofa” post.",
+     "note": "Use approved product shots. No music clips."
+    }
+   ],
+   "watch": "Any sale or price wording needs approval first."
+  }
+ ]
+}
