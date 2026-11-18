@@ -1,0 +1,283 @@
+{
+ "edition": "The daily",
+ "coverTitle": "The daily",
+ "coverSub": "what’s *moving* on social",
+ "dateLabel": "Wednesday 18 November",
+ "floorUrl": "https://claude.ai/artifact/QByUaU2dzAX6fAwH2X3jVb",
+ "sections": {
+  "saw": [
+   {
+    "short": "KFC UK joins GTA VI launch day with a pink Cadillac",
+    "headline": "*KFC UK* joins GTA VI launch day with a pink Cadillac",
+    "what": "KFC UK and Ireland says it will deliver GTA-inspired “Cluck n’ Bell” meals from a hot pink Cadillac to a limited number of London competition winners on Thursday 19 Nov, per Dexerto. It is inspired by GTA’s Cluckin’ Bell but isn’t an official Rockstar collaboration. KFC Australia is also staging a fake funeral for a GTA day off, which is Australia only.",
+    "why": "Brands are fighting for a slice of launch day. KFC’s version is local and visual.",
+    "momentum": "Rising",
+    "region": "UK",
+    "platform": "Instagram",
+    "source": "Dexerto, 17 Nov; Metro, 17 Nov",
+    "credit": "KFC via Dexerto",
+    "url": "https://www.dexerto.com/food/kfc-brings-gta-inspired-cluck-n-bell-to-life-with-delivery-car-straight-out-of-gta-6-3428986/",
+    "image": "images/kfc.jpg"
+   },
+   {
+    "short": "McDonald's UK Christmas menu brings back Home Alone",
+    "headline": "*McDonald’s UK* Christmas menu brings back Home Alone",
+    "what": "McDonald’s UK and Ireland’s Christmas menu launched on 17 Nov, per Metro, with a Home Alone Meal that includes a pair of socks in a mystery box, from £9.49. Macaulay Culkin is back as Kevin in the ad. Famous Campaigns says the Home Alone Meal reaches US restaurants on 1 December, which isn’t the UK date.",
+    "why": "A nostalgic film link inside a food launch. A strong template for film-led brand work.",
+    "momentum": "Rising",
+    "region": "UK",
+    "platform": "TikTok & Instagram",
+    "source": "Metro, 17 Nov; Famous Campaigns, 17 Nov",
+    "credit": "McDonald’s via Famous Campaigns",
+    "url": "https://metro.co.uk/2026/11/17/mcdonalds-unveils-christmas-menu-2026-home-alone-adult-happy-meal-29797774",
+    "image": "images/mcdonalds.jpg"
+   },
+   {
+    "short": "Amazon's Prime holiday ad stars Arnold Schwarzenegger as Santa",
+    "headline": "*Amazon’s Prime holiday ad* stars Arnold Schwarzenegger as Santa",
+    "what": "Amazon’s new Prime holiday ad has Arnold Schwarzenegger ordering a Santa suit and going undercover in New York, per Amazon’s own page. It promotes the Prime Video film The Man with the Bag, streaming globally from 2 December, and deals run 19–30 Nov. Amazon’s page is US-based, so we haven’t confirmed the UK run.",
+    "why": "A celebrity ad that doubles as a film trailer. The UK run is not confirmed.",
+    "momentum": "Rising",
+    "region": "Global",
+    "platform": "YouTube & TV",
+    "source": "Amazon, 16 Nov",
+    "credit": "Amazon",
+    "url": "https://www.aboutamazon.com/news/retail/arnold-schwarzenegger-amazon-holiday-ad-santa",
+    "image": "images/amazon.jpg"
+   },
+   {
+    "short": "BBC puts most Christmas specials on iPlayer from 27 Nov",
+    "headline": "The *BBC* puts most Christmas specials on iPlayer from 27 Nov",
+    "what": "Most of the BBC’s 2026 Christmas specials, including Death in Paradise and Mortimer & Whitehouse: Gone Fishing, arrive on iPlayer from Friday 27 Nov, per a BBC statement quoted by Metro. Metro says viewers are divided on X, with some calling it too early. It isn’t the whole schedule.",
+    "why": "Christmas TV is arriving four weeks early. People have strong opinions about it.",
+    "momentum": "Rising",
+    "region": "UK",
+    "platform": "X",
+    "source": "Metro, 17 Nov",
+    "credit": "BBC via Metro",
+    "url": "https://metro.co.uk/2026/11/17/bbc-releasing-festive-specials-a-whopping-28-days-christmas-29797831",
+    "image": "images/bbc.jpg"
+   },
+   {
+    "short": "Arsenal's Max Dowman, 16, becomes England U21's youngest scorer",
+    "headline": "Arsenal’s *Max Dowman*, 16, becomes England U21’s youngest scorer",
+    "what": "Arsenal’s Max Dowman, 16, scored a late winner in England Under-21s’ 3-2 win over France in Bristol on Monday, becoming their youngest ever scorer, per Metro and ESPN. Metro puts his age at 16 years 320 days. He had become their youngest ever player on Friday, as a substitute against Portugal. England’s match against France was a friendly.",
+    "why": "A teenage record with a clip that travels. Football fans love a prodigy.",
+    "momentum": "Rising",
+    "region": "UK",
+    "platform": "X & Instagram",
+    "source": "Metro, 17 Nov; ESPN",
+    "credit": "Metro",
+    "url": "https://metro.co.uk/2026/11/17/arsenal-wonderkid-max-dowman-smashes-jude-bellingham-england-under-21-record-29797480",
+    "image": "images/dowman.jpg"
+   },
+   {
+    "short": "The Hunger Games prequel opens Friday after its New York premiere",
+    "headline": "*The Hunger Games* prequel opens Friday after its New York premiere",
+    "what": "The Hunger Games: Sunrise on the Reaping opens in UK cinemas on Friday 20 Nov. The original cast, including Jennifer Lawrence, Josh Hutcherson, Woody Harrelson and Elizabeth Banks, attended its New York premiere on Monday, per indy100. Radio Times calls it a 158-minute spectacle.",
+    "why": "A big film week for the cinema calendar. Useful for Disney UK’s own countdown.",
+    "momentum": "Peaking",
+    "region": "UK",
+    "platform": "TikTok & X",
+    "source": "indy100, 17 Nov; Radio Times, 17 Nov",
+    "credit": "Getty via indy100",
+    "url": "https://www.indy100.com/celebrities/the-hunger-games-cast-reunion-sunrise-on-the-reaping-premiere",
+    "image": "images/hungergames.jpg"
+   }
+  ],
+  "platform": [
+   {
+    "short": "Instagram brings content protection to creators",
+    "headline": "Instagram brings *content protection* to creators",
+    "what": "Instagram says eligible creators who enrol will get alerts when others repost their original videos, with matches found across Instagram and Facebook. It was previously Facebook-only, per Instagram’s own post. Eligibility and markets aren’t stated.",
+    "why": "A tool against reposted work. Check if client creators qualify.",
+    "momentum": "Rising",
+    "region": "Global",
+    "platform": "Instagram",
+    "source": "Instagram, 17 Nov; Social Media Today, 17 Nov",
+    "credit": "Instagram via Social Media Today",
+    "url": "https://www.socialmediatoday.com/news/meta-expands-content-protection-to-instagram/874965/",
+    "image": "images/igprotect.jpg"
+   },
+   {
+    "short": "YouTube adds estimated co-views to TV view counts",
+    "headline": "YouTube adds *estimated co-views* to TV view counts",
+    "what": "YouTube says public view counts now include estimated co-views for plays on TV, using a model, and that it never uses cameras, microphones or sensors. Phone, tablet and computer plays still count once. It adds a private “co-view rate” metric in Studio and says it doesn’t affect revenue or Partner Programme eligibility.",
+    "why": "TV views may count for more than one person. Reach numbers will shift.",
+    "momentum": "Rising",
+    "region": "Global",
+    "platform": "YouTube",
+    "source": "YouTube Help, 16 Nov; Dexerto, 17 Nov",
+    "credit": "YouTube",
+    "url": "https://www.dexerto.com/entertainment/youtube-now-shows-co-views-in-big-shake-up-to-view-counts-3428863/"
+   },
+   {
+    "short": "Meta tests a standalone messaging app called Direct",
+    "headline": "Meta tests a standalone messaging app called *Direct*",
+    "what": "Meta says it is testing Direct, a standalone messaging app from Instagram, in Türkiye and Thailand on Android and iOS. Users must be 13 or over, and existing Instagram chats sync across both apps. Meta’s post doesn’t call it a teen app. It is a test, not a launch.",
+    "why": "Meta is testing a split between Instagram and its messaging. Nothing live in the UK.",
+    "momentum": "Rising",
+    "region": "Global",
+    "platform": "Instagram",
+    "source": "Meta, 17 Nov; Social Media Today, 17 Nov",
+    "credit": "Meta",
+    "url": "https://about.fb.com/news/2026/11/introducing-direct-an-app-just-for-messaging/"
+   }
+  ]
+ },
+ "watch": [
+  {
+   "when": "Wed 18 Nov",
+   "title": "Pochettino starts at Man Utd",
+   "note": "From 18 November per the club statement. First game is at Liverpool on Sunday 22 Nov, per Metro."
+  },
+  {
+   "when": "Thu 19 Nov",
+   "title": "GTA 6 launches",
+   "note": "KFC UK’s London Cadillac drop and YouTube’s 24-hour livestream are the same day."
+  },
+  {
+   "when": "Fri 20 Nov",
+   "title": "Hunger Games opens",
+   "note": "Sunrise on the Reaping in UK cinemas, per Radio Times."
+  },
+  {
+   "when": "Sat 21 Nov",
+   "title": "Strictly Blackpool week",
+   "note": "A live Saturday show. Check the BBC listing for the time."
+  },
+  {
+   "when": "Fri 27 Nov",
+   "title": "Hexed in UK cinemas",
+   "note": "Disney UK’s cinema date. BBC Christmas specials also reach iPlayer."
+  }
+ ],
+ "desks": [
+  {
+   "id": "disney",
+   "name": "Disney UK",
+   "short": "Disney UK",
+   "byline": "Pip · Disney UK desk",
+   "color": "#4a74c9",
+   "logo": "logos/disney.png",
+   "ideas": [
+    {
+     "from": "Hunger Games premiere",
+     "idea": "A Hexed “cast reunion” style post, if approved talent and assets are available.",
+     "note": "Approved assets only. Cinema date Fri 27 Nov."
+    },
+    {
+     "from": "McDonald’s Home Alone",
+     "idea": "A Hexed nostalgic-callback idea, a fun “first film you saw at the cinema” prompt.",
+     "note": "No film clips from other studios."
+    }
+   ],
+   "watch": "Hexed’s UK rating and assets need sign-off first. No other release dates go out."
+  },
+  {
+   "id": "family",
+   "name": "Disney Family UK",
+   "short": "Disney Family",
+   "byline": "Bo · Disney Family UK desk",
+   "color": "#a983cf",
+   "logo": "logos/disney.png",
+   "ideas": [
+    {
+     "from": "BBC Christmas specials",
+     "idea": "A “family Christmas TV plan” post for 27 Nov.",
+     "note": "Don’t name BBC shows as endorsements."
+    },
+    {
+     "from": "Home Alone",
+     "idea": "A “first film you watched with your family” prompt.",
+     "note": "No clips from other studios."
+    }
+   ],
+   "watch": "Keep any Christmas content clear of other brands’ ads."
+  },
+  {
+   "id": "store",
+   "name": "Disney Store UK",
+   "short": "Disney Store",
+   "byline": "Lulu · Disney Store UK desk",
+   "color": "#d4567f",
+   "logo": "logos/disney-store.png",
+   "ideas": [
+    {
+     "from": "Christmas ads",
+     "idea": "A “first Christmas gifts” gift-guide post.",
+     "note": "Use products in stock only."
+    },
+    {
+     "from": "GTA VI launch",
+     "idea": "A “limited drop” teaser format for any confirmed Disney Store release.",
+     "note": "Only products Disney Store confirms. No sell-out claims."
+    }
+   ],
+   "watch": "No Marvel or Hexed content without licensing sign-off."
+  },
+  {
+   "id": "muti",
+   "name": "Mutti UK",
+   "short": "Mutti",
+   "byline": "Kiki · Mutti UK desk",
+   "color": "#d8302b",
+   "logo": "logos/mutti.png",
+   "ideas": [
+    {
+     "from": "McDonald’s Home Alone",
+     "idea": "A “home alone dinner” tomato pasta post, a nod to a cosy night in.",
+     "note": "Recipe must be tested and approved by Mutti."
+    },
+    {
+     "from": "KFC and GTA",
+     "idea": "A “delivery-night dinner at home” post for Thursday.",
+     "note": "Recipe must be approved by Mutti. No brand references."
+    }
+   ],
+   "watch": "Don’t reference other brands, films or games by name."
+  },
+  {
+   "id": "on",
+   "name": "Optimum Nutrition UK",
+   "short": "Optimum Nutrition",
+   "byline": "Rex · Optimum Nutrition UK desk",
+   "color": "#c9962c",
+   "logo": "logos/on.png",
+   "ideas": [
+    {
+     "from": "Dowman’s record",
+     "idea": "A “youth training” tip idea with no club or player marks.",
+     "note": "Keep health claims within approved wording."
+    },
+    {
+     "from": "GTA VI launch",
+     "idea": "A “game night fuel” snack idea for Thursday.",
+     "note": "No game titles or artwork."
+    }
+   ],
+   "watch": "No health or performance claims beyond the approved list."
+  },
+  {
+   "id": "dfs",
+   "name": "DFS",
+   "short": "DFS",
+   "byline": "Dot · DFS desk",
+   "color": "#2f9c8f",
+   "logo": "logos/dfs.png",
+   "ideas": [
+    {
+     "from": "GTA VI launch",
+     "idea": "A “gaming night on the sofa” post for Thursday.",
+     "note": "No game titles or artwork. Use approved product shots."
+    },
+    {
+     "from": "BBC Christmas specials",
+     "idea": "A “Christmas TV on the sofa” post for 27 Nov.",
+     "note": "No tagging the BBC. Use approved product shots."
+    }
+   ],
+   "watch": "Any sale or price wording needs approval first."
+  }
+ ]
+}
