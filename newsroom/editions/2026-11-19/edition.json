@@ -1,0 +1,272 @@
+{
+ "edition": "The daily",
+ "coverTitle": "The daily",
+ "coverSub": "what’s *moving* on social",
+ "dateLabel": "Thursday 19 November",
+ "floorUrl": "https://claude.ai/artifact/QByUaU2dzAX6fAwH2X3jVb",
+ "sections": {
+  "saw": [
+   {
+    "short": "GTA VI launches in the UK at midnight",
+    "headline": "*GTA VI* launches in the UK at midnight with a 99 on Metacritic",
+    "what": "GTA VI goes live in the UK at midnight on Thursday 19 Nov, with a 99 on Metacritic from 150 critic reviews, level with the original Ocarina of Time as the highest-rated game ever, per Metacritic and BBC Newsbeat. Sensor Tower estimates more than 17 million pre-orders. A Belfast school is offering a prize draw for £70 gift cards to get pupils to turn up on launch day.",
+    "why": "A launch that has taken over feeds and school letters. Today is the peak.",
+    "momentum": "Peaking",
+    "region": "UK",
+    "platform": "X, TikTok & YouTube",
+    "source": "Metacritic, 19 Nov; BBC Newsbeat, 18 Nov; Metro, 18 Nov",
+    "credit": "Rockstar via Metro",
+    "url": "https://metro.co.uk/2026/11/18/gta-6-tops-metacritic-chart-highest-rated-video-game-ever-29801260/",
+    "image": "images/gta.jpg"
+   },
+   {
+    "short": "Glastonbury 2027 headliners are Sam Fender, Harry Styles and Billie Eilish",
+    "headline": "*Glastonbury 2027* headliners: Sam Fender, Harry Styles and Billie Eilish",
+    "what": "Glastonbury 2027 has named Sam Fender, Harry Styles and Billie Eilish as headliners, with Cher in the Sunday legends slot, per BBC News and NME. Kraftwerk, Massive Attack, Lily Allen and Chase & Status are also on the bill. Tickets were £408, according to the BBC.",
+    "why": "The biggest UK music announcement of the year. Line-up reaction travels fast.",
+    "momentum": "Peaking",
+    "region": "UK",
+    "platform": "X & Instagram",
+    "source": "BBC News, 18 Nov; NME, 18 Nov",
+    "credit": "NME file photo",
+    "url": "https://www.bbc.co.uk/news/articles/crwy4w381nlpo",
+    "image": "images/glasto.jpg"
+   },
+   {
+    "short": "I'm A Celebrity adds late arrival Leigh Francis",
+    "headline": "*I’m A Celebrity* adds late arrival Leigh Francis",
+    "what": "Leigh Francis, 53, was due to enter I’m A Celebrity on Wednesday night as a late arrival, with a secret mission first, per Metro and LADbible. Correction: our Tuesday edition said AJ Odudu was sent home, but the show has since told her “all is not as it seems”, and where she is now is unconfirmed. We haven’t seen a report of how Wednesday’s entry went.",
+    "why": "A show twist keeps fans talking. We’re also correcting Tuesday’s item.",
+    "momentum": "Rising",
+    "region": "UK",
+    "platform": "ITV & X",
+    "source": "Metro, 18 Nov; LADbible, 18 Nov",
+    "credit": "ITV via Metro",
+    "url": "https://metro.co.uk/2026/11/18/leigh-francis-enter-im-a-celebrity-camp-tonight-late-entry-29801816/",
+    "image": "images/leigh.jpg",
+    "spoiler": true
+   },
+   {
+    "short": "Leigh-Anne Pinnock welcomes a baby boy",
+    "headline": "*Leigh-Anne Pinnock* welcomes a baby boy, with a Celebrity Traitors nod",
+    "what": "Leigh-Anne Pinnock announced on Instagram on Wednesday that she has had a baby boy, her third child, per Metro, the Mirror and The Independent. Her caption includes a helicopter emoji, a nod to abseiling out of a helicopter in the Celebrity Traitors finale. She hasn’t shared his name.",
+    "why": "A warm moment tied to a show people loved. The Traitors link made it travel.",
+    "momentum": "Rising",
+    "region": "UK",
+    "platform": "Instagram",
+    "source": "Metro, 18 Nov; Mirror; The Independent",
+    "credit": "BBC/Studio Lambert via Metro",
+    "url": "https://metro.co.uk/2026/11/18/leigh-anne-pinnock-gives-birth-baby-celebrity-traitors-nod-sweet-announcement-29802660/",
+    "image": "images/pinnock.jpg"
+   },
+   {
+    "short": "Hunger Games prequel reviews are mixed to good",
+    "headline": "*Hunger Games* prequel reviews are mixed to good as UK cinemas open Friday",
+    "what": "The Hunger Games: Sunrise on the Reaping is at about 72% on Rotten Tomatoes and 55 on Metacritic, with Time Out giving it 4 out of 5, as of Thursday morning. Radio Times says it opens in UK cinemas on Friday 20 Nov. A claim of a one-star Guardian review rests on one blog, so we’ve left it out.",
+    "why": "A big film week with split critics. Audience reaction will decide the tone.",
+    "momentum": "Peaking",
+    "region": "Global",
+    "platform": "X & TikTok",
+    "source": "Rotten Tomatoes, 19 Nov; Metacritic; Time Out",
+    "credit": "Lionsgate via Time Out",
+    "url": "https://www.timeout.com/movies/the-hunger-games-sunrise-on-the-reaping-review-2026",
+    "image": "images/hungergames.jpg"
+   }
+  ],
+  "platform": [
+   {
+    "short": "Snapchat lets creators build Lenses with AI coding assistants",
+    "headline": "Snapchat lets creators *build Lenses with AI coding assistants*",
+    "what": "Snap says Easy Lens CLI is free with a Snapchat account and available now, so developers can build Lenses through AI coding assistants they already use. It includes 100+ AR building blocks and 50+ AI asset generators. Snap says it paid $1.8 million to Lens+ creators last month. No countries are listed.",
+    "why": "Easier Lens building for brands and creators. No region limits stated.",
+    "momentum": "Rising",
+    "region": "Global",
+    "platform": "Snapchat",
+    "source": "Snap newsroom, 18 Nov; Social Media Today, 18 Nov",
+    "credit": "Snap",
+    "url": "https://newsroom.snap.com/introducing-easy-lens-cli",
+    "image": "images/snaplens.jpg"
+   },
+   {
+    "short": "Meta's Creator Dashboard comes to the web",
+    "headline": "Meta’s *Creator Dashboard* comes to the web",
+    "what": "Meta says creator tools from Business Suite are now in the Creator Dashboard on the web. They include a new web composer for Feed posts and Reels, bulk video upload, a content library, Instagram insights, inbox and content protection. The blog doesn’t list countries.",
+    "why": "Posting and reporting for creators in one place on desktop.",
+    "momentum": "Rising",
+    "region": "Global",
+    "platform": "Facebook & Instagram",
+    "source": "Meta creators blog, 18 Nov; Social Media Today, 18 Nov",
+    "credit": "Meta via Social Media Today",
+    "url": "https://creators.facebook.com/blog/creator-dashboard-web-tools",
+    "image": "images/metadash.jpg"
+   },
+   {
+    "short": "Snapchat opens its creator marketplace to beta",
+    "headline": "Snapchat opens its *AI creator marketplace* to beta",
+    "what": "Snap says Snap Creator Network, an AI-powered creator discovery tool for advertisers, is now in open beta, and its “Visited By” Snap Map feature is available globally. Snap also announced a two-tier Creator Agency Partner Program. Snap says over 450 million people visit Snap Map every month. Beta regions aren’t stated.",
+    "why": "Snap is courting agencies and advertisers. Worth a look for creator briefs.",
+    "momentum": "Rising",
+    "region": "Global",
+    "platform": "Snapchat",
+    "source": "Snap for Business, 18 Nov",
+    "credit": "Snap",
+    "url": "https://forbusiness.snapchat.com/blog/snapchat-expands-creator-ad-solutions"
+   }
+  ]
+ },
+ "watch": [
+  {
+   "when": "Thu 19 Nov",
+   "title": "GTA 6 launches",
+   "note": "UK midnight launch. KFC UK’s London Cadillac drop and YouTube’s 24-hour livestream are the same day."
+  },
+  {
+   "when": "Fri 20 Nov",
+   "title": "Hunger Games opens",
+   "note": "Sunrise on the Reaping in UK cinemas, per Radio Times."
+  },
+  {
+   "when": "Sat 21 Nov",
+   "title": "Strictly Blackpool week",
+   "note": "A live Saturday show. Check the BBC listing for the time."
+  },
+  {
+   "when": "Sun 22 Nov",
+   "title": "Liverpool v Man Utd",
+   "note": "Pochettino’s first game, Anfield, 4.30pm per BBC."
+  },
+  {
+   "when": "Fri 27 Nov",
+   "title": "Hexed in UK cinemas",
+   "note": "Disney UK’s cinema date. Black Friday and BBC iPlayer Christmas specials are the same day."
+  }
+ ],
+ "desks": [
+  {
+   "id": "disney",
+   "name": "Disney UK",
+   "short": "Disney UK",
+   "byline": "Pip · Disney UK desk",
+   "color": "#4a74c9",
+   "logo": "logos/disney.png",
+   "ideas": [
+    {
+     "from": "Hunger Games opening",
+     "idea": "A Hexed “opening week” countdown post, one clear image a day.",
+     "note": "Approved assets only. Cinema date Fri 27 Nov."
+    },
+    {
+     "from": "GTA VI launch",
+     "idea": "A Hexed “what are you doing tonight” teaser.",
+     "note": "No game references in artwork. Approved footage only."
+    }
+   ],
+   "watch": "Hexed’s UK rating and assets need sign-off first. No other release dates go out."
+  },
+  {
+   "id": "family",
+   "name": "Disney Family UK",
+   "short": "Disney Family",
+   "byline": "Bo · Disney Family UK desk",
+   "color": "#a983cf",
+   "logo": "logos/disney.png",
+   "ideas": [
+    {
+     "from": "Glastonbury line-up",
+     "idea": "A “which act would you take the family to see?” prompt.",
+     "note": "No artist imagery. Check any festival references first."
+    },
+    {
+     "from": "Strictly Blackpool",
+     "idea": "A “family sofa night” post for Blackpool week.",
+     "note": "No spoilers about results."
+    }
+   ],
+   "watch": "No third-party artist or show imagery without sign-off."
+  },
+  {
+   "id": "store",
+   "name": "Disney Store UK",
+   "short": "Disney Store",
+   "byline": "Lulu · Disney Store UK desk",
+   "color": "#d4567f",
+   "logo": "logos/disney-store.png",
+   "ideas": [
+    {
+     "from": "Christmas season",
+     "idea": "A “first gifts of Christmas” gift-guide post.",
+     "note": "Use products in stock only."
+    },
+    {
+     "from": "GTA VI launch",
+     "idea": "A “limited drop” teaser format for any confirmed Disney Store release.",
+     "note": "Only products Disney Store confirms. No sell-out claims."
+    }
+   ],
+   "watch": "No Marvel or Hexed content without licensing sign-off."
+  },
+  {
+   "id": "muti",
+   "name": "Mutti UK",
+   "short": "Mutti",
+   "byline": "Kiki · Mutti UK desk",
+   "color": "#d8302b",
+   "logo": "logos/mutti.png",
+   "ideas": [
+    {
+     "from": "GTA VI night in",
+     "idea": "A “launch-night dinner” tomato pasta post for gamers.",
+     "note": "Recipe must be tested and approved by Mutti. No game references."
+    },
+    {
+     "from": "Glastonbury line-up",
+     "idea": "A “festival food at home” tomato bake idea.",
+     "note": "Recipe must be approved by Mutti."
+    }
+   ],
+   "watch": "Don’t reference games, artists or other brands by name."
+  },
+  {
+   "id": "on",
+   "name": "Optimum Nutrition UK",
+   "short": "Optimum Nutrition",
+   "byline": "Rex · Optimum Nutrition UK desk",
+   "color": "#c9962c",
+   "logo": "logos/on.png",
+   "ideas": [
+    {
+     "from": "GTA VI launch",
+     "idea": "A “game night fuel” snack idea for tonight.",
+     "note": "No game titles or artwork."
+    },
+    {
+     "from": "Glastonbury 2027",
+     "idea": "A “festival-ready by June” training teaser, no artist marks.",
+     "note": "Keep health claims within approved wording."
+    }
+   ],
+   "watch": "No health or performance claims beyond the approved list."
+  },
+  {
+   "id": "dfs",
+   "name": "DFS",
+   "short": "DFS",
+   "byline": "Dot · DFS desk",
+   "color": "#2f9c8f",
+   "logo": "logos/dfs.png",
+   "ideas": [
+    {
+     "from": "GTA VI launch",
+     "idea": "A “gaming night on the sofa” post for tonight.",
+     "note": "No game titles or artwork. Use approved product shots."
+    },
+    {
+     "from": "Strictly Blackpool",
+     "idea": "A “best seat in the house” sofa shot for Saturday.",
+     "note": "No tagging the show or BBC."
+    }
+   ],
+   "watch": "Any sale or price wording needs approval first."
+  }
+ ]
+}
