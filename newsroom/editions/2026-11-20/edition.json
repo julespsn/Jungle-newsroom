@@ -1,0 +1,281 @@
+{
+ "edition": "Best of the week",
+ "coverTitle": "Best of the week",
+ "coverSub": "what *carried on* growing",
+ "dateLabel": "Friday 20 November",
+ "floorUrl": "https://claude.ai/artifact/QByUaU2dzAX6fAwH2X3jVb",
+ "sections": {
+  "saw": [
+   {
+    "short": "GTA VI's launch week: estimated 24.5m units in first-day sales",
+    "headline": "*GTA VI’s launch week*: an estimated 24.5 million units by day one",
+    "what": "Sensor Tower estimates pre-orders plus first-day sales at more than 24.5 million units, around $2.36 billion, per BBC News. About three quarters are on PS5. Rockstar and Take-Two have given no sales figures and called demand “unprecedented”. Metro’s reviewer reported no obvious server issues at launch.",
+    "why": "The week’s biggest shared moment, from leaks to launch. All the sales figures are estimates.",
+    "momentum": "Peaking",
+    "region": "Global",
+    "platform": "X, TikTok & YouTube",
+    "source": "BBC News, 20 Nov; Metro, 19 Nov",
+    "credit": "Rockstar via Metro",
+    "url": "https://www.bbc.co.uk/news/articles/c9zr5nyv5dj2o",
+    "image": "images/gta.jpg"
+   },
+   {
+    "short": "Robert Pattinson is the next Bond, and Pierce Brosnan welcomes him",
+    "headline": "*Robert Pattinson* is the next Bond, and Pierce Brosnan welcomes him",
+    "what": "Amazon MGM announced Robert Pattinson as the next James Bond on Monday, per Deadline and Variety, with Denis Villeneuve directing. Pierce Brosnan posted “Welcome to the world of Bond. You are going to be magnificent”, and George Lazenby also welcomed him, per Metro. No release date has been announced.",
+    "why": "The biggest casting reveal of the year. The reaction from past Bonds kept it going.",
+    "momentum": "Peaking",
+    "region": "UK",
+    "platform": "Instagram & X",
+    "source": "Deadline, 16 Nov; Variety, 16 Nov; Metro, 19 Nov",
+    "credit": "Getty via Metro",
+    "url": "https://metro.co.uk/2026/11/19/pierce-brosnan-breaks-silence-magnificent-robert-pattinson-becoming-james-bond-29803474/",
+    "image": "images/bond.jpg"
+   },
+   {
+    "short": "I'm A Celebrity's first week: a twist, a late arrival and a lower launch audience",
+    "headline": "*I’m A Celebrity’s first week*: a twist, a late arrival and a lower launch audience",
+    "what": "AJ Odudu’s day-one “elimination” wasn’t real: Radio Times says she joined late arrival Leigh Francis as he entered camp on Wednesday. Metro reports Monday’s launch had 4.8 million overnight viewers, the lowest launch overnight for the show, against 6.6 million last year, with streaming adding more than a million. These are Metro’s figures.",
+    "why": "A week of talking points. The audience figure is worth watching for ITV.",
+    "momentum": "Rising",
+    "region": "UK",
+    "platform": "ITV & X",
+    "source": "Radio Times, 19 Nov; Metro, 18 Nov",
+    "credit": "ITV via Metro",
+    "url": "https://www.radiotimes.com/tv/entertainment/reality-tv/who-left-im-a-celebrity-2026/",
+    "image": "images/leigh.jpg",
+    "spoiler": true
+   },
+   {
+    "short": "Early System1 scores put M&S, Morrisons, Sainsbury's and Aldi on 5.9 stars",
+    "headline": "Early System1 scores: *M&S, Morrisons, Sainsbury’s and Aldi on 5.9 stars*",
+    "what": "System1’s early Christmas ad leaderboard, with data to 12 Nov, has M&S “The Home of Christmas” on 5.9 stars, Morrisons and Sainsbury’s on 5.9, Aldi on 5.9 and Waitrose’s “The Perfect Gift 2” on 5.6, per 365 Retail. Supermarkets take seven of the top 12. John Lewis isn’t in the top 12. Scores are early.",
+    "why": "Christmas ads were the season’s big talking point. Early data is a guide, not a result.",
+    "momentum": "Rising",
+    "region": "UK",
+    "platform": "YouTube & TV",
+    "source": "365 Retail, 14 Nov (System1 data to 12 Nov)",
+    "credit": "Waitrose via Metro",
+    "url": "https://365retail.co.uk/morrisons-sainsburys-top-system1-christmas-ad-leaderboard/",
+    "image": "images/xmasads.jpg"
+   },
+   {
+    "short": "Pochettino's first Man Utd training session was filmed by a drone",
+    "headline": "*Pochettino’s first Man Utd training session* was filmed by a drone",
+    "what": "BBC Sport reports a drone operator filmed 12 minutes of Pochettino’s first full-squad training session and posted it to YouTube, saying it was legal. Metro says United are 18th and winless in eight. His first game is at Liverpool on Sunday, kick-off 4.30pm per BBC.",
+    "why": "A new boss, a viral clip and a big Sunday game. Football fans will fill feeds.",
+    "momentum": "Peaking",
+    "region": "UK",
+    "platform": "YouTube & X",
+    "source": "BBC Sport, 19 Nov; Metro, 19 Nov",
+    "credit": "Getty via CNN",
+    "url": "https://www.bbc.co.uk/sport/football/articles/c6wy9d7wqy7wo",
+    "image": "images/pochettino.jpg"
+   },
+   {
+    "short": "KPop Demon Hunters announces nine UK and Ireland dates for 2027",
+    "headline": "*KPop Demon Hunters* announces nine UK and Ireland dates for 2027",
+    "what": "Netflix’s KPop Demon Hunters Golden World Tour has nine UK and Ireland dates in October 2027, including Glasgow OVO Hydro, Manchester AO Arena and two nights at London’s O2, per Radio Times. General sale is at 10am on Friday 20 Nov. Radio Times is the only source we have.",
+    "why": "A family-friendly fan frenzy with a ticket queue. Good one for the Friday feed.",
+    "momentum": "Rising",
+    "region": "UK",
+    "platform": "TikTok & Instagram",
+    "source": "Radio Times, 19 Nov",
+    "credit": "Netflix via Radio Times",
+    "url": "https://www.radiotimes.com/going-out/tickets/kpop-demon-hunters-tickets/",
+    "image": "images/kpop.jpg"
+   }
+  ],
+  "platform": [
+   {
+    "short": "Instagram lets you edit Stories for 15 minutes after posting",
+    "headline": "Instagram lets you *edit Stories* for 15 minutes after posting",
+    "what": "Instagram says users can edit a published Story for up to 15 minutes, per Social Media Today. It also adds easier multi-image selection, a new sticker selector and more colour gradients. Rollout dates and countries aren’t stated.",
+    "why": "Fewer deleted-and-reposted Stories. Check the feature’s rollout in the app.",
+    "momentum": "Rising",
+    "region": "Global",
+    "platform": "Instagram",
+    "source": "Social Media Today, 19 Nov",
+    "credit": "Instagram via Social Media Today",
+    "url": "https://www.socialmediatoday.com/news/instagram-adds-stories-editing/875261/",
+    "image": "images/igstories.jpg"
+   },
+   {
+    "short": "Threads tests upvoted Q&A in live chats",
+    "headline": "Threads tests *upvoted Q&A* in live chats",
+    "what": "Threads is testing a Q&A option in live chats, where hosts collect questions and participants vote on which to ask, per Social Media Today. All participants can read the responses. It is a test with selected live chats only.",
+    "why": "A way to run brand Q&As on Threads. Test only for now.",
+    "momentum": "Rising",
+    "region": "Global",
+    "platform": "Threads",
+    "source": "Social Media Today, 19 Nov",
+    "credit": "Threads via Social Media Today",
+    "url": "https://www.socialmediatoday.com/news/threads-tests-new-qa-option-in-live-chats/875287/",
+    "image": "images/threadsqa.jpg"
+   },
+   {
+    "short": "Snapchat will show who your mutual friends are",
+    "headline": "Snapchat will show *who your mutual friends are*",
+    "what": "Snapchat says profiles will list friends you have in common, where it currently shows only a count, per Social Media Today. It is opt-in and both users must opt in. The launch date isn’t stated.",
+    "why": "More social-graph detail on Snapchat. Opt-in, so reach will be limited.",
+    "momentum": "Rising",
+    "region": "Global",
+    "platform": "Snapchat",
+    "source": "Social Media Today, 17 Nov",
+    "credit": "Snapchat via Social Media Today",
+    "url": "https://www.socialmediatoday.com/news/snapchat-will-show-more-info-on-mutual-friends/874967/",
+    "image": "images/snapmutual.jpg"
+   }
+  ]
+ },
+ "watch": [
+  {
+   "when": "Fri 20 Nov",
+   "title": "Hunger Games opens, KPop tickets on sale",
+   "note": "Sunrise on the Reaping is in UK cinemas today. KPop Demon Hunters tickets are on general sale at 10am."
+  },
+  {
+   "when": "Sat 21 Nov",
+   "title": "Strictly Blackpool week",
+   "note": "A live Saturday show. Check the BBC listing for the time."
+  },
+  {
+   "when": "Sun 22 Nov",
+   "title": "Liverpool v Man Utd",
+   "note": "Pochettino’s first game, Anfield, 4.30pm per BBC."
+  },
+  {
+   "when": "Fri 27 Nov",
+   "title": "Hexed in UK cinemas",
+   "note": "Disney UK’s cinema date. Black Friday and BBC iPlayer Christmas specials are the same day."
+  }
+ ],
+ "desks": [
+  {
+   "id": "disney",
+   "name": "Disney UK",
+   "short": "Disney UK",
+   "byline": "Pip · Disney UK desk",
+   "color": "#4a74c9",
+   "logo": "logos/disney.png",
+   "ideas": [
+    {
+     "from": "Hunger Games opening",
+     "idea": "A Hexed “one week to go” post, one bold image and a date.",
+     "note": "Approved assets only. Cinema date Fri 27 Nov."
+    },
+    {
+     "from": "KPop Demon Hunters ticket frenzy",
+     "idea": "A “squad you’re taking to the cinema” prompt for Hexed.",
+     "note": "No third-party film imagery. Approved footage only."
+    }
+   ],
+   "watch": "Hexed’s UK rating and assets need sign-off first. No other release dates go out."
+  },
+  {
+   "id": "family",
+   "name": "Disney Family UK",
+   "short": "Disney Family",
+   "byline": "Bo · Disney Family UK desk",
+   "color": "#a983cf",
+   "logo": "logos/disney.png",
+   "ideas": [
+    {
+     "from": "KPop Demon Hunters tour",
+     "idea": "A “which family member sings loudest?” prompt for the weekend feed.",
+     "note": "No Netflix or film imagery."
+    },
+    {
+     "from": "Strictly Blackpool",
+     "idea": "A “family sofa night” post for Blackpool week.",
+     "note": "No spoilers about results."
+    }
+   ],
+   "watch": "No third-party film or show imagery without sign-off."
+  },
+  {
+   "id": "store",
+   "name": "Disney Store UK",
+   "short": "Disney Store",
+   "byline": "Lulu · Disney Store UK desk",
+   "color": "#d4567f",
+   "logo": "logos/disney-store.png",
+   "ideas": [
+    {
+     "from": "Christmas ads",
+     "idea": "A “first gifts of Christmas” gift-guide post.",
+     "note": "Use products in stock only."
+    },
+    {
+     "from": "Black Friday build-up",
+     "idea": "A “save the date” tease for any confirmed Disney Store offers.",
+     "note": "Only offers Disney Store confirms. No price claims without approval."
+    }
+   ],
+   "watch": "No Marvel or Hexed content without licensing sign-off."
+  },
+  {
+   "id": "muti",
+   "name": "Mutti UK",
+   "short": "Mutti",
+   "byline": "Kiki · Mutti UK desk",
+   "color": "#d8302b",
+   "logo": "logos/mutti.png",
+   "ideas": [
+    {
+     "from": "Pochettino’s Sunday",
+     "idea": "A “Sunday match-day pasta” post, no team or club marks.",
+     "note": "Recipe must be tested and approved by Mutti."
+    },
+    {
+     "from": "Christmas ads",
+     "idea": "A “cosy Christmas dinner” tomato bake idea.",
+     "note": "Recipe must be approved by Mutti."
+    }
+   ],
+   "watch": "Don’t reference clubs, shows or other brands by name."
+  },
+  {
+   "id": "on",
+   "name": "Optimum Nutrition UK",
+   "short": "Optimum Nutrition",
+   "byline": "Rex · Optimum Nutrition UK desk",
+   "color": "#c9962c",
+   "logo": "logos/on.png",
+   "ideas": [
+    {
+     "from": "GTA VI weekend",
+     "idea": "A “game night fuel” snack idea for the weekend.",
+     "note": "No game titles or artwork."
+    },
+    {
+     "from": "Sunday match",
+     "idea": "A “match-day recovery” tip, no club or league marks.",
+     "note": "Keep health claims within approved wording."
+    }
+   ],
+   "watch": "No health or performance claims beyond the approved list."
+  },
+  {
+   "id": "dfs",
+   "name": "DFS",
+   "short": "DFS",
+   "byline": "Dot · DFS desk",
+   "color": "#2f9c8f",
+   "logo": "logos/dfs.png",
+   "ideas": [
+    {
+     "from": "Strictly Blackpool",
+     "idea": "A “best seat in the house” sofa shot for Saturday.",
+     "note": "No tagging the show or BBC."
+    },
+    {
+     "from": "Sunday match",
+     "idea": "A “match-day on the sofa” post for Sunday afternoon.",
+     "note": "Use approved product shots. No club marks."
+    }
+   ],
+   "watch": "Any sale or price wording needs approval first."
+  }
+ ]
+}
