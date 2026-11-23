@@ -1,0 +1,278 @@
+{
+ "edition": "Weekend wrap-up",
+ "coverTitle": "Weekend wrap-up",
+ "coverSub": "what you might have *missed*",
+ "dateLabel": "Monday 23 November",
+ "floorUrl": "https://claude.ai/artifact/QByUaU2dzAX6fAwH2X3jVb",
+ "sections": {
+  "saw": [
+   {
+    "short": "Pochettino's Man Utd debut ends in a 4-0 loss at Anfield",
+    "headline": "*Pochettino’s Man Utd debut* ends in a 4-0 loss at Anfield",
+    "what": "Liverpool beat Manchester United 4-0 on Sunday in Mauricio Pochettino’s first game in charge, per Metro. Pochettino called the early red card for Leny Yoro “unfair”, and Metro says he called the result “so painful”. Liverpool’s goals came from Szoboszlai, Wirtz, Ngumoha and Víctor Muñoz. Metro’s red-card minute varies, so we haven’t quoted one.",
+    "why": "The biggest football story of the weekend. Pochettino’s first game set the tone.",
+    "momentum": "Peaking",
+    "region": "UK",
+    "platform": "X & TikTok",
+    "source": "Metro, 22 Nov",
+    "credit": "Getty via Metro",
+    "url": "https://metro.co.uk/2026/11/22/mauricio-pochettino-slams-unfair-decision-liverpool-thrash-manchester-united-29810425/",
+    "image": "images/liverpool.jpg"
+   },
+   {
+    "short": "England beat New Zealand 37-12 at Twickenham",
+    "headline": "England *beat New Zealand 37-12* at Twickenham",
+    "what": "England beat New Zealand 37-12 at Twickenham on Saturday, a record win over the All Blacks, per BBC Sport and the Telegraph. The Telegraph says Lewis Moody joined the England team to face the haka, and captain Maro Itoje said his presence inspired the win. The Sun’s headline says 34-12, which is wrong.",
+    "why": "A record rugby result with a very human moment. A big shared moment for UK sport fans.",
+    "momentum": "Peaking",
+    "region": "UK",
+    "platform": "X & TikTok",
+    "source": "BBC Sport, 21 Nov; Telegraph, 22 Nov",
+    "credit": "The Sun",
+    "url": "https://www.telegraph.co.uk/rugby-union/2026/11/22/lewis-moody-england-haka-all-blacks-mnd-twickenham-fans/",
+    "image": "images/rugby.jpg"
+   },
+   {
+    "short": "Strictly's Blackpool show is interrupted by prank audio",
+    "headline": "Strictly’s *Blackpool show* is interrupted by prank audio",
+    "what": "Lewd audio played behind the judges during Saturday’s live Strictly show, and presenter Emma Willis apologised on air, per Radio Times and LADbible. The BBC said it is investigating and put an edited version on iPlayer. Jaime Winstone and Carlos Gu left on Sunday after a dance-off with Delta Goodrem and Kai Widdrington, per Metro.",
+    "why": "A live-TV glitch got more talk than the dances. Blackpool week always does well.",
+    "momentum": "Peaking",
+    "region": "UK",
+    "platform": "X & TikTok",
+    "source": "Radio Times, 22 Nov; LADbible, 22 Nov; Metro, 22 Nov",
+    "credit": "BBC via Radio Times",
+    "url": "https://www.radiotimes.com/tv/entertainment/strictly-come-dancing-noise-disruption-bbc-apologises-newsupdate/",
+    "image": "images/strictly.jpg",
+    "spoiler": true
+   },
+   {
+    "short": "Hexed gets its London premiere",
+    "headline": "Disney’s *Hexed* gets its London premiere ahead of UK cinemas on 27 Nov",
+    "what": "Disney’s Hexed held its European premiere at the Odeon Luxe, Leicester Square, on Saturday, with Hailee Steinfeld, Rashida Jones and Jodie Foster on the red carpet, per Deadline and Film-news.co.uk. Film-news.co.uk says it opens in UK cinemas on Friday 27 Nov. We haven’t seen an official Disney UK post.",
+    "why": "Our client’s film week. The premiere sets up the cinema release.",
+    "momentum": "Rising",
+    "region": "UK",
+    "platform": "Instagram & TikTok",
+    "source": "Deadline, 23 Nov; Film-news.co.uk, 21 Nov",
+    "credit": "Disney via Deadline",
+    "url": "https://deadline.com/gallery/hexed-european-premiere-photos-hailee-steinfeld/",
+    "image": "images/hexed.jpg"
+   },
+   {
+    "short": "A new Home Alone film is reportedly in development",
+    "headline": "A new *Home Alone* film is reportedly in development with Macaulay Culkin",
+    "what": "Reports say Macaulay Culkin will return as Kevin McCallister in a new Home Alone film at Disney’s 20th Century Studios, with Seth Rogen and Evan Goldberg attached to write and produce, per NME and LADbible. NME says no director, cast or date is announced and it is at an early stage. Neither article is an official announcement.",
+    "why": "A Christmas favourite returning with a Disney link. Treat as reported until confirmed.",
+    "momentum": "Rising",
+    "region": "Global",
+    "platform": "X & Instagram",
+    "source": "NME, 22 Nov; LADbible, 20 Nov",
+    "credit": "20th Century via LADbible",
+    "url": "https://www.nme.com/news/film/macaulay-culkin-return-home-alone-sequel-seth-rogen-3976644",
+    "image": "images/homealone.jpg"
+   },
+   {
+    "short": "The Hunger Games prequel opens to $120m in North America",
+    "headline": "*The Hunger Games prequel* opens to $120m in North America",
+    "what": "The Hunger Games: Sunrise on the Reaping took an estimated $120 million in North America over the opening weekend, with $105 million overseas for $225 million globally, per Variety. These are weekend estimates. Variety says it is one of only five 2026 films to open above $100 million in North America. We haven’t found a UK-specific figure.",
+    "why": "A big cinema weekend. Useful context for Hexed’s opening on Friday.",
+    "momentum": "Peaking",
+    "region": "Global",
+    "platform": "X & TikTok",
+    "source": "Variety, 22 Nov; THR, 22 Nov",
+    "credit": "Lionsgate via THR",
+    "url": "https://variety.com/2026/film/box-office/sunrise-on-the-reaping-box-office-hunger-games-opening-weekend-exceeds-expectations-1236953061/",
+    "image": "images/hungergames.jpg"
+   }
+  ],
+  "platform": [
+   {
+    "short": "TikTok's Discovery report: UK searches for padel are up 2,275%",
+    "headline": "TikTok’s Discovery report: *UK searches for “padel” are up 2,275%*",
+    "what": "TikTok’s UK newsroom published its Discovery on TikTok report on 20 Nov, covering 16–24 year olds. It says 82% use TikTok to discover new things, #SportsOnTikTok posts are up 155% globally, and UK searches for “padel” are up 2,275%. These are TikTok’s own figures.",
+    "why": "A source of trend ideas, with a UK sports angle. First-party data only.",
+    "momentum": "Rising",
+    "region": "UK",
+    "platform": "TikTok",
+    "source": "TikTok Newsroom UK, 20 Nov",
+    "credit": "TikTok",
+    "url": "https://newsroom.tiktok.com/discovery-on-tiktok-what-young-people-explored-in-2026?lang=en-GB"
+   },
+   {
+    "short": "TikTok rolls out its deepfake detection tool globally",
+    "headline": "TikTok rolls out its *deepfake detection tool* globally for public figures",
+    "what": "TikTok has announced a global rollout of its likeness-detection tool for politicians and high-follower accounts, per an AP report. It was announced at TikTok’s safety event in London, ahead of European elections next year. The AP report’s original date wasn’t clear to us, and Geekout listed it on 20 Nov.",
+    "why": "A platform response to AI fakes. Relevant for any client with public faces.",
+    "momentum": "Rising",
+    "region": "Global",
+    "platform": "TikTok",
+    "source": "AP via Sunday World, 23 Nov; Geekout, 20 Nov",
+    "credit": "TikTok via AP",
+    "url": "https://sundayworld.co.za/technology/tiktok-launches-tool-to-help-public-figures-detect-deepfakes-globally/"
+   },
+   {
+    "short": "Disney+ will carry TikTok creator videos from December",
+    "headline": "Disney+ will carry *TikTok creator videos* from December",
+    "what": "Disney said on 17 Nov that invite-only TikTok creator videos, made from Disney content, will appear in the vertical video feed on Disney+ in December, per Mashable. It is tied to the Avengers: Doomsday build-up. We haven’t seen a UK launch detail.",
+    "why": "A Disney and TikTok link worth watching for our Disney desks. US-first.",
+    "momentum": "Rising",
+    "region": "Global",
+    "platform": "TikTok & Disney+",
+    "source": "Mashable, 17 Nov",
+    "credit": "Disney via Mashable",
+    "url": "https://mashable.com/life/disney-plus-tiktok-creator-videos-december"
+   }
+  ]
+ },
+ "watch": [
+  {
+   "when": "Fri 27 Nov",
+   "title": "Hexed in UK cinemas",
+   "note": "Disney UK’s cinema date. Black Friday and BBC iPlayer Christmas specials are the same day."
+  },
+  {
+   "when": "Sat 28 Nov",
+   "title": "Man Utd v Brentford",
+   "note": "Old Trafford, 3pm per Sky’s fixture list."
+  },
+  {
+   "when": "Sat 28 Nov",
+   "title": "Strictly week 10",
+   "note": "A live Saturday show. Check the BBC listing for the time."
+  },
+  {
+   "when": "Tue 2 Dec",
+   "title": "The Man with the Bag",
+   "note": "Prime Video’s Christmas film, per Amazon."
+  }
+ ],
+ "desks": [
+  {
+   "id": "disney",
+   "name": "Disney UK",
+   "short": "Disney UK",
+   "byline": "Pip · Disney UK desk",
+   "color": "#4a74c9",
+   "logo": "logos/disney.png",
+   "ideas": [
+    {
+     "from": "Hexed premiere",
+     "idea": "A “red carpet to cinema” post that sets up the 27 Nov release.",
+     "note": "Approved premiere assets only. Cinema date Fri 27 Nov."
+    },
+    {
+     "from": "Hunger Games opening",
+     "idea": "A Hexed “opening week” countdown, one image and a date.",
+     "note": "Approved assets only. No box-office claims."
+    }
+   ],
+   "watch": "Hexed’s UK rating and assets need sign-off first. No box-office or other release claims go out."
+  },
+  {
+   "id": "family",
+   "name": "Disney Family UK",
+   "short": "Disney Family",
+   "byline": "Bo · Disney Family UK desk",
+   "color": "#a983cf",
+   "logo": "logos/disney.png",
+   "ideas": [
+    {
+     "from": "Home Alone sequel report",
+     "idea": "A “first Christmas film you watched” prompt for the family feed.",
+     "note": "Don’t confirm the sequel. Reported only."
+    },
+    {
+     "from": "Strictly Blackpool",
+     "idea": "A “family sofa night” post for week 10.",
+     "note": "No spoilers about results."
+    }
+   ],
+   "watch": "Don’t confirm or imply a Home Alone sequel until Disney does."
+  },
+  {
+   "id": "store",
+   "name": "Disney Store UK",
+   "short": "Disney Store",
+   "byline": "Lulu · Disney Store UK desk",
+   "color": "#d4567f",
+   "logo": "logos/disney-store.png",
+   "ideas": [
+    {
+     "from": "Hexed premiere",
+     "idea": "A “Hexed gifts” teaser, only for approved products.",
+     "note": "Only products Disney Store confirms. Hexed licensing sign-off first."
+    },
+    {
+     "from": "Black Friday build-up",
+     "idea": "A “save the date” tease for any confirmed Disney Store offers.",
+     "note": "Only offers Disney Store confirms. No price claims without approval."
+    }
+   ],
+   "watch": "No Marvel or Hexed content without licensing sign-off."
+  },
+  {
+   "id": "muti",
+   "name": "Mutti UK",
+   "short": "Mutti",
+   "byline": "Kiki · Mutti UK desk",
+   "color": "#d8302b",
+   "logo": "logos/mutti.png",
+   "ideas": [
+    {
+     "from": "Sunday match day",
+     "idea": "A “Sunday dinner after the match” tomato pasta post, no club marks.",
+     "note": "Recipe must be tested and approved by Mutti."
+    },
+    {
+     "from": "Christmas season",
+     "idea": "A “cosy Christmas dinner” tomato bake idea.",
+     "note": "Recipe must be approved by Mutti."
+    }
+   ],
+   "watch": "Don’t reference clubs, shows or other brands by name."
+  },
+  {
+   "id": "on",
+   "name": "Optimum Nutrition UK",
+   "short": "Optimum Nutrition",
+   "byline": "Rex · Optimum Nutrition UK desk",
+   "color": "#c9962c",
+   "logo": "logos/on.png",
+   "ideas": [
+    {
+     "from": "England v New Zealand",
+     "idea": "A “recovery after a big week” tip, no team or tournament marks.",
+     "note": "Keep health claims within approved wording."
+    },
+    {
+     "from": "TikTok padel trend",
+     "idea": "A short “padel-ready” warm-up idea.",
+     "note": "Keep health claims within approved wording."
+    }
+   ],
+   "watch": "No health or performance claims beyond the approved list."
+  },
+  {
+   "id": "dfs",
+   "name": "DFS",
+   "short": "DFS",
+   "byline": "Dot · DFS desk",
+   "color": "#2f9c8f",
+   "logo": "logos/dfs.png",
+   "ideas": [
+    {
+     "from": "Strictly Blackpool",
+     "idea": "A “best seat in the house” sofa shot for Saturday.",
+     "note": "No tagging the show or BBC."
+    },
+    {
+     "from": "Black Friday build-up",
+     "idea": "A “save the date” tease for any confirmed DFS offers.",
+     "note": "Any sale or price wording needs approval first."
+    }
+   ],
+   "watch": "Any sale or price wording needs approval first."
+  }
+ ]
+}
