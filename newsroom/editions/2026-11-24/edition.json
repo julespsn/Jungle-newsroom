@@ -1,0 +1,285 @@
+{
+ "edition": "The daily",
+ "coverTitle": "The daily",
+ "coverSub": "what’s *moving* on social",
+ "dateLabel": "Tuesday 24 November",
+ "floorUrl": "https://claude.ai/artifact/QByUaU2dzAX6fAwH2X3jVb",
+ "sections": {
+  "saw": [
+   {
+    "short": "An I'm A Celebrity camp row sparks a big conversation",
+    "headline": "An *I’m A Celebrity camp row* sparks a big conversation",
+    "what": "On Sunday’s episode Mariella Frostrup, 64, called AJ Odudu “aggressive” and “dramatic” during a camp cooking row, and AJ replied “Please don’t use that word”. Mariella later apologised, per LADbible and Metro. ITV said duty of care is “of the utmost importance” and that production monitors camp 24/7, per Deadline. Metro reports bosses spoke to Mariella, but ITV’s statement doesn’t confirm it.",
+    "why": "The biggest TV talking point of the week. Tone matters, so we keep to the facts.",
+    "momentum": "Peaking",
+    "region": "UK",
+    "platform": "ITV & X",
+    "source": "Metro, 23 Nov; LADbible, 23 Nov; Deadline, 23 Nov",
+    "credit": "ITV via Metro",
+    "url": "https://deadline.com/2026/11/itv-statement-aj-odudu-mariella-frostrup-im-a-celeb-1237231538/",
+    "image": "images/imaceleb.jpg"
+   },
+   {
+    "short": "The UK is confirmed as 2035 Women's World Cup host",
+    "headline": "The *UK is confirmed as 2035 Women’s World Cup host*",
+    "what": "Fifa confirmed England, Northern Ireland, Scotland and Wales as joint hosts of the 2035 Women’s World Cup on Monday, per BBC Sport and Sky Sports. It is the first football World Cup in the UK since the men’s tournament in 1966. The bid proposes 19 venues, with 104 matches, 48 teams and 39 days.",
+    "why": "A big, positive sport story for the whole UK. Long runway for brand moments.",
+    "momentum": "Peaking",
+    "region": "UK",
+    "platform": "X & Instagram",
+    "source": "BBC Sport, 23 Nov; Sky Sports, 23 Nov",
+    "credit": "Fifa via Sky Sports",
+    "url": "https://www.bbc.co.uk/sport/football/articles/cx30g83716lzo",
+    "image": "images/wwc.jpg"
+   },
+   {
+    "short": "Avengers: Doomsday final trailer drops",
+    "headline": "*Avengers: Doomsday* final trailer drops ahead of 18 December",
+    "what": "The final Avengers: Doomsday trailer arrived on Monday, ahead of the 18 Dec release, per Variety. In it Robert Downey Jr.’s Doctor Doom says “All of you have lived stolen lives”, per Deadline. Variety’s date is for the release generally. We haven’t checked UK-specific dates.",
+    "why": "A Disney and Marvel moment. Trailer day is a social peak for film brands.",
+    "momentum": "Peaking",
+    "region": "Global",
+    "platform": "YouTube & X",
+    "source": "Variety, 23 Nov; Deadline, 23 Nov",
+    "credit": "Marvel via Variety",
+    "url": "https://variety.com/2026/film/news/avengers-doomsday-trailer-captain-america-son-cyclops-x-men-1236893948/",
+    "image": "images/avengers.jpg"
+   },
+   {
+    "short": "Strictly confirms Instant Dance returns for week 10",
+    "headline": "Strictly confirms *Instant Dance* returns for week 10",
+    "what": "Johannes Radebe confirmed on Sunday’s results show that the Instant Dance challenge returns on Saturday 28 Nov, per Radio Times. Each couple picks a dance style at random, makes a quick costume change, and has 10 seconds to decide how to dance it. Radio Times says it caused “chaos and costume changes” last year.",
+    "why": "A format everyone remembers. Fans will make predictions all week.",
+    "momentum": "Rising",
+    "region": "UK",
+    "platform": "BBC One & X",
+    "source": "Radio Times, 23 Nov",
+    "credit": "BBC via Radio Times",
+    "url": "https://www.radiotimes.com/tv/entertainment/strictly-come-dancing-instant-dance-challenge-return-newsupdate/",
+    "image": "images/instant.jpg"
+   },
+   {
+    "short": "Which? says one in five Black Friday deals was a genuine bargain",
+    "headline": "*Which?* says just one in five Black Friday deals was a genuine bargain",
+    "what": "Which? tracked 756 home, tech and health appliances at eight retailers and found only 22% of Black Friday 2025 discounts were the lowest price of the year. Retail Gazette reports Vouchernaut data that found 2,300 products had been cheaper in the 24 days before the sales. This is last year’s data. Black Friday is on Fri 27 Nov.",
+    "why": "Shoppers are sceptical before the sale. It shapes how deals land on social.",
+    "momentum": "Rising",
+    "region": "UK",
+    "platform": "Cross-platform",
+    "source": "Which?, 24 Nov; Retail Gazette, 23 Nov",
+    "credit": "Which?",
+    "url": "https://www.which.co.uk/news/article/just-one-in-five-black-friday-deals-genuine-bargains-a3llP9R5oq9Q",
+    "image": "images/blackfriday.jpg"
+   },
+   {
+    "short": "A Cornwall Christmas market looks nothing like its apparent AI posters",
+    "headline": "A Cornwall *Christmas market* looks nothing like its apparent AI posters",
+    "what": "The Kernow Christmas Market in Redruth opened in a sparsely decorated warehouse, and visitors compared it to the Willy Wonka Experience, per Metro and LADbible. Its promo images appeared to be AI-generated, though we haven’t seen a statement from the organisers. The funfair was shut on Sunday for high winds. Traders paid from £30 a day, per Metro.",
+    "why": "A lesson in expectation versus reality. Fake-looking posters now spread fast.",
+    "momentum": "Rising",
+    "region": "UK",
+    "platform": "Facebook & TikTok",
+    "source": "Metro, 23 Nov; LADbible, 23 Nov",
+    "credit": "LADbible",
+    "url": "https://metro.co.uk/2026/11/23/christmas-market-branded-ai-slop-new-willy-wonka-experience-29811808/",
+    "image": "images/market.jpg"
+   }
+  ],
+  "platform": [
+   {
+    "short": "Pinterest opens its ad inventory to Microsoft Advertising campaigns",
+    "headline": "*Pinterest* opens its ad inventory to Microsoft Advertising campaigns",
+    "what": "Pinterest’s open-auction inventory across home feed, search and related Pins can now be reached from Microsoft Advertising campaigns, per Pinterest’s newsroom and Social Media Today. Pinterest quotes 661 million monthly active users and 80 billion monthly searches, with more than half showing commercial intent. These are Pinterest’s own figures.",
+    "why": "More ways for advertisers to buy Pinterest. Useful for retail and home clients.",
+    "momentum": "Rising",
+    "region": "Global",
+    "platform": "Pinterest",
+    "source": "Pinterest Newsroom, 23 Nov; Social Media Today, 23 Nov",
+    "credit": "Pinterest",
+    "url": "https://newsroom.pinterest.com/en-au/news/pinterest-microsoft-advertising-integration-2026/",
+    "image": "images/pinms.jpg"
+   },
+   {
+    "short": "Pinterest puts teen parental controls on one page",
+    "headline": "*Pinterest* puts teen parental controls on one page",
+    "what": "Pinterest has put parental controls in one place and added settings for the amount of AI-generated content, notification volume and video autoplay, per its UK newsroom and Social Media Today. Every setting is locked by a parental passcode. It links to device-level screen time and location settings on iOS and Android.",
+    "why": "A teen-safety update with a UK page. Good to know for family-facing brands.",
+    "momentum": "Rising",
+    "region": "UK",
+    "platform": "Pinterest",
+    "source": "Pinterest Newsroom UK, 23 Nov; Social Media Today, 23 Nov",
+    "credit": "Pinterest",
+    "url": "https://newsroom.pinterest.com/en-gb/news/helping-families-navigate-controls-for-teens-on-pinterest/",
+    "image": "images/pinparents.jpg"
+   },
+   {
+    "short": "Threads previews an iPad app",
+    "headline": "*Threads* previews an iPad app",
+    "what": "Threads head of design Christopher Clare posted screenshots of the feed on an iPad, with no release date, per Social Media Today. iPad users currently use a browser or the iPhone app. We haven’t seen Clare’s original post.",
+    "why": "A sign Threads is building for bigger screens. Nothing live yet.",
+    "momentum": "Rising",
+    "region": "Global",
+    "platform": "Threads",
+    "source": "Social Media Today, 23 Nov",
+    "credit": "Threads via Social Media Today",
+    "url": "https://www.socialmediatoday.com/news/threads-teases-coming-ipad-app/875561/",
+    "image": "images/threadsipad.jpg"
+   }
+  ]
+ },
+ "watch": [
+  {
+   "when": "Thu 26 Nov",
+   "title": "Billie Eilish BST Hyde Park tickets",
+   "note": "On sale 10am, per NME. She headlines on Sat 3 Jul 2027."
+  },
+  {
+   "when": "Fri 27 Nov",
+   "title": "Hexed in UK cinemas",
+   "note": "Disney UK’s cinema date. Black Friday and BBC iPlayer Christmas specials are the same day."
+  },
+  {
+   "when": "Sat 28 Nov",
+   "title": "Strictly Instant Dance",
+   "note": "A live Saturday show. Man Utd v Brentford is at 3pm, per Sky."
+  },
+  {
+   "when": "Tue 2 Dec",
+   "title": "The Man with the Bag",
+   "note": "Prime Video’s Christmas film, per Amazon."
+  },
+  {
+   "when": "Fri 18 Dec",
+   "title": "Avengers: Doomsday",
+   "note": "Release date per Variety. Check the UK date with Disney."
+  }
+ ],
+ "desks": [
+  {
+   "id": "disney",
+   "name": "Disney UK",
+   "short": "Disney UK",
+   "byline": "Pip · Disney UK desk",
+   "color": "#4a74c9",
+   "logo": "logos/disney.png",
+   "ideas": [
+    {
+     "from": "Avengers: Doomsday trailer",
+     "idea": "A Hexed “trailer day” format: one bold line and a date.",
+     "note": "Approved assets only. Cinema date Fri 27 Nov."
+    },
+    {
+     "from": "Hexed week",
+     "idea": "A “three days to go” countdown post.",
+     "note": "Approved assets only. No box-office claims."
+    }
+   ],
+   "watch": "Hexed’s UK rating and assets need sign-off first. No Marvel release claims from this channel."
+  },
+  {
+   "id": "family",
+   "name": "Disney Family UK",
+   "short": "Disney Family",
+   "byline": "Bo · Disney Family UK desk",
+   "color": "#a983cf",
+   "logo": "logos/disney.png",
+   "ideas": [
+    {
+     "from": "Strictly Instant Dance",
+     "idea": "A “which dance would your family get?” prompt for Saturday.",
+     "note": "No spoilers about results."
+    },
+    {
+     "from": "Black Friday build-up",
+     "idea": "A “family gift list” save-the-date post, if any offers are confirmed.",
+     "note": "Only confirmed offers. No price claims without approval."
+    }
+   ],
+   "watch": "No third-party show imagery without sign-off."
+  },
+  {
+   "id": "store",
+   "name": "Disney Store UK",
+   "short": "Disney Store",
+   "byline": "Lulu · Disney Store UK desk",
+   "color": "#d4567f",
+   "logo": "logos/disney-store.png",
+   "ideas": [
+    {
+     "from": "Black Friday build-up",
+     "idea": "A “save the date” tease for any confirmed Disney Store offers.",
+     "note": "Only offers Disney Store confirms. No price claims without approval."
+    },
+    {
+     "from": "Avengers: Doomsday trailer",
+     "idea": "A Marvel gift tease, only if licensed products are approved.",
+     "note": "Marvel licensing sign-off first."
+    }
+   ],
+   "watch": "No Marvel or Hexed content without licensing sign-off."
+  },
+  {
+   "id": "muti",
+   "name": "Mutti UK",
+   "short": "Mutti",
+   "byline": "Kiki · Mutti UK desk",
+   "color": "#d8302b",
+   "logo": "logos/mutti.png",
+   "ideas": [
+    {
+     "from": "Black Friday scepticism",
+     "idea": "A “price you can trust” pantry staple post, no price claims.",
+     "note": "No price or deal claims. Recipe must be approved by Mutti."
+    },
+    {
+     "from": "Cold-weather cooking",
+     "idea": "A “tomato soup weather” recipe post for midweek.",
+     "note": "Recipe must be tested and approved by Mutti."
+    }
+   ],
+   "watch": "Don’t reference other brands, shows or retailers by name."
+  },
+  {
+   "id": "on",
+   "name": "Optimum Nutrition UK",
+   "short": "Optimum Nutrition",
+   "byline": "Rex · Optimum Nutrition UK desk",
+   "color": "#c9962c",
+   "logo": "logos/on.png",
+   "ideas": [
+    {
+     "from": "Women’s World Cup 2035",
+     "idea": "A “long-term goals” training tip, no tournament or Fifa marks.",
+     "note": "Keep health claims within approved wording."
+    },
+    {
+     "from": "Black Friday build-up",
+     "idea": "A “what to look for in a deal” explainer, no price claims.",
+     "note": "Keep claims within approved wording."
+    }
+   ],
+   "watch": "No health or performance claims beyond the approved list."
+  },
+  {
+   "id": "dfs",
+   "name": "DFS",
+   "short": "DFS",
+   "byline": "Dot · DFS desk",
+   "color": "#2f9c8f",
+   "logo": "logos/dfs.png",
+   "ideas": [
+    {
+     "from": "Which? Black Friday data",
+     "idea": "A “how we price our sale” transparency post, if DFS approves.",
+     "note": "Any sale or price wording needs approval first."
+    },
+    {
+     "from": "Strictly Instant Dance",
+     "idea": "A “best seat in the house” sofa shot for Saturday.",
+     "note": "No tagging the show or BBC."
+    }
+   ],
+   "watch": "Any sale or price wording needs approval first. No references to Which?."
+  }
+ ]
+}
