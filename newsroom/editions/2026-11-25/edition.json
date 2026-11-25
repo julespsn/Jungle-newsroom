@@ -1,0 +1,273 @@
+{
+ "edition": "The daily",
+ "coverTitle": "The daily",
+ "coverSub": "what’s *moving* on social",
+ "dateLabel": "Wednesday 25 November",
+ "floorUrl": "https://claude.ai/artifact/QByUaU2dzAX6fAwH2X3jVb",
+ "sections": {
+  "saw": [
+   {
+    "short": "I'm A Celebrity's two-in-a-row trial rule gets its first outing",
+    "headline": "*I’m A Celebrity’s* “two in a row” trial rule gets its first outing",
+    "what": "After Tuesday’s episode Ant and Dec said Mariella Frostrup can’t be in Wednesday’s public vote because she has done the previous two trials, per LADbible. The rule says the same person can’t be voted for more than two trials in a row. LADbible quotes the hosts’ account as saying it was “introduced last year, not been used until now”, and viewers are split. We haven’t seen the tweet itself.",
+    "why": "A rule nobody had seen used becomes the talking point. Fans have strong views.",
+    "momentum": "Peaking",
+    "region": "UK",
+    "platform": "ITV & X",
+    "source": "LADbible, 24 Nov",
+    "credit": "ITV via LADbible",
+    "url": "https://ladbible.com/entertainment/tv/i-m-a-celeb-fans-furious-rule-mariella-cant-take-part-in-next-trial-475550-20261124",
+    "image": "images/mariella.jpg"
+   },
+   {
+    "short": "Højlund's 'only one club in Manchester' celebration",
+    "headline": "Højlund’s *“only one club in Manchester”* celebration at the Etihad",
+    "what": "Napoli’s Rasmus Højlund, on loan from Manchester United, scored the opener at the Etihad, held up one finger and told City fans “there is only one club in Manchester”, per Metro. City salvaged a 2-2 draw with Rayan Cherki’s 86th-minute equaliser. Højlund said afterwards: “Some good banter… United is my home.”",
+    "why": "A derby-sized moment in a Champions League night. Football fans love banter.",
+    "momentum": "Peaking",
+    "region": "UK",
+    "platform": "X",
+    "source": "Metro, 24 Nov",
+    "credit": "Metro",
+    "url": "https://metro.co.uk/2026/11/24/rasmus-hojlund-taunts-manchester-city-fans-man-utd-celebration-napoli-29817536/",
+    "image": "images/hojlund.jpg"
+   },
+   {
+    "short": "The Bake Off series 17 final crowns its champion",
+    "headline": "*The Great British Bake Off* series 17 final crowns its champion",
+    "what": "The Great British Bake Off series 17 final aired on Tuesday on Channel 4, with a citrus celebration cake, crème brûlée doughnuts and a British-landscapes showstopper, per Radio Times and The Independent. Moyin Odeniran, 22, from Essex, won, beating Mo Mahir and Tom Whittaker. Nigella Lawson is Paul Hollywood’s new co-host.",
+    "why": "The show’s big finale night. Winner chat and family reactions travel fast.",
+    "momentum": "Peaking",
+    "region": "UK",
+    "platform": "Channel 4 & X",
+    "source": "Radio Times, 24 Nov; The Independent, 24 Nov",
+    "credit": "Channel 4 via Radio Times",
+    "url": "https://www.radiotimes.com/tv/entertainment/the-great-british-bake-off-2026-winner-revealed-moyin-newsupdate/",
+    "image": "images/bakeoff.jpg",
+    "spoiler": true
+   },
+   {
+    "short": "Strictly's Christmas special line-up is complete",
+    "headline": "Strictly’s *Christmas special line-up* is complete",
+    "what": "Danny Mac and JB Gill are the final two returnees for Strictly’s Christmas special, per Radio Times. They join Angela Rippon, Ashley Roberts, Kimberley Walsh and Lewis Cope, making six celebrities in all. JB will dance with Alexis Warr and Danny with newcomer Aleksandra Isaeva.",
+    "why": "A Christmas Day-style treat that gets people planning. Strictly stories always do well.",
+    "momentum": "Rising",
+    "region": "UK",
+    "platform": "BBC One & Instagram",
+    "source": "Radio Times, 24 Nov",
+    "credit": "BBC via Radio Times",
+    "url": "https://www.radiotimes.com/tv/entertainment/strictly-come-dancing-christmas-special-danny-mac-jb-gill-newsupdate/",
+    "image": "images/strictlyxmas.jpg"
+   },
+   {
+    "short": "Radio Times calls Disney's Hexed a 'lacklustre witch's brew'",
+    "headline": "Radio Times calls Disney’s *Hexed* a “lacklustre witch’s brew” ahead of UK cinemas on Friday",
+    "what": "Radio Times’s James Mottram calls Hexed “ho-hum” and says it feels derivative of Harry Potter and Disney’s own archive, and that it will likely appeal to very young viewers. Hailee Steinfeld voices Billie Doe, with Rashida Jones, Jodie Foster and Stephen Fry in the cast. This is one critic’s view. We found no other review or audience reaction yet.",
+    "why": "Our client’s film gets a critical review a few days before release. Know the tone before Friday.",
+    "momentum": "Rising",
+    "region": "UK",
+    "platform": "X & Instagram",
+    "source": "Radio Times, 24 Nov",
+    "credit": "Disney via Radio Times",
+    "url": "https://www.radiotimes.com/movies/hexed-review/",
+    "image": "images/hexed.jpg"
+   },
+   {
+    "short": "A Dalek spotted in Greenwich is promoting a pantomime horse race",
+    "headline": "A *Dalek spotted in Greenwich* is promoting a pantomime horse race for charity",
+    "what": "Metro reports a Dalek filmed on a Greenwich pavement is promoting the London Pantomime Horse Race for Great Ormond Street Hospital. The race takes in five pubs and starts at 1pm on Sunday 13 Dec at Devonport House. Matt Berry and Tony Blackburn are promoting it. The clip came from a Reddit user, and Metro doesn’t say when it was posted.",
+    "why": "A quirky local clip with a charity link. The sort of thing UK feeds love.",
+    "momentum": "Rising",
+    "region": "UK",
+    "platform": "Reddit",
+    "source": "Metro, 24 Nov",
+    "credit": "Reddit user via Metro",
+    "url": "https://metro.co.uk/2026/11/24/dalek-spotted-greenwich-wont-guess-29816775/",
+    "image": "images/dalek.jpg"
+   }
+  ],
+  "platform": [
+   {
+    "short": "YouTube opens custom Shorts thumbnails to all creators",
+    "headline": "*YouTube* opens custom Shorts thumbnails to all creators",
+    "what": "Creators can now upload a custom thumbnail in the YouTube Studio Shorts flow, at upload or after publishing, or pick a suggested frame, per Social Media Today. YouTube’s Rene Ritchie said creators can use the Ask Studio AI assistant to brainstorm ideas. It was first available to Partner Programme creators in June. The quotes are second-hand.",
+    "why": "Shorts now have a real cover image. Worth testing for client channels.",
+    "momentum": "Rising",
+    "region": "Global",
+    "platform": "YouTube",
+    "source": "Social Media Today, 24 Nov",
+    "credit": "YouTube via Social Media Today",
+    "url": "https://www.socialmediatoday.com/news/youtube-enables-custom-shorts-thumbnails/875687/",
+    "image": "images/ytshorts.jpg"
+   },
+   {
+    "short": "Meta shares festive-shopper data from an Ipsos survey",
+    "headline": "*Meta* shares festive-shopper data from an Ipsos survey",
+    "what": "Across 18 markets, 37% of festive shoppers use social media for gift discovery, compared with 41% for search engines and 27% for TV advertising, per Social Media Today. Social shoppers are more likely to plan to spend more (49% against 36% overall). The survey covered 14,473 shoppers. Social Media Today says the data was published earlier this year, and there is no UK-only figure.",
+    "why": "A useful stat for Christmas pitches. It’s resurfaced data, not new research.",
+    "momentum": "Rising",
+    "region": "Global",
+    "platform": "Facebook & Instagram",
+    "source": "Social Media Today, 24 Nov",
+    "credit": "Meta via Social Media Today",
+    "url": "https://www.socialmediatoday.com/news/meta-says-festive-shoppers-use-social-media-for-gift-discovery/875523/",
+    "image": "images/metafestive.jpg"
+   }
+  ]
+ },
+ "watch": [
+  {
+   "when": "Thu 26 Nov",
+   "title": "Billie Eilish BST Hyde Park tickets",
+   "note": "On sale 10am, per NME. She headlines on Sat 3 Jul 2027."
+  },
+  {
+   "when": "Fri 27 Nov",
+   "title": "Hexed in UK cinemas",
+   "note": "Disney UK’s cinema date. Black Friday and BBC iPlayer Christmas specials are the same day."
+  },
+  {
+   "when": "Sat 28 Nov",
+   "title": "Strictly Instant Dance",
+   "note": "A live Saturday show. Man Utd v Brentford is at 3pm, per Sky."
+  },
+  {
+   "when": "Tue 2 Dec",
+   "title": "The Man with the Bag",
+   "note": "Prime Video’s Christmas film, per Amazon."
+  },
+  {
+   "when": "Fri 18 Dec",
+   "title": "Avengers: Doomsday",
+   "note": "Release date per Variety. Check the UK date with Disney."
+  }
+ ],
+ "desks": [
+  {
+   "id": "disney",
+   "name": "Disney UK",
+   "short": "Disney UK",
+   "byline": "Pip · Disney UK desk",
+   "color": "#4a74c9",
+   "logo": "logos/disney.png",
+   "ideas": [
+    {
+     "from": "Hexed review",
+     "idea": "A confident “see it for yourself” Hexed post for Friday, led by the film’s own footage.",
+     "note": "Approved assets only. Cinema date Fri 27 Nov. No reference to reviews."
+    },
+    {
+     "from": "Hexed week",
+     "idea": "A “two days to go” countdown with one bold image.",
+     "note": "Approved assets only. No box-office or review claims."
+    }
+   ],
+   "watch": "Hexed’s UK rating and assets need sign-off first. Don’t reference or respond to reviews without approval."
+  },
+  {
+   "id": "family",
+   "name": "Disney Family UK",
+   "short": "Disney Family",
+   "byline": "Bo · Disney Family UK desk",
+   "color": "#a983cf",
+   "logo": "logos/disney.png",
+   "ideas": [
+    {
+     "from": "Bake Off final",
+     "idea": "A “family bake-along” post for the weekend.",
+     "note": "No spoilers about the winner. Recipe must be approved."
+    },
+    {
+     "from": "Strictly Christmas line-up",
+     "idea": "A “family Christmas TV plan” post.",
+     "note": "No spoilers. Don’t name BBC shows as endorsements."
+    }
+   ],
+   "watch": "Don’t name the Bake Off winner or reference shows as endorsements."
+  },
+  {
+   "id": "store",
+   "name": "Disney Store UK",
+   "short": "Disney Store",
+   "byline": "Lulu · Disney Store UK desk",
+   "color": "#d4567f",
+   "logo": "logos/disney-store.png",
+   "ideas": [
+    {
+     "from": "Black Friday build-up",
+     "idea": "A “save the date” tease for any confirmed Disney Store offers.",
+     "note": "Only offers Disney Store confirms. No price claims without approval."
+    },
+    {
+     "from": "Meta festive-shopper data",
+     "idea": "A “gift discovery” gift-guide post for the Christmas run-up.",
+     "note": "Use products in stock only."
+    }
+   ],
+   "watch": "No Marvel or Hexed content without licensing sign-off."
+  },
+  {
+   "id": "muti",
+   "name": "Mutti UK",
+   "short": "Mutti",
+   "byline": "Kiki · Mutti UK desk",
+   "color": "#d8302b",
+   "logo": "logos/mutti.png",
+   "ideas": [
+    {
+     "from": "Bake Off final",
+     "idea": "A “bake your own” tomato focaccia post for the weekend.",
+     "note": "Recipe must be tested and approved by Mutti. No show references."
+    },
+    {
+     "from": "Greggs sell-out",
+     "idea": "A “last week to get one” seasonal recipe idea, no brand references.",
+     "note": "Recipe must be approved by Mutti."
+    }
+   ],
+   "watch": "Don’t reference Greggs, Bake Off or other brands by name."
+  },
+  {
+   "id": "on",
+   "name": "Optimum Nutrition UK",
+   "short": "Optimum Nutrition",
+   "byline": "Rex · Optimum Nutrition UK desk",
+   "color": "#c9962c",
+   "logo": "logos/on.png",
+   "ideas": [
+    {
+     "from": "Højlund celebration",
+     "idea": "A “banter after the match” recovery tip, no club or player marks.",
+     "note": "Keep health claims within approved wording."
+    },
+    {
+     "from": "Black Friday build-up",
+     "idea": "A “what to check in a protein deal” explainer, no price claims.",
+     "note": "Keep claims within approved wording."
+    }
+   ],
+   "watch": "No health or performance claims beyond the approved list."
+  },
+  {
+   "id": "dfs",
+   "name": "DFS",
+   "short": "DFS",
+   "byline": "Dot · DFS desk",
+   "color": "#2f9c8f",
+   "logo": "logos/dfs.png",
+   "ideas": [
+    {
+     "from": "Strictly Christmas line-up",
+     "idea": "A “Christmas on the sofa” post for the festive TV season.",
+     "note": "Use approved product shots. No tagging the show or BBC."
+    },
+    {
+     "from": "Black Friday build-up",
+     "idea": "A “save the date” tease for any confirmed DFS offers.",
+     "note": "Any sale or price wording needs approval first."
+    }
+   ],
+   "watch": "Any sale or price wording needs approval first."
+  }
+ ]
+}
