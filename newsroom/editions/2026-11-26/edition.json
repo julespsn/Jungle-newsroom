@@ -1,0 +1,272 @@
+{
+ "edition": "The daily",
+ "coverTitle": "The daily",
+ "coverSub": "what’s *moving* on social",
+ "dateLabel": "Thursday 26 November",
+ "floorUrl": "https://claude.ai/artifact/QByUaU2dzAX6fAwH2X3jVb",
+ "sections": {
+  "saw": [
+   {
+    "short": "Gordon Ramsay is the new Top Gear host",
+    "headline": "*Gordon Ramsay* is the new Top Gear host",
+    "what": "The BBC confirmed Gordon Ramsay as lead host of a revived Top Gear on BBC One and iPlayer in 2028, per Radio Times, Variety and Metro. Filming runs across the UK and abroad in 2027, with Dunsfold and The Stig returning. Ramsay announced it in a social video with The Stig, captioned “It’s official! Gordon Ramsay is your new host”, per Digital Spy.",
+    "why": "A huge TV hosting reveal with a social-first announcement. Expect reaction takes all week.",
+    "momentum": "Peaking",
+    "region": "UK",
+    "platform": "X & Instagram",
+    "source": "Radio Times, 25 Nov; Variety, 25 Nov; Metro, 25 Nov",
+    "credit": "BBC via Radio Times",
+    "url": "https://www.radiotimes.com/tv/entertainment/gordon-ramsay-new-top-gear-host-newsupdate/",
+    "image": "images/ramsay.jpg"
+   },
+   {
+    "short": "Man City wear a fourth, orange kit in the Champions League",
+    "headline": "*Man City* wear a fourth, orange kit in the Champions League",
+    "what": "Man City wore a special-edition orange Puma x C.P. Company kit against Napoli on Tuesday, in a 2-2 draw, per Metro and the BBC. The BBC says it is a fourth kit, so it can’t be worn in the Premier League, where clubs may use only three. The collection goes on sale globally on Tuesday 1 Dec, per the club.",
+    "why": "A kit launch that is also a fashion collaboration. Fans split on the look.",
+    "momentum": "Rising",
+    "region": "UK",
+    "platform": "Instagram & X",
+    "source": "Metro, 24 Nov; BBC Sport",
+    "credit": "Man City via Metro",
+    "url": "https://metro.co.uk/2026/11/24/man-city-wear-special-edition-orange-kit-vs-napoli-champions-league-29817453/",
+    "image": "images/citykit.jpg"
+   },
+   {
+    "short": "Strictly's week 10 dances are revealed",
+    "headline": "Strictly’s *week 10 dances* are revealed, with Instant Dance returning",
+    "what": "Seven couples remain on Strictly, and Digital Spy lists the week 10 dances: Delta and Kai get a Couples’ Choice to AC/DC, Cach and Maddie a Viennese waltz to “Feeling Good”, and Lacey and Vito a waltz to “Chasing Cars”. Instant Dance returns for every couple on Saturday 28 Nov. We have the list from Digital Spy only.",
+    "why": "Song choices give fans something to predict. Saturday is the next big night.",
+    "momentum": "Rising",
+    "region": "UK",
+    "platform": "BBC One & X",
+    "source": "Digital Spy, 25 Nov",
+    "credit": "BBC via Digital Spy",
+    "url": "https://www.digitalspy.com/tv/reality-tv/a74534962/strictly-come-dancing-week-10-song-dance-list/",
+    "image": "images/strictly.jpg"
+   },
+   {
+    "short": "I'm A Celebrity mid-week: Joanna Page's socks and Wayne's foot spa",
+    "headline": "*I’m A Celebrity* mid-week: Joanna Page’s socks and Wayne’s foot spa",
+    "what": "Joanna Page admitted she hasn’t changed her socks in nine days in camp, per Metro. Coleen Rooney said on ITV’s Unpacked that Wayne’s electric foot spa luxury item was first going to be a chair, per Digital Spy. We’ve left trial results out.",
+    "why": "Light camp chat that keeps the show in feeds between big moments.",
+    "momentum": "Rising",
+    "region": "UK",
+    "platform": "ITV & X",
+    "source": "Metro, 25 Nov; Digital Spy, 25 Nov",
+    "credit": "ITV via Metro",
+    "url": "https://metro.co.uk/2026/11/25/joanna-page-leaves-im-a-celebrity-fans-gagging-revealing-dirty-habit-29818397/",
+    "image": "images/joanna.jpg"
+   },
+   {
+    "short": "Disney's Hexed opens in the US ahead of UK cinemas on Friday",
+    "headline": "Disney’s *Hexed* opens in the US ahead of UK cinemas on Friday",
+    "what": "Deadline projects Hexed will take about $7.8 million on Wednesday, including $2.1 million of previews, and $35–40 million over five days. Deadline puts critics at 67% fresh and its soundtrack includes Queen, Little Mix, Dua Lipa and Demi Lovato. Hailee Steinfeld sings a cover of “Magic” over the credits. These are Deadline’s early estimates, and we haven’t seen UK reaction yet.",
+    "why": "Our client’s film week. US numbers set the mood before the UK release.",
+    "momentum": "Rising",
+    "region": "UK",
+    "platform": "Instagram & TikTok",
+    "source": "Deadline, 25 Nov",
+    "credit": "Disney via Deadline",
+    "url": "https://deadline.com/2026/11/hexed-soundtrack-songs-queen-dua-lipa-hailee-steinfeld-1237233514/",
+    "image": "images/hexed.jpg"
+   },
+   {
+    "short": "M&S launches a Chocolate & Clementine sandwich",
+    "headline": "*M&S* launches a Chocolate & Clementine sandwich",
+    "what": "M&S launched a limited-edition Chocolate & Clementine sandwich on Tuesday, at £3 for one half, per Metro. It follows the viral Strawberry & Creme and Chocolate & Pistachio versions. Metro says the pack states 5% of sales go to Shelter, and commenters are divided. We found no second source.",
+    "why": "A retail launch built for TikTok food-haul culture. A repeatable format.",
+    "momentum": "Rising",
+    "region": "UK",
+    "platform": "Instagram & TikTok",
+    "source": "Metro, 25 Nov",
+    "credit": "M&S via Metro",
+    "url": "https://metro.co.uk/2026/11/25/official-m-ss-new-chocolate-sandwich-best-one-yet-29818044/",
+    "image": "images/mssandwich.jpg"
+   }
+  ],
+  "platform": [
+   {
+    "short": "Meta launches its Muse AI agent in the UK",
+    "headline": "*Meta* launches its Muse AI agent in the UK",
+    "what": "Meta says Muse, its personal AI agent, launched for UK adults on iOS, Android, muse.ai and WhatsApp on 24 Nov, free with optional paid plans. UK partners include M&S, Currys, Argos, Sainsbury’s, ASOS, JD Sports and MyProtein. Muse asks before sending emails or buying. The CMA said the same day that UK consumer law applies to AI agents.",
+    "why": "A new AI agent that can shop for people. Retail clients will want to know how it surfaces them.",
+    "momentum": "Peaking",
+    "region": "UK",
+    "platform": "Meta",
+    "source": "Meta, 24 Nov; Social Media Today, 24 Nov; CMA",
+    "credit": "Meta",
+    "url": "https://about.fb.com/news/2026/11/introducing-muse-in-the-uk-a-personal-ai-agent-you-control/",
+    "image": "images/muse.jpg"
+   },
+   {
+    "short": "Discord launches Auto Clips in early access",
+    "headline": "*Discord* launches Auto Clips in early access for Nitro members",
+    "what": "Discord says Auto Clips detects spikes of laughter or shouting in voice calls and saves the moment locally on your PC. It rolls out in early access to Nitro members over the coming weeks, with event-based clipping for League of Legends, Rocket League, Counter-Strike 2 and Dota 2. Discord says calls stay end-to-end encrypted. The blog’s date is 23 or 24 Nov.",
+    "why": "Gaming communities get an easy way to share highlights. Early access only.",
+    "momentum": "Rising",
+    "region": "Global",
+    "platform": "Discord",
+    "source": "Discord blog, 23–24 Nov",
+    "credit": "Discord",
+    "url": "https://discord.com/blog/introducing-auto-clips",
+    "image": "images/discord.jpg"
+   }
+  ]
+ },
+ "watch": [
+  {
+   "when": "Fri 27 Nov",
+   "title": "Hexed in UK cinemas",
+   "note": "Disney UK’s cinema date. Black Friday and BBC iPlayer Christmas specials are the same day."
+  },
+  {
+   "when": "Sat 28 Nov",
+   "title": "Strictly week 10",
+   "note": "Instant Dance returns. Man Utd v Brentford is at 3pm, per Sky."
+  },
+  {
+   "when": "Tue 1 Dec",
+   "title": "Man City orange kit on sale",
+   "note": "Global sale starts, per the club via Metro."
+  },
+  {
+   "when": "Tue 2 Dec",
+   "title": "The Man with the Bag",
+   "note": "Prime Video’s Christmas film, per Amazon."
+  },
+  {
+   "when": "Fri 18 Dec",
+   "title": "Avengers: Doomsday",
+   "note": "Release date per Variety. Check the UK date with Disney."
+  }
+ ],
+ "desks": [
+  {
+   "id": "disney",
+   "name": "Disney UK",
+   "short": "Disney UK",
+   "byline": "Pip · Disney UK desk",
+   "color": "#4a74c9",
+   "logo": "logos/disney.png",
+   "ideas": [
+    {
+     "from": "Hexed opening",
+     "idea": "A confident “tomorrow in cinemas” Hexed post, built from approved footage.",
+     "note": "Approved assets only. Cinema date Fri 27 Nov. No box-office or review claims."
+    },
+    {
+     "from": "Hexed soundtrack",
+     "idea": "A “name the song” teaser using only cleared audio.",
+     "note": "Only cleared music. No artist claims without approval."
+    }
+   ],
+   "watch": "Hexed’s UK rating, audio and assets need sign-off first. No US box-office or review claims from this channel."
+  },
+  {
+   "id": "family",
+   "name": "Disney Family UK",
+   "short": "Disney Family",
+   "byline": "Bo · Disney Family UK desk",
+   "color": "#a983cf",
+   "logo": "logos/disney.png",
+   "ideas": [
+    {
+     "from": "Strictly week 10",
+     "idea": "A “family sofa night” post with a song-guess prompt.",
+     "note": "No spoilers about results."
+    },
+    {
+     "from": "Hexed opening",
+     "idea": "A “family cinema night” Friday post, if Disney UK approves.",
+     "note": "Approved assets only. No ratings claims."
+    }
+   ],
+   "watch": "No third-party show imagery without sign-off."
+  },
+  {
+   "id": "store",
+   "name": "Disney Store UK",
+   "short": "Disney Store",
+   "byline": "Lulu · Disney Store UK desk",
+   "color": "#d4567f",
+   "logo": "logos/disney-store.png",
+   "ideas": [
+    {
+     "from": "Man City orange kit",
+     "idea": "A “limited edition” drop format for any confirmed Disney Store release.",
+     "note": "Only products Disney Store confirms. No sell-out claims."
+    },
+    {
+     "from": "Hexed opening",
+     "idea": "A “Hexed gifts” tease, if licensed products are approved.",
+     "note": "Hexed licensing sign-off first."
+    }
+   ],
+   "watch": "No Marvel or Hexed content without licensing sign-off."
+  },
+  {
+   "id": "muti",
+   "name": "Mutti UK",
+   "short": "Mutti",
+   "byline": "Kiki · Mutti UK desk",
+   "color": "#d8302b",
+   "logo": "logos/mutti.png",
+   "ideas": [
+    {
+     "from": "M&S sandwich launch",
+     "idea": "A “weird flavour pairing” tomato recipe prompt, a playful twist.",
+     "note": "Recipe must be tested and approved by Mutti."
+    },
+    {
+     "from": "Top Gear host reveal",
+     "idea": "A “road trip lunch” pasta salad post, no show references.",
+     "note": "Recipe must be approved by Mutti."
+    }
+   ],
+   "watch": "Don’t reference M&S, the BBC or other brands by name."
+  },
+  {
+   "id": "on",
+   "name": "Optimum Nutrition UK",
+   "short": "Optimum Nutrition",
+   "byline": "Rex · Optimum Nutrition UK desk",
+   "color": "#c9962c",
+   "logo": "logos/on.png",
+   "ideas": [
+    {
+     "from": "Muse UK launch",
+     "idea": "A “what to look for when an AI recommends supplements” explainer, no product claims.",
+     "note": "Keep claims within approved wording. No Meta or MyProtein references."
+    },
+    {
+     "from": "Black Friday build-up",
+     "idea": "A “what to check in a protein deal” explainer, no price claims.",
+     "note": "Keep claims within approved wording."
+    }
+   ],
+   "watch": "No health or performance claims beyond the approved list. Don’t mention MyProtein."
+  },
+  {
+   "id": "dfs",
+   "name": "DFS",
+   "short": "DFS",
+   "byline": "Dot · DFS desk",
+   "color": "#2f9c8f",
+   "logo": "logos/dfs.png",
+   "ideas": [
+    {
+     "from": "Strictly week 10",
+     "idea": "A “best seat in the house” sofa shot for Saturday.",
+     "note": "No tagging the show or BBC."
+    },
+    {
+     "from": "Black Friday build-up",
+     "idea": "A “save the date” tease for any confirmed DFS offers.",
+     "note": "Any sale or price wording needs approval first."
+    }
+   ],
+   "watch": "Any sale or price wording needs approval first."
+  }
+ ]
+}

@@ -1,0 +1,193 @@
+<title>Jungle Newsroom Edition</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap">
+<style>
+/* Layout: 1080x1350 slides in Jungle's Instagram carousel style (dark concrete texture, hairline top bar,
+   Poppins, Jungle green for the key words, the jungle wordmark bottom right). Story slides lead with a picture.
+   Viewer mode (default) shows one slide at a time; print mode (set by render.js) stacks them for PNG/PDF export. */
+:root{
+  --bg:#3b3936; --white:#ffffff; --soft:#dedad3; --dim:#aaa59d; --green:#7ef25c; --amber:#ffc94a; --grey:#8d8880;
+  --sans:'Poppins','Helvetica Neue',Arial,sans-serif;
+  color-scheme: dark;
+}
+[hidden]{display:none!important}
+html,body{margin:0}
+body{background:#161514;color:var(--white);font-family:var(--sans)}
+a{color:inherit}
+
+.slide{position:relative;width:1080px;height:1350px;box-sizing:border-box;padding:136px 76px 150px;overflow:hidden;background:var(--bg);
+  background-image:radial-gradient(ellipse at 30% 20%,rgba(255,255,255,.06),transparent 60%),radial-gradient(ellipse at 80% 100%,rgba(0,0,0,.35),transparent 60%)}
+.slide::before{content:"";position:absolute;inset:0;pointer-events:none;opacity:.55;mix-blend-mode:overlay;
+  background-image:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='400' height='400'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='.65' numOctaves='4' stitchTiles='stitch'/><feColorMatrix values='0 0 0 0 .5  0 0 0 0 .5  0 0 0 0 .5  0 0 0 1.6 -.45'/></filter><rect width='100%' height='100%' filter='url(%23n)'/></svg>")}
+.slide > *{position:relative;z-index:1}
+em{font-style:normal;color:var(--green)}
+
+.bar{position:absolute;top:52px;left:76px;right:76px;display:flex;justify-content:space-between;align-items:center;padding-bottom:20px;border-bottom:2px solid rgba(255,255,255,.55);
+  font-size:21px;font-weight:600;letter-spacing:.03em;text-transform:uppercase}
+.bar span:last-child{text-transform:none;font-weight:500}
+.mark{position:absolute;right:70px;bottom:56px;height:52px}
+.mark img{height:100%;display:block}
+.foot{position:absolute;left:76px;bottom:58px;max-width:700px;font-size:19px;line-height:1.45;color:var(--dim)}
+.foot a{color:var(--green);text-decoration:none;font-weight:600;word-break:break-all}
+
+/* cover */
+.cover{display:flex;flex-direction:column;justify-content:center}
+.cover .kick{font-size:28px;font-weight:600;color:var(--soft);margin:0 0 4px}
+.cover h1{font-size:132px;font-weight:800;line-height:.95;letter-spacing:-.04em;margin:0;color:var(--green)}
+.cover .sub{font-size:62px;font-weight:700;line-height:1.05;letter-spacing:-.03em;margin:8px 0 44px}
+.cover h3{font-size:22px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--green);margin:22px 0 10px}
+.cover ol{list-style:none;margin:0;padding:0;display:grid;gap:8px}
+.cover li{font-size:27px;font-weight:500;line-height:1.25;color:var(--soft);padding-left:26px;position:relative}
+.cover li::before{content:"";position:absolute;left:0;top:.5em;width:10px;height:10px;border-radius:50%;background:var(--green)}
+
+/* story */
+.pic{height:500px;border-radius:30px;overflow:hidden;background:#222;margin:0 0 30px}
+.pic img{width:100%;height:100%;object-fit:cover;display:block}
+.chips{display:flex;flex-wrap:wrap;gap:10px;margin:0 0 20px}
+.chip{font-size:19px;font-weight:600;border:2px solid rgba(255,255,255,.6);border-radius:999px;padding:4px 16px;color:var(--soft)}
+.chip.up{border-color:var(--green);color:var(--green)}
+.chip.peak{border-color:var(--amber);color:var(--amber)}
+.chip.spoil{border-color:#ff7a66;color:#ff7a66}
+.chip.down{border-color:var(--grey);color:var(--grey)}
+.story h2{font-size:56px;font-weight:700;line-height:1.08;letter-spacing:-.03em;margin:0 0 18px;text-wrap:balance}
+.story .what{font-size:25px;font-weight:400;line-height:1.5;margin:0 0 20px;color:var(--soft)}
+.why{border-left:5px solid var(--green);padding:2px 0 2px 22px}
+.why p{margin:0;font-size:24px;font-weight:500;line-height:1.45}
+.why b{color:var(--green);font-weight:700}
+
+/* watch list */
+.watch h2{font-size:84px;font-weight:800;line-height:1;letter-spacing:-.04em;margin:30px 0 44px}
+.wl{list-style:none;margin:0;padding:0;display:grid;gap:22px}
+.wl li{display:grid;grid-template-columns:150px 1fr;gap:24px;align-items:start;background:rgba(0,0,0,.25);border-radius:26px;padding:24px 28px}
+.wl .when{font-size:20px;font-weight:700;color:#1d1c1a;background:var(--green);border-radius:999px;text-align:center;padding:6px 10px;align-self:start}
+.wl .t{font-size:29px;font-weight:700;line-height:1.2;margin:0}
+.wl .n{font-size:22px;font-weight:400;line-height:1.45;margin:6px 0 0;color:var(--soft)}
+
+/* desk */
+.desk .head{display:flex;align-items:center;gap:28px;margin:12px 0 34px}
+.desk .tile{width:150px;height:150px;border-radius:28px;background:var(--white);display:grid;place-items:center;flex:none;box-shadow:inset 0 -10px 0 var(--c)}
+.desk .tile img{max-width:112px;max-height:74px;margin-bottom:8px}
+.desk h2{font-size:58px;font-weight:700;line-height:1.02;letter-spacing:-.03em;margin:0}
+.desk .who{font-size:21px;font-weight:500;color:var(--dim);margin:8px 0 0}
+.ideas{list-style:none;margin:0;padding:0;display:grid;gap:20px}
+.ideas li{background:rgba(0,0,0,.28);border-radius:26px;padding:24px 28px;border-top:6px solid var(--c)}
+.lbl{font-size:18px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--dim);margin:0 0 8px}
+.ideas .idea{font-size:30px;font-weight:700;line-height:1.25;margin:0}
+.ideas .note{font-size:22px;font-weight:400;line-height:1.45;margin:8px 0 0;color:var(--soft)}
+.wo{margin-top:24px;border:2px solid var(--amber);border-radius:26px;padding:22px 28px}
+.wo .lbl{color:var(--amber)}
+.wo p.t{font-size:25px;font-weight:600;line-height:1.4;margin:0}
+
+/* end */
+.end{display:flex;flex-direction:column;justify-content:center}
+.end h2{font-size:112px;font-weight:800;line-height:.98;letter-spacing:-.04em;margin:0 0 30px}
+.end p{font-size:32px;font-weight:500;line-height:1.45;margin:0 0 40px;color:var(--soft);max-width:30ch}
+.end .go{align-self:flex-start;display:inline-flex;align-items:center;gap:14px;font-size:30px;font-weight:700;color:#1d1c1a;background:var(--green);border-radius:999px;padding:18px 36px;text-decoration:none}
+.end .url{font-size:19px;color:var(--dim);margin-top:18px;word-break:break-all}
+
+/* viewer (artifact) */
+body:not([data-mode="print"]){min-height:100vh;display:flex;flex-direction:column;align-items:center;gap:16px;padding:20px max(16px,env(safe-area-inset-left,0px)) 24px max(16px,env(safe-area-inset-right,0px));box-sizing:border-box}
+body:not([data-mode="print"]) #deck{position:relative;width:min(540px,100%);aspect-ratio:1080/1350}
+body:not([data-mode="print"]) .slide{position:absolute;top:0;left:0;transform-origin:top left;display:none}
+body:not([data-mode="print"]) .slide.on{display:block}
+body:not([data-mode="print"]) .slide.on.cover,body:not([data-mode="print"]) .slide.on.end{display:flex}
+.nav{display:flex;align-items:center;gap:14px;font-weight:600;color:var(--soft)}
+.nav button{font:inherit;font-weight:700;color:#1d1c1a;background:var(--green);border:none;border-radius:999px;padding:10px 22px;cursor:pointer}
+.nav button:disabled{opacity:.35;cursor:default}
+.nav button:focus-visible{outline:3px solid var(--white);outline-offset:3px}
+body[data-mode="print"] .nav{display:none}
+body[data-mode="print"] .slide{page-break-after:always;break-after:page}
+@page{size:1080px 1350px;margin:0}
+</style>
+
+<div id="deck"></div>
+<div class="nav"><button id="prev" type="button">Back</button><span id="pos"></span><button id="next" type="button">Next</button></div>
+
+<script id="edition" type="application/json">{"edition":"The daily","coverTitle":"The daily","coverSub":"what’s *moving* on social","dateLabel":"Thursday 26 November","floorUrl":"https://newsroom-production-7727.up.railway.app/","sections":{"saw":[{"short":"Gordon Ramsay is the new Top Gear host","headline":"*Gordon Ramsay* is the new Top Gear host","what":"The BBC confirmed Gordon Ramsay as lead host of a revived Top Gear on BBC One and iPlayer in 2028, per Radio Times, Variety and Metro. Filming runs across the UK and abroad in 2027, with Dunsfold and The Stig returning. Ramsay announced it in a social video with The Stig, captioned “It’s official! Gordon Ramsay is your new host”, per Digital Spy.","why":"A huge TV hosting reveal with a social-first announcement. Expect reaction takes all week.","momentum":"Peaking","region":"UK","platform":"X & Instagram","source":"Radio Times, 25 Nov; Variety, 25 Nov; Metro, 25 Nov","credit":"BBC via Radio Times","url":"https://www.radiotimes.com/tv/entertainment/gordon-ramsay-new-top-gear-host-newsupdate/","image":"images/ramsay.jpg"},{"short":"Man City wear a fourth, orange kit in the Champions League","headline":"*Man City* wear a fourth, orange kit in the Champions League","what":"Man City wore a special-edition orange Puma x C.P. Company kit against Napoli on Tuesday, in a 2-2 draw, per Metro and the BBC. The BBC says it is a fourth kit, so it can’t be worn in the Premier League, where clubs may use only three. The collection goes on sale globally on Tuesday 1 Dec, per the club.","why":"A kit launch that is also a fashion collaboration. Fans split on the look.","momentum":"Rising","region":"UK","platform":"Instagram & X","source":"Metro, 24 Nov; BBC Sport","credit":"Man City via Metro","url":"https://metro.co.uk/2026/11/24/man-city-wear-special-edition-orange-kit-vs-napoli-champions-league-29817453/","image":"images/citykit.jpg"},{"short":"Strictly's week 10 dances are revealed","headline":"Strictly’s *week 10 dances* are revealed, with Instant Dance returning","what":"Seven couples remain on Strictly, and Digital Spy lists the week 10 dances: Delta and Kai get a Couples’ Choice to AC/DC, Cach and Maddie a Viennese waltz to “Feeling Good”, and Lacey and Vito a waltz to “Chasing Cars”. Instant Dance returns for every couple on Saturday 28 Nov. We have the list from Digital Spy only.","why":"Song choices give fans something to predict. Saturday is the next big night.","momentum":"Rising","region":"UK","platform":"BBC One & X","source":"Digital Spy, 25 Nov","credit":"BBC via Digital Spy","url":"https://www.digitalspy.com/tv/reality-tv/a74534962/strictly-come-dancing-week-10-song-dance-list/","image":"images/strictly.jpg"},{"short":"I'm A Celebrity mid-week: Joanna Page's socks and Wayne's foot spa","headline":"*I’m A Celebrity* mid-week: Joanna Page’s socks and Wayne’s foot spa","what":"Joanna Page admitted she hasn’t changed her socks in nine days in camp, per Metro. Coleen Rooney said on ITV’s Unpacked that Wayne’s electric foot spa luxury item was first going to be a chair, per Digital Spy. We’ve left trial results out.","why":"Light camp chat that keeps the show in feeds between big moments.","momentum":"Rising","region":"UK","platform":"ITV & X","source":"Metro, 25 Nov; Digital Spy, 25 Nov","credit":"ITV via Metro","url":"https://metro.co.uk/2026/11/25/joanna-page-leaves-im-a-celebrity-fans-gagging-revealing-dirty-habit-29818397/","image":"images/joanna.jpg"},{"short":"Disney's Hexed opens in the US ahead of UK cinemas on Friday","headline":"Disney’s *Hexed* opens in the US ahead of UK cinemas on Friday","what":"Deadline projects Hexed will take about $7.8 million on Wednesday, including $2.1 million of previews, and $35–40 million over five days. Deadline puts critics at 67% fresh and its soundtrack includes Queen, Little Mix, Dua Lipa and Demi Lovato. Hailee Steinfeld sings a cover of “Magic” over the credits. These are Deadline’s early estimates, and we haven’t seen UK reaction yet.","why":"Our client’s film week. US numbers set the mood before the UK release.","momentum":"Rising","region":"UK","platform":"Instagram & TikTok","source":"Deadline, 25 Nov","credit":"Disney via Deadline","url":"https://deadline.com/2026/11/hexed-soundtrack-songs-queen-dua-lipa-hailee-steinfeld-1237233514/","image":"images/hexed.jpg"},{"short":"M&S launches a Chocolate & Clementine sandwich","headline":"*M&S* launches a Chocolate & Clementine sandwich","what":"M&S launched a limited-edition Chocolate & Clementine sandwich on Tuesday, at £3 for one half, per Metro. It follows the viral Strawberry & Creme and Chocolate & Pistachio versions. Metro says the pack states 5% of sales go to Shelter, and commenters are divided. We found no second source.","why":"A retail launch built for TikTok food-haul culture. A repeatable format.","momentum":"Rising","region":"UK","platform":"Instagram & TikTok","source":"Metro, 25 Nov","credit":"M&S via Metro","url":"https://metro.co.uk/2026/11/25/official-m-ss-new-chocolate-sandwich-best-one-yet-29818044/","image":"images/mssandwich.jpg"}],"platform":[{"short":"Meta launches its Muse AI agent in the UK","headline":"*Meta* launches its Muse AI agent in the UK","what":"Meta says Muse, its personal AI agent, launched for UK adults on iOS, Android, muse.ai and WhatsApp on 24 Nov, free with optional paid plans. UK partners include M&S, Currys, Argos, Sainsbury’s, ASOS, JD Sports and MyProtein. Muse asks before sending emails or buying. The CMA said the same day that UK consumer law applies to AI agents.","why":"A new AI agent that can shop for people. Retail clients will want to know how it surfaces them.","momentum":"Peaking","region":"UK","platform":"Meta","source":"Meta, 24 Nov; Social Media Today, 24 Nov; CMA","credit":"Meta","url":"https://about.fb.com/news/2026/11/introducing-muse-in-the-uk-a-personal-ai-agent-you-control/","image":"images/muse.jpg"},{"short":"Discord launches Auto Clips in early access","headline":"*Discord* launches Auto Clips in early access for Nitro members","what":"Discord says Auto Clips detects spikes of laughter or shouting in voice calls and saves the moment locally on your PC. It rolls out in early access to Nitro members over the coming weeks, with event-based clipping for League of Legends, Rocket League, Counter-Strike 2 and Dota 2. Discord says calls stay end-to-end encrypted. The blog’s date is 23 or 24 Nov.","why":"Gaming communities get an easy way to share highlights. Early access only.","momentum":"Rising","region":"Global","platform":"Discord","source":"Discord blog, 23–24 Nov","credit":"Discord","url":"https://discord.com/blog/introducing-auto-clips","image":"images/discord.jpg"}]},"watch":[{"when":"Fri 27 Nov","title":"Hexed in UK cinemas","note":"Disney UK’s cinema date. Black Friday and BBC iPlayer Christmas specials are the same day."},{"when":"Sat 28 Nov","title":"Strictly week 10","note":"Instant Dance returns. Man Utd v Brentford is at 3pm, per Sky."},{"when":"Tue 1 Dec","title":"Man City orange kit on sale","note":"Global sale starts, per the club via Metro."},{"when":"Tue 2 Dec","title":"The Man with the Bag","note":"Prime Video’s Christmas film, per Amazon."},{"when":"Fri 18 Dec","title":"Avengers: Doomsday","note":"Release date per Variety. Check the UK date with Disney."}],"desks":[{"id":"disney","name":"Disney UK","short":"Disney UK","byline":"Pip · Disney UK desk","color":"#4a74c9","logo":"logos/disney.png","ideas":[{"from":"Hexed opening","idea":"A confident “tomorrow in cinemas” Hexed post, built from approved footage.","note":"Approved assets only. Cinema date Fri 27 Nov. No box-office or review claims."},{"from":"Hexed soundtrack","idea":"A “name the song” teaser using only cleared audio.","note":"Only cleared music. No artist claims without approval."}],"watch":"Hexed’s UK rating, audio and assets need sign-off first. No US box-office or review claims from this channel."},{"id":"family","name":"Disney Family UK","short":"Disney Family","byline":"Bo · Disney Family UK desk","color":"#a983cf","logo":"logos/disney.png","ideas":[{"from":"Strictly week 10","idea":"A “family sofa night” post with a song-guess prompt.","note":"No spoilers about results."},{"from":"Hexed opening","idea":"A “family cinema night” Friday post, if Disney UK approves.","note":"Approved assets only. No ratings claims."}],"watch":"No third-party show imagery without sign-off."},{"id":"store","name":"Disney Store UK","short":"Disney Store","byline":"Lulu · Disney Store UK desk","color":"#d4567f","logo":"logos/disney-store.png","ideas":[{"from":"Man City orange kit","idea":"A “limited edition” drop format for any confirmed Disney Store release.","note":"Only products Disney Store confirms. No sell-out claims."},{"from":"Hexed opening","idea":"A “Hexed gifts” tease, if licensed products are approved.","note":"Hexed licensing sign-off first."}],"watch":"No Marvel or Hexed content without licensing sign-off."},{"id":"muti","name":"Mutti UK","short":"Mutti","byline":"Kiki · Mutti UK desk","color":"#d8302b","logo":"logos/mutti.png","ideas":[{"from":"M&S sandwich launch","idea":"A “weird flavour pairing” tomato recipe prompt, a playful twist.","note":"Recipe must be tested and approved by Mutti."},{"from":"Top Gear host reveal","idea":"A “road trip lunch” pasta salad post, no show references.","note":"Recipe must be approved by Mutti."}],"watch":"Don’t reference M&S, the BBC or other brands by name."},{"id":"on","name":"Optimum Nutrition UK","short":"Optimum Nutrition","byline":"Rex · Optimum Nutrition UK desk","color":"#c9962c","logo":"logos/on.png","ideas":[{"from":"Muse UK launch","idea":"A “what to look for when an AI recommends supplements” explainer, no product claims.","note":"Keep claims within approved wording. No Meta or MyProtein references."},{"from":"Black Friday build-up","idea":"A “what to check in a protein deal” explainer, no price claims.","note":"Keep claims within approved wording."}],"watch":"No health or performance claims beyond the approved list. Don’t mention MyProtein."},{"id":"dfs","name":"DFS","short":"DFS","byline":"Dot · DFS desk","color":"#2f9c8f","logo":"logos/dfs.png","ideas":[{"from":"Strictly week 10","idea":"A “best seat in the house” sofa shot for Saturday.","note":"No tagging the show or BBC."},{"from":"Black Friday build-up","idea":"A “save the date” tease for any confirmed DFS offers.","note":"Any sale or price wording needs approval first."}],"watch":"Any sale or price wording needs approval first."}]}</script>
+<script>
+(function(){
+const E = JSON.parse(document.getElementById('edition').textContent || '{}');
+const deck = document.getElementById('deck');
+const esc = s => String(s == null ? '' : s).replace(/[&<>"]/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+// *words* in headlines are set in Jungle green
+const hi = s => esc(s).replace(/\*(.+?)\*/g, '<em>$1</em>');
+const plain = s => String(s == null ? '' : s).replace(/\*/g, '');
+const short = u => String(u || '').replace(/^https?:\/\/(www\.)?/, '').replace(/[?#].*$/, '').replace(/\/$/, '');
+const link = u => '<a href="' + esc(u) + '">' + esc(short(u).length > 60 ? short(u).slice(0, 58) + '…' : short(u)) + '</a>';
+const MOM = {Rising:'up', Peaking:'peak', Fading:'down'};
+const edition = E.edition || 'The daily';
+const bar = (l, r) => '<div class="bar"><span>' + esc(l) + '</span><span>' + esc(r) + '</span></div>';
+const mark = '<div class="mark"><img src="logos/jungle-wordmark-white.png" alt="jungle"></div>';
+const SECTIONS = [['saw', 'Things we saw'], ['platform', 'Platform highlights']];
+const S = E.sections || {};
+const slides = [];
+
+slides.push('<section class="slide cover">' + bar(edition, 'The Jungle Newsroom · ' + (E.dateLabel || '')) +
+  '<p class="kick">The Jungle Newsroom</p><h1>' + hi(E.coverTitle || edition) + '</h1>' +
+  '<p class="sub">' + hi(E.coverSub || 'what’s moving on social') + '</p>' +
+  SECTIONS.filter(([k]) => (S[k] || []).length).map(([k, name]) => '<h3>' + name + '</h3><ol>' + S[k].map(s => '<li>' + esc(plain(s.short || s.headline)) + '</li>').join('') + '</ol>').join('') +
+  mark + '</section>');
+
+SECTIONS.forEach(([k, name]) => {
+  const list = S[k] || [];
+  list.forEach((s, i) => {
+    slides.push('<section class="slide story">' + bar(name, String(i + 1).padStart(2, '0') + ' / ' + String(list.length).padStart(2, '0') + ' · ' + (E.dateLabel || '')) +
+      (s.image ? '<div class="pic"><img src="' + esc(s.image) + '" alt=""></div>' : '') +
+      '<div class="chips">' + (s.spoiler ? '<span class="chip spoil">Spoilers</span>' : '') + '<span class="chip ' + (MOM[s.momentum] || '') + '">' + esc(s.momentum) + '</span><span class="chip">' + esc(s.region) + '</span><span class="chip">' + esc(s.platform) + '</span></div>' +
+      '<h2>' + hi(s.headline) + '</h2><p class="what">' + esc(s.what) + '</p>' +
+      '<div class="why"><p><b>Why it matters: </b>' + esc(s.why) + '</p></div>' +
+      '<div class="foot">' + esc(s.source) + (s.credit ? ' · Image: ' + esc(s.credit) : '') + (s.url ? '<br>' + link(s.url) : '') + '</div>' + mark + '</section>');
+  });
+});
+
+if ((E.watch || []).length) {
+  slides.push('<section class="slide watch">' + bar('This week', E.dateLabel || '') +
+    '<h2>Things to watch <em>this week</em></h2><ul class="wl">' +
+    E.watch.map(w => '<li><span class="when">' + esc(w.when) + '</span><div><p class="t">' + esc(w.title) + '</p>' + (w.note ? '<p class="n">' + esc(w.note) + '</p>' : '') + '</div></li>').join('') +
+    '</ul>' + mark + '</section>');
+}
+
+(E.desks || []).forEach(d => {
+  if (!(d.ideas || []).length && !d.watch) return;
+  slides.push('<section class="slide desk" style="--c:' + d.color + '">' + bar('For our clients', d.short) +
+    '<div class="head"><div class="tile">' + (d.logo ? '<img src="' + esc(d.logo) + '" alt="' + esc(d.name) + '">' : '') + '</div>' +
+    '<div><h2>' + hi(d.title || ('For *' + d.name + '*')) + '</h2><p class="who">' + esc(d.byline) + '</p></div></div>' +
+    '<ul class="ideas">' + (d.ideas || []).map(it => '<li><p class="lbl">Idea · ' + esc(it.from) + '</p><p class="idea">' + esc(it.idea) + '</p>' + (it.note ? '<p class="note">' + esc(it.note) + '</p>' : '') + '</li>').join('') + '</ul>' +
+    (d.watch ? '<div class="wo"><p class="lbl">Watch out</p><p class="t">' + esc(d.watch) + '</p></div>' : '') +
+    mark + '</section>');
+});
+
+slides.push('<section class="slide end">' + bar('The Jungle Newsroom', E.dateLabel || '') +
+  '<h2>Did we <em>miss</em> something?</h2>' +
+  '<p>Spotted something we missed? Or want more of something tomorrow? Reply under this post in #agency-hq.</p>' +
+  (E.floorUrl ? '<a class="go" href="' + esc(E.floorUrl) + '">See the newsroom island →</a><p class="url">' + esc(short(E.floorUrl)) + '</p>' : '') +
+  mark + '</section>');
+
+deck.innerHTML = slides.join('');
+const els = [...deck.querySelectorAll('.slide')];
+
+// viewer: one slide at a time, scaled to fit
+let cur = 0;
+const pos = document.getElementById('pos'), prev = document.getElementById('prev'), next = document.getElementById('next');
+function fit(){
+  if (document.body.dataset.mode === 'print') return;
+  const s = deck.clientWidth / 1080;
+  els.forEach(el => { el.style.transform = 'scale(' + s + ')'; });
+}
+function show(i){
+  cur = Math.max(0, Math.min(els.length - 1, i));
+  els.forEach((el, k) => el.classList.toggle('on', k === cur));
+  pos.textContent = (cur + 1) + ' / ' + els.length;
+  prev.disabled = cur === 0; next.disabled = cur === els.length - 1;
+}
+prev.addEventListener('click', () => show(cur - 1));
+next.addEventListener('click', () => show(cur + 1));
+document.addEventListener('keydown', e => { if (e.key === 'ArrowRight') show(cur + 1); if (e.key === 'ArrowLeft') show(cur - 1); });
+let sx = null;
+deck.addEventListener('pointerdown', e => { sx = e.clientX; });
+deck.addEventListener('pointerup', e => { if (sx != null && Math.abs(e.clientX - sx) > 40) show(cur + (e.clientX < sx ? 1 : -1)); sx = null; });
+window.addEventListener('resize', fit);
+fit(); show(0);
+})();
+</script>
