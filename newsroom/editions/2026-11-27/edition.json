@@ -1,0 +1,270 @@
+{
+ "edition": "Best of the week",
+ "coverTitle": "Best of the week",
+ "coverSub": "what *carried on* growing",
+ "dateLabel": "Friday 27 November",
+ "floorUrl": "https://claude.ai/artifact/QByUaU2dzAX6fAwH2X3jVb",
+ "sections": {
+  "saw": [
+   {
+    "short": "GTA VI's launch week: 420 million hours watched on streaming",
+    "headline": "*GTA VI’s launch week*: 420 million hours watched on streaming",
+    "what": "Streams Charts says GTA VI’s launch week drew 420 million hours watched, nearly triple the previous launch-week record, with a 7.91 million peak of concurrent viewers, per Dexerto. That is third-party data. Take-Two’s investor page lists a 20 Nov release headlined “$3.79 Billion in Day One Retail Sales”, but we couldn’t load its text. Earlier estimates from Sensor Tower were lower, so the figures don’t match.",
+    "why": "A launch that carried on for a week. Sales figures vary a lot between sources.",
+    "momentum": "Peaking",
+    "region": "Global",
+    "platform": "Twitch, YouTube & X",
+    "source": "Dexerto, 26 Nov; Take-Two investor page",
+    "credit": "Rockstar via Dexerto",
+    "url": "https://www.dexerto.com/gta/gta-6-shatters-streaming-records-with-420m-hours-watched-as-burntpeanut-ishowspeed-dominate-3431545/",
+    "image": "images/gta.jpg"
+   },
+   {
+    "short": "Ofcom has had 887 complaints about the I'm A Celebrity camp row",
+    "headline": "*Ofcom* has had 887 complaints about the I’m A Celebrity camp row",
+    "what": "Ofcom says it received 887 complaints about Sunday’s I’m A Celebrity episode, in which Mariella Frostrup and AJ Odudu clashed, and “is yet to decide whether or not to investigate”, per Radio Times. Metro reports Ant and Dec say it “became a much bigger deal than it should have”. This is a sensitive story, so we have kept to the facts.",
+    "why": "The biggest TV talking point of the week, and still running. Tone matters.",
+    "momentum": "Peaking",
+    "region": "UK",
+    "platform": "ITV & X",
+    "source": "Radio Times, 25 Nov; Metro, 26 Nov",
+    "credit": "ITV via Radio Times",
+    "url": "https://www.radiotimes.com/tv/entertainment/reality-tv/im-a-celebrity-2026-mariella-frostrup-aj-odudu-ofcom-complaints-newsupdate/",
+    "image": "images/imaceleb.jpg"
+   },
+   {
+    "short": "Disney's Hexed opens in UK cinemas today",
+    "headline": "Disney’s *Hexed* opens in UK cinemas today",
+    "what": "Hexed opens in UK cinemas today. TheWrap’s pre-release projection, published 24 Nov, has a $40–45 million five-day US opening, likely second behind The Hunger Games, with a 65% Rotten Tomatoes score at the time. These are projections, not results. We haven’t seen a UK reviews round-up beyond the Radio Times review.",
+    "why": "Our client’s release day. The projection is a guide, not a result.",
+    "momentum": "Rising",
+    "region": "UK",
+    "platform": "Instagram & TikTok",
+    "source": "TheWrap, 24 Nov",
+    "credit": "Disney via TheWrap",
+    "url": "https://www.thewrap.com/creative-content/movies/hexed-thanksgiving-box-office-preview/",
+    "image": "images/hexed.jpg"
+   },
+   {
+    "short": "Radio 1's Big Weekend 2027 is heading to Brighton",
+    "headline": "*Radio 1’s Big Weekend 2027* is heading to Brighton",
+    "what": "Greg James revealed on air on Thursday that Radio 1’s Big Weekend 2027 will be at Preston Park, Brighton, from Friday 28 to Sunday 30 May, per BBC News and NME. He said: “If Radio 1 was a place, it would be Brighton.” BBC says about 70 acts, and NME puts capacity at 80,000, so we have used BBC’s wording.",
+    "why": "A festival announcement that gets a local and national response. Start planning early.",
+    "momentum": "Rising",
+    "region": "UK",
+    "platform": "Instagram & TikTok",
+    "source": "BBC News, 26 Nov; NME, 26 Nov",
+    "credit": "NME file photo",
+    "url": "https://www.bbc.co.uk/news/articles/cr1ewjpgd2llo",
+    "image": "images/radio1.jpg"
+   },
+   {
+    "short": "A baby hippo is born at Longleat",
+    "headline": "A *baby hippo* is born at Longleat",
+    "what": "Metro reports a hippo calf was born last week to mother Matylda at Longleat in Wiltshire, as part of the European breeding programme. Its sex isn’t yet known. Longleat’s Darren Beasley said keepers are “over the moon”. Metro’s headline says it is the first in 40 years, which we haven’t seen supported in the text.",
+    "why": "A feel-good animal story that travels well. The ‘first in 40 years’ line is unconfirmed.",
+    "momentum": "Rising",
+    "region": "UK",
+    "platform": "Instagram & TikTok",
+    "source": "Metro, 26 Nov",
+    "credit": "Longleat via Metro",
+    "url": "https://metro.co.uk/2026/11/26/first-picture-baby-hippo-born-uk-safari-park-first-time-40-years-29821724/",
+    "image": "images/hippo.jpg"
+   },
+   {
+    "short": "Bournemouth win their first five European games",
+    "headline": "*Bournemouth* win their first five European games",
+    "what": "Bournemouth won away at Celta Vigo in the Europa League on Thursday after going 1-0 down and having Bafode Diakite sent off, per BBC Sport. Álvaro Rodríguez and Rayan scored in the second half, for a club-record 10th straight win in all competitions. BBC says they are only the third side to win each of their first five European matches.",
+    "why": "A big football story outside the Big Six. Fans will make it a talking point.",
+    "momentum": "Rising",
+    "region": "UK",
+    "platform": "X & Instagram",
+    "source": "BBC Sport, 26 Nov",
+    "credit": "BBC Sport",
+    "url": "https://www.bbc.co.uk/sport/football/articles/cmq5v84vw818o"
+   }
+  ],
+  "platform": [
+   {
+    "short": "X launches its first parental controls for teens",
+    "headline": "*X* launches its first parental controls for teens",
+    "what": "X’s new controls for 13 to 17 year olds let parents see time spent, set daily limits, require approval for new followers and limit For You to accounts the teen follows, per The Verge and Engadget. A parent can link up to five teens, both sides must agree, and parents can’t read DMs or searches. Teen accounts default to protected mode.",
+    "why": "A teen-safety first for X. Relevant for family-facing brands.",
+    "momentum": "Rising",
+    "region": "Global",
+    "platform": "X",
+    "source": "The Verge, 26 Nov; Engadget, 26 Nov",
+    "credit": "X",
+    "url": "https://www.theverge.com/news/1043078/x-parental-controls-features"
+   },
+   {
+    "short": "WhatsApp adds scheduled messages",
+    "headline": "*WhatsApp* adds scheduled messages",
+    "what": "WhatsApp says users can schedule a message from 10 minutes to 14 days ahead, in one-to-one and group chats, for text, photos and videos. It stays end-to-end encrypted and delivers even if the phone is off. It is rolling out globally “over the coming weeks”, per the WhatsApp blog.",
+    "why": "Handy for community managers and campaigns. Rollout is gradual.",
+    "momentum": "Rising",
+    "region": "Global",
+    "platform": "WhatsApp",
+    "source": "WhatsApp Blog, 25 Nov",
+    "credit": "WhatsApp",
+    "url": "https://blog.whatsapp.com/say-it-at-the-right-time-with-scheduled-messages",
+    "image": "images/whatsapp.jpg"
+   }
+  ]
+ },
+ "watch": [
+  {
+   "when": "Fri 27 Nov",
+   "title": "Hexed in UK cinemas",
+   "note": "Disney UK’s cinema date. Black Friday and BBC iPlayer Christmas specials are the same day."
+  },
+  {
+   "when": "Sat 28 Nov",
+   "title": "Strictly week 10",
+   "note": "Instant Dance returns. Man Utd v Brentford is at 3pm, per Sky."
+  },
+  {
+   "when": "Tue 1 Dec",
+   "title": "Man City orange kit on sale",
+   "note": "Global sale starts, per the club via Metro."
+  },
+  {
+   "when": "Tue 2 Dec",
+   "title": "The Man with the Bag",
+   "note": "Prime Video’s Christmas film, per Amazon."
+  },
+  {
+   "when": "Fri 18 Dec",
+   "title": "Avengers: Doomsday",
+   "note": "Release date per Variety. Check the UK date with Disney."
+  }
+ ],
+ "desks": [
+  {
+   "id": "disney",
+   "name": "Disney UK",
+   "short": "Disney UK",
+   "byline": "Pip · Disney UK desk",
+   "color": "#4a74c9",
+   "logo": "logos/disney.png",
+   "ideas": [
+    {
+     "from": "Hexed release day",
+     "idea": "A confident “in cinemas now” Hexed post built from approved footage.",
+     "note": "Approved assets only. No box-office, projection or review claims."
+    },
+    {
+     "from": "Hexed weekend",
+     "idea": "A “first-weekend cinema plan” post for families.",
+     "note": "Approved assets only. Don’t reference other films."
+    }
+   ],
+   "watch": "Hexed’s UK rating and assets need sign-off first. No projections, box-office or review claims from this channel."
+  },
+  {
+   "id": "family",
+   "name": "Disney Family UK",
+   "short": "Disney Family",
+   "byline": "Bo · Disney Family UK desk",
+   "color": "#a983cf",
+   "logo": "logos/disney.png",
+   "ideas": [
+    {
+     "from": "Longleat hippo",
+     "idea": "A “favourite zoo animal” family prompt for the weekend.",
+     "note": "No Longleat references or imagery."
+    },
+    {
+     "from": "Hexed release day",
+     "idea": "A “family cinema day” post, if Disney UK approves.",
+     "note": "Approved assets only. No ratings claims."
+    }
+   ],
+   "watch": "No third-party imagery or references without sign-off."
+  },
+  {
+   "id": "store",
+   "name": "Disney Store UK",
+   "short": "Disney Store",
+   "byline": "Lulu · Disney Store UK desk",
+   "color": "#d4567f",
+   "logo": "logos/disney-store.png",
+   "ideas": [
+    {
+     "from": "Black Friday",
+     "idea": "A “Black Friday is here” tease for any confirmed Disney Store offers.",
+     "note": "Only offers Disney Store confirms. No price claims without approval."
+    },
+    {
+     "from": "Hexed release day",
+     "idea": "A “Hexed gifts” post, if licensed products are approved.",
+     "note": "Hexed licensing sign-off first."
+    }
+   ],
+   "watch": "No Marvel or Hexed content without licensing sign-off."
+  },
+  {
+   "id": "muti",
+   "name": "Mutti UK",
+   "short": "Mutti",
+   "byline": "Kiki · Mutti UK desk",
+   "color": "#d8302b",
+   "logo": "logos/mutti.png",
+   "ideas": [
+    {
+     "from": "Black Friday",
+     "idea": "A “stock up the pantry” tomato staples post, no price claims.",
+     "note": "No price or deal claims. Recipe must be approved by Mutti."
+    },
+    {
+     "from": "Cold-weather cooking",
+     "idea": "A “Friday night in” tomato bake idea.",
+     "note": "Recipe must be tested and approved by Mutti."
+    }
+   ],
+   "watch": "Don’t reference other brands, retailers or shows by name."
+  },
+  {
+   "id": "on",
+   "name": "Optimum Nutrition UK",
+   "short": "Optimum Nutrition",
+   "byline": "Rex · Optimum Nutrition UK desk",
+   "color": "#c9962c",
+   "logo": "logos/on.png",
+   "ideas": [
+    {
+     "from": "Black Friday",
+     "idea": "A “what to check in a protein deal” explainer, no price claims.",
+     "note": "Keep claims within approved wording."
+    },
+    {
+     "from": "Bournemouth’s run",
+     "idea": "A “consistency wins” training tip, no club marks.",
+     "note": "Keep health claims within approved wording."
+    }
+   ],
+   "watch": "No health or performance claims beyond the approved list."
+  },
+  {
+   "id": "dfs",
+   "name": "DFS",
+   "short": "DFS",
+   "byline": "Dot · DFS desk",
+   "color": "#2f9c8f",
+   "logo": "logos/dfs.png",
+   "ideas": [
+    {
+     "from": "Strictly week 10",
+     "idea": "A “best seat in the house” sofa shot for Saturday.",
+     "note": "No tagging the show or BBC."
+    },
+    {
+     "from": "Black Friday",
+     "idea": "A “save the date” tease for any confirmed DFS offers.",
+     "note": "Any sale or price wording needs approval first."
+    }
+   ],
+   "watch": "Any sale or price wording needs approval first."
+  }
+ ]
+}
